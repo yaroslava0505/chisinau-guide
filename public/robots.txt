@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /ru/admin
+Disallow: /ro/admin
+Disallow: /admin
+Disallow: /ru/favorites
+Disallow: /ro/favorites
+Disallow: /favorites
+
+Sitemap: https://chisinau-guide.netlify.app/sitemap.xml

@@ -1,0 +1,6 @@
+{
+  "name": "Кишинів Гід | Куди піти сьогодні?",
+  "description": "Сучасний міський lifestyle-гід по Кишиневу. Кафе для роботи, затишні куточки, прогулянки, події та міські маршрути.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
