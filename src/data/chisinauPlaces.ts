@@ -3978,7 +3978,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: 'Вхід вільний',
     free_entry: true,
     description: 'Святкування Дня міста: літургія, ярмарки ремісників і виробників, гастрономічна зона на бульварі Штефан чел Маре та концертна програма на площі.',
-    image: 'https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop',
     tags: ['свято', 'фестиваль'],
     i18n: {
       ru: {
