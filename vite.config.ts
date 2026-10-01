@@ -12,7 +12,7 @@ import {defineConfig} from 'vite';
  * the placeholder is never left unresolved.
  */
 const SITE_URL =
-  process.env.VITE_SITE_URL ?? process.env.SITE_URL ?? 'https://chisinau-guide.md';
+  process.env.VITE_SITE_URL ?? process.env.SITE_URL ?? 'https://chisinau-guide.com';
 process.env.VITE_SITE_URL = SITE_URL;
 process.env.SITE_URL = SITE_URL;
 

@@ -145,7 +145,7 @@ export function categoryPath(category: CategoryId, locale: Locale = DEFAULT_LOCA
  * domain the deployment does not use would point canonical at another site.
  */
 /** Used when neither VITE_SITE_URL nor SITE_URL is set. */
-const DEFAULT_SITE_ORIGIN = 'https://chisinau-guide.md';
+const DEFAULT_SITE_ORIGIN = 'https://chisinau-guide.com';
 
 function readSiteOrigin(): string {
   try {

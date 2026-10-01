@@ -90,13 +90,13 @@ Netlify-формат `public/_redirects` і `public/_headers` без змін �
 1. Workers & Pages → Create → Pages → Connect to Git → обрати репозиторій.
 2. Build command: `npm run build`. Build output directory: `dist`.
 3. Environment variables (Settings → Environment variables), для продакшн-оточення:
-   * `VITE_SITE_URL` = `https://chisinau-guide.md`
-   * `SITE_URL` = `https://chisinau-guide.md`
+   * `VITE_SITE_URL` = `https://chisinau-guide.com`
+   * `SITE_URL` = `https://chisinau-guide.com`
    * `VITE_FORMSPREE_ENDPOINT` = ваш endpoint з [formspree.io](https://formspree.io)
    * `NODE_VERSION` = `24`
    * `VITE_ENABLE_ADMIN` — **не задавати**: без нього маршрут `/admin`
      у публічній збірці не реєструється.
-4. Кастомний домен — Custom domains → додати `chisinau-guide.md`, Cloudflare
+4. Кастомний домен — Custom domains → додати `chisinau-guide.com`, Cloudflare
    сам виставить DNS/SSL, якщо домен уже є в тому самому Cloudflare-акаунті.
 
 **Через drag-and-drop** — зібрати локально (`npm run build`) і перетягнути
