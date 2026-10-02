@@ -323,6 +323,8 @@ export const ro: Dictionary = {
     copyright: (year: number) => `© ${year} Ghidul Chișinăului — Chișinău Urban Guide`,
     dataNote: 'Adresele, coordonatele și programul provin din OpenStreetMap. Caracteristicile care nu sunt în sursă nu se afișează.',
     demoNote: 'Catalogul este completat cu date demonstrative, marcate cu eticheta «Demo».',
+    privacy: 'Politica de confidențialitate',
+    contacts: 'Contact',
   },
 
   seo: {
@@ -336,6 +338,40 @@ export const ro: Dictionary = {
     favoritesDescription: 'Locurile salvate din Chișinău pe care vrei să le vizitezi.',
     adminTitle: 'Panou de administrare',
     adminDescription: 'Gestionarea catalogului Ghidul Chișinăului.',
+  },
+
+  privacy: {
+    title: 'Politica de confidențialitate',
+    seoDescription:
+      'Cum procesează Ghidul Chișinăului datele vizitatorilor: ce rămâne doar în browserul tău și ce ajunge la servicii terțe.',
+    updated: (date: string) => `Ultima actualizare: ${date}`,
+    intro:
+      'Ghidul Chișinăului este un proiect independent, de voluntariat, fără companie, înregistrare sau conturi. Această pagină descrie onest ce se întâmplă cu datele tale — fără jargon juridic.',
+    noDataTitle: 'Ce nu face site-ul',
+    noDataText:
+      'Nu există înregistrare, parole sau conturi. Nu există analitice, contoare de vizite sau cookie-uri publicitare. Pe site nu este conectat niciun script de urmărire terț.',
+    localStorageTitle: 'Datele din browserul tău',
+    localStorageText:
+      'Favoritele, comentariile de la locuri și limba aleasă sunt stocate în localStorage — spațiul de stocare al browserului tău. Aceste date nu sunt niciodată trimise către vreun server și dispar dacă ștergi datele site-ului. Un comentariu este vizibil doar pentru cel care l-a lăsat, în același browser.',
+    formTitle: 'Formularul „Adaugă locul tău preferat”',
+    formText:
+      'Dacă completezi acest formular, datele introduse (numele locului, adresa, categoria, descrierea și emailul — dacă îl indici) sunt trimise prin Formspree, un serviciu terț de recepție a formularelor, către e-mailul redacției ghidului. E-mailul este folosit doar pentru a clarifica eventual detaliile cererii. Procesarea datelor de către Formspree este descrisă în propria lor politică de confidențialitate.',
+    hostingTitle: 'Găzduire',
+    hostingText:
+      'Site-ul este găzduit pe Cloudflare Pages. Ca orice serviciu de găzduire, Cloudflare procesează date tehnice ale cererilor (de exemplu, adresa IP și tipul de browser) pentru ca site-ul să funcționeze și să fie protejat — conform propriei politici Cloudflare.',
+    contactTitle: 'Întrebări despre confidențialitate',
+    contactText: 'Scrie la',
+  },
+
+  contacts: {
+    title: 'Contact',
+    seoDescription:
+      'Cum iei legătura cu Ghidul Chișinăului: propune un loc, raportează o eroare sau pune o întrebare.',
+    intro:
+      'Ghidul Chișinăului este administrat de o singură persoană — fără redacție, companie sau call-center. Răspunsul la un mesaj poate dura câteva zile.',
+    emailLabel: 'Email',
+    formTitle: 'Știi un loc care lipsește de aici?',
+    formSubtitle: 'Povestește-ne despre el mai jos — e cel mai rapid mod de a ne găsi.',
   },
 
   categories: {

@@ -50,6 +50,8 @@ import { PlaceDetailModal } from './components/PlaceDetailModal';
 import { EventsSection } from './components/EventsSection';
 import { FavoritesView } from './components/FavoritesView';
 import { AddPlaceForm } from './components/AddPlaceForm';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { ContactsPage } from './components/ContactsPage';
 /**
  * The admin panel is loaded on demand and only when it is enabled, so a public
  * build never ships its code — not merely hides its route.
@@ -208,6 +210,26 @@ function Guide() {
       return;
     }
 
+    if (route.view === 'privacy') {
+      updateSEO({
+        title: t.privacy.title,
+        description: t.privacy.seoDescription,
+        path,
+        locale,
+      });
+      return;
+    }
+
+    if (route.view === 'contacts') {
+      updateSEO({
+        title: t.contacts.title,
+        description: t.contacts.seoDescription,
+        path,
+        locale,
+      });
+      return;
+    }
+
     if (route.view === 'admin') {
       updateSEO({
         title: t.seo.adminTitle,
@@ -337,6 +359,8 @@ function Guide() {
 
   const isMapActive = route.view === 'map';
   const isFavoritesActive = route.view === 'favorites';
+  const isPrivacyActive = route.view === 'privacy';
+  const isContactsActive = route.view === 'contacts';
   const isAdminActive = ADMIN_ENABLED && route.view === 'admin';
   const isHome = route.view === 'home' || route.view === 'notfound';
 
@@ -358,6 +382,7 @@ function Guide() {
         isMapActive={isMapActive}
         isFavoritesActive={isFavoritesActive}
         isAdminActive={isAdminActive}
+        isStaticPageActive={isPrivacyActive || isContactsActive}
         onResetToHome={() => selectCategory('all')}
         onSelectLocale={selectLocale}
       />
@@ -419,6 +444,14 @@ function Guide() {
               onToggleFavorite={toggleFavorite}
             />
           </Suspense>
+        </main>
+      ) : isPrivacyActive ? (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+          <PrivacyPolicy />
+        </main>
+      ) : isContactsActive ? (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+          <ContactsPage />
         </main>
       ) : route.view === 'events' ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex-1">
@@ -685,8 +718,34 @@ function Guide() {
           </div>
 
           <div className="pt-6 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
-            <p>{t.footer.copyright(new Date().getFullYear())}</p>
-            <p className="text-zinc-400">{t.footer.dataNote}</p>
+            <div className="flex items-center gap-2 order-2 sm:order-1">
+              <p>{t.footer.copyright(new Date().getFullYear())}</p>
+              <span className="text-zinc-300">·</span>
+              <a
+                href={withLocale('/privacy', locale)}
+                onClick={(event) => {
+                  if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+                  event.preventDefault();
+                  navigate(withLocale('/privacy', locale));
+                }}
+                className="hover:text-zinc-900 transition-colors"
+              >
+                {t.footer.privacy}
+              </a>
+              <span className="text-zinc-300">·</span>
+              <a
+                href={withLocale('/contacts', locale)}
+                onClick={(event) => {
+                  if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+                  event.preventDefault();
+                  navigate(withLocale('/contacts', locale));
+                }}
+                className="hover:text-zinc-900 transition-colors"
+              >
+                {t.footer.contacts}
+              </a>
+            </div>
+            <p className="text-zinc-400 order-1 sm:order-2">{t.footer.dataNote}</p>
           </div>
         </div>
       </footer>

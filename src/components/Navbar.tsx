@@ -32,6 +32,8 @@ interface NavbarProps {
   isMapActive: boolean;
   isFavoritesActive: boolean;
   isAdminActive: boolean;
+  /** Privacy policy, contacts — any standalone page with no category of its own. */
+  isStaticPageActive?: boolean;
   onResetToHome: () => void;
   onSelectLocale: (locale: Locale) => void;
 }
@@ -116,6 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   isMapActive,
   isFavoritesActive,
   isAdminActive,
+  isStaticPageActive,
   onResetToHome,
   onSelectLocale,
 }) => {
@@ -124,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [draftQuery, setDraftQuery] = useState(searchQuery);
 
-  const isBrowsing = !isMapActive && !isFavoritesActive && !isAdminActive;
+  const isBrowsing = !isMapActive && !isFavoritesActive && !isAdminActive && !isStaticPageActive;
 
   const handleNavClick = (event: React.MouseEvent, category: CategoryId) => {
     if (event.metaKey || event.ctrlKey || event.shiftKey) return;

@@ -220,6 +220,52 @@ function pagesForLocale(locale: Locale): PageContent[] {
     image: places[0] ? getPlaceImage(places[0]) : undefined,
   });
 
+  pages.push({
+    path: '/privacy',
+    title: t.privacy.title,
+    description: t.privacy.seoDescription,
+    heading: t.privacy.title,
+    subtitle: t.privacy.intro,
+    body: `<p>${esc(t.privacy.updated(new Date().toISOString().slice(0, 10)))}</p>
+    <h2>${esc(t.privacy.noDataTitle)}</h2>
+    <p>${esc(t.privacy.noDataText)}</p>
+    <h2>${esc(t.privacy.localStorageTitle)}</h2>
+    <p>${esc(t.privacy.localStorageText)}</p>
+    <h2>${esc(t.privacy.formTitle)}</h2>
+    <p>${esc(t.privacy.formText)}</p>
+    <h2>${esc(t.privacy.hostingTitle)}</h2>
+    <p>${esc(t.privacy.hostingText)}</p>
+    <h2>${esc(t.privacy.contactTitle)}</h2>
+    <p>${esc(t.privacy.contactText)} myyarosfilm@gmail.com</p>`,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: t.privacy.title,
+      description: t.privacy.seoDescription,
+      url: absoluteUrl(withLocale('/privacy', locale)),
+      inLanguage: LOCALE_META[locale].htmlLang,
+    },
+  });
+
+  pages.push({
+    path: '/contacts',
+    title: t.contacts.title,
+    description: t.contacts.seoDescription,
+    heading: t.contacts.title,
+    subtitle: t.contacts.intro,
+    body: `<p>${esc(t.contacts.emailLabel)}: <a href="mailto:myyarosfilm@gmail.com">myyarosfilm@gmail.com</a></p>
+    <h2>${esc(t.contacts.formTitle)}</h2>
+    <p>${esc(t.contacts.formSubtitle)}</p>`,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: t.contacts.title,
+      description: t.contacts.seoDescription,
+      url: absoluteUrl(withLocale('/contacts', locale)),
+      inLanguage: LOCALE_META[locale].htmlLang,
+    },
+  });
+
   // One page per place.
   places.forEach((place) => {
     const path = placePath(place);

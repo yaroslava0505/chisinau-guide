@@ -277,6 +277,8 @@ const STATIC_PATHS = [
   '/activities',
   '/events',
   '/map',
+  '/privacy',
+  '/contacts',
 ];
 
 /** Locale-less paths of every indexable page. */
