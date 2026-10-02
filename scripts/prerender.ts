@@ -25,8 +25,9 @@ import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../src/i18n/t
 import { categoryCopy, districtLabel } from '../src/i18n/labels';
 import { absoluteUrl, withLocale } from '../src/router';
 import { localizeEvents, localizePlaces } from '../src/utils/localize';
-import { eventJsonLd, itemListJsonLd, placeJsonLd, websiteJsonLd } from '../src/utils/seo';
+import { eventJsonLd, itemListJsonLd, placeJsonLd, socialImageUrl, websiteJsonLd } from '../src/utils/seo';
 import { formatOpeningHours } from '../src/utils/openingHours';
+import { getPlaceImage } from '../src/utils/illustrations';
 import type { CategoryId, CityEvent, Place } from '../src/types';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -64,6 +65,8 @@ interface PageContent {
   /** Rendered inside #root, below the heading. */
   body: string;
   jsonLd: unknown;
+  /** Falls back to the site-wide default (set in index.html) when absent. */
+  image?: string;
 }
 
 /* ------------------------------------------------------------------ */
@@ -183,6 +186,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
       subtitle: copy.subtitle,
       body: placeList(inCategory, locale),
       jsonLd: itemListJsonLd(inCategory, absoluteUrl(withLocale(path, locale)), copy.h1, locale),
+      image: inCategory[0] ? getPlaceImage(inCategory[0]) : undefined,
     });
   });
 
@@ -202,6 +206,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     jsonLd: events.map((event) =>
       eventJsonLd(event, absoluteUrl(withLocale('/events', locale)), locale),
     ),
+    image: events[0]?.image,
   });
 
   pages.push({
@@ -212,6 +217,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     subtitle: t.seo.mapDescription,
     body: placeList(places, locale),
     jsonLd: itemListJsonLd(places, absoluteUrl(withLocale('/map', locale)), t.seo.mapTitle, locale),
+    image: places[0] ? getPlaceImage(places[0]) : undefined,
   });
 
   // One page per place.
@@ -225,6 +231,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
       subtitle: `${place.subcategory} · ${districtLabel(t, place.district)}`,
       body: placeDetail(place, locale),
       jsonLd: placeJsonLd(place, absoluteUrl(withLocale(path, locale)), locale),
+      image: getPlaceImage(place),
     });
   });
 
@@ -304,6 +311,15 @@ function render(page: PageContent, locale: Locale): string {
   replaceMeta('property', 'og:site_name', siteName);
   replaceMeta('name', 'twitter:title', fullTitle);
   replaceMeta('name', 'twitter:description', page.description);
+  // Without its own image, a page keeps the site-wide default already in the
+  // template rather than this tag being removed or left empty.
+  if (page.image) {
+    const social = socialImageUrl(page.image);
+    replaceMeta('property', 'og:image', social);
+    replaceMeta('name', 'twitter:image', social);
+    replaceMeta('property', 'og:image:width', '1200');
+    replaceMeta('property', 'og:image:height', '630');
+  }
 
   // Replace the site-wide City block with this page's own structured data.
   html = html.replace(

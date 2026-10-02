@@ -16,6 +16,7 @@ import {
   toggleStoredFavorite,
 } from './utils/storage';
 import { eventJsonLd, itemListJsonLd, placeJsonLd, updateSEO, websiteJsonLd } from './utils/seo';
+import { getPlaceImage } from './utils/illustrations';
 import { INITIAL_FILTERS, countActiveFilters, filterPlaces } from './utils/filters';
 import { analyzeQuery } from './utils/search';
 import { localizeEvents, localizePlaces } from './utils/localize';
@@ -164,7 +165,7 @@ function Guide() {
         description: selectedPlace.description.slice(0, 300),
         path,
         locale,
-        image: selectedPlace.photos[0],
+        image: getPlaceImage(selectedPlace),
         jsonLd: placeJsonLd(selectedPlace, canonical, locale),
       });
       return;

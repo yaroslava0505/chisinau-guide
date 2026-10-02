@@ -100,3 +100,13 @@ export function getIllustration(place: Place): string | null {
   const pool = (key && BY_SUBTYPE[key]) || BY_CATEGORY[place.category];
   return pool[hash(place.slug) % pool.length];
 }
+
+/**
+ * The image actually shown for a place — its own photo if it has one,
+ * otherwise the same illustration `PlacePhoto` renders. Used for SEO (meta
+ * tags, JSON-LD `image`) so a shared link's preview matches the page itself
+ * instead of falling back to the site-wide default image.
+ */
+export function getPlaceImage(place: Place): string {
+  return place.photos[0] ?? getIllustration(place) ?? '';
+}

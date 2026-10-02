@@ -3,6 +3,7 @@ import { SITE_ORIGIN, absoluteUrl, withLocale } from '../router';
 import { nextOccurrence, toIsoDate } from './events';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../i18n/types';
 import { getDictionary } from '../i18n';
+import { getPlaceImage } from './illustrations';
 
 const SCHEMA_SCRIPT_ID = 'schema-structured-data';
 const HREFLANG_CLASS = 'hreflang-alternate';
@@ -15,6 +16,17 @@ function upsertMeta(selector: string, attr: 'name' | 'property', key: string, co
     document.head.appendChild(element);
   }
   element.setAttribute('content', content);
+}
+
+/**
+ * Re-crops an Unsplash URL to the exact 1200×630 the `og:image:width`/
+ * `og:image:height` tags claim. Without this, a page-specific image (served
+ * at a different size for its in-app card/detail use) would contradict the
+ * dimensions those tags advertise.
+ */
+export function socialImageUrl(url: string): string {
+  const [base] = url.split('?');
+  return `${base}?q=80&w=1200&h=630&fit=crop`;
 }
 
 function upsertCanonical(href: string) {
@@ -102,7 +114,7 @@ export function placeJsonLd(place: Place, canonical: string, locale: Locale = DE
     description: place.description,
     url: canonical,
     inLanguage: LOCALE_META[locale].htmlLang,
-    image: place.photos,
+    image: [getPlaceImage(place)],
     address: {
       '@type': 'PostalAddress',
       streetAddress: place.address,
@@ -225,8 +237,11 @@ export function updateSEO({ title, description, path, locale, image, jsonLd, noi
   upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', description);
 
   if (image) {
-    upsertMeta('meta[property="og:image"]', 'property', 'og:image', image);
-    upsertMeta('meta[name="twitter:image"]', 'name', 'twitter:image', image);
+    const social = socialImageUrl(image);
+    upsertMeta('meta[property="og:image"]', 'property', 'og:image', social);
+    upsertMeta('meta[name="twitter:image"]', 'name', 'twitter:image', social);
+    upsertMeta('meta[property="og:image:width"]', 'property', 'og:image:width', '1200');
+    upsertMeta('meta[property="og:image:height"]', 'property', 'og:image:height', '630');
   }
 
   upsertMeta(
@@ -274,29 +289,38 @@ export function collectSitemapPaths(places: Place[]): string[] {
 
 export function generateSitemapXml(places: Place[], lastmod = new Date()): string {
   const stamp = toIsoDate(lastmod);
+  const placeByPath = new Map(
+    places.map((place) => [`/${place.category.replace('_', '-')}/${place.slug}`, place]),
+  );
 
   const entries = collectSitemapPaths(places).flatMap((path) => {
-    const isPlace = path.split('/').filter(Boolean).length === 2;
+    const place = placeByPath.get(path);
     const alternates = LOCALES.map(
       (locale) =>
         `    <xhtml:link rel="alternate" hreflang="${LOCALE_META[locale].htmlLang}" href="${absoluteUrl(withLocale(path, locale))}"/>`,
     ).join('\n');
+    // Lets Google Images attribute the illustration (or real photo, once one
+    // exists) shown on the page back to this URL.
+    const image = place
+      ? `\n    <image:image><image:loc>${socialImageUrl(getPlaceImage(place))}</image:loc></image:image>`
+      : '';
 
     // Every language of a page is its own URL, each declaring the full set.
     return LOCALES.map(
       (locale) => `  <url>
     <loc>${absoluteUrl(withLocale(path, locale))}</loc>
-${alternates}
+${alternates}${image}
     <lastmod>${stamp}</lastmod>
-    <changefreq>${isPlace ? 'weekly' : 'daily'}</changefreq>
-    <priority>${path === '/' ? '1.0' : isPlace ? '0.7' : '0.9'}</priority>
+    <changefreq>${place ? 'weekly' : 'daily'}</changefreq>
+    <priority>${path === '/' ? '1.0' : place ? '0.7' : '0.9'}</priority>
   </url>`,
     );
   });
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${entries.join('\n')}
 </urlset>
 `;
