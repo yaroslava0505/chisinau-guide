@@ -53,7 +53,10 @@ const BY_SUBTYPE: Record<string, string[]> = {
   photo: [U('1553592742-def0a198f084'), U('1766126535244-b75a7b8d511d')],
 
   // quiet places — venue type
-  library: [U('1521587760476-6c12a4b040da'), U('1507842217343-583bb7270b66')],
+  library: [
+    U('1521587760476-6c12a4b040da'), U('1507842217343-583bb7270b66'),
+    U('1760166699654-5d0e10f51994'), U('1754697831323-6d51e460ba8f'),
+  ],
 
   // remote work / cafes — venue type
   coworking: [U('1497215728101-856f4ea42174'), U('1527192491265-7e15c55b1ed2'), U('1758691737060-3814f16d5aba')],
