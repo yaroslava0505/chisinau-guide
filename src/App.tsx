@@ -49,6 +49,7 @@ import { PlaceCard } from './components/PlaceCard';
 import { PlaceDetailModal } from './components/PlaceDetailModal';
 import { EventsSection } from './components/EventsSection';
 import { FavoritesView } from './components/FavoritesView';
+import { AiPlanner } from './components/AiPlanner';
 import { AddPlaceForm } from './components/AddPlaceForm';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactsPage } from './components/ContactsPage';
@@ -498,6 +499,15 @@ function Guide() {
           )}
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 sm:space-y-14">
+            {isBrowsingHome && (
+              <AiPlanner
+                places={places}
+                favorites={favorites}
+                onToggleFavorite={toggleFavoriteFromCard}
+                onSelectPlace={selectPlace}
+              />
+            )}
+
             {isBrowsingHome && (
               <TodaySection
                 places={places}

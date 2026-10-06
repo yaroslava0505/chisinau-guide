@@ -106,6 +106,16 @@ export const ro: Dictionary = {
     openMap: 'Deschide harta',
   },
 
+  aiPlanner: {
+    title: 'Recomandări AI',
+    subtitle: 'Descrie cu cuvintele tale ce îți dorești — AI alege variante din catalogul ghidului',
+    placeholder: 'De exemplu: vreau să mă plimb cu copilul în seara asta',
+    submit: 'Recomandă',
+    loading: 'Căutăm…',
+    errorText: 'Nu am reușit să obținem recomandări. Încearcă din nou puțin mai târziu.',
+    emptyText: 'AI nu a găsit variante potrivite în catalog pentru această cerere.',
+  },
+
   filters: {
     title: 'Filtre',
     allCategories: 'toate categoriile',
