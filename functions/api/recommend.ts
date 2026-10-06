@@ -26,19 +26,32 @@ interface EventContext {
 
 const MAX_QUERY_LENGTH = 300;
 const MAX_RESULTS = 6;
+// Short field names and a clipped description are the two biggest levers on
+// the catalogue's token count — it's resent (or, once cached, re-read) on
+// every single request, so trimming it here is the highest-value place to
+// cut cost. See README § AI-підбір місць for the measured $/request impact.
+const DESCRIPTION_LIMIT = 90;
+
+/** Cuts at the last space within the limit instead of mid-word. */
+function clip(text: string, limit: number): string {
+  if (text.length <= limit) return text;
+  const cut = text.slice(0, limit);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${lastSpace > 0 ? cut.slice(0, lastSpace) : cut}…`;
+}
 
 function toCatalogueEntry(place: Place) {
   return {
     slug: place.slug,
-    category: place.category,
+    cat: place.category,
     name: place.name,
-    subcategory: place.subcategory,
+    sub: place.subcategory,
     district: place.district,
-    description: place.description,
+    desc: clip(place.description, DESCRIPTION_LIMIT),
     tags: place.tags ?? [],
-    kids_friendly: place.kids_friendly,
-    free_entry: place.free_entry,
-    price_level: place.price_level,
+    kids: place.kids_friendly,
+    free: place.free_entry,
+    price: place.price_level,
   };
 }
 
@@ -49,7 +62,7 @@ const KNOWN_SLUGS = new Set(INITIAL_PLACES.map((place) => place.slug));
 
 const SYSTEM_PROMPT = `Ти — асистент міського гіда "Кишинів Гід" по Кишиневу (Молдова). Відвідувач своїми словами описує, чого хоче зараз. Підбери від 1 до ${MAX_RESULTS} найбільш підходящих місць із каталогу нижче — і тільки з нього, ніколи не вигадуй місце, якого там немає.
 
-Каталог (JSON-масив, поля: slug, category, name, subcategory, district, description, tags, kids_friendly, free_entry, price_level):
+Каталог (JSON-масив, поля: slug, cat=категорія, name, sub=підкатегорія, district, desc=короткий опис (може бути обрізаний), tags, kids=для дітей, free=безкоштовний вхід, price=рівень цін 1-3):
 ${CATALOGUE_JSON}
 
 Відповідай викликом інструмента recommend_places.
@@ -114,8 +127,16 @@ export async function onRequestPost(context: EventContext): Promise<Response> {
     const response = await client.messages.create({
       model: 'claude-opus-5',
       max_tokens: 1024,
-      output_config: { effort: 'medium' },
-      system: [{ type: 'text', text: SYSTEM_PROMPT, cache_control: { type: 'ephemeral' } }],
+      // Matching a request against a provided list doesn't need deep
+      // reasoning — "low" keeps the (expensive, $25/1M) thinking/output
+      // tokens short without hurting match quality.
+      output_config: { effort: 'low' },
+      // The catalogue is identical across requests until the next deploy, so
+      // a 1h cache (vs the 5-minute default) keeps it warm across a whole
+      // day's worth of spread-out visitors, not just back-to-back ones.
+      system: [
+        { type: 'text', text: SYSTEM_PROMPT, cache_control: { type: 'ephemeral', ttl: '1h' } },
+      ],
       tools: [RECOMMEND_TOOL],
       tool_choice: { type: 'tool', name: 'recommend_places' },
       messages: [{ role: 'user', content: query }],
