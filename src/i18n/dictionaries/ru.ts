@@ -332,6 +332,10 @@ export const ru: Dictionary = {
     favoritesDescription: 'Сохранённые места Кишинёва, которые вы хотите посетить.',
     adminTitle: 'Админ-панель',
     adminDescription: 'Управление каталогом Кишинёв Гид.',
+    notFoundTitle: 'Страница не найдена',
+    notFoundDescription: 'Такой страницы не существует, либо ссылка устарела.',
+    notFoundText: 'Возможно, адрес введён с ошибкой или ссылка, по которой вы пришли, устарела.',
+    notFoundBackHome: 'На главную',
   },
 
   privacy: {

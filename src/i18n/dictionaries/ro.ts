@@ -338,6 +338,10 @@ export const ro: Dictionary = {
     favoritesDescription: 'Locurile salvate din Chișinău pe care vrei să le vizitezi.',
     adminTitle: 'Panou de administrare',
     adminDescription: 'Gestionarea catalogului Ghidul Chișinăului.',
+    notFoundTitle: 'Pagina nu a fost găsită',
+    notFoundDescription: 'Această pagină nu există sau linkul este învechit.',
+    notFoundText: 'Poate adresa a fost introdusă greșit sau linkul pe care l-ai urmat este învechit.',
+    notFoundBackHome: 'Spre pagina principală',
   },
 
   privacy: {

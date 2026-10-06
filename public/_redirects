@@ -1,1 +1,18 @@
-/*    /index.html   200
+# Every real page (home, categories, places, events, map, privacy, contacts)
+# is a prerendered static file, so it's served directly — none of these rules
+# ever apply to a real URL.
+#
+# /favorites and /admin are genuine client-only routes with no static file of
+# their own (favorites is personal, admin is noindex and code-split out of
+# public builds), so they still need to load the SPA shell.
+/favorites       /index.html   200
+/ru/favorites    /index.html   200
+/ro/favorites    /index.html   200
+/admin           /index.html   200
+/ru/admin        /index.html   200
+/ro/admin        /index.html   200
+
+# Anything else has no matching page: a real 404, not a 200 with the home
+# page's content (a "soft 404" — confuses search engines about which URLs are
+# real). The SPA still mounts and shows its own not-found message.
+/*    /404.html   404

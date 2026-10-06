@@ -67,6 +67,8 @@ interface PageContent {
   jsonLd: unknown;
   /** Falls back to the site-wide default (set in index.html) when absent. */
   image?: string;
+  /** Default is `index, follow` (the value already in the template). */
+  noindex?: boolean;
 }
 
 /* ------------------------------------------------------------------ */
@@ -350,6 +352,7 @@ function render(page: PageContent, locale: Locale): string {
   };
 
   replaceMeta('name', 'description', page.description);
+  replaceMeta('name', 'robots', page.noindex ? 'noindex, follow' : 'index, follow');
   replaceMeta('property', 'og:title', fullTitle);
   replaceMeta('property', 'og:description', page.description);
   replaceMeta('property', 'og:url', canonical);
@@ -415,4 +418,27 @@ LOCALES.forEach((locale) => {
   });
 });
 
-console.log(`Prerendered ${written} pages → dist/`);
+// A real 404 for any path that isn't one of the pages above (see
+// `public/_redirects`, which points unmatched requests here with HTTP 404 —
+// without that, every bad URL served the home page with status 200, a
+// textbook soft-404). The SPA still mounts: `parsePath` classifies whatever
+// the visitor actually typed as `notfound` client-side and renders the same
+// message, regardless of what generic URL this static file was built for.
+const notFoundT = getDictionary(DEFAULT_LOCALE);
+const notFoundPage: PageContent = {
+  path: '/404',
+  title: notFoundT.seo.notFoundTitle,
+  description: notFoundT.seo.notFoundDescription,
+  heading: notFoundT.seo.notFoundTitle,
+  subtitle: notFoundT.seo.notFoundText,
+  body: `<p><a href="/">${esc(notFoundT.seo.notFoundBackHome)}</a></p>`,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: notFoundT.seo.notFoundTitle,
+  },
+  noindex: true,
+};
+writeFileSync(join(distDir, '404.html'), render(notFoundPage, DEFAULT_LOCALE), 'utf8');
+
+console.log(`Prerendered ${written} pages → dist/ (+ 404.html)`);

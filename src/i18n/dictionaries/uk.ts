@@ -337,6 +337,10 @@ export const uk = {
     favoritesDescription: 'Збережені місця Кишинева, які ви хочете відвідати.',
     adminTitle: 'Адмін-панель',
     adminDescription: 'Керування каталогом Кишинів Гід.',
+    notFoundTitle: 'Сторінку не знайдено',
+    notFoundDescription: 'Такої сторінки не існує або посилання застаріло.',
+    notFoundText: 'Можливо, адресу введено з помилкою або посилання, за яким ви прийшли, застаріло.',
+    notFoundBackHome: 'На головну',
   },
 
   privacy: {

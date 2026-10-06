@@ -241,15 +241,23 @@ function Guide() {
       return;
     }
 
+    if (route.view === 'notfound') {
+      updateSEO({
+        title: t.seo.notFoundTitle,
+        description: t.seo.notFoundDescription,
+        path,
+        locale,
+        noindex: true,
+      });
+      return;
+    }
+
     updateSEO({
       title: t.seo.homeTitle,
       description: t.seo.homeDescription,
       path: '/',
       locale,
       jsonLd: websiteJsonLd(locale),
-      // An unknown path falls back to the home feed, but must not be indexed
-      // under that URL.
-      noindex: route.view === 'notfound',
     });
   }, [route, selectedPlace, locale, t, copy, events, filteredPlaces]);
 
@@ -362,7 +370,7 @@ function Guide() {
   const isPrivacyActive = route.view === 'privacy';
   const isContactsActive = route.view === 'contacts';
   const isAdminActive = ADMIN_ENABLED && route.view === 'admin';
-  const isHome = route.view === 'home' || route.view === 'notfound';
+  const isHome = route.view === 'home';
 
   const activeFilterCount = countActiveFilters(filters);
   // With a search or filters active the results should dominate the page, so
@@ -456,6 +464,26 @@ function Guide() {
       ) : route.view === 'events' ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex-1">
           <EventsSection events={events} variant="page" />
+        </main>
+      ) : route.view === 'notfound' ? (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 py-20 text-center">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+            {t.seo.notFoundTitle}
+          </h1>
+          <p className="mt-3 text-sm sm:text-base text-zinc-500 max-w-md mx-auto">
+            {t.seo.notFoundText}
+          </p>
+          <a
+            href={withLocale('/', locale)}
+            onClick={(event) => {
+              if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+              event.preventDefault();
+              navigate(withLocale('/', locale));
+            }}
+            className="inline-flex items-center gap-1.5 mt-6 px-5 py-3 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white text-sm font-bold transition-colors"
+          >
+            {t.seo.notFoundBackHome}
+          </a>
         </main>
       ) : (
         <main className="flex-1 w-full">
