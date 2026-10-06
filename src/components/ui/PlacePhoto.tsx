@@ -52,12 +52,16 @@ export const PlacePhoto: React.FC<PlacePhotoProps> = ({
     );
   }
 
+  // An illustration's alt text says what it honestly is — a stock image for
+  // this kind of place, not a photo of this specific one — so it's useful to
+  // both search engines and screen readers instead of being hidden from both.
+  const illustrationAlt = `${t.common.illustrative}: ${place.subcategory}`;
+
   return (
     <span className={`relative block overflow-hidden ${className}`}>
       <img
         src={src}
-        alt={real ? alt : ''}
-        aria-hidden={real ? undefined : true}
+        alt={real ? alt : illustrationAlt}
         loading="lazy"
         className="w-full h-full object-cover"
       />

@@ -29,7 +29,10 @@ const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event, t }) 
       <div className="relative aspect-[16/9] overflow-hidden bg-zinc-100">
         <img
           src={event.image}
-          alt={event.title}
+          // Every event image is a themed stock illustration (see the note
+          // below), never a photo of the event itself — the alt text says so
+          // instead of claiming otherwise.
+          alt={`${t.common.illustrative}: ${event.category}`}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
         />
