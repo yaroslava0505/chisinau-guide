@@ -4,13 +4,16 @@
 #
 # /favorites and /admin are genuine client-only routes with no static file of
 # their own (favorites is personal, admin is noindex and code-split out of
-# public builds), so they still need to load the SPA shell.
-/favorites       /index.html   200
-/ru/favorites    /index.html   200
-/ro/favorites    /index.html   200
-/admin           /index.html   200
-/ru/admin        /index.html   200
-/ro/admin        /index.html   200
+# public builds), so they still need to load the SPA shell. The target is `/`,
+# not `/index.html` — Cloudflare treats the literal `/index.html` path as an
+# alias of `/` and 308-redirects to it, which would lose the actual URL the
+# visitor is on before the SPA ever mounts to read it.
+/favorites       /   200
+/ru/favorites    /   200
+/ro/favorites    /   200
+/admin           /   200
+/ru/admin        /   200
+/ro/admin        /   200
 
 # Anything else has no matching page: a real 404, not a 200 with the home
 # page's content (a "soft 404" — confuses search engines about which URLs are
