@@ -95,7 +95,7 @@ Netlify-формат `public/_redirects` і `public/_headers` без змін �
    * `VITE_SITE_URL` = `https://chisinau-guide.com`
    * `SITE_URL` = `https://chisinau-guide.com`
    * `VITE_FORMSPREE_ENDPOINT` = ваш endpoint з [formspree.io](https://formspree.io)
-   * `ANTHROPIC_API_KEY` = ваш ключ із [console.anthropic.com](https://console.anthropic.com) —
+   * `GEMINI_API_KEY` = ваш ключ із [aistudio.google.com](https://aistudio.google.com/apikey) —
      додавайте з позначкою **Encrypt**, це секрет (див. «AI-підбір місць» нижче)
    * `NODE_VERSION` = `24`
    * `VITE_ENABLE_ADMIN` — **не задавати**: без нього маршрут `/admin`
@@ -138,21 +138,26 @@ Endpoint — не секрет (він публічний, потрапляє в
 1. `src/components/AiPlanner.tsx` шле запит на `/api/recommend`.
 2. `functions/api/recommend.ts` — **Cloudflare Pages Function**: окрема
    серверна функція (не частина React-бандла), яка звертається до
-   [Claude API](https://console.anthropic.com) з каталогом місць і просить
-   модель підібрати відповідні `slug`-и через строгий виклик інструмента —
-   тому відповідь завжди має очікувану форму, а не "сподіваємось, що це
-   правильний JSON".
-3. Ключ API (`ANTHROPIC_API_KEY`) лишається на сервері — на відміну від
+   [Gemini API](https://aistudio.google.com) з каталогом місць і просить
+   модель підібрати відповідні `slug`-и, вимагаючи відповідь у вигляді JSON за
+   фіксованою схемою (`responseSchema`) — тому відповідь завжди має очікувану
+   форму, а не "сподіваємось, що це правильний JSON".
+3. Ключ API (`GEMINI_API_KEY`) лишається на сервері — на відміну від
    `VITE_*`-змінних, він **ніколи** не потрапляє в клієнтський бандл. Задається
    лише в Cloudflare → Settings → Environment variables, з позначкою
    **Encrypt** (див. `.env.example`).
 4. Модель бачить лише каталог, який уже є на сайті, і їй прямо заборонено
    вигадувати місця, яких там немає — та сама «правило чесності», що й для
    решти каталогу.
+5. Модель — `gemini-3.5-flash-lite`: найдешевший/найшвидший рівень Gemini,
+   достатній для підбору зі списку; каталог надсилається в скороченому
+   вигляді (коротші ключі, обрізані описи), щоб менше платити за вхідні
+   токени на кожен запит.
 
-Без заданого `ANTHROPIC_API_KEY` функція повертає `503` і форма чесно
-показує помилку, а не вдає, що підбір спрацював. Це платний API (оплата за
-запит) — функція сама по собі не обмежує частоту запитів; якщо з'явиться
+Без заданого `GEMINI_API_KEY` функція повертає `503` і форма чесно показує
+помилку, а не вдає, що підбір спрацював. Це платний API (є й безкоштовна
+квота — див. [ai.google.dev/pricing](https://ai.google.dev/gemini-api/docs/pricing))
+— функція сама по собі не обмежує частоту запитів; якщо з'явиться
 зловживання, варто додати Cloudflare Rate Limiting Rules або Turnstile
 окремо.
 

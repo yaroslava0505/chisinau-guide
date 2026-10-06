@@ -2,19 +2,19 @@
  * Cloudflare Pages Function — POST /api/recommend
  *
  * Backs the homepage's free-text "AI підбір" box. Runs server-side so the
- * Anthropic API key never reaches the browser (unlike VITE_* values, this one
+ * Gemini API key never reaches the browser (unlike VITE_* values, this one
  * must stay a secret — see README § AI-підбір місць).
  *
  * The model only ever sees the catalogue already shipped on the site (never
- * invents a place) and must answer through a strict tool call, so the
+ * invents a place) and must answer with JSON matching a fixed schema, so the
  * response shape is guaranteed rather than hopefully-parsed free text.
  */
-import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenAI } from '@google/genai';
 import { INITIAL_PLACES } from '../../src/data/chisinauPlaces';
 import type { Place } from '../../src/types';
 
 interface Env {
-  ANTHROPIC_API_KEY?: string;
+  GEMINI_API_KEY?: string;
   /** Same value as VITE_SITE_URL — used to reject cross-site requests. */
   SITE_URL?: string;
 }
@@ -27,9 +27,8 @@ interface EventContext {
 const MAX_QUERY_LENGTH = 300;
 const MAX_RESULTS = 6;
 // Short field names and a clipped description are the two biggest levers on
-// the catalogue's token count — it's resent (or, once cached, re-read) on
-// every single request, so trimming it here is the highest-value place to
-// cut cost. See README § AI-підбір місць for the measured $/request impact.
+// the catalogue's token count — it's resent on every single request, so
+// trimming it here is the highest-value place to cut cost.
 const DESCRIPTION_LIMIT = 90;
 
 /** Cuts at the last space within the limit instead of mid-word. */
@@ -55,8 +54,6 @@ function toCatalogueEntry(place: Place) {
   };
 }
 
-// Built once per isolate (not per request) and marked cacheable below, so a
-// burst of requests only pays full price for the catalogue once.
 const CATALOGUE_JSON = JSON.stringify(INITIAL_PLACES.map(toCatalogueEntry));
 const KNOWN_SLUGS = new Set(INITIAL_PLACES.map((place) => place.slug));
 
@@ -65,24 +62,18 @@ const SYSTEM_PROMPT = `Ти — асистент міського гіда "Ки
 Каталог (JSON-масив, поля: slug, cat=категорія, name, sub=підкатегорія, district, desc=короткий опис (може бути обрізаний), tags, kids=для дітей, free=безкоштовний вхід, price=рівень цін 1-3):
 ${CATALOGUE_JSON}
 
-Відповідай викликом інструмента recommend_places.
+Відповідай лише JSON-обʼєктом з полями:
 - "intro": одне коротке дружнє речення тією самою мовою, якою написаний запит (українська/російська/румунська), без слів "AI", "алгоритм" чи "модель".
 - "slugs": slug-и з каталогу вище, найкращі варіанти першими.
 Якщо в каталозі справді немає нічого підходящого — поверни порожній масив і чесно скажи про це в intro, замість вигаданої відповіді.`;
 
-const RECOMMEND_TOOL: Anthropic.Tool = {
-  name: 'recommend_places',
-  description: "Return the catalogue places that best match the visitor's request.",
-  input_schema: {
-    type: 'object',
-    properties: {
-      intro: { type: 'string' },
-      slugs: { type: 'array', items: { type: 'string' } },
-    },
-    required: ['intro', 'slugs'],
-    additionalProperties: false,
+const RESPONSE_SCHEMA = {
+  type: 'OBJECT',
+  properties: {
+    intro: { type: 'STRING' },
+    slugs: { type: 'ARRAY', items: { type: 'STRING' } },
   },
-  strict: true,
+  required: ['intro', 'slugs'],
 };
 
 function json(data: unknown, status = 200): Response {
@@ -105,7 +96,7 @@ export async function onRequestPost(context: EventContext): Promise<Response> {
     return json({ error: 'forbidden' }, 403);
   }
 
-  if (!env.ANTHROPIC_API_KEY) {
+  if (!env.GEMINI_API_KEY) {
     return json({ error: 'not_configured' }, 503);
   }
 
@@ -121,40 +112,30 @@ export async function onRequestPost(context: EventContext): Promise<Response> {
     return json({ error: 'empty_query' }, 400);
   }
 
-  const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
+  const ai = new GoogleGenAI({ apiKey: env.GEMINI_API_KEY });
 
   try {
-    const response = await client.messages.create({
-      model: 'claude-opus-5',
-      max_tokens: 1024,
-      // Matching a request against a provided list doesn't need deep
-      // reasoning — "low" keeps the (expensive, $25/1M) thinking/output
-      // tokens short without hurting match quality.
-      output_config: { effort: 'low' },
-      // The catalogue is identical across requests until the next deploy, so
-      // a 1h cache (vs the 5-minute default) keeps it warm across a whole
-      // day's worth of spread-out visitors, not just back-to-back ones.
-      system: [
-        { type: 'text', text: SYSTEM_PROMPT, cache_control: { type: 'ephemeral', ttl: '1h' } },
-      ],
-      tools: [RECOMMEND_TOOL],
-      tool_choice: { type: 'tool', name: 'recommend_places' },
-      messages: [{ role: 'user', content: query }],
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.5-flash-lite',
+      contents: query,
+      config: {
+        systemInstruction: SYSTEM_PROMPT,
+        responseMimeType: 'application/json',
+        responseSchema: RESPONSE_SCHEMA,
+      },
     });
 
-    const toolUse = response.content.find(
-      (block): block is Anthropic.ToolUseBlock => block.type === 'tool_use',
-    );
-    if (!toolUse) {
+    const text = response.text;
+    if (!text) {
       return json({ error: 'no_result' }, 502);
     }
 
-    const input = toolUse.input as { intro?: string; slugs?: unknown };
-    const slugs = Array.isArray(input.slugs)
-      ? input.slugs.filter((slug): slug is string => typeof slug === 'string' && KNOWN_SLUGS.has(slug)).slice(0, MAX_RESULTS)
+    const parsed = JSON.parse(text) as { intro?: string; slugs?: unknown };
+    const slugs = Array.isArray(parsed.slugs)
+      ? parsed.slugs.filter((slug): slug is string => typeof slug === 'string' && KNOWN_SLUGS.has(slug)).slice(0, MAX_RESULTS)
       : [];
 
-    return json({ intro: input.intro ?? '', slugs });
+    return json({ intro: parsed.intro ?? '', slugs });
   } catch (error) {
     console.error('recommend function error', error);
     return json({ error: 'upstream_error' }, 502);
