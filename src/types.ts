@@ -234,6 +234,7 @@ export type EventType =
   | 'concert'
   | 'festival'
   | 'exhibition'
+  | 'theatre'
   | 'lecture'
   | 'workshop'
   | 'kids'

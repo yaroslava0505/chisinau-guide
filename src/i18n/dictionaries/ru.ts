@@ -522,6 +522,7 @@ export const ru: Dictionary = {
       concert: 'Концерты',
       festival: 'Фестивали',
       exhibition: 'Выставки',
+      theatre: 'Спектакли',
       lecture: 'Лекции',
       workshop: 'Мастер-классы',
       kids: 'Детские мероприятия',

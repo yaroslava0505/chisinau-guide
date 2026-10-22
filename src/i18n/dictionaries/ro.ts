@@ -528,6 +528,7 @@ export const ro: Dictionary = {
       concert: 'Concerte',
       festival: 'Festivaluri',
       exhibition: 'Expoziții',
+      theatre: 'Spectacole',
       lecture: 'Lecții',
       workshop: 'Ateliere',
       kids: 'Evenimente pentru copii',

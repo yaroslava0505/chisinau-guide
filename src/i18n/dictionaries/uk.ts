@@ -527,6 +527,7 @@ export const uk = {
       concert: 'Концерти',
       festival: 'Фестивалі',
       exhibition: 'Виставки',
+      theatre: 'Вистави',
       lecture: 'Лекції',
       workshop: 'Майстер-класи',
       kids: 'Дитячі заходи',

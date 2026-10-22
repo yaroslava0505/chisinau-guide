@@ -104,7 +104,7 @@ export const ACTIVITY_TYPE_VALUES = [
 export const QUIET_TYPE_VALUES = ['park', 'cafe', 'library', 'nature'] as const;
 
 export const EVENT_TYPE_VALUES: EventType[] = [
-  'concert', 'festival', 'exhibition', 'lecture', 'workshop', 'kids', 'sport', 'cinema',
+  'concert', 'festival', 'exhibition', 'theatre', 'lecture', 'workshop', 'kids', 'sport', 'cinema',
 ];
 
 export const PRICE_LEVEL_VALUES = [1, 2, 3] as const;
