@@ -58,18 +58,16 @@ export const AiPlanner: React.FC<AiPlannerProps> = ({
     .filter((place): place is Place => Boolean(place));
 
   return (
-    <section className="bg-zinc-900 rounded-3xl p-6 sm:p-8 text-white">
-      <div className="flex items-center gap-2.5 mb-4">
-        <span className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-          <Sparkles className="w-4 h-4" aria-hidden="true" />
+    <section className="bg-white rounded-3xl border border-zinc-200 shadow-sm shadow-zinc-200/60 p-6 sm:p-10">
+      <div className="flex items-center gap-3 mb-3">
+        <span className="w-11 h-11 rounded-2xl bg-zinc-900 text-white flex items-center justify-center shrink-0">
+          <Sparkles className="w-5 h-5" aria-hidden="true" />
         </span>
-        <div>
-          <h2 className="text-lg sm:text-xl font-extrabold font-['Outfit',sans-serif]">
-            {t.aiPlanner.title}
-          </h2>
-          <p className="text-xs text-zinc-400">{t.aiPlanner.subtitle}</p>
-        </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+          {t.aiPlanner.title}
+        </h2>
       </div>
+      <p className="text-sm sm:text-base text-zinc-600 mb-6 max-w-2xl">{t.aiPlanner.subtitle}</p>
 
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <textarea
@@ -78,12 +76,12 @@ export const AiPlanner: React.FC<AiPlannerProps> = ({
           placeholder={t.aiPlanner.placeholder}
           rows={2}
           maxLength={MAX_QUERY_LENGTH}
-          className="flex-1 bg-white/10 border border-white/10 rounded-2xl px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/40 resize-none"
+          className="flex-1 bg-zinc-50 border border-zinc-200 rounded-2xl px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-4 focus:ring-zinc-900/5 resize-none transition-all"
         />
         <button
           type="submit"
           disabled={status === 'loading' || !query.trim()}
-          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-zinc-900 text-sm font-bold hover:bg-zinc-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shrink-0 min-h-[48px]"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-zinc-900 text-white text-sm font-bold hover:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shrink-0 min-h-[48px]"
         >
           <Send className="w-4 h-4" aria-hidden="true" />
           {status === 'loading' ? t.aiPlanner.loading : t.aiPlanner.submit}
@@ -91,12 +89,12 @@ export const AiPlanner: React.FC<AiPlannerProps> = ({
       </form>
 
       {status === 'error' && (
-        <p className="mt-4 text-sm text-rose-300">{t.aiPlanner.errorText}</p>
+        <p className="mt-4 text-sm text-rose-600">{t.aiPlanner.errorText}</p>
       )}
 
       {status === 'done' && (
         <div className="mt-5 space-y-4">
-          {intro && <p className="text-sm text-zinc-200">{intro}</p>}
+          {intro && <p className="text-sm text-zinc-700">{intro}</p>}
           {results.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {results.map((place) => (
@@ -110,7 +108,7 @@ export const AiPlanner: React.FC<AiPlannerProps> = ({
               ))}
             </div>
           ) : (
-            <p className="text-sm text-zinc-400">{t.aiPlanner.emptyText}</p>
+            <p className="text-sm text-zinc-500">{t.aiPlanner.emptyText}</p>
           )}
         </div>
       )}

@@ -1,24 +1,14 @@
 import React from 'react';
-import { Search, X } from 'lucide-react';
 import { SCENARIOS } from '../data/taxonomy';
 import type { ScenarioId } from '../types';
 import { useT } from '../i18n';
 
 interface HeroSearchProps {
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
-  onSubmitSearch: () => void;
   onScenarioSelect: (id: ScenarioId) => void;
   activeScenario: ScenarioId | null;
 }
 
-export const HeroSearch: React.FC<HeroSearchProps> = ({
-  searchQuery,
-  onSearchChange,
-  onSubmitSearch,
-  onScenarioSelect,
-  activeScenario,
-}) => {
+export const HeroSearch: React.FC<HeroSearchProps> = ({ onScenarioSelect, activeScenario }) => {
   const t = useT();
 
   return (
@@ -35,51 +25,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
         {t.hero.subtitle}
       </p>
 
-      <form
-        className="mt-8 sm:mt-10"
-        onSubmit={(event) => {
-          event.preventDefault();
-          onSubmitSearch();
-        }}
-        role="search"
-      >
-        <div className="relative flex items-center gap-2 bg-white rounded-2xl border border-zinc-300 p-2 shadow-lg shadow-zinc-200/60 focus-within:border-zinc-900 focus-within:ring-4 focus-within:ring-zinc-900/5 transition-all">
-          <Search className="w-5 h-5 text-zinc-400 ml-3 shrink-0" aria-hidden="true" />
-
-          <input
-            type="search"
-            id="hero-search-input"
-            value={searchQuery}
-            onChange={(event) => onSearchChange(event.target.value)}
-            placeholder={t.hero.placeholder}
-            aria-label={t.hero.placeholder}
-            className="flex-1 min-w-0 bg-transparent text-base text-zinc-900 placeholder:text-zinc-400 focus:outline-none py-2.5"
-          />
-
-          {searchQuery && (
-            <button
-              type="button"
-              onClick={() => onSearchChange('')}
-              className="p-2 text-zinc-400 hover:text-zinc-900 rounded-lg hover:bg-zinc-100 transition-colors"
-              aria-label={t.common.close}
-            >
-              <X className="w-5 h-5" />
-            </button>
-          )}
-
-          <button
-            type="submit"
-            className="hidden sm:inline-flex items-center px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-sm font-semibold transition-colors shrink-0"
-          >
-            {t.common.find}
-          </button>
-        </div>
-      </form>
-
-      <div className="mt-6 sm:mt-8">
-        <p className="text-base font-bold text-zinc-900 mb-1">{t.hero.want}</p>
-        <p className="text-xs text-zinc-500 mb-4">{t.hero.scenariosLabel}</p>
-
+      <div className="mt-8 sm:mt-10">
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1 sm:flex-wrap sm:justify-center sm:overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0">
           {SCENARIOS.map((scenario) => {
             const isActive = activeScenario === scenario.id;

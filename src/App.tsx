@@ -500,13 +500,7 @@ function Guide() {
       ) : (
         <main className="flex-1 w-full">
           {isHome && (
-            <HeroSearch
-              searchQuery={filters.searchQuery}
-              onSearchChange={(value) => updateFilter('searchQuery', value)}
-              onSubmitSearch={() => runSearch(filters.searchQuery)}
-              onScenarioSelect={selectScenario}
-              activeScenario={activeScenario}
-            />
+            <HeroSearch onScenarioSelect={selectScenario} activeScenario={activeScenario} />
           )}
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 sm:space-y-14">
@@ -516,6 +510,15 @@ function Guide() {
                 favorites={favorites}
                 onToggleFavorite={toggleFavoriteFromCard}
                 onSelectPlace={selectPlace}
+              />
+            )}
+
+            {isBrowsingHome && (
+              <EventsSection
+                events={events}
+                variant="home"
+                limit={2}
+                onOpenAllEvents={() => navigate(withLocale('/events', locale))}
               />
             )}
 
@@ -674,13 +677,6 @@ function Guide() {
                     {t.home.openMap}
                   </button>
                 </section>
-
-                <EventsSection
-                  events={events}
-                  variant="home"
-                  limit={2}
-                  onOpenAllEvents={() => navigate(withLocale('/events', locale))}
-                />
 
                 <AddPlaceForm />
               </>
