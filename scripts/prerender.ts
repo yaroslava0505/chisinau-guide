@@ -224,6 +224,11 @@ function pagesForLocale(locale: Locale): PageContent[] {
     }).join('')}<li><a href="${esc(withLocale('/events', locale))}">${esc(
       categoryCopy(t, 'events')!.h1,
     )}</a></li><li><a href="${esc(withLocale('/map', locale))}">${esc(t.seo.mapTitle)}</a></li></ul></nav>
+    ${
+      articles.length > 0
+        ? `<h2>${esc(t.articles.homeTitle)}</h2>\n    ${articleList(articles, locale)}`
+        : ''
+    }
     ${placeList(places, locale)}`,
     jsonLd: websiteJsonLd(locale),
   });
