@@ -1,11 +1,14 @@
-import type { CityEvent, Place } from '../types';
+import type { CategoryId, CityEvent, Place } from '../types';
 import { SITE_ORIGIN, absoluteUrl, withLocale } from '../router';
 import { nextOccurrence, toIsoDate } from './events';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../i18n/types';
 import { getDictionary } from '../i18n';
+import { categoryCopy } from '../i18n/labels';
 import { getPlaceImage } from './illustrations';
 
 const SCHEMA_SCRIPT_ID = 'schema-structured-data';
+/** Must match the id `scripts/prerender.ts` gives the breadcrumb script. */
+const BREADCRUMB_SCRIPT_ID = 'schema-breadcrumb-data';
 const HREFLANG_CLASS = 'hreflang-alternate';
 
 function upsertMeta(selector: string, attr: 'name' | 'property', key: string, content: string) {
@@ -65,11 +68,11 @@ function upsertHreflang(basePath: string) {
   add('x-default', absoluteUrl(withLocale(basePath, DEFAULT_LOCALE)));
 }
 
-function upsertJsonLd(data: unknown) {
-  let script = document.getElementById(SCHEMA_SCRIPT_ID);
+function upsertScriptJsonLd(id: string, data: unknown) {
+  let script = document.getElementById(id);
   if (!script) {
     script = document.createElement('script');
-    script.id = SCHEMA_SCRIPT_ID;
+    script.id = id;
     script.setAttribute('type', 'application/ld+json');
     document.head.appendChild(script);
   }
@@ -219,6 +222,36 @@ export function contactsJsonLd(locale: Locale = DEFAULT_LOCALE) {
   };
 }
 
+/**
+ * Mirrors `breadcrumbJsonLd` in `scripts/prerender.ts` exactly, so the trail
+ * a crawler sees on first load matches what a real visitor's browser shows
+ * after SPA navigation. `leafName` is only used for two-segment paths (place
+ * detail pages); other routes' own name already comes from the category
+ * segment.
+ */
+export function breadcrumbJsonLd(path: string, locale: Locale = DEFAULT_LOCALE, leafName?: string) {
+  const t = getDictionary(locale);
+  const segments = path.split('/').filter(Boolean);
+  const items = [{ name: t.common.siteName, path: '/' }];
+
+  if (segments.length >= 1) {
+    const copy = categoryCopy(t, segments[0].replace('-', '_') as CategoryId);
+    if (copy) items.push({ name: copy.name, path: `/${segments[0]}` });
+  }
+  if (segments.length === 2 && leafName) items.push({ name: leafName, path });
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(withLocale(item.path, locale)),
+    })),
+  };
+}
+
 export function itemListJsonLd(
   places: Place[],
   canonical: string,
@@ -250,11 +283,22 @@ export interface SeoOptions {
   image?: string;
   /** Pre-built structured data for this page. */
   jsonLd?: unknown;
+  /** Place/page name for the breadcrumb's leaf item, e.g. a place's own name. */
+  breadcrumbLeaf?: string;
   /** Set for pages that must not be indexed (admin, favourites, unknown paths). */
   noindex?: boolean;
 }
 
-export function updateSEO({ title, description, path, locale, image, jsonLd, noindex }: SeoOptions) {
+export function updateSEO({
+  title,
+  description,
+  path,
+  locale,
+  image,
+  jsonLd,
+  breadcrumbLeaf,
+  noindex,
+}: SeoOptions) {
   const siteName = getDictionary(locale).common.siteName;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const canonical = absoluteUrl(withLocale(path, locale));
@@ -289,7 +333,8 @@ export function updateSEO({ title, description, path, locale, image, jsonLd, noi
 
   upsertCanonical(canonical);
   upsertHreflang(path);
-  upsertJsonLd(jsonLd ?? websiteJsonLd(locale));
+  upsertScriptJsonLd(SCHEMA_SCRIPT_ID, jsonLd ?? websiteJsonLd(locale));
+  upsertScriptJsonLd(BREADCRUMB_SCRIPT_ID, breadcrumbJsonLd(path, locale, breadcrumbLeaf));
 }
 
 /* ------------------------------------------------------------------ */

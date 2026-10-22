@@ -178,6 +178,7 @@ function Guide() {
         locale,
         image: getPlaceImage(selectedPlace),
         jsonLd: placeJsonLd(selectedPlace, canonical, locale),
+        breadcrumbLeaf: selectedPlace.name,
       });
       return;
     }

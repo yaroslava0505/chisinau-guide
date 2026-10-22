@@ -26,6 +26,7 @@ import { categoryCopy, districtLabel } from '../src/i18n/labels';
 import { absoluteUrl, withLocale } from '../src/router';
 import { localizeEvents, localizePlaces } from '../src/utils/localize';
 import {
+  breadcrumbJsonLd,
   contactsJsonLd,
   eventJsonLd,
   itemListJsonLd,
@@ -53,13 +54,14 @@ const jsonLdScript = (data: unknown, id?: string): string =>
   `<script${id ? ` id="${id}"` : ''} type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 
 /**
- * Must match `SCHEMA_SCRIPT_ID` in src/utils/seo.ts: on client-side route
- * changes `updateSEO` looks up this id to replace the page schema in place.
- * Without it, SPA navigation finds no match and appends a second, duplicate
- * script instead — leaving the previous page's schema stale in the DOM
- * alongside the new one.
+ * Must match `SCHEMA_SCRIPT_ID`/`BREADCRUMB_SCRIPT_ID` in src/utils/seo.ts:
+ * on client-side route changes `updateSEO` looks up these ids to replace the
+ * page schema in place. Without them, SPA navigation finds no match and
+ * appends duplicate scripts instead — leaving the previous page's schema
+ * stale in the DOM alongside the new one.
  */
 const SCHEMA_SCRIPT_ID = 'schema-structured-data';
+const BREADCRUMB_SCRIPT_ID = 'schema-breadcrumb-data';
 
 const CATEGORIES: CategoryId[] = [
   'remote_work',
@@ -295,29 +297,6 @@ function pagesForLocale(locale: Locale): PageContent[] {
 
 const template = readFileSync(join(distDir, 'index.html'), 'utf8');
 
-function breadcrumbJsonLd(page: PageContent, locale: Locale) {
-  const t = getDictionary(locale);
-  const segments = page.path.split('/').filter(Boolean);
-  const items = [{ name: t.common.siteName, path: '/' }];
-
-  if (segments.length >= 1) {
-    const copy = categoryCopy(t, segments[0].replace('-', '_') as CategoryId);
-    if (copy) items.push({ name: copy.name, path: `/${segments[0]}` });
-  }
-  if (segments.length === 2) items.push({ name: page.heading, path: page.path });
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: absoluteUrl(withLocale(item.path, locale)),
-    })),
-  };
-}
-
 function render(page: PageContent, locale: Locale): string {
   const t = getDictionary(locale);
   const meta = LOCALE_META[locale];
@@ -376,7 +355,7 @@ function render(page: PageContent, locale: Locale): string {
   // Replace the site-wide City block with this page's own structured data.
   html = html.replace(
     /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-    `${jsonLdScript(page.jsonLd, SCHEMA_SCRIPT_ID)}\n    ${jsonLdScript(breadcrumbJsonLd(page, locale))}`,
+    `${jsonLdScript(page.jsonLd, SCHEMA_SCRIPT_ID)}\n    ${jsonLdScript(breadcrumbJsonLd(page.path, locale, page.heading), BREADCRUMB_SCRIPT_ID)}`,
   );
 
   const content = `<main>
