@@ -49,8 +49,17 @@ const esc = (value: string): string =>
     .replace(/"/g, '&quot;');
 
 /** `</script>` inside JSON would close the tag it lives in. */
-const jsonLdScript = (data: unknown): string =>
-  `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
+const jsonLdScript = (data: unknown, id?: string): string =>
+  `<script${id ? ` id="${id}"` : ''} type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
+
+/**
+ * Must match `SCHEMA_SCRIPT_ID` in src/utils/seo.ts: on client-side route
+ * changes `updateSEO` looks up this id to replace the page schema in place.
+ * Without it, SPA navigation finds no match and appends a second, duplicate
+ * script instead — leaving the previous page's schema stale in the DOM
+ * alongside the new one.
+ */
+const SCHEMA_SCRIPT_ID = 'schema-structured-data';
 
 const CATEGORIES: CategoryId[] = [
   'remote_work',
@@ -367,7 +376,7 @@ function render(page: PageContent, locale: Locale): string {
   // Replace the site-wide City block with this page's own structured data.
   html = html.replace(
     /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-    `${jsonLdScript(page.jsonLd)}\n    ${jsonLdScript(breadcrumbJsonLd(page, locale))}`,
+    `${jsonLdScript(page.jsonLd, SCHEMA_SCRIPT_ID)}\n    ${jsonLdScript(breadcrumbJsonLd(page, locale))}`,
   );
 
   const content = `<main>
