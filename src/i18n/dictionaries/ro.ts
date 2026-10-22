@@ -229,6 +229,7 @@ export const ro: Dictionary = {
     airConditioning: 'Aer condiționat',
     wheelchair: 'Accesibil cu scaunul rulant',
     pet: 'Se poate cu animalul',
+    kids: 'Potrivit cu copilul',
     freeEntry: 'Intrare gratuită',
   },
 

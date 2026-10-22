@@ -1,6 +1,7 @@
 import {
   Accessibility,
   Armchair,
+  Baby,
   Clock,
   Coffee,
   Dog,
@@ -178,6 +179,7 @@ const AMENITIES: { id: string; field: ConfirmedField; icon: LucideIcon; key: key
   { id: 'ac', field: 'air_conditioning', icon: Wind, key: 'airConditioning', read: (p) => p.air_conditioning },
   { id: 'wheelchair', field: 'wheelchair', icon: Accessibility, key: 'wheelchair', read: (p) => p.wheelchair },
   { id: 'pet', field: 'pet_friendly', icon: Dog, key: 'pet', read: (p) => p.pet_friendly },
+  { id: 'kids', field: 'kids_friendly', icon: Baby, key: 'kids', read: (p) => p.kids_friendly },
   { id: 'free', field: 'free_entry', icon: Ticket, key: 'freeEntry', read: (p) => p.free_entry },
 ];
 

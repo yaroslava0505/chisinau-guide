@@ -228,6 +228,7 @@ export const uk = {
     airConditioning: 'Кондиціонер',
     wheelchair: 'Доступно для візка',
     pet: 'Можна з твариною',
+    kids: 'Можна з дитиною',
     freeEntry: 'Безкоштовний вхід',
   },
 

@@ -223,6 +223,7 @@ export const ru: Dictionary = {
     airConditioning: 'Кондиционер',
     wheelchair: 'Доступно для коляски',
     pet: 'Можно с животным',
+    kids: 'Можно с ребёнком',
     freeEntry: 'Бесплатный вход',
   },
 
