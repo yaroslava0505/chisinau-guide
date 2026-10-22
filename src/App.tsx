@@ -640,49 +640,51 @@ function Guide() {
               />
             )}
 
-            <section className="space-y-5">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
-                  {filters.searchQuery
-                    ? t.home.searchResults(filters.searchQuery)
-                    : isHome
-                      ? t.home.allPlaces
-                      : categoryName(t, activeCategory)}
-                </h2>
-                <p className="text-xs text-zinc-500">
-                  {t.common.showingOf(filteredPlaces.length, places.length)}
-                </p>
-              </div>
+            {!isBrowsingHome && (
+              <section className="space-y-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+                    {filters.searchQuery
+                      ? t.home.searchResults(filters.searchQuery)
+                      : isHome
+                        ? t.home.allPlaces
+                        : categoryName(t, activeCategory)}
+                  </h2>
+                  <p className="text-xs text-zinc-500">
+                    {t.common.showingOf(filteredPlaces.length, places.length)}
+                  </p>
+                </div>
 
-              {filteredPlaces.length === 0 ? (
-                <div className="py-14 text-center bg-white rounded-3xl border border-zinc-200 px-6 max-w-md mx-auto space-y-4">
-                  <span className="w-14 h-14 rounded-2xl bg-zinc-100 text-zinc-400 flex items-center justify-center mx-auto">
-                    <Compass className="w-7 h-7" aria-hidden="true" />
-                  </span>
-                  <h3 className="font-bold text-zinc-900">{t.common.notFoundTitle}</h3>
-                  <p className="text-sm text-zinc-500">{t.common.notFoundText}</p>
-                  <button
-                    type="button"
-                    onClick={resetFilters}
-                    className="px-5 py-3 rounded-2xl bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-800 min-h-[48px]"
-                  >
-                    {t.common.resetFilters}
-                  </button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredPlaces.map((place) => (
-                    <PlaceCard
-                      key={place.id}
-                      place={place}
-                      isFavorite={favorites.includes(place.id)}
-                      onToggleFavorite={toggleFavoriteFromCard}
-                      onSelectPlace={selectPlace}
-                    />
-                  ))}
-                </div>
-              )}
-            </section>
+                {filteredPlaces.length === 0 ? (
+                  <div className="py-14 text-center bg-white rounded-3xl border border-zinc-200 px-6 max-w-md mx-auto space-y-4">
+                    <span className="w-14 h-14 rounded-2xl bg-zinc-100 text-zinc-400 flex items-center justify-center mx-auto">
+                      <Compass className="w-7 h-7" aria-hidden="true" />
+                    </span>
+                    <h3 className="font-bold text-zinc-900">{t.common.notFoundTitle}</h3>
+                    <p className="text-sm text-zinc-500">{t.common.notFoundText}</p>
+                    <button
+                      type="button"
+                      onClick={resetFilters}
+                      className="px-5 py-3 rounded-2xl bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-800 min-h-[48px]"
+                    >
+                      {t.common.resetFilters}
+                    </button>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredPlaces.map((place) => (
+                      <PlaceCard
+                        key={place.id}
+                        place={place}
+                        isFavorite={favorites.includes(place.id)}
+                        onToggleFavorite={toggleFavoriteFromCard}
+                        onSelectPlace={selectPlace}
+                      />
+                    ))}
+                  </div>
+                )}
+              </section>
+            )}
 
             {isBrowsingHome && (
               <>
