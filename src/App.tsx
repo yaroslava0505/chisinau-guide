@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react';
-import { ArrowRight, Compass, Flame, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, Compass, MapPin } from 'lucide-react';
 import type { Article, CategoryId, CityEvent, FilterState, Place, ScenarioId } from './types';
 import {
   clearLegacyStorage,
@@ -169,8 +169,6 @@ function Guide() {
     [places, activeCategory, filters],
   );
 
-  const featuredPlaces = useMemo(() => places.filter((place) => place.is_featured), [places]);
-  const popularPlaces = useMemo(() => places.filter((place) => place.is_popular), [places]);
   const favoritePlaces = useMemo(
     () => places.filter((place) => favorites.includes(place.id)),
     [places, favorites],
@@ -631,62 +629,6 @@ function Guide() {
               onResetFilters={resetFilters}
               totalFilteredCount={filteredPlaces.length}
             />
-
-            {isBrowsingHome && featuredPlaces.length > 0 && (
-              <section className="space-y-5">
-                <div className="flex items-center gap-2.5">
-                  <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-4 h-4" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
-                      {t.home.featuredTitle}
-                    </h2>
-                    <p className="text-xs text-zinc-500">{t.home.featuredSubtitle}</p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {featuredPlaces.slice(0, 3).map((place) => (
-                    <PlaceCard
-                      key={place.id}
-                      place={place}
-                      isFavorite={favorites.includes(place.id)}
-                      onToggleFavorite={toggleFavoriteFromCard}
-                      onSelectPlace={selectPlace}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {isBrowsingHome && popularPlaces.length > 0 && (
-              <section className="space-y-5">
-                <div className="flex items-center gap-2.5">
-                  <span className="w-9 h-9 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center shrink-0">
-                    <Flame className="w-4 h-4" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
-                      {t.home.popularTitle}
-                    </h2>
-                    <p className="text-xs text-zinc-500">{t.home.popularSubtitle}</p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {popularPlaces.slice(0, 3).map((place) => (
-                    <PlaceCard
-                      key={place.id}
-                      place={place}
-                      isFavorite={favorites.includes(place.id)}
-                      onToggleFavorite={toggleFavoriteFromCard}
-                      onSelectPlace={selectPlace}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
 
             {isBrowsingHome && (
               <ArticlesSection
