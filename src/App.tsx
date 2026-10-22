@@ -15,7 +15,15 @@ import {
   saveStoredPlaces,
   toggleStoredFavorite,
 } from './utils/storage';
-import { eventJsonLd, itemListJsonLd, placeJsonLd, updateSEO, websiteJsonLd } from './utils/seo';
+import {
+  contactsJsonLd,
+  eventJsonLd,
+  itemListJsonLd,
+  placeJsonLd,
+  privacyPolicyJsonLd,
+  updateSEO,
+  websiteJsonLd,
+} from './utils/seo';
 import { getPlaceImage } from './utils/illustrations';
 import { INITIAL_FILTERS, countActiveFilters, filterPlaces } from './utils/filters';
 import { analyzeQuery } from './utils/search';
@@ -217,6 +225,7 @@ function Guide() {
         description: t.privacy.seoDescription,
         path,
         locale,
+        jsonLd: privacyPolicyJsonLd(locale),
       });
       return;
     }
@@ -227,6 +236,7 @@ function Guide() {
         description: t.contacts.seoDescription,
         path,
         locale,
+        jsonLd: contactsJsonLd(locale),
       });
       return;
     }

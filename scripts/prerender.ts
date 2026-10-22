@@ -25,7 +25,15 @@ import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../src/i18n/t
 import { categoryCopy, districtLabel } from '../src/i18n/labels';
 import { absoluteUrl, withLocale } from '../src/router';
 import { localizeEvents, localizePlaces } from '../src/utils/localize';
-import { eventJsonLd, itemListJsonLd, placeJsonLd, socialImageUrl, websiteJsonLd } from '../src/utils/seo';
+import {
+  contactsJsonLd,
+  eventJsonLd,
+  itemListJsonLd,
+  placeJsonLd,
+  privacyPolicyJsonLd,
+  socialImageUrl,
+  websiteJsonLd,
+} from '../src/utils/seo';
 import { formatOpeningHours } from '../src/utils/openingHours';
 import { getPlaceImage } from '../src/utils/illustrations';
 import type { CategoryId, CityEvent, Place } from '../src/types';
@@ -239,14 +247,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     <p>${esc(t.privacy.hostingText)}</p>
     <h2>${esc(t.privacy.contactTitle)}</h2>
     <p>${esc(t.privacy.contactText)} myyarosfilm@gmail.com</p>`,
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: t.privacy.title,
-      description: t.privacy.seoDescription,
-      url: absoluteUrl(withLocale('/privacy', locale)),
-      inLanguage: LOCALE_META[locale].htmlLang,
-    },
+    jsonLd: privacyPolicyJsonLd(locale),
   });
 
   pages.push({
@@ -258,14 +259,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     body: `<p>${esc(t.contacts.emailLabel)}: <a href="mailto:myyarosfilm@gmail.com">myyarosfilm@gmail.com</a></p>
     <h2>${esc(t.contacts.formTitle)}</h2>
     <p>${esc(t.contacts.formSubtitle)}</p>`,
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      name: t.contacts.title,
-      description: t.contacts.seoDescription,
-      url: absoluteUrl(withLocale('/contacts', locale)),
-      inLanguage: LOCALE_META[locale].htmlLang,
-    },
+    jsonLd: contactsJsonLd(locale),
   });
 
   // One page per place.
@@ -356,7 +350,7 @@ function render(page: PageContent, locale: Locale): string {
   replaceMeta('property', 'og:title', fullTitle);
   replaceMeta('property', 'og:description', page.description);
   replaceMeta('property', 'og:url', canonical);
-  replaceMeta('property', 'og:locale', meta.htmlLang);
+  replaceMeta('property', 'og:locale', meta.ogLocale);
   replaceMeta('property', 'og:site_name', siteName);
   replaceMeta('name', 'twitter:title', fullTitle);
   replaceMeta('name', 'twitter:description', page.description);

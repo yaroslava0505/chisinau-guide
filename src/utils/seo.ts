@@ -183,6 +183,42 @@ export function websiteJsonLd(locale: Locale = DEFAULT_LOCALE) {
   };
 }
 
+/**
+ * Shared by the client (`updateSEO` on SPA navigation) and `scripts/prerender.ts`
+ * (the static HTML a non-JS crawler sees) so both describe the same page as the
+ * same entity — without this, a client-side route change to /privacy or
+ * /contacts fell back to `websiteJsonLd`, asserting the *homepage's* URL as
+ * structured data on a different page.
+ */
+export function privacyPolicyJsonLd(locale: Locale = DEFAULT_LOCALE) {
+  const t = getDictionary(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t.privacy.title,
+    description: t.privacy.seoDescription,
+    url: absoluteUrl(withLocale('/privacy', locale)),
+    inLanguage: LOCALE_META[locale].htmlLang,
+  };
+}
+
+export function contactsJsonLd(locale: Locale = DEFAULT_LOCALE) {
+  const t = getDictionary(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: t.contacts.title,
+    description: t.contacts.seoDescription,
+    url: absoluteUrl(withLocale('/contacts', locale)),
+    inLanguage: LOCALE_META[locale].htmlLang,
+    mainEntity: {
+      '@type': 'Organization',
+      name: t.common.siteName,
+      email: 'myyarosfilm@gmail.com',
+    },
+  };
+}
+
 export function itemListJsonLd(
   places: Place[],
   canonical: string,
@@ -232,7 +268,7 @@ export function updateSEO({ title, description, path, locale, image, jsonLd, noi
   upsertMeta('meta[property="og:url"]', 'property', 'og:url', canonical);
   upsertMeta('meta[property="og:type"]', 'property', 'og:type', 'website');
   upsertMeta('meta[property="og:site_name"]', 'property', 'og:site_name', siteName);
-  upsertMeta('meta[property="og:locale"]', 'property', 'og:locale', LOCALE_META[locale].htmlLang);
+  upsertMeta('meta[property="og:locale"]', 'property', 'og:locale', LOCALE_META[locale].ogLocale);
   upsertMeta('meta[name="twitter:title"]', 'name', 'twitter:title', fullTitle);
   upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', description);
 

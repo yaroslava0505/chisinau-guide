@@ -20,14 +20,20 @@ export interface LocaleMeta {
   name: string;
   /** Value for <html lang> and hreflang. */
   htmlLang: string;
+  /**
+   * Value for `og:locale`. Open Graph wants `language_TERRITORY` (e.g.
+   * `uk_UA`), not the bare language code `htmlLang` holds — the two have
+   * different formats for a reason and must not be conflated.
+   */
+  ogLocale: string;
   /** URL prefix; empty for the default locale. */
   prefix: string;
 }
 
 export const LOCALE_META: Record<Locale, LocaleMeta> = {
-  uk: { short: 'UA', name: 'Українська', htmlLang: 'uk', prefix: '' },
-  ru: { short: 'RU', name: 'Русский', htmlLang: 'ru', prefix: '/ru' },
-  ro: { short: 'RO', name: 'Română', htmlLang: 'ro', prefix: '/ro' },
+  uk: { short: 'UA', name: 'Українська', htmlLang: 'uk', ogLocale: 'uk_UA', prefix: '' },
+  ru: { short: 'RU', name: 'Русский', htmlLang: 'ru', ogLocale: 'ru_MD', prefix: '/ru' },
+  ro: { short: 'RO', name: 'Română', htmlLang: 'ro', ogLocale: 'ro_MD', prefix: '/ro' },
 };
 
 export const isLocale = (value: string): value is Locale =>
