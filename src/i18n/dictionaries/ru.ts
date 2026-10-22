@@ -328,6 +328,7 @@ export const ru: Dictionary = {
     dataNote: 'Адреса, координаты и графики — из OpenStreetMap. Характеристики, которых нет в источнике, не показываются.',
     demoNote: 'Каталог наполнен демонстрационными данными с меткой «Demo».',
     privacy: 'Политика конфиденциальности',
+    articles: 'Статьи',
     contacts: 'Контакты',
   },
 
@@ -380,6 +381,20 @@ export const ru: Dictionary = {
     emailLabel: 'Почта',
     formTitle: 'Знаете место, которого здесь нет?',
     formSubtitle: 'Расскажите о нём ниже — это самый быстрый способ достучаться.',
+  },
+
+  articles: {
+    indexTitle: 'Статьи и подборки',
+    indexSubtitle: 'Короткие гиды по городу — не просто список мест, а подсказки, с чего начать',
+    seoIndexDescription:
+      'Короткие редакционные гиды по Кишинёву: где работать с ноутбуком, куда пойти на кофе, какими маршрутами гулять.',
+    homeTitle: 'Статьи и подборки',
+    homeSubtitle: 'Короткие гиды вместо сухого списка мест',
+    allArticles: 'Все статьи',
+    readMore: 'Читать',
+    publishedOn: (date: string) => `Опубликовано ${date}`,
+    relatedPlacesTitle: 'Места из статьи',
+    backToArticles: 'Ко всем статьям',
   },
 
   categories: {

@@ -16,6 +16,8 @@ export type Route =
   | { view: 'favorites' }
   | { view: 'privacy' }
   | { view: 'contacts' }
+  | { view: 'articles' }
+  | { view: 'article'; slug: string }
   | { view: 'admin' }
   | { view: 'notfound'; path: string };
 
@@ -44,6 +46,7 @@ const STATIC_ROUTES: Record<string, Route> = {
   favorites: { view: 'favorites' },
   privacy: { view: 'privacy' },
   contacts: { view: 'contacts' },
+  articles: { view: 'articles' },
   ...(ADMIN_ENABLED ? { admin: { view: 'admin' as const } } : {}),
 };
 
@@ -81,6 +84,12 @@ export function parsePath(pathname: string): Route {
 
   if (segments.length === 1 && first in STATIC_ROUTES) {
     return STATIC_ROUTES[first];
+  }
+
+  // Not a place category, so it needs its own two-segment case before the
+  // category lookup below (which would otherwise fall through to notfound).
+  if (first === 'articles' && segments.length === 2) {
+    return { view: 'article', slug: second };
   }
 
   const meta = categoryBySlug(first);
@@ -128,6 +137,10 @@ export function buildPath(route: Route, locale: Locale = DEFAULT_LOCALE): string
         return '/privacy';
       case 'contacts':
         return '/contacts';
+      case 'articles':
+        return '/articles';
+      case 'article':
+        return `/articles/${route.slug}`;
       case 'admin':
         return '/admin';
       default:

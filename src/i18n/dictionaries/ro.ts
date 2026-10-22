@@ -335,6 +335,7 @@ export const ro: Dictionary = {
     demoNote: 'Catalogul este completat cu date demonstrative, marcate cu eticheta «Demo».',
     privacy: 'Politica de confidențialitate',
     contacts: 'Contact',
+    articles: 'Articole',
   },
 
   seo: {
@@ -386,6 +387,20 @@ export const ro: Dictionary = {
     emailLabel: 'Email',
     formTitle: 'Știi un loc care lipsește de aici?',
     formSubtitle: 'Povestește-ne despre el mai jos — e cel mai rapid mod de a ne găsi.',
+  },
+
+  articles: {
+    indexTitle: 'Articole și selecții',
+    indexSubtitle: 'Ghiduri scurte despre oraș — nu doar o listă de locuri, ci sugestii de unde să începi',
+    seoIndexDescription:
+      'Ghiduri editoriale scurte despre Chișinău: unde lucrezi cu laptopul, unde bei o cafea, ce trasee să alegi pentru plimbare.',
+    homeTitle: 'Articole și selecții',
+    homeSubtitle: 'Ghiduri scurte în loc de o listă seacă de locuri',
+    allArticles: 'Toate articolele',
+    readMore: 'Citește',
+    publishedOn: (date: string) => `Publicat la ${date}`,
+    relatedPlacesTitle: 'Locuri din articol',
+    backToArticles: 'Înapoi la articole',
   },
 
   categories: {

@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react';
 import { ArrowRight, Compass, Flame, MapPin, Sparkles } from 'lucide-react';
-import type { CategoryId, CityEvent, FilterState, Place, ScenarioId } from './types';
+import type { Article, CategoryId, CityEvent, FilterState, Place, ScenarioId } from './types';
 import {
   clearLegacyStorage,
   clearStoredFavorites,
@@ -16,8 +16,11 @@ import {
   toggleStoredFavorite,
 } from './utils/storage';
 import {
+  articleJsonLd,
+  articlesIndexJsonLd,
   contactsJsonLd,
   eventJsonLd,
+  getArticleImage,
   itemListJsonLd,
   placeJsonLd,
   privacyPolicyJsonLd,
@@ -27,9 +30,10 @@ import {
 import { getPlaceImage } from './utils/illustrations';
 import { INITIAL_FILTERS, countActiveFilters, filterPlaces } from './utils/filters';
 import { analyzeQuery } from './utils/search';
-import { localizeEvents, localizePlaces } from './utils/localize';
+import { localizeArticles, localizeEvents, localizePlaces } from './utils/localize';
 import { CATEGORY_META, SCENARIOS } from './data/taxonomy';
 import { DISTRICT_IDS } from './data/chisinauPlaces';
+import { INITIAL_ARTICLES } from './data/articles';
 import {
   ADMIN_ENABLED,
   absoluteUrl,
@@ -61,6 +65,8 @@ import { AiPlanner } from './components/AiPlanner';
 import { AddPlaceForm } from './components/AddPlaceForm';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactsPage } from './components/ContactsPage';
+import { ArticlesSection } from './components/ArticlesSection';
+import { ArticleDetailPage } from './components/ArticleDetailPage';
 /**
  * The admin panel is loaded on demand and only when it is enabled, so a public
  * build never ships its code — not merely hides its route.
@@ -104,6 +110,8 @@ function Guide() {
 
   const places = useMemo(() => localizePlaces(sourcePlaces, locale), [sourcePlaces, locale]);
   const events = useMemo(() => localizeEvents(sourceEvents, locale), [sourceEvents, locale]);
+  // Static editorial content — no admin CRUD, so no source/persisted state needed.
+  const articles = useMemo(() => localizeArticles(INITIAL_ARTICLES, locale), [locale]);
 
   // Rewrite old `#category=` / `#place=` links, and honour a previously
   // chosen language when the visitor opens the bare root path.
@@ -146,6 +154,12 @@ function Guide() {
   const selectedPlace = useMemo(
     () => (route.view === 'place' ? places.find((place) => place.slug === route.slug) ?? null : null),
     [route, places],
+  );
+
+  const selectedArticle = useMemo(
+    () =>
+      route.view === 'article' ? articles.find((article) => article.slug === route.slug) ?? null : null,
+    [route, articles],
   );
 
   const copy = categoryCopy(t, activeCategory);
@@ -242,6 +256,33 @@ function Guide() {
       return;
     }
 
+    if (route.view === 'articles') {
+      const canonical = absoluteUrl(withLocale(path, locale));
+      updateSEO({
+        title: t.articles.indexTitle,
+        description: t.articles.seoIndexDescription,
+        path,
+        locale,
+        jsonLd: articlesIndexJsonLd(articles, canonical, locale),
+      });
+      return;
+    }
+
+    if (route.view === 'article') {
+      if (!selectedArticle) return;
+      const canonical = absoluteUrl(withLocale(path, locale));
+      updateSEO({
+        title: selectedArticle.title,
+        description: selectedArticle.excerpt,
+        path,
+        locale,
+        image: getArticleImage(selectedArticle),
+        jsonLd: articleJsonLd(selectedArticle, canonical, locale),
+        breadcrumbLeaf: selectedArticle.title,
+      });
+      return;
+    }
+
     if (route.view === 'admin') {
       updateSEO({
         title: t.seo.adminTitle,
@@ -271,7 +312,7 @@ function Guide() {
       locale,
       jsonLd: websiteJsonLd(locale),
     });
-  }, [route, selectedPlace, locale, t, copy, events, filteredPlaces]);
+  }, [route, selectedPlace, selectedArticle, locale, t, copy, events, articles, filteredPlaces]);
 
   /* ------------------------------- Handlers -------------------------------- */
 
@@ -302,6 +343,13 @@ function Guide() {
       navigate(buildPath({ view: 'place', category: place.category, slug: place.slug }, locale), {
         keepScroll: true,
       });
+    },
+    [locale],
+  );
+
+  const selectArticle = useCallback(
+    (article: Article) => {
+      navigate(buildPath({ view: 'article', slug: article.slug }, locale));
     },
     [locale],
   );
@@ -381,6 +429,8 @@ function Guide() {
   const isFavoritesActive = route.view === 'favorites';
   const isPrivacyActive = route.view === 'privacy';
   const isContactsActive = route.view === 'contacts';
+  const isArticlesActive = route.view === 'articles';
+  const isArticleActive = route.view === 'article';
   const isAdminActive = ADMIN_ENABLED && route.view === 'admin';
   const isHome = route.view === 'home';
 
@@ -402,7 +452,7 @@ function Guide() {
         isMapActive={isMapActive}
         isFavoritesActive={isFavoritesActive}
         isAdminActive={isAdminActive}
-        isStaticPageActive={isPrivacyActive || isContactsActive}
+        isStaticPageActive={isPrivacyActive || isContactsActive || isArticlesActive || isArticleActive}
         onResetToHome={() => selectCategory('all')}
         onSelectLocale={selectLocale}
       />
@@ -473,6 +523,30 @@ function Guide() {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
           <ContactsPage />
         </main>
+      ) : isArticlesActive ? (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex-1">
+          <ArticlesSection articles={articles} onSelectArticle={selectArticle} variant="page" />
+        </main>
+      ) : isArticleActive ? (
+        selectedArticle ? (
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+            <ArticleDetailPage
+              article={selectedArticle}
+              places={places}
+              favorites={favorites}
+              onToggleFavorite={toggleFavoriteFromCard}
+              onSelectPlace={selectPlace}
+              onBackToArticles={() => navigate(withLocale('/articles', locale))}
+              onOpenCategory={() => selectCategory(selectedArticle.category)}
+            />
+          </main>
+        ) : (
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 py-20 text-center">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+              {t.seo.notFoundTitle}
+            </h1>
+          </main>
+        )
       ) : route.view === 'events' ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex-1">
           <EventsSection events={events} variant="page" />
@@ -612,6 +686,16 @@ function Guide() {
                   ))}
                 </div>
               </section>
+            )}
+
+            {isBrowsingHome && (
+              <ArticlesSection
+                articles={articles}
+                onSelectArticle={selectArticle}
+                variant="home"
+                limit={3}
+                onOpenAllArticles={() => navigate(withLocale('/articles', locale))}
+              />
             )}
 
             <section className="space-y-5">
@@ -788,6 +872,18 @@ function Guide() {
                 className="hover:text-zinc-900 transition-colors"
               >
                 {t.footer.contacts}
+              </a>
+              <span className="text-zinc-300">·</span>
+              <a
+                href={withLocale('/articles', locale)}
+                onClick={(event) => {
+                  if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+                  event.preventDefault();
+                  navigate(withLocale('/articles', locale));
+                }}
+                className="hover:text-zinc-900 transition-colors"
+              >
+                {t.footer.articles}
               </a>
             </div>
             <p className="text-zinc-400 order-1 sm:order-2">{t.footer.dataNote}</p>

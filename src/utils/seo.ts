@@ -1,10 +1,10 @@
-import type { CategoryId, CityEvent, Place } from '../types';
+import type { Article, CategoryId, CityEvent, Place } from '../types';
 import { SITE_ORIGIN, absoluteUrl, withLocale } from '../router';
 import { nextOccurrence, toIsoDate } from './events';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../i18n/types';
 import { getDictionary } from '../i18n';
 import { categoryCopy } from '../i18n/labels';
-import { getPlaceImage } from './illustrations';
+import { getCategoryIllustration, getPlaceImage } from './illustrations';
 
 const SCHEMA_SCRIPT_ID = 'schema-structured-data';
 /** Must match the id `scripts/prerender.ts` gives the breadcrumb script. */
@@ -235,8 +235,12 @@ export function breadcrumbJsonLd(path: string, locale: Locale = DEFAULT_LOCALE, 
   const items = [{ name: t.common.siteName, path: '/' }];
 
   if (segments.length >= 1) {
-    const copy = categoryCopy(t, segments[0].replace('-', '_') as CategoryId);
-    if (copy) items.push({ name: copy.name, path: `/${segments[0]}` });
+    if (segments[0] === 'articles') {
+      items.push({ name: t.articles.indexTitle, path: '/articles' });
+    } else {
+      const copy = categoryCopy(t, segments[0].replace('-', '_') as CategoryId);
+      if (copy) items.push({ name: copy.name, path: `/${segments[0]}` });
+    }
   }
   if (segments.length === 2 && leafName) items.push({ name: leafName, path });
 
@@ -249,6 +253,52 @@ export function breadcrumbJsonLd(path: string, locale: Locale = DEFAULT_LOCALE, 
       name: item.name,
       item: absoluteUrl(withLocale(item.path, locale)),
     })),
+  };
+}
+
+/** Cover image for an article — same pool and labelling convention as place cards. */
+export function getArticleImage(article: Article): string {
+  return getCategoryIllustration(article.category, article.slug);
+}
+
+export function articleJsonLd(article: Article, canonical: string, locale: Locale = DEFAULT_LOCALE) {
+  const t = getDictionary(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    url: canonical,
+    inLanguage: LOCALE_META[locale].htmlLang,
+    datePublished: article.publishedAt,
+    author: { '@type': 'Organization', name: t.common.siteName },
+    publisher: { '@type': 'Organization', name: t.common.siteName },
+    mainEntityOfPage: canonical,
+  };
+}
+
+export function articlesIndexJsonLd(
+  articles: Article[],
+  canonical: string,
+  locale: Locale = DEFAULT_LOCALE,
+) {
+  const t = getDictionary(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: t.articles.indexTitle,
+    description: t.articles.seoIndexDescription,
+    url: canonical,
+    inLanguage: LOCALE_META[locale].htmlLang,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: article.title,
+        url: absoluteUrl(withLocale(`/articles/${article.slug}`, locale)),
+      })),
+    },
   };
 }
 
@@ -360,32 +410,41 @@ const STATIC_PATHS = [
   '/map',
   '/privacy',
   '/contacts',
+  '/articles',
 ];
 
 /** Locale-less paths of every indexable page. */
-export function collectSitemapPaths(places: Place[]): string[] {
+export function collectSitemapPaths(places: Place[], articles: Article[] = []): string[] {
   return [
     ...STATIC_PATHS,
     ...places.map((place) => `/${place.category.replace('_', '-')}/${place.slug}`),
+    ...articles.map((article) => `/articles/${article.slug}`),
   ];
 }
 
-export function generateSitemapXml(places: Place[], lastmod = new Date()): string {
+export function generateSitemapXml(
+  places: Place[],
+  articles: Article[] = [],
+  lastmod = new Date(),
+): string {
   const stamp = toIsoDate(lastmod);
   const placeByPath = new Map(
     places.map((place) => [`/${place.category.replace('_', '-')}/${place.slug}`, place]),
   );
+  const articleByPath = new Map(articles.map((article) => [`/articles/${article.slug}`, article]));
 
-  const entries = collectSitemapPaths(places).flatMap((path) => {
+  const entries = collectSitemapPaths(places, articles).flatMap((path) => {
     const place = placeByPath.get(path);
+    const article = articleByPath.get(path);
     const alternates = LOCALES.map(
       (locale) =>
         `    <xhtml:link rel="alternate" hreflang="${LOCALE_META[locale].htmlLang}" href="${absoluteUrl(withLocale(path, locale))}"/>`,
     ).join('\n');
     // Lets Google Images attribute the illustration (or real photo, once one
     // exists) shown on the page back to this URL.
-    const image = place
-      ? `\n    <image:image><image:loc>${socialImageUrl(getPlaceImage(place))}</image:loc></image:image>`
+    const imageUrl = place ? getPlaceImage(place) : article ? getArticleImage(article) : null;
+    const image = imageUrl
+      ? `\n    <image:image><image:loc>${socialImageUrl(imageUrl)}</image:loc></image:image>`
       : '';
 
     // Every language of a page is its own URL, each declaring the full set.
@@ -394,8 +453,8 @@ export function generateSitemapXml(places: Place[], lastmod = new Date()): strin
     <loc>${absoluteUrl(withLocale(path, locale))}</loc>
 ${alternates}${image}
     <lastmod>${stamp}</lastmod>
-    <changefreq>${place ? 'weekly' : 'daily'}</changefreq>
-    <priority>${path === '/' ? '1.0' : place ? '0.7' : '0.9'}</priority>
+    <changefreq>${place ? 'weekly' : article ? 'monthly' : 'daily'}</changefreq>
+    <priority>${path === '/' ? '1.0' : place ? '0.7' : article ? '0.8' : '0.9'}</priority>
   </url>`,
     );
   });

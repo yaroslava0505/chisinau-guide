@@ -8,6 +8,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { INITIAL_PLACES } from '../src/data/chisinauPlaces';
+import { INITIAL_ARTICLES } from '../src/data/articles';
 import { generateRobotsTxt, generateSitemapXml } from '../src/utils/seo';
 import { SITE_ORIGIN } from '../src/router';
 
@@ -16,10 +17,16 @@ const publicDir = resolve(here, '..', 'public');
 
 mkdirSync(publicDir, { recursive: true });
 
-writeFileSync(resolve(publicDir, 'sitemap.xml'), generateSitemapXml(INITIAL_PLACES), 'utf8');
+writeFileSync(
+  resolve(publicDir, 'sitemap.xml'),
+  generateSitemapXml(INITIAL_PLACES, INITIAL_ARTICLES),
+  'utf8',
+);
 writeFileSync(resolve(publicDir, 'robots.txt'), generateRobotsTxt(), 'utf8');
 
-console.log(`SEO files written for ${INITIAL_PLACES.length} places → public/ (origin: ${SITE_ORIGIN})`);
+console.log(
+  `SEO files written for ${INITIAL_PLACES.length} places + ${INITIAL_ARTICLES.length} articles → public/ (origin: ${SITE_ORIGIN})`,
+);
 
 if (SITE_ORIGIN.includes('chisinau.guide')) {
   console.warn(

@@ -110,3 +110,14 @@ export function getIllustration(place: Place): string | null {
 export function getPlaceImage(place: Place): string {
   return place.photos[0] ?? getIllustration(place) ?? '';
 }
+
+/**
+ * A themed illustration for content that isn't a place record — currently
+ * just articles, keyed by category rather than cuisine/venue type since an
+ * article covers a whole category, not one specific subtype. `seed` (the
+ * article's slug) keeps the pick stable between renders, same as `getIllustration`.
+ */
+export function getCategoryIllustration(category: PlaceCategoryId, seed: string): string {
+  const pool = BY_CATEGORY[category];
+  return pool[hash(seed) % pool.length];
+}

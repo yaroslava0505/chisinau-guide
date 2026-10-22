@@ -20,15 +20,19 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { INITIAL_EVENTS, INITIAL_PLACES } from '../src/data/chisinauPlaces';
+import { INITIAL_ARTICLES } from '../src/data/articles';
 import { getDictionary } from '../src/i18n';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../src/i18n/types';
 import { categoryCopy, districtLabel } from '../src/i18n/labels';
 import { absoluteUrl, withLocale } from '../src/router';
-import { localizeEvents, localizePlaces } from '../src/utils/localize';
+import { localizeArticles, localizeEvents, localizePlaces } from '../src/utils/localize';
 import {
+  articleJsonLd,
+  articlesIndexJsonLd,
   breadcrumbJsonLd,
   contactsJsonLd,
   eventJsonLd,
+  getArticleImage,
   itemListJsonLd,
   placeJsonLd,
   privacyPolicyJsonLd,
@@ -37,7 +41,7 @@ import {
 } from '../src/utils/seo';
 import { formatOpeningHours } from '../src/utils/openingHours';
 import { getPlaceImage } from '../src/utils/illustrations';
-import type { CategoryId, CityEvent, Place } from '../src/types';
+import type { Article, CategoryId, CityEvent, Place } from '../src/types';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const distDir = join(root, 'dist');
@@ -121,6 +125,35 @@ function placeList(places: Place[], locale: Locale): string {
   return `<ul>\n      ${places.map((place) => placeItem(place, locale)).join('\n      ')}\n    </ul>`;
 }
 
+function articleItem(article: Article, locale: Locale): string {
+  const href = withLocale(`/articles/${article.slug}`, locale);
+  return `<li>
+        <h3><a href="${esc(href)}">${esc(article.title)}</a></h3>
+        <p>${esc(article.excerpt)}</p>
+      </li>`;
+}
+
+function articleList(articles: Article[], locale: Locale): string {
+  if (articles.length === 0) return '';
+  return `<ul>\n      ${articles.map((article) => articleItem(article, locale)).join('\n      ')}\n    </ul>`;
+}
+
+/** The detail page's own paragraphs, plus the real places it links out to. */
+function articleDetail(article: Article, locale: Locale): string {
+  const t = getDictionary(locale);
+  const paragraphs = article.body.map((paragraph) => `<p>${esc(paragraph)}</p>`).join('\n    ');
+
+  const related = INITIAL_PLACES.filter((place) => article.placeSlugs.includes(place.slug));
+  const localizedRelated = localizePlaces(related, locale);
+
+  return `${paragraphs}
+    ${
+      localizedRelated.length > 0
+        ? `<h2>${esc(t.articles.relatedPlacesTitle)}</h2>\n    ${placeList(localizedRelated, locale)}`
+        : ''
+    }`;
+}
+
 function eventItem(event: CityEvent, locale: Locale): string {
   const facts = [event.date, event.location_name, event.address, event.price].filter(Boolean);
   return `<li>
@@ -175,6 +208,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
   const t = getDictionary(locale);
   const places = localizePlaces(INITIAL_PLACES, locale);
   const events = localizeEvents(INITIAL_EVENTS, locale);
+  const articles = localizeArticles(INITIAL_ARTICLES, locale);
   const pages: PageContent[] = [];
 
   // Home — the whole catalogue is reachable from here in one hop.
@@ -271,6 +305,31 @@ function pagesForLocale(locale: Locale): PageContent[] {
     <h2>${esc(t.contacts.formTitle)}</h2>
     <p>${esc(t.contacts.formSubtitle)}</p>`,
     jsonLd: contactsJsonLd(locale),
+  });
+
+  pages.push({
+    path: '/articles',
+    title: t.articles.indexTitle,
+    description: t.articles.seoIndexDescription,
+    heading: t.articles.indexTitle,
+    subtitle: t.articles.indexSubtitle,
+    body: articleList(articles, locale),
+    jsonLd: articlesIndexJsonLd(articles, absoluteUrl(withLocale('/articles', locale)), locale),
+  });
+
+  // One page per article.
+  articles.forEach((article) => {
+    const path = `/articles/${article.slug}`;
+    pages.push({
+      path,
+      title: article.title,
+      description: article.excerpt,
+      heading: article.title,
+      subtitle: article.excerpt,
+      body: articleDetail(article, locale),
+      jsonLd: articleJsonLd(article, absoluteUrl(withLocale(path, locale)), locale),
+      image: getArticleImage(article),
+    });
   });
 
   // One page per place.

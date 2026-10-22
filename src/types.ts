@@ -243,6 +243,40 @@ export type EventType =
 
 export type EventWhen = 'all' | 'today' | 'tomorrow' | 'weekend' | 'week';
 
+/** Fields of an Article that are worth translating. */
+export interface ArticleTranslation {
+  title?: string;
+  excerpt?: string;
+  body?: string[];
+}
+
+export type ArticleI18n = Partial<Record<Exclude<Locale, 'uk'>, ArticleTranslation>>;
+
+/**
+ * An editorial guide piece — a few paragraphs of hand-written commentary that
+ * links out to real catalogue entries, rather than another bare list of
+ * places. `placeSlugs` must only reference places that exist in the
+ * catalogue; the article text itself should stick to what is generally true
+ * of the category rather than asserting specifics (amenities, hours) that
+ * belong on the place record and may not be confirmed there.
+ */
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  /** Paragraphs, rendered one per `<p>`. */
+  body: string[];
+  /** The category this piece is about — drives its cover image and "see all" link. */
+  category: PlaceCategoryId;
+  /** Slugs of real places referenced in the article, shown at the end as cards. */
+  placeSlugs: string[];
+  /** ISO date, e.g. `2026-10-20`. */
+  publishedAt: string;
+  /** Russian and Romanian versions of the text fields. */
+  i18n?: ArticleI18n;
+}
+
 /** One of the 8 quick user intents on the home page. */
 export type ScenarioId =
   | 'work'

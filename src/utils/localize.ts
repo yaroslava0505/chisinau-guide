@@ -1,4 +1,4 @@
-import type { CityEvent, Place } from '../types';
+import type { Article, CityEvent, Place } from '../types';
 import { DEFAULT_LOCALE, type Locale } from '../i18n/types';
 
 /**
@@ -42,8 +42,25 @@ export function localizeEvent(event: CityEvent, locale: Locale): CityEvent {
   };
 }
 
+export function localizeArticle(article: Article, locale: Locale): Article {
+  if (locale === DEFAULT_LOCALE) return article;
+
+  const translation = article.i18n?.[locale];
+  if (!translation) return article;
+
+  return {
+    ...article,
+    title: translation.title || article.title,
+    excerpt: translation.excerpt || article.excerpt,
+    body: translation.body && translation.body.length > 0 ? translation.body : article.body,
+  };
+}
+
 export const localizePlaces = (places: Place[], locale: Locale): Place[] =>
   locale === DEFAULT_LOCALE ? places : places.map((place) => localizePlace(place, locale));
 
 export const localizeEvents = (events: CityEvent[], locale: Locale): CityEvent[] =>
   locale === DEFAULT_LOCALE ? events : events.map((event) => localizeEvent(event, locale));
+
+export const localizeArticles = (articles: Article[], locale: Locale): Article[] =>
+  locale === DEFAULT_LOCALE ? articles : articles.map((article) => localizeArticle(article, locale));
