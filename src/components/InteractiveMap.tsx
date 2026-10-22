@@ -13,6 +13,7 @@ import {
   Layers,
   MapPin,
   Navigation,
+  ShoppingBag,
   Utensils,
   X,
 } from 'lucide-react';
@@ -38,6 +39,7 @@ const MAP_CATEGORIES: { id: PlaceCategoryId; icon: React.ElementType; color: str
   { id: 'food', icon: Utensils, color: '#ea580c' },
   { id: 'walks', icon: Footprints, color: '#0284c7' },
   { id: 'activities', icon: Compass, color: '#7c3aed' },
+  { id: 'shopping_centers', icon: ShoppingBag, color: '#c026d3' },
 ];
 
 const CATEGORY_COLORS: Record<string, string> = Object.fromEntries(

@@ -100,6 +100,8 @@ export function schemaTypeForPlace(place: Place): string {
       return 'Library';
     case 'culture':
       return 'TouristAttraction';
+    case 'mall':
+      return 'ShoppingCenter';
     case 'coworking':
     default:
       return 'LocalBusiness';
@@ -108,7 +110,9 @@ export function schemaTypeForPlace(place: Place): string {
 
 export function placeJsonLd(place: Place, canonical: string, locale: Locale = DEFAULT_LOCALE) {
   const type = schemaTypeForPlace(place);
-  const isBusiness = !['Park', 'TouristAttraction'].includes(type);
+  // Free to enter, so `priceRange` (what it costs to use the place itself,
+  // not what's sold inside) would be as misleading here as on a park.
+  const isBusiness = !['Park', 'TouristAttraction', 'ShoppingCenter'].includes(type);
 
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
@@ -406,6 +410,7 @@ const STATIC_PATHS = [
   '/food',
   '/walks',
   '/activities',
+  '/shopping-centers',
   '/events',
   '/map',
   '/privacy',

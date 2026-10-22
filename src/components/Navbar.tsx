@@ -11,6 +11,7 @@ import {
   MapPin,
   Menu,
   Search,
+  ShoppingBag,
   Utensils,
   X,
 } from 'lucide-react';
@@ -46,6 +47,7 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
   food: Utensils,
   walks: Footprints,
   activities: Compass,
+  shopping_centers: ShoppingBag,
   events: Calendar,
 };
 

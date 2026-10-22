@@ -68,6 +68,12 @@ const BY_SUBTYPE: Record<string, string[]> = {
   bistro: [U('1555396273-367ea4eb4db5'), U('1414235077428-338989a2e8c0')],
   restaurant: [U('1517248135467-4c7edcad34c4'), U('1552566626-52f8b828add9')],
   culture: [U('1518998053901-5348d3961a04'), U('1507924538820-ede94a04019d')],
+
+  // shopping centres — venue type
+  mall: [
+    U('1758448501002-8c7bb7a7d9ff'), U('1761333482894-700fc6aebd47'),
+    U('1742602446126-e10f78b518b6'),
+  ],
 };
 
 /** Fallback pools when nothing more specific is known. */
@@ -78,6 +84,7 @@ const BY_CATEGORY: Record<PlaceCategoryId, string[]> = {
   food: [U('1517248135467-4c7edcad34c4'), U('1555939594-58d7cb561ad1')],
   walks: [U('1519331379826-f10be5486c6f'), U('1441974231531-c6227db76b6e')],
   activities: [U('1518998053901-5348d3961a04'), U('1507924538820-ede94a04019d')],
+  shopping_centers: [U('1758448501002-8c7bb7a7d9ff'), U('1761333482894-700fc6aebd47')],
 };
 
 /** Small stable hash so a place always gets the same image from its pool. */

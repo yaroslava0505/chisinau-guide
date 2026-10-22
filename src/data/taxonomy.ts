@@ -32,6 +32,7 @@ export const CATEGORY_META: CategoryMeta[] = [
   { id: 'food', slug: 'food', icon: 'Utensils', badgeColor: 'bg-orange-50 text-orange-700 border-orange-200' },
   { id: 'walks', slug: 'walks', icon: 'Footprints', badgeColor: 'bg-sky-50 text-sky-700 border-sky-200' },
   { id: 'activities', slug: 'activities', icon: 'Compass', badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
+  { id: 'shopping_centers', slug: 'shopping-centers', icon: 'ShoppingBag', badgeColor: 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200' },
   { id: 'events', slug: 'events', icon: 'Calendar', badgeColor: 'bg-purple-50 text-purple-700 border-purple-200' },
 ];
 
@@ -110,5 +111,5 @@ export const EVENT_TYPE_VALUES: EventType[] = [
 export const PRICE_LEVEL_VALUES = [1, 2, 3] as const;
 
 export const VENUE_TYPE_VALUES = [
-  'cafe', 'coworking', 'park', 'library', 'nature', 'restaurant', 'bistro', 'bakery', 'culture',
+  'cafe', 'coworking', 'park', 'library', 'nature', 'restaurant', 'bistro', 'bakery', 'culture', 'mall',
 ] as const;

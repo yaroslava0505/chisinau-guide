@@ -453,6 +453,14 @@ export const ro: Dictionary = {
       seoDescription:
         'Muzee, galerii, cinema, ateliere și spații creative din Chișinău — singur, în doi sau cu copiii.',
     },
+    shopping_centers: {
+      name: 'Centre comerciale',
+      h1: 'Centre comerciale din Chișinău',
+      subtitle: 'Mall-uri mari și magazine universale istorice — adrese, program, sector',
+      seoTitle: 'Centre comerciale din Chișinău',
+      seoDescription:
+        'Centre comerciale din Chișinău: MallDova, Atrium, UNIC, Sun City — adrese, program și sector.',
+    },
     events: {
       name: 'Evenimente',
       h1: 'Ce se întâmplă în Chișinău',

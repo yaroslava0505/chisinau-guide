@@ -82,6 +82,8 @@ const RATINGS_BY_CATEGORY: Record<PlaceCategoryId, RatingId[]> = {
   food: ['comfort', 'quiet'],
   walks: ['quiet', 'comfort'],
   activities: ['comfort', 'quiet'],
+  // Nothing here is measured for shopping centres — no ratings to show.
+  shopping_centers: [],
 };
 
 /**

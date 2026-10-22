@@ -68,6 +68,7 @@ export type CategoryId =
   | 'food'
   | 'walks'
   | 'activities'
+  | 'shopping_centers'
   | 'events';
 
 /** Categories that actually hold Place records (events live in their own collection). */
@@ -92,7 +93,8 @@ export type VenueType =
   | 'restaurant'
   | 'bistro'
   | 'bakery'
-  | 'culture';
+  | 'culture'
+  | 'mall';
 
 /** Extra structured data for walking routes (category `walks`). */
 export interface WalkRoute {

@@ -74,6 +74,7 @@ const CATEGORIES: CategoryId[] = [
   'food',
   'walks',
   'activities',
+  'shopping_centers',
 ];
 
 const placePath = (place: Place): string =>
