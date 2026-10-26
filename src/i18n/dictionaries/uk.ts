@@ -272,6 +272,7 @@ export const uk = {
     allTypes: 'Усі типи',
     emptyTitle: 'На цей період подій ще немає',
     emptyText: 'Спробуйте обрати інший період або тип події.',
+    pastEventNote: 'Ця подія вже минула.',
     today: 'Сьогодні',
     tomorrow: 'Завтра',
     when: {

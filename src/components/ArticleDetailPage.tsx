@@ -14,6 +14,7 @@ interface ArticleDetailPageProps {
   favorites: string[];
   onToggleFavorite: (id: string, event: React.MouseEvent) => void;
   onSelectPlace: (place: Place) => void;
+  onSelectEvent: (event: CityEvent) => void;
   onBackToArticles: () => void;
   onOpenCategory: () => void;
 }
@@ -25,6 +26,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
   favorites,
   onToggleFavorite,
   onSelectPlace,
+  onSelectEvent,
   onBackToArticles,
   onOpenCategory,
 }) => {
@@ -78,7 +80,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
 
       {relatedEvent && (
         <div className="max-w-sm">
-          <EventCard event={relatedEvent} t={t} />
+          <EventCard event={relatedEvent} t={t} onSelectEvent={onSelectEvent} />
         </div>
       )}
 

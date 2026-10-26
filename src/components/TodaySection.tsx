@@ -15,6 +15,7 @@ interface TodaySectionProps {
   onSelectPlace: (place: Place) => void;
   onToggleFavorite: (id: string, event: React.MouseEvent) => void;
   onOpenEvents: () => void;
+  onSelectEvent: (event: CityEvent) => void;
   /** Sends the visitor to the feed filtered to what is open right now. */
   onPickForMe: () => void;
 }
@@ -37,6 +38,7 @@ export const TodaySection: React.FC<TodaySectionProps> = ({
   onSelectPlace,
   onToggleFavorite,
   onOpenEvents,
+  onSelectEvent,
   onPickForMe,
 }) => {
   const t = useT();
@@ -132,7 +134,7 @@ export const TodaySection: React.FC<TodaySectionProps> = ({
               <button
                 key={event.id}
                 type="button"
-                onClick={onOpenEvents}
+                onClick={() => onSelectEvent(event)}
                 className="w-full text-left flex items-center gap-4 p-3 rounded-2xl border border-zinc-200 hover:border-zinc-400 transition-colors"
               >
                 <img

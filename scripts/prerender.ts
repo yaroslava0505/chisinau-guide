@@ -40,6 +40,7 @@ import {
   websiteJsonLd,
 } from '../src/utils/seo';
 import { formatOpeningHours } from '../src/utils/openingHours';
+import { isPastEvent, occurrenceLabel } from '../src/utils/events';
 import { getPlaceImage } from '../src/utils/illustrations';
 import type { Article, CategoryId, CityEvent, Place } from '../src/types';
 
@@ -171,6 +172,24 @@ function eventItem(event: CityEvent, locale: Locale): string {
         <p>${esc(facts.join(' · '))}</p>
         <p>${esc(event.description)}</p>
       </li>`;
+}
+
+/** The event detail page's own facts, as a definition list. */
+function eventDetail(event: CityEvent, locale: Locale): string {
+  const t = getDictionary(locale);
+  const rows: [string, string][] = [
+    [t.admin.columns.date, `${occurrenceLabel(event, t)} · ${event.time}`],
+    [t.admin.columns.place, `${event.location_name}, ${event.address}`],
+    [t.admin.columns.price, event.price],
+  ];
+  const definitions = rows
+    .map(([term, value]) => `      <dt>${esc(term)}</dt><dd>${esc(value)}</dd>`)
+    .join('\n');
+
+  return `<p>${esc(event.description)}</p>
+    <dl>
+${definitions}
+    </dl>`;
 }
 
 /** The detail page's own facts, as a definition list. */
@@ -347,6 +366,24 @@ function pagesForLocale(locale: Locale): PageContent[] {
       body: articleDetail(article, locale),
       jsonLd: articleJsonLd(article, absoluteUrl(withLocale(path, locale)), locale),
       image: getArticleImage(article),
+    });
+  });
+
+  // One page per event. A past event stays reachable (so old links and
+  // cross-references don't 404) but goes noindex — the sitemap already
+  // leaves it out for the same reason (see generate-seo-files.ts).
+  events.forEach((event) => {
+    const path = `/events/${event.slug}`;
+    pages.push({
+      path,
+      title: event.title,
+      description: event.description,
+      heading: event.title,
+      subtitle: event.description,
+      body: eventDetail(event, locale),
+      jsonLd: eventJsonLd(event, absoluteUrl(withLocale(path, locale)), locale),
+      image: event.image,
+      noindex: isPastEvent(event),
     });
   });
 

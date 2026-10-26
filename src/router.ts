@@ -12,6 +12,7 @@ export type Route =
   | { view: 'category'; category: PlaceCategoryId }
   | { view: 'place'; category: PlaceCategoryId; slug: string }
   | { view: 'events' }
+  | { view: 'event'; slug: string }
   | { view: 'map' }
   | { view: 'favorites' }
   | { view: 'privacy' }
@@ -86,10 +87,13 @@ export function parsePath(pathname: string): Route {
     return STATIC_ROUTES[first];
   }
 
-  // Not a place category, so it needs its own two-segment case before the
+  // Not a place category, so they need their own two-segment case before the
   // category lookup below (which would otherwise fall through to notfound).
   if (first === 'articles' && segments.length === 2) {
     return { view: 'article', slug: second };
+  }
+  if (first === 'events' && segments.length === 2) {
+    return { view: 'event', slug: second };
   }
 
   const meta = categoryBySlug(first);
@@ -129,6 +133,8 @@ export function buildPath(route: Route, locale: Locale = DEFAULT_LOCALE): string
         return `/${categoryById(route.category)?.slug ?? ''}/${route.slug}`;
       case 'events':
         return '/events';
+      case 'event':
+        return `/events/${route.slug}`;
       case 'map':
         return '/map';
       case 'favorites':

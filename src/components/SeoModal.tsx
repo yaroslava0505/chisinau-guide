@@ -3,8 +3,12 @@ import { Check, Copy } from 'lucide-react';
 import type { Place } from '../types';
 import { collectSitemapPaths, generateRobotsTxt, generateSitemapXml } from '../utils/seo';
 import { INITIAL_ARTICLES } from '../data/articles';
+import { INITIAL_EVENTS } from '../data/chisinauPlaces';
+import { isPastEvent } from '../utils/events';
 import { useT } from '../i18n';
 import { Sheet } from './ui/Sheet';
+
+const UPCOMING_EVENTS = INITIAL_EVENTS.filter((event) => !isPastEvent(event));
 
 interface SeoModalProps {
   places: Place[];
@@ -21,9 +25,9 @@ export const SeoModal: React.FC<SeoModalProps> = ({ places, onClose }) => {
   const [tab, setTab] = useState<Tab>('overview');
   const [copied, setCopied] = useState(false);
 
-  const sitemapXml = generateSitemapXml(places, INITIAL_ARTICLES);
+  const sitemapXml = generateSitemapXml(places, INITIAL_ARTICLES, UPCOMING_EVENTS);
   const robotsTxt = generateRobotsTxt();
-  const urlCount = collectSitemapPaths(places, INITIAL_ARTICLES).length;
+  const urlCount = collectSitemapPaths(places, INITIAL_ARTICLES, UPCOMING_EVENTS).length;
 
   const copy = async (text: string) => {
     try {

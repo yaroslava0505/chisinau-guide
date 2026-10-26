@@ -419,17 +419,23 @@ const STATIC_PATHS = [
 ];
 
 /** Locale-less paths of every indexable page. */
-export function collectSitemapPaths(places: Place[], articles: Article[] = []): string[] {
+export function collectSitemapPaths(
+  places: Place[],
+  articles: Article[] = [],
+  events: CityEvent[] = [],
+): string[] {
   return [
     ...STATIC_PATHS,
     ...places.map((place) => `/${place.category.replace('_', '-')}/${place.slug}`),
     ...articles.map((article) => `/articles/${article.slug}`),
+    ...events.map((event) => `/events/${event.slug}`),
   ];
 }
 
 export function generateSitemapXml(
   places: Place[],
   articles: Article[] = [],
+  events: CityEvent[] = [],
   lastmod = new Date(),
 ): string {
   const stamp = toIsoDate(lastmod);
@@ -437,17 +443,19 @@ export function generateSitemapXml(
     places.map((place) => [`/${place.category.replace('_', '-')}/${place.slug}`, place]),
   );
   const articleByPath = new Map(articles.map((article) => [`/articles/${article.slug}`, article]));
+  const eventByPath = new Map(events.map((event) => [`/events/${event.slug}`, event]));
 
-  const entries = collectSitemapPaths(places, articles).flatMap((path) => {
+  const entries = collectSitemapPaths(places, articles, events).flatMap((path) => {
     const place = placeByPath.get(path);
     const article = articleByPath.get(path);
+    const event = eventByPath.get(path);
     const alternates = LOCALES.map(
       (locale) =>
         `    <xhtml:link rel="alternate" hreflang="${LOCALE_META[locale].htmlLang}" href="${absoluteUrl(withLocale(path, locale))}"/>`,
     ).join('\n');
     // Lets Google Images attribute the illustration (or real photo, once one
     // exists) shown on the page back to this URL.
-    const imageUrl = place ? getPlaceImage(place) : article ? getArticleImage(article) : null;
+    const imageUrl = place ? getPlaceImage(place) : article ? getArticleImage(article) : event ? event.image : null;
     const image = imageUrl
       ? `\n    <image:image><image:loc>${socialImageUrl(imageUrl)}</image:loc></image:image>`
       : '';
@@ -458,8 +466,8 @@ export function generateSitemapXml(
     <loc>${absoluteUrl(withLocale(path, locale))}</loc>
 ${alternates}${image}
     <lastmod>${stamp}</lastmod>
-    <changefreq>${place ? 'weekly' : article ? 'monthly' : 'daily'}</changefreq>
-    <priority>${path === '/' ? '1.0' : place ? '0.7' : article ? '0.8' : '0.9'}</priority>
+    <changefreq>${place ? 'weekly' : article ? 'monthly' : event ? 'weekly' : 'daily'}</changefreq>
+    <priority>${path === '/' ? '1.0' : place ? '0.7' : article ? '0.8' : event ? '0.6' : '0.9'}</priority>
   </url>`,
     );
   });

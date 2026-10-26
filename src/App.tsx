@@ -31,6 +31,7 @@ import { getPlaceImage } from './utils/illustrations';
 import { INITIAL_FILTERS, countActiveFilters, filterPlaces } from './utils/filters';
 import { analyzeQuery } from './utils/search';
 import { localizeArticles, localizeEvents, localizePlaces } from './utils/localize';
+import { isPastEvent } from './utils/events';
 import { CATEGORY_META, SCENARIOS } from './data/taxonomy';
 import { DISTRICT_IDS } from './data/chisinauPlaces';
 import { INITIAL_ARTICLES } from './data/articles';
@@ -67,6 +68,7 @@ import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactsPage } from './components/ContactsPage';
 import { ArticlesSection } from './components/ArticlesSection';
 import { ArticleDetailPage } from './components/ArticleDetailPage';
+import { EventDetailPage } from './components/EventDetailPage';
 /**
  * The admin panel is loaded on demand and only when it is enabled, so a public
  * build never ships its code — not merely hides its route.
@@ -160,6 +162,11 @@ function Guide() {
     () =>
       route.view === 'article' ? articles.find((article) => article.slug === route.slug) ?? null : null,
     [route, articles],
+  );
+
+  const selectedEvent = useMemo(
+    () => (route.view === 'event' ? events.find((event) => event.slug === route.slug) ?? null : null),
+    [route, events],
   );
 
   const copy = categoryCopy(t, activeCategory);
@@ -281,6 +288,24 @@ function Guide() {
       return;
     }
 
+    if (route.view === 'event') {
+      if (!selectedEvent) return;
+      const canonical = absoluteUrl(withLocale(path, locale));
+      updateSEO({
+        title: selectedEvent.title,
+        description: selectedEvent.description,
+        path,
+        locale,
+        image: selectedEvent.image,
+        jsonLd: eventJsonLd(selectedEvent, canonical, locale),
+        breadcrumbLeaf: selectedEvent.title,
+        // A past event's own page stops being something worth surfacing in
+        // search — the sitemap already leaves it out for the same reason.
+        noindex: isPastEvent(selectedEvent),
+      });
+      return;
+    }
+
     if (route.view === 'admin') {
       updateSEO({
         title: t.seo.adminTitle,
@@ -310,7 +335,7 @@ function Guide() {
       locale,
       jsonLd: websiteJsonLd(locale),
     });
-  }, [route, selectedPlace, selectedArticle, locale, t, copy, events, articles, filteredPlaces]);
+  }, [route, selectedPlace, selectedArticle, selectedEvent, locale, t, copy, events, articles, filteredPlaces]);
 
   /* ------------------------------- Handlers -------------------------------- */
 
@@ -348,6 +373,13 @@ function Guide() {
   const selectArticle = useCallback(
     (article: Article) => {
       navigate(buildPath({ view: 'article', slug: article.slug }, locale));
+    },
+    [locale],
+  );
+
+  const selectEvent = useCallback(
+    (event: CityEvent) => {
+      navigate(buildPath({ view: 'event', slug: event.slug }, locale));
     },
     [locale],
   );
@@ -429,6 +461,7 @@ function Guide() {
   const isContactsActive = route.view === 'contacts';
   const isArticlesActive = route.view === 'articles';
   const isArticleActive = route.view === 'article';
+  const isEventActive = route.view === 'event';
   const isAdminActive = ADMIN_ENABLED && route.view === 'admin';
   const isHome = route.view === 'home';
 
@@ -450,7 +483,9 @@ function Guide() {
         isMapActive={isMapActive}
         isFavoritesActive={isFavoritesActive}
         isAdminActive={isAdminActive}
-        isStaticPageActive={isPrivacyActive || isContactsActive || isArticlesActive || isArticleActive}
+        isStaticPageActive={
+          isPrivacyActive || isContactsActive || isArticlesActive || isArticleActive || isEventActive
+        }
         onResetToHome={() => selectCategory('all')}
         onSelectLocale={selectLocale}
       />
@@ -535,6 +570,7 @@ function Guide() {
               favorites={favorites}
               onToggleFavorite={toggleFavoriteFromCard}
               onSelectPlace={selectPlace}
+              onSelectEvent={selectEvent}
               onBackToArticles={() => navigate(withLocale('/articles', locale))}
               onOpenCategory={() => selectCategory(selectedArticle.category)}
             />
@@ -546,9 +582,24 @@ function Guide() {
             </h1>
           </main>
         )
+      ) : isEventActive ? (
+        selectedEvent ? (
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+            <EventDetailPage
+              event={selectedEvent}
+              onBackToEvents={() => navigate(withLocale('/events', locale))}
+            />
+          </main>
+        ) : (
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 py-20 text-center">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+              {t.seo.notFoundTitle}
+            </h1>
+          </main>
+        )
       ) : route.view === 'events' ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex-1">
-          <EventsSection events={events} variant="page" />
+          <EventsSection events={events} onSelectEvent={selectEvent} variant="page" />
         </main>
       ) : route.view === 'notfound' ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 py-20 text-center">
@@ -589,6 +640,7 @@ function Guide() {
             {isBrowsingHome && (
               <EventsSection
                 events={events}
+                onSelectEvent={selectEvent}
                 variant="home"
                 limit={2}
                 onOpenAllEvents={() => navigate(withLocale('/events', locale))}
@@ -603,6 +655,7 @@ function Guide() {
                 onSelectPlace={selectPlace}
                 onToggleFavorite={toggleFavoriteFromCard}
                 onOpenEvents={() => navigate(withLocale('/events', locale))}
+                onSelectEvent={selectEvent}
                 onPickForMe={() => {
                   // "Pick one for me" = everything open right now, across categories.
                   setActiveScenario(null);

@@ -9,6 +9,7 @@ import { ToggleChip } from './ui/Chip';
 
 interface EventsSectionProps {
   events: CityEvent[];
+  onSelectEvent: (event: CityEvent) => void;
   /** `page` renders the standalone /events view with filters. */
   variant?: 'home' | 'page';
   /** Number of cards shown in the home teaser. */
@@ -16,7 +17,11 @@ interface EventsSectionProps {
   onOpenAllEvents?: () => void;
 }
 
-export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event, t }) => {
+export const EventCard: React.FC<{ event: CityEvent; t: Dictionary; onSelectEvent: (event: CityEvent) => void }> = ({
+  event,
+  t,
+  onSelectEvent,
+}) => {
   const past = isPastEvent(event);
 
   return (
@@ -26,7 +31,11 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event
         past ? 'opacity-60' : ''
       }`}
     >
-      <div className="relative aspect-[16/9] overflow-hidden bg-zinc-100">
+      <button
+        type="button"
+        onClick={() => onSelectEvent(event)}
+        className="relative aspect-[16/9] overflow-hidden bg-zinc-100 block w-full text-left"
+      >
         <img
           src={event.image}
           // Every event image is a themed stock illustration (see the note
@@ -36,9 +45,9 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
         />
-        {/* No licensed event photos exist yet — every image here is a themed
-            stock illustration, so it must always carry the note (see Place's
-            same rule in utils/illustrations.ts). */}
+        {/* No licensed event photos exist yet — every event image here is a
+            themed stock illustration, so it must always carry the note (see
+            Place's same rule in utils/illustrations.ts). */}
         <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
           <ImageOff className="w-3 h-3" aria-hidden="true" />
           {t.common.illustrative}
@@ -56,7 +65,7 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event
             </span>
           )}
         </div>
-      </div>
+      </button>
 
       <div className="p-5 flex-1 flex flex-col">
         <div className="flex items-center justify-between gap-2 mb-2">
@@ -68,7 +77,9 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event
         </div>
 
         <h3 className="text-lg font-bold text-zinc-900 font-['Outfit',sans-serif] leading-snug">
-          {event.title}
+          <button type="button" onClick={() => onSelectEvent(event)} className="text-left hover:text-zinc-600 transition-colors">
+            {event.title}
+          </button>
         </h3>
 
         <p className="text-sm text-zinc-600 mt-2 line-clamp-2 leading-relaxed">
@@ -109,6 +120,7 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event
 
 export const EventsSection: React.FC<EventsSectionProps> = ({
   events,
+  onSelectEvent,
   variant = 'home',
   limit = 2,
   onOpenAllEvents,
@@ -191,7 +203,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({
       ) : (
         <div className={`grid gap-6 ${isPage ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 sm:grid-cols-2'}`}>
           {visible.map((event) => (
-            <EventCard key={event.id} event={event} t={t} />
+            <EventCard key={event.id} event={event} t={t} onSelectEvent={onSelectEvent} />
           ))}
         </div>
       )}
