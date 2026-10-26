@@ -142,4 +142,50 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-4',
+    slug: 'shopping-centers-chisinau',
+    title: 'Торгові центри Кишинева: куди йти за покупками й не тільки',
+    excerpt:
+      'Великий мол на пів дня, універмаг у центрі чи сусідній ТЦ із кінотеатром — як обрати торговий центр у Кишиневі під свою задачу.',
+    body: [
+      'Торговий центр у Кишиневі — це рідко лише магазини. Майже в кожному великому ТЦ під одним дахом є продуктовий супермаркет, фудкорт, зона розваг для дітей, іноді кінотеатр — тому сюди їдуть не тільки за покупками, а й щоб перечекати дощ, пообідати або зайняти дітей на пару годин.',
+      'Якщо потрібен один заїзд «за всім одразу», орієнтуйтеся на великі моли на околицях і вздовж основних магістралей: там більше площі, безкоштовний паркінг і повний набір якірних орендарів. Якщо ж ви в центрі й маєте пів години між справами, зручніші невеликі центри та історичні універмаги на бульварі Штефан чел Маре — туди можна зайти пішки й не загубитися в коридорах.',
+      'З дітьми варто дивитися не на кількість магазинів, а на те, чи є в центрі ігрова зона й кінотеатр: у таких ТЦ прогулянка легко перетворюється на повноцінний сімейний вихід, а на фудкорті завжди знайдеться щось просте. У будні після обіду людей значно менше, ніж у вихідні ввечері — якщо не любите черги, це найкращий час.',
+      'Нижче — кілька центрів із каталогу. Повний список із адресами, графіком роботи та фільтрами за районом — у категорії «Торгові центри».',
+    ],
+    category: 'shopping_centers',
+    placeSlugs: [
+      'malldova-shopping-center',
+      'port-mall-chisinau',
+      'atrium-albisoara-chisinau',
+      'unic-stefan-cel-mare-chisinau',
+      'sun-city-pushkin-chisinau',
+    ],
+    publishedAt: '2026-10-26',
+    i18n: {
+      ru: {
+        title: 'Торговые центры Кишинёва: куда идти за покупками и не только',
+        excerpt:
+          'Большой молл на полдня, универмаг в центре или соседний ТЦ с кинотеатром — как выбрать торговый центр в Кишинёве под свою задачу.',
+        body: [
+          'Торговый центр в Кишинёве — это редко только магазины. Почти в каждом крупном ТЦ под одной крышей есть продуктовый супермаркет, фудкорт, зона развлечений для детей, иногда кинотеатр — поэтому сюда едут не только за покупками, но и чтобы переждать дождь, пообедать или занять детей на пару часов.',
+          'Если нужен один заезд «за всем сразу», ориентируйтесь на большие моллы на окраинах и вдоль основных магистралей: там больше площади, бесплатная парковка и полный набор якорных арендаторов. Если же вы в центре и у вас полчаса между делами, удобнее небольшие центры и исторические универмаги на бульваре Штефан чел Маре — туда можно зайти пешком и не потеряться в коридорах.',
+          'С детьми стоит смотреть не на количество магазинов, а на то, есть ли в центре игровая зона и кинотеатр: в таких ТЦ прогулка легко превращается в полноценный семейный выход, а на фудкорте всегда найдётся что-то простое. В будни после обеда людей значительно меньше, чем в выходные вечером — если не любите очереди, это лучшее время.',
+          'Ниже — несколько центров из каталога. Полный список с адресами, графиком работы и фильтрами по району — в категории «Торговые центры».',
+        ],
+      },
+      ro: {
+        title: 'Centrele comerciale din Chișinău: unde mergi la cumpărături și nu numai',
+        excerpt:
+          'Un mall mare pentru o jumătate de zi, un magazin universal din centru sau un centru comercial de cartier cu cinema — cum alegi centrul comercial potrivit în Chișinău.',
+        body: [
+          'Un centru comercial în Chișinău înseamnă rar doar magazine. Aproape fiecare mall mare are, sub același acoperiș, un supermarket alimentar, un food court, o zonă de distracții pentru copii, uneori și un cinema — de aceea lumea vine aici nu doar la cumpărături, ci și ca să aștepte să treacă ploaia, să ia prânzul sau să ocupe copiii câteva ore.',
+          'Dacă vrei o singură deplasare „pentru tot”, orientează-te spre mall-urile mari de la periferie și de-a lungul arterelor principale: au mai mult spațiu, parcare gratuită și setul complet de chiriași-ancoră. Dacă însă ești în centru și ai o jumătate de oră între două treburi, sunt mai comode centrele mici și magazinele universale istorice de pe bulevardul Ștefan cel Mare — ajungi pe jos și nu te pierzi pe coridoare.',
+          'Cu copiii, nu te uita la numărul de magazine, ci dacă centrul are zonă de joacă și cinema: în astfel de mall-uri o plimbare devine ușor o ieșire de familie, iar la food court se găsește mereu ceva simplu. În zilele de lucru, după-amiaza, e mult mai puțină lume decât în weekend seara — dacă nu îți plac cozile, acela e cel mai bun moment.',
+          'Mai jos — câteva centre din catalog. Lista completă, cu adrese, program și filtre pe sector — în categoria „Centre comerciale”.',
+        ],
+      },
+    },
+  },
 ];
