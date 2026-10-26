@@ -188,4 +188,45 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-5',
+    slug: 'rammstein-symphonic-experience-chisinau',
+    title: 'Rammstein Symphonic Experience у Кишиневі: що це за концерт',
+    excerpt:
+      'Не сам гурт, а оркестрова інтерпретація його хітів на сцені Національної опери — що варто знати перед тим, як купувати квиток.',
+    body: [
+      '28 листопада Національний театр опери та балету «Maria Bieșu» приймає «Rammstein Symphonic Experience» — варто одразу прояснити: це не концерт самого гурту Rammstein, а симфонічна трибʼют-програма. На сцені — оркестр із близько двох десятків музикантів, який переосмислює найвідоміші пісні гурту без участі Тілля Ліндеманна чи інших оригінальних учасників.',
+      'Шоу вже проїхало десятки міст Європи — від Парижа до Таллінна, і скрізь працює за однією формулою: близько 75 хвилин без антракту, кінематографічне світло й візуальний ряд, важкі гітарні рифи, перекладені на мову струнних і духових. Для тих, хто любить Rammstein за атмосферу й драматургію, а не лише за звучання оригіналу, — це своя, окрема форма враження.',
+      'Квитки коштують 900–1300 лей залежно від місця в залі, початок о 19:00. Зала — та сама, де зазвичай ставлять оперу й балет, тож формат ближчий до вечірнього виходу, ніж до звичного клубного концерту.',
+      'Перед виставою зручно перекусити чи випити кави просто на бульварі Штефан чел Маре — поруч із театром є кілька перевірених варіантів. Повна афіша інших подій у Кишиневі на найближчі тижні — на сторінці «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['la-mamuca-stefan-cel-mare', 'bouchee-stefan-cel-mare', 'poetry-coffeeshop-julius-meinl'],
+    eventSlug: 'rammstein-symphonic-experience-2026',
+    publishedAt: '2026-10-26',
+    i18n: {
+      ru: {
+        title: 'Rammstein Symphonic Experience в Кишинёве: что это за концерт',
+        excerpt:
+          'Не сама группа, а оркестровая интерпретация её хитов на сцене Национальной оперы — что стоит знать перед покупкой билета.',
+        body: [
+          '28 ноября Национальный театр оперы и балета «Maria Bieșu» принимает «Rammstein Symphonic Experience» — сразу стоит прояснить: это не концерт самой группы Rammstein, а симфоническая трибьют-программа. На сцене — оркестр примерно из двух десятков музыкантов, который переосмысляет самые известные песни группы без участия Тилля Линдеманна или других оригинальных участников.',
+          'Шоу уже проехало десятки городов Европы — от Парижа до Таллина, и везде работает по одной формуле: около 75 минут без антракта, кинематографичный свет и визуальный ряд, тяжёлые гитарные риффы, переложенные на язык струнных и духовых. Для тех, кто любит Rammstein за атмосферу и драматургию, а не только за звучание оригинала, — это своя, отдельная форма впечатления.',
+          'Билеты стоят 900–1300 лей в зависимости от места в зале, начало в 19:00. Зал — тот же, где обычно ставят оперу и балет, поэтому формат ближе к вечернему выходу, чем к привычному клубному концерту.',
+          'Перед спектаклем удобно перекусить или выпить кофе прямо на бульваре Штефан чел Маре — рядом с театром есть несколько проверенных вариантов. Полная афиша других событий в Кишинёве на ближайшие недели — на странице «События».',
+        ],
+      },
+      ro: {
+        title: 'Rammstein Symphonic Experience la Chișinău: ce fel de concert este',
+        excerpt:
+          'Nu trupa însăși, ci o interpretare simfonică a hiturilor ei pe scena Operei Naționale — ce merită să știi înainte să cumperi un bilet.',
+        body: [
+          'Pe 28 noiembrie, Teatrul Național de Operă și Balet „Maria Bieșu” găzduiește „Rammstein Symphonic Experience” — trebuie clarificat de la bun început: nu este un concert al trupei Rammstein, ci un program simfonic de tip tribute. Pe scenă urcă o orchestră de aproximativ două zeci de muzicieni, care reinterpretează cele mai cunoscute piese ale trupei, fără participarea lui Till Lindemann sau a celorlalți membri originali.',
+          'Spectacolul a trecut deja prin zeci de orașe din Europa — de la Paris la Tallinn — și funcționează peste tot după aceeași formulă: aproximativ 75 de minute fără pauză, lumini și imagini de nivel cinematografic, riff-uri grele de chitară transpuse pentru instrumente de coarde și suflat. Pentru cei care iubesc Rammstein pentru atmosferă și dramaturgie, nu doar pentru sunetul original, este o experiență aparte.',
+          'Biletele costă 900–1300 lei, în funcție de loc, iar spectacolul începe la ora 19:00. Sala e aceeași în care se joacă de obicei operă și balet, așa că formatul e mai aproape de o ieșire de seară decât de un concert obișnuit de club.',
+          'Înainte de spectacol, e comod să iei o gustare sau o cafea chiar pe bulevardul Ștefan cel Mare — lângă teatru sunt câteva variante verificate. Afișul complet al celorlalte evenimente din Chișinău pentru săptămânile următoare — pe pagina „Evenimente”.',
+        ],
+      },
+    },
+  },
 ];

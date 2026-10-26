@@ -144,10 +144,19 @@ function articleDetail(article: Article, locale: Locale): string {
   const t = getDictionary(locale);
   const paragraphs = article.body.map((paragraph) => `<p>${esc(paragraph)}</p>`).join('\n    ');
 
+  const sourceEvent = article.eventSlug
+    ? INITIAL_EVENTS.find((event) => event.slug === article.eventSlug)
+    : undefined;
+  const localizedEvent = sourceEvent ? localizeEvents([sourceEvent], locale)[0] : undefined;
+  const eventBlock = localizedEvent
+    ? `<ul>\n      ${eventItem(localizedEvent, locale)}\n    </ul>`
+    : '';
+
   const related = INITIAL_PLACES.filter((place) => article.placeSlugs.includes(place.slug));
   const localizedRelated = localizePlaces(related, locale);
 
-  return `${paragraphs}
+  return `${eventBlock}
+    ${paragraphs}
     ${
       localizedRelated.length > 0
         ? `<h2>${esc(t.articles.relatedPlacesTitle)}</h2>\n    ${placeList(localizedRelated, locale)}`

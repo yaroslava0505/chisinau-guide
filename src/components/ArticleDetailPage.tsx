@@ -1,14 +1,16 @@
 import React from 'react';
 import { ArrowLeft, ArrowRight, Calendar, ImageOff } from 'lucide-react';
-import type { Article, Place } from '../types';
+import type { Article, CityEvent, Place } from '../types';
 import { getArticleImage } from '../utils/seo';
 import { categoryName } from '../i18n/labels';
 import { useT } from '../i18n';
 import { PlaceCard } from './PlaceCard';
+import { EventCard } from './EventsSection';
 
 interface ArticleDetailPageProps {
   article: Article;
   places: Place[];
+  events: CityEvent[];
   favorites: string[];
   onToggleFavorite: (id: string, event: React.MouseEvent) => void;
   onSelectPlace: (place: Place) => void;
@@ -19,6 +21,7 @@ interface ArticleDetailPageProps {
 export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
   article,
   places,
+  events,
   favorites,
   onToggleFavorite,
   onSelectPlace,
@@ -30,6 +33,10 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
   const relatedPlaces = article.placeSlugs
     .map((slug) => places.find((place) => place.slug === slug))
     .filter((place): place is Place => Boolean(place));
+
+  const relatedEvent = article.eventSlug
+    ? events.find((event) => event.slug === article.eventSlug)
+    : undefined;
 
   return (
     <div className="py-8 sm:py-10 max-w-3xl mx-auto space-y-8">
@@ -68,6 +75,12 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
           {t.common.illustrative}
         </span>
       </div>
+
+      {relatedEvent && (
+        <div className="max-w-sm">
+          <EventCard event={relatedEvent} t={t} />
+        </div>
+      )}
 
       <div className="space-y-4 text-base text-zinc-700 leading-relaxed">
         {article.body.map((paragraph, index) => (

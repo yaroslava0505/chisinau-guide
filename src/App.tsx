@@ -531,6 +531,7 @@ function Guide() {
             <ArticleDetailPage
               article={selectedArticle}
               places={places}
+              events={events}
               favorites={favorites}
               onToggleFavorite={toggleFavoriteFromCard}
               onSelectPlace={selectPlace}

@@ -16,7 +16,7 @@ interface EventsSectionProps {
   onOpenAllEvents?: () => void;
 }
 
-const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event, t }) => {
+export const EventCard: React.FC<{ event: CityEvent; t: Dictionary }> = ({ event, t }) => {
   const past = isPastEvent(event);
 
   return (

@@ -274,6 +274,8 @@ export interface Article {
   category: PlaceCategoryId;
   /** Slugs of real places referenced in the article, shown at the end as cards. */
   placeSlugs: string[];
+  /** Slug of a real CityEvent this piece is about, shown as a live event card. */
+  eventSlug?: string;
   /** ISO date, e.g. `2026-10-20`. */
   publishedAt: string;
   /** Russian and Romanian versions of the text fields. */
