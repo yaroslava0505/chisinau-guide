@@ -218,7 +218,10 @@ function pagesForLocale(locale: Locale): PageContent[] {
   const t = getDictionary(locale);
   const places = localizePlaces(INITIAL_PLACES, locale);
   const events = localizeEvents(INITIAL_EVENTS, locale);
-  const articles = localizeArticles(INITIAL_ARTICLES, locale);
+  // Newest first — matches the client-side homepage teaser (ArticlesSection).
+  const articles = localizeArticles(INITIAL_ARTICLES, locale).sort((a, b) =>
+    b.publishedAt.localeCompare(a.publishedAt),
+  );
   const pages: PageContent[] = [];
 
   // Home — the whole catalogue is reachable from here in one hop.

@@ -23,7 +23,11 @@ export const ArticlesSection: React.FC<ArticlesSectionProps> = ({
 }) => {
   const t = useT();
   const isPage = variant === 'page';
-  const visible = isPage ? articles : articles.slice(0, limit);
+  // Newest first, so a freshly published piece (e.g. this week's event
+  // write-up) actually surfaces on the homepage teaser instead of sitting
+  // behind older ones in catalogue order.
+  const sorted = [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  const visible = isPage ? sorted : sorted.slice(0, limit);
 
   if (visible.length === 0) return null;
 
