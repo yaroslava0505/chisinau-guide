@@ -81,7 +81,8 @@ export type District =
   | 'Ботаніка'
   | 'Буюкань'
   | 'Чокана'
-  | 'Телецентр';
+  | 'Телецентр'
+  | 'Скулянка';
 
 export type Atmosphere = 'creative' | 'aesthetic' | 'cozy' | 'vibrant' | 'minimalist';
 

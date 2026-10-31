@@ -53,6 +53,7 @@ const DISTRICT_CENTERS: Record<District, [number, number]> = {
   'Буюкань': [47.0322, 28.8105],
   'Чокана': [47.05, 28.885],
   'Телецентр': [47.005, 28.825],
+  'Скулянка': [47.0397, 28.793],
 };
 
 export const InteractiveMap: React.FC<InteractiveMapProps> = ({
