@@ -7,4 +7,4 @@ Disallow: /ru/favorites
 Disallow: /ro/favorites
 Disallow: /favorites
 
-Sitemap: https://chisinau-guide.netlify.app/sitemap.xml
+Sitemap: https://chisinau-guide.com/sitemap.xml

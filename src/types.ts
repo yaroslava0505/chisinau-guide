@@ -52,6 +52,7 @@ export type ConfirmedField =
   | 'wheelchair'
   | 'pet_friendly'
   | 'kids_friendly'
+  | 'parking'
   | 'free_entry'
   | 'photos'
   | 'price_range'

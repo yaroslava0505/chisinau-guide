@@ -2,7 +2,7 @@ import { writeFileSync, mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildCatalogueFile } from '../src/utils/exportCatalogue';
-import { INITIAL_PLACES, INITIAL_EVENTS } from '../src/data/chisinauPlaces';
+import { DISTRICT_IDS, INITIAL_PLACES, INITIAL_EVENTS } from '../src/data/chisinauPlaces';
 
 async function main() {
   let failed = 0;
@@ -30,7 +30,7 @@ async function main() {
     JSON.stringify(reloaded.INITIAL_PLACES) === JSON.stringify(INITIAL_PLACES), true);
   t('події ідентичні',
     JSON.stringify(reloaded.INITIAL_EVENTS) === JSON.stringify(INITIAL_EVENTS), true);
-  t('райони збереглися', reloaded.DISTRICT_IDS.length, 6);
+  t('райони збереглися', reloaded.DISTRICT_IDS.length, DISTRICT_IDS.length);
 
   // Apostrophes and non-Latin text must survive the round trip untouched.
   const tricky = INITIAL_PLACES.find((p) => p.name.includes('ʼ') || p.name.includes("'"));
