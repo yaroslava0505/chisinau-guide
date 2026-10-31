@@ -529,6 +529,7 @@ export const uk = {
       italian: 'Італійська',
       meat: 'Мʼясо & гриль',
       moldovan: 'Молдовська',
+      georgian: 'Грузинська',
       vegetarian: 'Vegetarian',
       bakery: 'Bakery',
       desserts: 'Desserts',

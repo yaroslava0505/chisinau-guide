@@ -530,6 +530,7 @@ export const ro: Dictionary = {
       italian: 'Italiană',
       meat: 'Carne & grătar',
       moldovan: 'Moldovenească',
+      georgian: 'Georgiană',
       vegetarian: 'Vegetarian',
       bakery: 'Bakery',
       desserts: 'Desserts',

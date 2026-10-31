@@ -524,6 +524,7 @@ export const ru: Dictionary = {
       italian: 'Итальянская',
       meat: 'Мясо & гриль',
       moldovan: 'Молдавская',
+      georgian: 'Грузинская',
       vegetarian: 'Vegetarian',
       bakery: 'Bakery',
       desserts: 'Desserts',

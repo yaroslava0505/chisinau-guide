@@ -89,7 +89,7 @@ export const ATMOSPHERE_VALUES: Atmosphere[] = [
 ];
 
 export const CUISINE_VALUES = [
-  'pizza', 'burgers', 'sushi', 'italian', 'meat', 'moldovan',
+  'pizza', 'burgers', 'sushi', 'italian', 'meat', 'moldovan', 'georgian',
   'vegetarian', 'bakery', 'desserts', 'street_food', 'healthy',
 ] as const;
 
