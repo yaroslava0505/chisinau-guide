@@ -40,6 +40,7 @@ import {
   websiteJsonLd,
 } from '../src/utils/seo';
 import { formatOpeningHours } from '../src/utils/openingHours';
+import { formatPriceRange } from '../src/utils/priceRange';
 import { isPastEvent, occurrenceLabel } from '../src/utils/events';
 import { getPlaceImage } from '../src/utils/illustrations';
 import type { Article, CategoryId, CityEvent, Place } from '../src/types';
@@ -204,6 +205,8 @@ function placeDetail(place: Place, locale: Locale): string {
   if (place.opening_hours) {
     rows.push([t.admin.fields.openingHours, formatOpeningHours(place.opening_hours, t.common)]);
   }
+  const priceRange = formatPriceRange(place, t);
+  if (priceRange) rows.push([t.detail.priceRange, priceRange]);
   if (place.website) rows.push([t.detail.website, place.website]);
   if (place.source?.name) rows.push([t.detail.source, place.source.name]);
 

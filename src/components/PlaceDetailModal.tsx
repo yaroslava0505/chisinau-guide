@@ -24,6 +24,7 @@ import 'leaflet/dist/leaflet.css';
 import type { Place } from '../types';
 import { getConfirmedAmenities, getRatingItems, getWhyHere } from '../utils/placeMetrics';
 import { formatOpeningHours, getOpenState } from '../utils/openingHours';
+import { formatPriceRange } from '../utils/priceRange';
 import { PlaceComments } from './PlaceComments';
 import { PlacePhoto } from './ui/PlacePhoto';
 import { Sheet } from './ui/Sheet';
@@ -69,6 +70,7 @@ export const PlaceDetailModal: React.FC<PlaceDetailModalProps> = ({
   const reasons = getWhyHere(place, t);
   const amenities = getConfirmedAmenities(place, t);
   const openState = getOpenState(place.opening_hours);
+  const priceRange = formatPriceRange(place, t);
   const openStateLabel = openState === 'open' ? t.common.openNowLong : t.common.closedNow;
   const districtShort = districtLabel(t, place.district);
   const category = categoryName(t, place.category);
@@ -406,7 +408,16 @@ export const PlaceDetailModal: React.FC<PlaceDetailModalProps> = ({
 
             <p className="flex items-start gap-3 text-sm text-zinc-700">
               <DollarSign className="w-4 h-4 text-zinc-500 shrink-0 mt-0.5" aria-hidden="true" />
-              <span>{t.detail.priceLevel}: {'$'.repeat(place.price_level)}</span>
+              <span>
+                {t.detail.priceLevel}: {'$'.repeat(place.price_level)}
+                {priceRange && (
+                  <>
+                    <br />
+                    {t.detail.priceRange}: {priceRange}{' '}
+                    <span className="text-zinc-400">({t.detail.priceRangeSource})</span>
+                  </>
+                )}
+              </span>
             </p>
 
             {place.phone && (

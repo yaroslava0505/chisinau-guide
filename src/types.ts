@@ -54,6 +54,7 @@ export type ConfirmedField =
   | 'kids_friendly'
   | 'free_entry'
   | 'photos'
+  | 'price_range'
   | 'wifi_rating'
   | 'quiet_rating'
   | 'outlet_rating'
@@ -98,6 +99,17 @@ export type VenueType =
   | 'culture'
   | 'mall';
 
+/** What a `price_range` describes, so the label can be translated. */
+export type PriceKind =
+  | 'menu'
+  | 'drinks'
+  | 'pastries'
+  | 'tickets'
+  | 'entry'
+  | 'membership'
+  | 'coworking'
+  | 'products';
+
 /** Extra structured data for walking routes (category `walks`). */
 export interface WalkRoute {
   duration_min: number;
@@ -125,6 +137,8 @@ export interface Place {
   instagram: string;
   opening_hours: string;
   price_level: 1 | 2 | 3; // 1 = $, 2 = $$, 3 = $$$
+  /** Approximate prices in MDL as published on the venue's own site or menu. */
+  price_range?: { from: number; to: number; kind: PriceKind };
   photos: string[];
 
   /**
