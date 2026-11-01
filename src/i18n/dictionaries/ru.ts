@@ -225,6 +225,15 @@ export const ru: Dictionary = {
     pet: 'Можно с животным',
     kids: 'Можно с ребёнком',
     freeEntry: 'Бесплатный вход',
+    parking: 'Парковка',
+    breakfast: 'Завтраки',
+    kidsRoom: 'Детская комната',
+    kidsMenu: 'Детское меню',
+    reservation: 'Бронирование столика',
+    delivery: 'Доставка',
+    banquet: 'Банкеты и мероприятия',
+    businessLunch: 'Бизнес-ланч',
+    liveMusic: 'Живая музыка',
   },
 
   detail: {

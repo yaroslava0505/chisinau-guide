@@ -230,6 +230,15 @@ export const uk = {
     pet: 'Можна з твариною',
     kids: 'Можна з дитиною',
     freeEntry: 'Безкоштовний вхід',
+    parking: 'Парковка',
+    breakfast: 'Сніданки',
+    kidsRoom: 'Дитяча кімната',
+    kidsMenu: 'Дитяче меню',
+    reservation: 'Бронювання столика',
+    delivery: 'Доставка',
+    banquet: 'Банкети та події',
+    businessLunch: 'Бізнес-ланч',
+    liveMusic: 'Жива музика',
   },
 
   detail: {

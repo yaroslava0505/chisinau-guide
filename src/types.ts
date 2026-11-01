@@ -56,6 +56,14 @@ export type ConfirmedField =
   | 'free_entry'
   | 'photos'
   | 'price_range'
+  | 'breakfast'
+  | 'kids_room'
+  | 'kids_menu'
+  | 'reservation'
+  | 'delivery'
+  | 'banquet'
+  | 'business_lunch'
+  | 'live_music'
   | 'wifi_rating'
   | 'quiet_rating'
   | 'outlet_rating'
@@ -174,6 +182,14 @@ export interface Place {
   long_stay_ok?: boolean;
   solo_friendly?: boolean;
   breakfast?: boolean;
+  /** Venue features stated on the venue's own site; same three-state rule. */
+  kids_room?: boolean;
+  kids_menu?: boolean;
+  reservation?: boolean;
+  delivery?: boolean;
+  banquet?: boolean;
+  business_lunch?: boolean;
+  live_music?: boolean;
   atmosphere?: Atmosphere;
   venue_type?: VenueType;
 

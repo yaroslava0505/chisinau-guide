@@ -231,6 +231,15 @@ export const ro: Dictionary = {
     pet: 'Se poate cu animalul',
     kids: 'Potrivit cu copilul',
     freeEntry: 'Intrare gratuită',
+    parking: 'Parcare',
+    breakfast: 'Mic dejun',
+    kidsRoom: 'Cameră pentru copii',
+    kidsMenu: 'Meniu pentru copii',
+    reservation: 'Rezervare de masă',
+    delivery: 'Livrare',
+    banquet: 'Banchete și evenimente',
+    businessLunch: 'Business lunch',
+    liveMusic: 'Muzică live',
   },
 
   detail: {
