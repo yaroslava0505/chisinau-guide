@@ -245,11 +245,11 @@ export const INITIAL_ARTICLES: Article[] = [
     category: 'activities',
     placeSlugs: ['fuior-gourmet-chisinau', 'torro-burgers-puskin', 'bellucci-cafe-kogalniceanu'],
     eventSlug: 'sviatoslav-vakarchuk-chisinau-2026',
-    image: '/images/articles/sviatoslav-vakarchuk-2022.jpg',
+    image: '/images/articles/sviatoslav-vakarchuk-2023.jpg',
     imageCredit: {
-      author: '24-та ОМБр ім. короля Данила',
-      license: 'CC BY 4.0',
-      url: 'https://commons.wikimedia.org/wiki/File:Vakarchuk_24th_brigade_concert_Oct_2022_01.jpg',
+      author: 'Посольство США в Україні',
+      license: 'суспільне надбання',
+      url: 'https://commons.wikimedia.org/wiki/File:Ambassador_Bridget_Brink_attended_a_concert_of_one_of_her_favorite_musicians_%E2%80%94_Svyatoslav_Vakarchuk,_the_legendary_Ukrainian_singer_and_lead_of_Okean_Elzy_band,_Dec._9,_2023_-_2.jpg',
     },
     publishedAt: '2026-11-01',
     i18n: {

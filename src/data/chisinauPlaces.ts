@@ -6280,8 +6280,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: '750–2050 лей',
     free_entry: false,
     description: 'Лідер «Океану Ельзи» Святослав Вакарчук представить у Кишиневі камерну сольну програму — лише голос, гітара та фортепіано: відомі пісні гурту, твори з сольних проєктів і нові композиції. Концерт за підтримки Посольства України в Молдові; квитки на livetickets.md.',
-    image: '/images/articles/sviatoslav-vakarchuk-2022.jpg',
-    image_credit: { author: '24-та ОМБр ім. короля Данила', license: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Vakarchuk_24th_brigade_concert_Oct_2022_01.jpg' },
+    image: '/images/articles/sviatoslav-vakarchuk-2023.jpg',
+    image_credit: { author: 'Посольство США в Україні', license: 'суспільне надбання', url: 'https://commons.wikimedia.org/wiki/File:Ambassador_Bridget_Brink_attended_a_concert_of_one_of_her_favorite_musicians_%E2%80%94_Svyatoslav_Vakarchuk,_the_legendary_Ukrainian_singer_and_lead_of_Okean_Elzy_band,_Dec._9,_2023_-_2.jpg' },
     tags: ['концерт', 'океан ельзи', 'українська музика'],
     i18n: {
       ru: {
