@@ -52,14 +52,25 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({ event, onBackT
       <div className={`relative aspect-[16/9] rounded-3xl overflow-hidden bg-zinc-100 ${past ? 'opacity-60' : ''}`}>
         <img
           src={event.image}
-          alt={`${t.common.illustrative}: ${event.category}`}
+          alt={event.image_credit ? event.title : `${t.common.illustrative}: ${event.category}`}
           loading="lazy"
           className="w-full h-full object-cover"
         />
-        <span className="absolute bottom-3 left-3 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
-          <ImageOff className="w-3 h-3" aria-hidden="true" />
-          {t.common.illustrative}
-        </span>
+        {event.image_credit ? (
+          <a
+            href={event.image_credit.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-3 left-3 inline-flex items-center px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold hover:bg-black/70"
+          >
+            {t.common.photo}: {event.image_credit.author} · {event.image_credit.license}
+          </a>
+        ) : (
+          <span className="absolute bottom-3 left-3 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
+            <ImageOff className="w-3 h-3" aria-hidden="true" />
+            {t.common.illustrative}
+          </span>
+        )}
       </div>
 
       <div className="bg-white rounded-3xl border border-zinc-200 p-6 space-y-4">

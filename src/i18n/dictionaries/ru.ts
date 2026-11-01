@@ -23,6 +23,7 @@ export const ru: Dictionary = {
     hoursUnknown: 'Часы работы не указаны',
     openUntil: (time: string) => `Открыто до ${time}`,
     illustrative: 'Иллюстративное фото',
+    photo: 'Фото',
     noPhoto: 'Фото пока нет',
     openNowLong: 'Открыто сейчас',
     showingOf: (shown: number, total: number) => `Показано ${shown} из ${total}`,

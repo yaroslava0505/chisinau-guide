@@ -38,19 +38,22 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary; onSelectEven
       >
         <img
           src={event.image}
-          // Every event image is a themed stock illustration (see the note
-          // below), never a photo of the event itself — the alt text says so
-          // instead of claiming otherwise.
-          alt={`${t.common.illustrative}: ${event.category}`}
+          // Without a credit the image is a themed stock illustration, never a
+          // photo of the event itself — the alt text says so instead of
+          // claiming otherwise.
+          alt={event.image_credit ? event.title : `${t.common.illustrative}: ${event.category}`}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
         />
-        {/* No licensed event photos exist yet — every event image here is a
-            themed stock illustration, so it must always carry the note (see
-            Place's same rule in utils/illustrations.ts). */}
         <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
-          <ImageOff className="w-3 h-3" aria-hidden="true" />
-          {t.common.illustrative}
+          {event.image_credit ? (
+            `${t.common.photo}: ${event.image_credit.author} · ${event.image_credit.license}`
+          ) : (
+            <>
+              <ImageOff className="w-3 h-3" aria-hidden="true" />
+              {t.common.illustrative}
+            </>
+          )}
         </span>
         <div className="absolute top-3 left-3 flex items-center gap-1.5">
           <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/95 text-zinc-900 backdrop-blur-md">

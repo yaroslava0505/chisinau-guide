@@ -22,13 +22,19 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelectArtic
       >
         <img
           src={getArticleImage(article)}
-          alt={`${t.common.illustrative}: ${categoryName(t, article.category)}`}
+          alt={article.image ? article.title : `${t.common.illustrative}: ${categoryName(t, article.category)}`}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
         />
         <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
-          <ImageOff className="w-3 h-3" aria-hidden="true" />
-          {t.common.illustrative}
+          {article.imageCredit ? (
+            `${t.common.photo}: ${article.imageCredit.author} · ${article.imageCredit.license}`
+          ) : (
+            <>
+              <ImageOff className="w-3 h-3" aria-hidden="true" />
+              {t.common.illustrative}
+            </>
+          )}
         </span>
         <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/95 text-zinc-900 backdrop-blur-md">
           {categoryName(t, article.category)}

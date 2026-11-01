@@ -25,6 +25,7 @@ export const uk = {
     hoursUnknown: 'Години роботи не вказані',
     openUntil: (time: string) => `Відкрито до ${time}`,
     illustrative: 'Ілюстративне фото',
+    photo: 'Фото',
     noPhoto: 'Фото поки немає',
     openNowLong: 'Відчинено зараз',
     showingOf: (shown: number, total: number) => `Показано ${shown} з ${total}`,

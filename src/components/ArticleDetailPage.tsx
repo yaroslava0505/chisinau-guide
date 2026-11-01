@@ -68,14 +68,25 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
       <div className="relative aspect-[16/9] rounded-3xl overflow-hidden bg-zinc-100">
         <img
           src={getArticleImage(article)}
-          alt={`${t.common.illustrative}: ${categoryName(t, article.category)}`}
+          alt={article.image ? article.title : `${t.common.illustrative}: ${categoryName(t, article.category)}`}
           loading="lazy"
           className="w-full h-full object-cover"
         />
-        <span className="absolute bottom-3 left-3 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
-          <ImageOff className="w-3 h-3" aria-hidden="true" />
-          {t.common.illustrative}
-        </span>
+        {article.imageCredit ? (
+          <a
+            href={article.imageCredit.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-3 left-3 inline-flex items-center px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold hover:bg-black/70"
+          >
+            {t.common.photo}: {article.imageCredit.author} · {article.imageCredit.license}
+          </a>
+        ) : (
+          <span className="absolute bottom-3 left-3 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-black/55 backdrop-blur-sm text-white text-[10px] font-semibold">
+            <ImageOff className="w-3 h-3" aria-hidden="true" />
+            {t.common.illustrative}
+          </span>
+        )}
       </div>
 
       {relatedEvent && (

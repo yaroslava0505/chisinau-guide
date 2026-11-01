@@ -5952,7 +5952,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: '300–830 лей',
     free_entry: false,
     description: 'Румунський поп-гурт 3 Sud Est дає два концерти в Палаці Націонал 18 і 19 листопада о 19:00 — програма з головних хітів майже тридцятирічної карʼєри. Організатори — Sens Music і 1AM, квитки на iTicket.',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/articles/palatul-national-chisinau.jpg',
+    image_credit: { author: 'Tomasz Bladyniec', license: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Palatul_Na%C8%9Bional,_Chi%C8%99in%C4%83u.jpg' },
     tags: ['концерт', 'поп', 'палац націонал'],
     i18n: {
       ru: {
@@ -5988,7 +5989,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: '150–400 лей',
     free_entry: false,
     description: 'Молодий німецький органіст Ян Ліберман відкриває XV Міжнародний фестиваль «J.S. Bach» в Органній залі: у програмі Токата і фуга ре мінор, Пасакалія до мінор та інші твори Баха. Фестиваль триває до 26 листопада — Bach Jazz Trio (15.11), «Copiii cântă Bach» (20.11), «Bach–Brahms» (26.11).',
-    image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/articles/sala-cu-orga-chisinau.jpg',
+    image_credit: { author: 'Pelin Oleg', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Sala_cu_Org%C4%83_din_Chi%C8%99in%C4%83u_2.jpg' },
     tags: ['орган', 'класика', 'бах'],
     i18n: {
       ru: {
@@ -6204,7 +6206,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: '200 лей (1 учасник), 350 (2), 500 (3)',
     free_entry: false,
     description: 'Святковий неконкурентний забіг на 3 км у центрі Кишинева зі стартом на Площі Великих національних зборів, відкритий для всіх віків і рівнів підготовки. Учасники отримують номер, святкову шапку та «їстівну медаль»; діти до 14 років — у супроводі батьків. Реєстрація на sporter.md.',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/articles/arcul-de-triumf-chisinau.jpg',
+    image_credit: { author: 'ValentinVrz', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Arcul_de_triumf_(Chi%C8%99in%C4%83u).jpg' },
     tags: ['біг', 'різдво', 'з дітьми'],
     i18n: {
       ru: {
@@ -6277,7 +6280,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: '750–2050 лей',
     free_entry: false,
     description: 'Лідер «Океану Ельзи» Святослав Вакарчук представить у Кишиневі камерну сольну програму — лише голос, гітара та фортепіано: відомі пісні гурту, твори з сольних проєктів і нові композиції. Концерт за підтримки Посольства України в Молдові; квитки на livetickets.md.',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/articles/sviatoslav-vakarchuk-2022.jpg',
+    image_credit: { author: '24-та ОМБр ім. короля Данила', license: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Vakarchuk_24th_brigade_concert_Oct_2022_01.jpg' },
     tags: ['концерт', 'океан ельзи', 'українська музика'],
     i18n: {
       ru: {
@@ -6313,7 +6317,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: '250–1000 лей',
     free_entry: false,
     description: 'Різдвяний концерт румунської співачки Паули Селінг у Палаці Націонал: традиційні колядки, зимові пісні та сучасні аранжування. Організатор — Dar.fm; квитки на iTicket.',
-    image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/articles/paula-seling-2019.jpg',
+    image_credit: { author: 'Cezar Popescu', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Paula_Seling,_3_august_2019.jpg' },
     tags: ['концерт', 'колядки', 'різдво'],
     i18n: {
       ru: {

@@ -245,6 +245,12 @@ export const INITIAL_ARTICLES: Article[] = [
     category: 'activities',
     placeSlugs: ['fuior-gourmet-chisinau', 'torro-burgers-puskin', 'bellucci-cafe-kogalniceanu'],
     eventSlug: 'sviatoslav-vakarchuk-chisinau-2026',
+    image: '/images/articles/sviatoslav-vakarchuk-2022.jpg',
+    imageCredit: {
+      author: '24-та ОМБр ім. короля Данила',
+      license: 'CC BY 4.0',
+      url: 'https://commons.wikimedia.org/wiki/File:Vakarchuk_24th_brigade_concert_Oct_2022_01.jpg',
+    },
     publishedAt: '2026-11-01',
     i18n: {
       ru: {
@@ -289,6 +295,12 @@ export const INITIAL_ARTICLES: Article[] = [
     category: 'activities',
     placeSlugs: ['torro-burgers-puskin', 'fuior-gourmet-chisinau', 'bellucci-cafe-kogalniceanu'],
     eventSlug: '3-sud-est-chisinau-2026',
+    image: '/images/articles/palatul-national-chisinau.jpg',
+    imageCredit: {
+      author: 'Tomasz Bladyniec',
+      license: 'CC BY 4.0',
+      url: 'https://commons.wikimedia.org/wiki/File:Palatul_Na%C8%9Bional,_Chi%C8%99in%C4%83u.jpg',
+    },
     publishedAt: '2026-11-01',
     i18n: {
       ru: {
@@ -333,6 +345,12 @@ export const INITIAL_ARTICLES: Article[] = [
     category: 'activities',
     placeSlugs: ['coffee-molka-chisinau', 'la-placinte-chisinau', 'bouchee-stefan-cel-mare'],
     eventSlug: 'maratonul-de-craciun-2026',
+    image: '/images/articles/arcul-de-triumf-chisinau.jpg',
+    imageCredit: {
+      author: 'ValentinVrz',
+      license: 'CC BY-SA 4.0',
+      url: 'https://commons.wikimedia.org/wiki/File:Arcul_de_triumf_(Chi%C8%99in%C4%83u).jpg',
+    },
     publishedAt: '2026-11-01',
     i18n: {
       ru: {
@@ -378,6 +396,12 @@ export const INITIAL_ARTICLES: Article[] = [
     category: 'activities',
     placeSlugs: ['teatrul-opera-balet', 'sala-cu-orga', 'teatrul-national-mihai-eminescu', 'teatrul-satiricus', 'palatul-republicii', 'muzeul-national-de-istorie-chisinau'],
     eventSlug: 'bach-festival-liebermann-2026',
+    image: '/images/articles/sala-cu-orga-chisinau.jpg',
+    imageCredit: {
+      author: 'Pelin Oleg',
+      license: 'CC BY-SA 4.0',
+      url: 'https://commons.wikimedia.org/wiki/File:Sala_cu_Org%C4%83_din_Chi%C8%99in%C4%83u_2.jpg',
+    },
     publishedAt: '2026-11-01',
     i18n: {
       ru: {

@@ -28,6 +28,8 @@ function upsertMeta(selector: string, attr: 'name' | 'property', key: string, co
  * dimensions those tags advertise.
  */
 export function socialImageUrl(url: string): string {
+  // Site-hosted photos ship a pre-cropped 1200×630 sibling next to them.
+  if (url.startsWith('/')) return absoluteUrl(url.replace(/\.jpg$/, '-og.jpg'));
   const [base] = url.split('?');
   return `${base}?q=80&w=1200&h=630&fit=crop`;
 }
@@ -262,7 +264,7 @@ export function breadcrumbJsonLd(path: string, locale: Locale = DEFAULT_LOCALE, 
 
 /** Cover image for an article — same pool and labelling convention as place cards. */
 export function getArticleImage(article: Article): string {
-  return getCategoryIllustration(article.category, article.slug);
+  return article.image ?? getCategoryIllustration(article.category, article.slug);
 }
 
 export function articleJsonLd(article: Article, canonical: string, locale: Locale = DEFAULT_LOCALE) {

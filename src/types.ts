@@ -259,6 +259,8 @@ export interface CityEvent {
   free_entry?: boolean;
   description: string;
   image: string;
+  /** Set only when `image` is a real licensed photo rather than an illustration. */
+  image_credit?: ImageCredit;
   tags: string[];
   /** Russian and Romanian versions of the text fields. */
   i18n?: EventI18n;
@@ -277,6 +279,14 @@ export type EventType =
   | 'cinema';
 
 export type EventWhen = 'all' | 'today' | 'tomorrow' | 'weekend' | 'week';
+
+/** Who took a licensed photo and under which licence — shown next to it. */
+export interface ImageCredit {
+  author: string;
+  license: string;
+  /** Page the photo was taken from (e.g. its Wikimedia Commons file page). */
+  url: string;
+}
 
 /** Fields of an Article that are worth translating. */
 export interface ArticleTranslation {
@@ -308,6 +318,10 @@ export interface Article {
   placeSlugs: string[];
   /** Slug of a real CityEvent this piece is about, shown as a live event card. */
   eventSlug?: string;
+  /** A real, licensed cover photo; without it a themed illustration is shown. */
+  image?: string;
+  /** Required attribution whenever `image` is set. */
+  imageCredit?: ImageCredit;
   /** ISO date, e.g. `2026-10-20`. */
   publishedAt: string;
   /** Russian and Romanian versions of the text fields. */

@@ -23,6 +23,7 @@ export const ro: Dictionary = {
     hoursUnknown: 'Programul nu este indicat',
     openUntil: (time: string) => `Deschis până la ${time}`,
     illustrative: 'Fotografie ilustrativă',
+    photo: 'Foto',
     noPhoto: 'Încă nu există fotografii',
     openNowLong: 'Deschis acum',
     showingOf: (shown: number, total: number) => `Afișate ${shown} din ${total}`,
