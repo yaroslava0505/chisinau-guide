@@ -229,4 +229,183 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-6',
+    slug: 'sviatoslav-vakarchuk-chisinau-2026',
+    title: 'Святослав Вакарчук у Кишиневі 15 грудня: сольний концерт у Палаці Націонал',
+    excerpt:
+      'Лідер «Океану Ельзи» привозить камерну програму — лише голос, гітара й фортепіано. Дата, ціни, де купити квитки і де повечеряти поруч.',
+    body: [
+      '15 грудня 2026 року Святослав Вакарчук виступить у Кишиневі із сольним концертом у Палаці Націонал «Ніколае Сулак» (вул. Пушкіна, 21). Початок о 19:00. Це не концерт гурту «Океан Ельзи» в повному складі, а камерна програма: на сцені — сам Вакарчук, голос, гітара та фортепіано.',
+      'У програмі — відомі пісні «Океану Ельзи», твори з сольних проєктів і нові композиції. Організатори анонсують вечір як розмову з залом без великого продакшену, де головне — пісні та їхні історії. Концерт проходить за підтримки Посольства України в Республіці Молдова.',
+      'Квитки коштують від 750 до 2050 лей залежно від сектора й продаються на livetickets.md. Для українців Кишинева це, ймовірно, найбільша українська музична подія зими.',
+      'Палац Націонал стоїть у самому центрі, за два квартали від бульвару Штефан чел Маре. Повечеряти перед концертом можна на тій самій вулиці Пушкіна: Fuior Gourmet — винний ресторан з молдовською авторською кухнею за адресою Пушкіна, 30, або Torro Burgers на Пушкіна, 12, якщо хочеться швидко й без церемоній. Після концерту кавʼярні вже зачинені, а от ресторани в центрі працюють до 23:00.',
+      'Інші концерти й вистави в Кишиневі на грудень — у розділі «Події»: там же 17 грудня в тому ж залі — різдвяна програма Паули Селінг, а 13 грудня на площі Великих національних зборів — святковий забіг на 3 км.',
+    ],
+    category: 'activities',
+    placeSlugs: ['fuior-gourmet-chisinau', 'torro-burgers-puskin', 'bellucci-cafe-kogalniceanu'],
+    eventSlug: 'sviatoslav-vakarchuk-chisinau-2026',
+    publishedAt: '2026-11-01',
+    i18n: {
+      ru: {
+        title: 'Святослав Вакарчук в Кишинёве 15 декабря: сольный концерт в Национальном дворце',
+        excerpt:
+          'Лидер «Океана Ельзи» привозит камерную программу — только голос, гитара и фортепиано. Дата, цены, где купить билеты и где поужинать рядом.',
+        body: [
+          '15 декабря 2026 года Святослав Вакарчук выступит в Кишинёве с сольным концертом в Национальном дворце «Николае Сулак» (ул. Пушкина, 21). Начало в 19:00. Это не концерт группы «Океан Ельзи» в полном составе, а камерная программа: на сцене — сам Вакарчук, голос, гитара и фортепиано.',
+          'В программе — известные песни «Океана Ельзи», произведения из сольных проектов и новые композиции. Организаторы анонсируют вечер как разговор с залом без большого продакшена, где главное — песни и их истории. Концерт проходит при поддержке Посольства Украины в Республике Молдова.',
+          'Билеты стоят от 750 до 2050 леев в зависимости от сектора и продаются на livetickets.md. Для украинцев Кишинёва это, вероятно, самое крупное украинское музыкальное событие зимы.',
+          'Национальный дворец стоит в самом центре, в двух кварталах от бульвара Штефан чел Маре. Поужинать перед концертом можно на той же улице Пушкина: Fuior Gourmet — винный ресторан с молдавской авторской кухней по адресу Пушкина, 30, или Torro Burgers на Пушкина, 12, если хочется быстро и без церемоний. После концерта кофейни уже закрыты, а рестораны в центре работают до 23:00.',
+          'Другие концерты и спектакли в Кишинёве на декабрь — в разделе «События»: там же 17 декабря в том же зале — рождественская программа Паулы Селинг, а 13 декабря на Площади Великого национального собрания — праздничный забег на 3 км.',
+        ],
+      },
+      ro: {
+        title: 'Sviatoslav Vakarciuk la Chișinău pe 15 decembrie: concert solo la Palatul Național',
+        excerpt:
+          'Liderul trupei Okean Elzy aduce un program de cameră — doar voce, chitară și pian. Data, prețurile, de unde iei bilete și unde cinezi în apropiere.',
+        body: [
+          'Pe 15 decembrie 2026, Sviatoslav Vakarciuk susține un concert solo la Palatul Național „Nicolae Sulac” din Chișinău (str. Pușkin 21). Începe la ora 19:00. Nu este un concert al trupei Okean Elzy în formulă completă, ci un program de cameră: pe scenă — Vakarciuk însuși, voce, chitară și pian.',
+          'În program: piese cunoscute ale trupei Okean Elzy, lucrări din proiectele solo și compoziții noi. Organizatorii anunță seara ca pe un dialog cu sala, fără producție mare, în care contează piesele și poveștile lor. Concertul are loc cu sprijinul Ambasadei Ucrainei în Republica Moldova.',
+          'Biletele costă între 750 și 2050 lei, în funcție de sector, și se vând pe livetickets.md. Pentru comunitatea ucraineană din Chișinău este, probabil, cel mai mare eveniment muzical ucrainean al iernii.',
+          'Palatul Național e chiar în centru, la două cvartale de bulevardul Ștefan cel Mare. Înainte de concert poți cina pe aceeași stradă Pușkin: Fuior Gourmet — restaurant cu vinuri și bucătărie moldovenească de autor, la Pușkin 30, sau Torro Burgers la Pușkin 12, dacă vrei ceva rapid. După concert cafenelele sunt deja închise, dar restaurantele din centru lucrează până la 23:00.',
+          'Alte concerte și spectacole din Chișinău pentru decembrie — în secțiunea „Evenimente”: tot acolo, pe 17 decembrie, în aceeași sală — programul de Crăciun al Paulei Seling, iar pe 13 decembrie, în Piața Marii Adunări Naționale — cursa festivă de 3 km.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-7',
+    slug: '3-sud-est-chisinau-2026',
+    title: '3 Sud Est у Кишиневі 18 і 19 листопада: два концерти в Палаці Націонал',
+    excerpt:
+      'Румунський гурт, чиї хіти знають усі, хто ріс у 2000-х, дає два вечори поспіль. Ціни, час, квитки і що поруч.',
+    body: [
+      '3 Sud Est — один із найвідоміших румунських поп-гуртів, що виник наприкінці 1990-х. 18 і 19 листопада 2026 року гурт грає два концерти в Кишиневі — обидва в Палаці Націонал «Ніколае Сулак» на вул. Пушкіна, 21, початок о 19:00.',
+      'Програма — головні хіти майже тридцятирічної карʼєри; організатори Sens Music і 1AM обіцяють повну живу програму без скорочень. Якщо перший вечір розкуплять, другий — така сама програма, тож можна спокійно обирати зручнішу дату.',
+      'Квитки — від 300 до 830 лей залежно від сектора, у продажу на iticket.md.',
+      'Палац Націонал — у двох кварталах від бульвару Штефан чел Маре, тож зручно дійти пішки з центру. Повечеряти до концерту можна на тій самій вулиці Пушкіна — від Torro Burgers (Пушкіна, 12) до винного Fuior Gourmet (Пушкіна, 30).',
+      'Інші концерти в Кишиневі в листопаді — Alternosfera в Chișinău Arena 12 листопада, відкриття органного фестивалю «J.S. Bach» 12 листопада, Rammstein Symphonic Experience 28 листопада — у розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['torro-burgers-puskin', 'fuior-gourmet-chisinau', 'bellucci-cafe-kogalniceanu'],
+    eventSlug: '3-sud-est-chisinau-2026',
+    publishedAt: '2026-11-01',
+    i18n: {
+      ru: {
+        title: '3 Sud Est в Кишинёве 18 и 19 ноября: два концерта в Национальном дворце',
+        excerpt:
+          'Румынская группа, чьи хиты знают все, кто рос в 2000-х, даёт два вечера подряд. Цены, время, билеты и что рядом.',
+        body: [
+          '3 Sud Est — одна из самых известных румынских поп-групп, возникшая в конце 1990-х. 18 и 19 ноября 2026 года группа играет два концерта в Кишинёве — оба в Национальном дворце «Николае Сулак» на ул. Пушкина, 21, начало в 19:00.',
+          'Программа — главные хиты почти тридцатилетней карьеры; организаторы Sens Music и 1AM обещают полную живую программу без сокращений. Если первый вечер раскупят, второй — та же программа, так что можно спокойно выбирать более удобную дату.',
+          'Билеты — от 300 до 830 леев в зависимости от сектора, в продаже на iticket.md.',
+          'Национальный дворец — в двух кварталах от бульвара Штефан чел Маре, так что удобно дойти пешком из центра. Поужинать до концерта можно на той же улице Пушкина — от Torro Burgers (Пушкина, 12) до винного Fuior Gourmet (Пушкина, 30).',
+          'Другие концерты в Кишинёве в ноябре — Alternosfera в Chișinău Arena 12 ноября, открытие органного фестиваля «J.S. Bach» 12 ноября, Rammstein Symphonic Experience 28 ноября — в разделе «События».',
+        ],
+      },
+      ro: {
+        title: '3 Sud Est la Chișinău pe 18 și 19 noiembrie: două concerte la Palatul Național',
+        excerpt:
+          'Trupa românească ale cărei hituri le știe oricine a crescut în anii 2000 cântă două seri la rând. Prețuri, ore, bilete și ce e în apropiere.',
+        body: [
+          '3 Sud Est este una dintre cele mai cunoscute trupe pop românești, apărută la sfârșitul anilor 1990. Pe 18 și 19 noiembrie 2026, trupa susține două concerte la Chișinău — ambele la Palatul Național „Nicolae Sulac”, str. Pușkin 21, de la ora 19:00.',
+          'Programul cuprinde hiturile celor aproape trei decenii de carieră; organizatorii Sens Music și 1AM promit un program live complet. Dacă prima seară se epuizează, a doua are același program, așa că poți alege liniștit data mai convenabilă.',
+          'Biletele costă între 300 și 830 lei, în funcție de sector, și se vând pe iticket.md.',
+          'Palatul Național e la două cvartale de bulevardul Ștefan cel Mare, așa că ajungi comod pe jos din centru. Înainte de concert poți cina pe aceeași stradă Pușkin — de la Torro Burgers (Pușkin 12) la restaurantul cu vinuri Fuior Gourmet (Pușkin 30).',
+          'Alte concerte din Chișinău în noiembrie — Alternosfera la Chișinău Arena pe 12 noiembrie, deschiderea Festivalului „J.S. Bach” la Sala cu Orgă pe 12 noiembrie, Rammstein Symphonic Experience pe 28 noiembrie — în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-8',
+    slug: 'maratonul-de-craciun-chisinau-2026',
+    title: 'Різдвяний забіг у Кишиневі 13 грудня: 3 км у центрі для всієї родини',
+    excerpt:
+      'Maratonul de Crăciun — не змагання, а святкова пробіжка від площі Великих національних зборів. Як зареєструватися, скільки коштує і що дають учасникам.',
+    body: [
+      '13 грудня 2026 року о 12:00 у центрі Кишинева стартує Maratonul de Crăciun by Moldcell — святковий забіг, який організатор Sporter проводить щороку перед Різдвом. Попри назву, це не марафон: дистанція — 3 км, темп вільний, результати не фіксують. Старт і фініш — на площі Великих національних зборів, навпроти Тріумфальної арки.',
+      'Участь відкрита для всіх віків і рівнів підготовки: бігти, йти швидким кроком чи котити візочок — на вибір. Діти до 14 років беруть участь лише в супроводі батьків.',
+      'Реєстрація на sporter.md. Стартовий пакет коштує 200 лей за одного учасника, 350 лей за двох і 500 лей за трьох — тобто сімейна реєстрація помітно вигідніша. У пакет входять стартовий номер, святкова шапка та «їстівна медаль» на фініші.',
+      'Після забігу центр уже живе в передсвятковому режимі. Зігрітися можна в кавʼярнях за кілька хвилин ходи: Coffee Molka на вул. 31 Серпня 1989, 78/3 — кавʼярня-музей зі сніданками, або La Plăcinte на Дософтей, 100, де є дитяча ігрова зона — зручно, якщо бігли з малечею.',
+      'Дату відкриття різдвяного ярмарку на площі мерія зазвичай оголошує в середині листопада — щойно вона буде відома, вона зʼявиться в розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['coffee-molka-chisinau', 'la-placinte-chisinau', 'bouchee-stefan-cel-mare'],
+    eventSlug: 'maratonul-de-craciun-2026',
+    publishedAt: '2026-11-01',
+    i18n: {
+      ru: {
+        title: 'Рождественский забег в Кишинёве 13 декабря: 3 км в центре для всей семьи',
+        excerpt:
+          'Maratonul de Crăciun — не соревнование, а праздничная пробежка от Площади Великого национального собрания. Как зарегистрироваться, сколько стоит и что дают участникам.',
+        body: [
+          '13 декабря 2026 года в 12:00 в центре Кишинёва стартует Maratonul de Crăciun by Moldcell — праздничный забег, который организатор Sporter проводит каждый год перед Рождеством. Несмотря на название, это не марафон: дистанция — 3 км, темп свободный, результаты не фиксируются. Старт и финиш — на Площади Великого национального собрания, напротив Триумфальной арки.',
+          'Участие открыто для всех возрастов и уровней подготовки: бежать, идти быстрым шагом или катить коляску — на выбор. Дети до 14 лет участвуют только в сопровождении родителей.',
+          'Регистрация на sporter.md. Стартовый пакет стоит 200 леев за одного участника, 350 леев за двоих и 500 леев за троих — семейная регистрация заметно выгоднее. В пакет входят стартовый номер, праздничная шапка и «съедобная медаль» на финише.',
+          'После забега центр уже живёт в предпраздничном режиме. Согреться можно в кофейнях в нескольких минутах ходьбы: Coffee Molka на ул. 31 Августа 1989, 78/3 — кофейня-музей с завтраками, или La Plăcinte на Дософтей, 100, где есть детская игровая зона — удобно, если бежали с малышами.',
+          'Дату открытия рождественской ярмарки на площади мэрия обычно объявляет в середине ноября — как только она станет известна, она появится в разделе «События».',
+        ],
+      },
+      ro: {
+        title: 'Cursa de Crăciun din Chișinău pe 13 decembrie: 3 km în centru pentru toată familia',
+        excerpt:
+          'Maratonul de Crăciun nu e o competiție, ci o alergare festivă din Piața Marii Adunări Naționale. Cum te înscrii, cât costă și ce primesc participanții.',
+        body: [
+          'Pe 13 decembrie 2026, la ora 12:00, în centrul Chișinăului pornește Maratonul de Crăciun by Moldcell — cursa festivă pe care organizatorul Sporter o ține în fiecare an înainte de Crăciun. În ciuda numelui, nu e un maraton: distanța e de 3 km, ritmul e liber, iar rezultatele nu se cronometrează. Startul și sosirea — în Piața Marii Adunări Naționale, vizavi de Arcul de Triumf.',
+          'Participarea e deschisă tuturor vârstelor și nivelurilor: alergi, mergi în pas rapid sau împingi căruciorul — cum vrei. Copiii sub 14 ani participă doar însoțiți de părinți.',
+          'Înscrierile se fac pe sporter.md. Pachetul de start costă 200 lei pentru un participant, 350 lei pentru doi și 500 lei pentru trei — înscrierea în familie e vizibil mai avantajoasă. Pachetul include numărul de concurs, căciulița festivă și o „medalie comestibilă” la sosire.',
+          'După cursă, centrul e deja în ritm de sărbătoare. Te poți încălzi în cafenelele aflate la câteva minute de mers: Coffee Molka pe str. 31 August 1989, 78/3 — cafenea-muzeu cu mic dejun, sau La Plăcinte de pe Dosoftei 100, unde există loc de joacă pentru copii — util dacă ai alergat cu cei mici.',
+          'Data deschiderii Târgului de Crăciun din piață e anunțată de primărie de obicei la mijlocul lunii noiembrie — imediat ce va fi cunoscută, va apărea în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-9',
+    slug: 'kudy-pity-chisinau-lystopad-2026',
+    title: 'Куди піти в Кишиневі в листопаді 2026: концерти, премʼєри, фестивалі',
+    excerpt:
+      'Перевірена добірка подій місяця — від Uriah Heep і Alternosfera до органного фестивалю Баха, трьох театральних премʼєр і документального кіно MOLDOX.',
+    body: [
+      'Листопад у Кишиневі — найщільніший концертний місяць осені. Нижче — лише події, які ми перевірили на сайтах організаторів і в касах; повний список із цінами й адресами — у розділі «Події», де кожну подію можна відкрити окремо.',
+      'Концерти. 2 листопада Палац Націонал приймає прощальний тур Uriah Heep, 5 листопада там же — ювілейний вечір формації «Noroc» до 60-річчя. 12 листопада Alternosfera в Chișinău Arena святкує 20 років альбому «Orașul 511», а того ж вечора в Органній залі молодий німецький органіст Ян Ліберман відкриває XV фестиваль «J.S. Bach» (150–400 лей; фестиваль триває до 26 листопада). 18 і 19 листопада — два концерти 3 Sud Est у Палаці Націонал (300–830 лей). 19 листопада в Палаці Республіки — вечір української хорової музики капели «Doina» (100 лей). 28 листопада в Опері — Rammstein Symphonic Experience (900–1300 лей).',
+      'Театр. Три премʼєри за один тиждень: 12 листопада в Студійній залі Національного театру ім. Емінеску — документальна вистава «Oameni care dispar» про Анну Політковську; 13 і 14 листопада в Satiricus — «Приборкання норовливої» Шекспіра в постановці Александру Греку (від 100 лей); 14 листопада в театрі Чехова — драма «Лошади за окном» (150 лей, 14+). В Опері — балет «Dracula» 8 листопада.',
+      'З дітьми. 14 листопада о 13:00 — балет «Червона Шапочка» в Опері, 22 листопада о 17:00 там же — «Спляча красуня» Чайковського в недільний час (150–400 лей; дітей до 7 років в Оперу не пускають). У Національному музеї історії до 30 листопада триває виставка про міську археологію Кишинева, а поруч із нею відкрилася довга експозиція артефактів Кукутень–Трипілля (дорослі 50 лей, діти 10).',
+      'Фестивалі й кіно. 21–22 листопада Chișinău Arena приймає танцювальний JDC Dance Weekend (від 370 лей), а 25–29 листопада в Cineplex Loteanu — XI фестиваль документального кіно MOLDOX із близько 50 фільмами, ретроспективою Аньєс Варда і дискусіями.',
+      'Якщо плануєте вечір у центрі: майже всі перелічені зали — Палац Націонал, Органна зала, Опера, театри Емінеску та Satiricus — стоять уздовж бульвару Штефан чел Маре або за квартал від нього, тож повечеряти чи випити кави до вистави можна пішки. Картки залів із адресами й фото — нижче.',
+    ],
+    category: 'activities',
+    placeSlugs: ['teatrul-opera-balet', 'sala-cu-orga', 'teatrul-national-mihai-eminescu', 'teatrul-satiricus', 'palatul-republicii', 'muzeul-national-de-istorie-chisinau'],
+    eventSlug: 'bach-festival-liebermann-2026',
+    publishedAt: '2026-11-01',
+    i18n: {
+      ru: {
+        title: 'Куда пойти в Кишинёве в ноябре 2026: концерты, премьеры, фестивали',
+        excerpt:
+          'Проверенная подборка событий месяца — от Uriah Heep и Alternosfera до органного фестиваля Баха, трёх театральных премьер и документального кино MOLDOX.',
+        body: [
+          'Ноябрь в Кишинёве — самый плотный концертный месяц осени. Ниже — только события, которые мы проверили на сайтах организаторов и в кассах; полный список с ценами и адресами — в разделе «События», где каждое событие можно открыть отдельно.',
+          'Концерты. 2 ноября Национальный дворец принимает прощальный тур Uriah Heep, 5 ноября там же — юбилейный вечер формации «Noroc» к 60-летию. 12 ноября Alternosfera в Chișinău Arena отмечает 20 лет альбома «Orașul 511», а в тот же вечер в Органном зале молодой немецкий органист Ян Либерманн открывает XV фестиваль «J.S. Bach» (150–400 леев; фестиваль длится до 26 ноября). 18 и 19 ноября — два концерта 3 Sud Est в Национальном дворце (300–830 леев). 19 ноября во Дворце Республики — вечер украинской хоровой музыки капеллы «Doina» (100 леев). 28 ноября в Опере — Rammstein Symphonic Experience (900–1300 леев).',
+          'Театр. Три премьеры за одну неделю: 12 ноября в Студийном зале Национального театра им. Эминеску — документальный спектакль «Oameni care dispar» об Анне Политковской; 13 и 14 ноября в Satiricus — «Укрощение строптивой» Шекспира в постановке Александру Греку (от 100 леев); 14 ноября в театре Чехова — драма «Лошади за окном» (150 леев, 14+). В Опере — балет «Dracula» 8 ноября.',
+          'С детьми. 14 ноября в 13:00 — балет «Красная Шапочка» в Опере, 22 ноября в 17:00 там же — «Спящая красавица» Чайковского в воскресное время (150–400 леев; детей до 7 лет в Оперу не пускают). В Национальном музее истории до 30 ноября идёт выставка о городской археологии Кишинёва, а рядом открылась долгая экспозиция артефактов Кукутень–Триполье (взрослые 50 леев, дети 10).',
+          'Фестивали и кино. 21–22 ноября Chișinău Arena принимает танцевальный JDC Dance Weekend (от 370 леев), а 25–29 ноября в Cineplex Loteanu — XI фестиваль документального кино MOLDOX с примерно 50 фильмами, ретроспективой Аньес Варда и дискуссиями.',
+          'Если планируете вечер в центре: почти все перечисленные залы — Национальный дворец, Органный зал, Опера, театры Эминеску и Satiricus — стоят вдоль бульвара Штефан чел Маре или в квартале от него, так что поужинать или выпить кофе до спектакля можно пешком. Карточки залов с адресами и фото — ниже.',
+        ],
+      },
+      ro: {
+        title: 'Unde mergi în Chișinău în noiembrie 2026: concerte, premiere, festivaluri',
+        excerpt:
+          'O selecție verificată a evenimentelor lunii — de la Uriah Heep și Alternosfera la festivalul de orgă Bach, trei premiere de teatru și documentarele MOLDOX.',
+        body: [
+          'Noiembrie este cea mai aglomerată lună de concerte a toamnei la Chișinău. Mai jos — doar evenimente pe care le-am verificat pe site-urile organizatorilor și la case; lista completă, cu prețuri și adrese, e în secțiunea „Evenimente”, unde fiecare eveniment are pagina lui.',
+          'Concerte. Pe 2 noiembrie Palatul Național găzduiește turneul de adio Uriah Heep, pe 5 noiembrie tot acolo — seara aniversară a formației „Noroc”, la 60 de ani. Pe 12 noiembrie Alternosfera sărbătorește la Chișinău Arena 20 de ani ai albumului „Orașul 511”, iar în aceeași seară, la Sala cu Orgă, tânărul organist german Jan Liebermann deschide ediția a XV-a a Festivalului „J.S. Bach” (150–400 lei; festivalul ține până pe 26 noiembrie). Pe 18 și 19 noiembrie — două concerte 3 Sud Est la Palatul Național (300–830 lei). Pe 19 noiembrie la Palatul Republicii — seară de muzică corală ucraineană cu capela „Doina” (100 lei). Pe 28 noiembrie la Operă — Rammstein Symphonic Experience (900–1300 lei).',
+          'Teatru. Trei premiere într-o singură săptămână: pe 12 noiembrie, în Sala Studio a Teatrului Național „Mihai Eminescu” — spectacolul documentar „Oameni care dispar” despre Anna Politkovskaia; pe 13 și 14 noiembrie la Satiricus — „Îmblânzirea scorpiei” de Shakespeare în regia lui Alexandru Grecu (de la 100 lei); pe 14 noiembrie la Teatrul Cehov — drama „Лошади за окном” (150 lei, 14+). La Operă — baletul „Dracula” pe 8 noiembrie.',
+          'Cu copiii. Pe 14 noiembrie, ora 13:00 — baletul „Scufița Roșie” la Operă; pe 22 noiembrie, ora 17:00, tot acolo — „Frumoasa din Pădurea Adormită” de Ceaikovski, într-un orar de duminică (150–400 lei; copiii sub 7 ani nu au acces la Operă). La Muzeul Național de Istorie, până pe 30 noiembrie, continuă expoziția despre arheologia urbană a Chișinăului, iar alături s-a deschis o expoziție de lungă durată cu artefacte Cucuteni–Trypillia (adulți 50 lei, copii 10).',
+          'Festivaluri și film. Pe 21–22 noiembrie Chișinău Arena găzduiește JDC Dance Weekend (de la 370 lei), iar pe 25–29 noiembrie, la Cineplex Loteanu — ediția a XI-a a festivalului de film documentar MOLDOX, cu circa 50 de filme, o retrospectivă Agnès Varda și dezbateri.',
+          'Dacă plănuiești o seară în centru: aproape toate sălile enumerate — Palatul Național, Sala cu Orgă, Opera, teatrele Eminescu și Satiricus — sunt pe bulevardul Ștefan cel Mare sau la un cvartal de el, așa că poți cina sau bea o cafea înainte de spectacol mergând pe jos. Cardurile sălilor, cu adrese și fotografii — mai jos.',
+        ],
+      },
+    },
+  },
 ];
