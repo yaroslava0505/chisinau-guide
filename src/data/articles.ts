@@ -432,4 +432,53 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-10',
+    slug: 'where-to-eat-chisinau',
+    title: 'Де поїсти в Кишиневі: від плацинд до стейка',
+    excerpt:
+      'Молдовська класика, грузинська кухня, суші, бургери й винні вечері — як орієнтуватися в ресторанах Кишинева і вибирати під нагоду, а не навмання.',
+    body: [
+      'Кишинів — місто, де поїсти недорого й смачно все ще легше, ніж у більшості європейських столиць. Основа — молдовська кухня: плацинди, зама, мамалига з брину, мʼясо на вуглинні. Але одним цим місто не обмежується: за останнє десятиліття тут міцно осіли грузинські ресторани, італійські траторії, суші-бари, бургерні та кебабні, а поряд із ними працюють пекарні й кондитерські, куди ходять просто за хлібом і десертом.',
+      'Найпростіший спосіб не загубитися — обирати не «найкращий ресторан», а формат під нагоду. Якщо ви вперше в Молдові або приймаєте гостей, починати варто з традиційної кухні: там зрозуміле меню, великі порції й та сама їжа, яку тут готують удома. Для особливого вечора логічніше дивитися на заклади з власною винною картою — Молдова все-таки винна країна, і місцеве вино в ресторані зазвичай коштує стільки ж, скільки в магазині в Європі. Для щоденного обіду чи швидкої вечері працює третя категорія: бургери, піца, кебаб, боули — те, що готують за десять хвилин.',
+      'Кілька практичних речей, які економлять час. У будні багато ресторанів у центрі пропонують бізнес-ланч — та сама кухня, але помітно дешевше, ніж вечірнє меню. У пʼятницю й суботу ввечері в популярні місця варто телефонувати заздалегідь: зал на 10–12 столиків заповнюється до вісімнадцятої. І ще — більшість закладів поза центром зачиняються раніше, ніж здається, тож пізню вечерю надійніше планувати на бульварі Штефан чел Маре або в кварталах поруч.',
+      'З дітьми орієнтуйтеся не на кухню, а на простір: заклади з ігровою зоною й дитячим меню є і серед молдовських, і серед піцерій — у каталозі це видно по фільтрах. А якщо потрібно просто швидко перекусити між справами, зверніть увагу на пекарні: у Кишиневі це окрема й дуже конкурентна категорія, де свіжий ковриг або плацинда коштують дрібні гроші.',
+      'Нижче — кілька закладів із каталогу, різних за форматом. Повний список із фільтрами за кухнею, районом, ціною та зручностями — у категорії «Їжа».',
+    ],
+    category: 'food',
+    placeSlugs: [
+      'la-placinte-chisinau',
+      'vatra-veche-melestiu',
+      'tiflis-studentilor',
+      'fuior-gourmet-chisinau',
+      'torro-burgers-puskin',
+    ],
+    publishedAt: '2026-11-02',
+    i18n: {
+      ru: {
+        title: 'Где поесть в Кишинёве: от плацинд до стейка',
+        excerpt:
+          'Молдавская классика, грузинская кухня, суши, бургеры и винные ужины — как ориентироваться в ресторанах Кишинёва и выбирать под повод, а не наугад.',
+        body: [
+          'Кишинёв — город, где поесть недорого и вкусно всё ещё проще, чем в большинстве европейских столиц. Основа — молдавская кухня: плацинды, зама, мамалыга с брынзой, мясо на углях. Но одним этим город не ограничивается: за последнее десятилетие здесь прочно осели грузинские рестораны, итальянские траттории, суши-бары, бургерные и кебабные, а рядом с ними работают пекарни и кондитерские, куда ходят просто за хлебом и десертом.',
+          'Самый простой способ не потеряться — выбирать не «лучший ресторан», а формат под повод. Если вы впервые в Молдове или принимаете гостей, начинать стоит с традиционной кухни: там понятное меню, большие порции и та самая еда, которую здесь готовят дома. Для особенного вечера логичнее смотреть на заведения с собственной винной картой — Молдова всё-таки винная страна, и местное вино в ресторане обычно стоит столько же, сколько в магазине в Европе. Для ежедневного обеда или быстрого ужина работает третья категория: бургеры, пицца, кебаб, боулы — то, что готовят за десять минут.',
+          'Несколько практических вещей, которые экономят время. В будни многие рестораны в центре предлагают бизнес-ланч — та же кухня, но заметно дешевле вечернего меню. В пятницу и субботу вечером в популярные места стоит звонить заранее: зал на 10–12 столиков заполняется к шести. И ещё — большинство заведений вне центра закрываются раньше, чем кажется, поэтому поздний ужин надёжнее планировать на бульваре Штефан чел Маре или в кварталах рядом.',
+          'С детьми ориентируйтесь не на кухню, а на пространство: заведения с игровой зоной и детским меню есть и среди молдавских, и среди пиццерий — в каталоге это видно по фильтрам. А если нужно просто быстро перекусить между делами, обратите внимание на пекарни: в Кишинёве это отдельная и очень конкурентная категория, где свежий ковриг или плацинда стоят копейки.',
+          'Ниже — несколько заведений из каталога, разных по формату. Полный список с фильтрами по кухне, району, цене и удобствам — в категории «Еда».',
+        ],
+      },
+      ro: {
+        title: 'Unde mănânci în Chișinău: de la plăcinte la friptură',
+        excerpt:
+          'Clasici moldovenești, bucătărie georgiană, sushi, burgeri și cine cu vin — cum te orientezi printre restaurantele Chișinăului și alegi după ocazie, nu la întâmplare.',
+        body: [
+          'Chișinăul rămâne un oraș în care mănânci bine și ieftin mai ușor decât în majoritatea capitalelor europene. Baza e bucătăria moldovenească: plăcinte, zeamă, mămăligă cu brânză, carne la grătar. Dar orașul nu se oprește aici: în ultimul deceniu s-au așezat solid restaurante georgiene, trattorii italiene, baruri de sushi, burgerii și kebaberii, iar alături de ele funcționează brutării și cofetării unde lumea intră doar după pâine și desert.',
+          'Cel mai simplu mod de a nu te pierde e să alegi nu „cel mai bun restaurant”, ci formatul potrivit ocaziei. Dacă ești pentru prima dată în Moldova sau ai oaspeți, începe cu bucătăria tradițională: meniu limpede, porții mari și exact mâncarea care se gătește aici în familie. Pentru o seară specială, uită-te mai bine la localurile cu carte de vinuri proprie — Moldova e totuși o țară a vinului, iar vinul local la restaurant costă de obicei cât într-un magazin din Europa. Pentru prânzul de zi cu zi sau o cină rapidă funcționează a treia categorie: burgeri, pizza, kebab, bowl-uri — lucruri gata în zece minute.',
+          'Câteva detalii practice care economisesc timp. În zilele de lucru, multe restaurante din centru au business lunch — aceeași bucătărie, dar vizibil mai ieftin decât meniul de seară. Vineri și sâmbătă seara, la locurile populare merită să suni din timp: o sală de 10–12 mese se umple până la ora șase. Și încă ceva — majoritatea localurilor din afara centrului se închid mai devreme decât pare, așa că o cină târzie e mai sigur planificată pe bulevardul Ștefan cel Mare sau în cvartalele din apropiere.',
+          'Cu copiii, uită-te nu la bucătărie, ci la spațiu: locuri cu zonă de joacă și meniu pentru copii există și printre cele moldovenești, și printre pizzerii — în catalog se vede după filtre. Iar dacă vrei doar să iei ceva rapid între două treburi, uită-te spre brutării: în Chișinău e o categorie separată și foarte competitivă, unde un covrig proaspăt sau o plăcintă costă mărunțiș.',
+          'Mai jos — câteva localuri din catalog, diferite ca format. Lista completă, cu filtre după bucătărie, sector, preț și facilități — în categoria „Mâncare”.',
+        ],
+      },
+    },
+  },
 ];
