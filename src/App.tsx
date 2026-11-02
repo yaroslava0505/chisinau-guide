@@ -19,6 +19,7 @@ import {
   articleJsonLd,
   articlesIndexJsonLd,
   contactsJsonLd,
+  businessJsonLd,
   eventJsonLd,
   getArticleImage,
   itemListJsonLd,
@@ -66,6 +67,7 @@ import { AiPlanner } from './components/AiPlanner';
 import { AddPlaceForm } from './components/AddPlaceForm';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactsPage } from './components/ContactsPage';
+import { BusinessPage } from './components/BusinessPage';
 import { ArticlesSection } from './components/ArticlesSection';
 import { ArticleDetailPage } from './components/ArticleDetailPage';
 import { EventDetailPage } from './components/EventDetailPage';
@@ -257,6 +259,17 @@ function Guide() {
         path,
         locale,
         jsonLd: contactsJsonLd(locale),
+      });
+      return;
+    }
+
+    if (route.view === 'business') {
+      updateSEO({
+        title: t.business.title,
+        description: t.business.seoDescription,
+        path,
+        locale,
+        jsonLd: businessJsonLd(locale),
       });
       return;
     }
@@ -459,6 +472,7 @@ function Guide() {
   const isFavoritesActive = route.view === 'favorites';
   const isPrivacyActive = route.view === 'privacy';
   const isContactsActive = route.view === 'contacts';
+  const isBusinessActive = route.view === 'business';
   const isArticlesActive = route.view === 'articles';
   const isArticleActive = route.view === 'article';
   const isEventActive = route.view === 'event';
@@ -484,7 +498,7 @@ function Guide() {
         isFavoritesActive={isFavoritesActive}
         isAdminActive={isAdminActive}
         isStaticPageActive={
-          isPrivacyActive || isContactsActive || isArticlesActive || isArticleActive || isEventActive
+          isPrivacyActive || isContactsActive || isBusinessActive || isArticlesActive || isArticleActive || isEventActive
         }
         onResetToHome={() => selectCategory('all')}
         onSelectLocale={selectLocale}
@@ -555,6 +569,10 @@ function Guide() {
       ) : isContactsActive ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
           <ContactsPage />
+        </main>
+      ) : isBusinessActive ? (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+          <BusinessPage />
         </main>
       ) : isArticlesActive ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex-1">
@@ -831,14 +849,15 @@ function Guide() {
               </h2>
               <p className="text-xs leading-relaxed">{t.footer.businessText}</p>
               <a
-                href={withLocale('/map', locale)}
+                href={withLocale('/business', locale)}
                 onClick={(event) => {
+                  if (event.metaKey || event.ctrlKey || event.shiftKey) return;
                   event.preventDefault();
-                  navigate(withLocale('/map', locale));
+                  navigate(withLocale('/business', locale));
                 }}
                 className="inline-flex items-center gap-1.5 py-2.5 text-xs font-semibold text-zinc-900 hover:gap-2.5 transition-all"
               >
-                {t.footer.viewMap}
+                {t.business.title}
                 <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
               </a>
             </div>

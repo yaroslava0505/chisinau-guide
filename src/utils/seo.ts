@@ -228,6 +228,18 @@ export function contactsJsonLd(locale: Locale = DEFAULT_LOCALE) {
   };
 }
 
+export function businessJsonLd(locale: Locale = DEFAULT_LOCALE) {
+  const t = getDictionary(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t.business.title,
+    description: t.business.seoDescription,
+    url: absoluteUrl(withLocale('/business', locale)),
+    inLanguage: LOCALE_META[locale].htmlLang,
+  };
+}
+
 /**
  * Mirrors `breadcrumbJsonLd` in `scripts/prerender.ts` exactly, so the trail
  * a crawler sees on first load matches what a real visitor's browser shows
@@ -417,6 +429,7 @@ const STATIC_PATHS = [
   '/map',
   '/privacy',
   '/contacts',
+  '/business',
   '/articles',
 ];
 

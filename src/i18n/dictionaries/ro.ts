@@ -413,6 +413,52 @@ export const ro: Dictionary = {
     formSubtitle: 'Povestește-ne despre el mai jos — e cel mai rapid mod de a ne găsi.',
   },
 
+  business: {
+    title: 'Colaborare',
+    seoDescription:
+      'Colaborare cu Ghidul Chișinăului pentru cafenele, restaurante, spații de coworking și organizatori de evenimente: pagină a localului în trei limbi, articole despre evenimente, date verificate.',
+    intro:
+      'Ghidul Chișinăului este un îndrumar al orașului în trei limbi: cafenele, restaurante, locuri de lucru, plimbări și afișul evenimentelor. Fiecare loc este verificat manual și apare în Google la căutări precum „cafenea cu loc de joacă Chișinău”.',
+    forVenuesTitle: 'Pentru cafenele, restaurante și coworking',
+    forVenuesItems: [
+      'Pagină proprie cu adresă, program, telefon, link către site și Instagram.',
+      'Fotografie reală de pe site-ul dvs. în locul unei ilustrații.',
+      'Prețuri orientative din meniul dvs. — oaspetele vine pregătit.',
+      'Facilități după care se caută: loc de joacă, rezervare, livrare, terasă, mic dejun, banchete.',
+      'Un singur card — trei audiențe: română, rusă și ucraineană.',
+      'Hartă și traseu dintr-un clic.',
+    ],
+    forOrganizersTitle: 'Pentru organizatori de evenimente',
+    forOrganizersItems: [
+      'Articol despre eveniment în trei limbi, cu dată, prețuri și link către bilete.',
+      'Card al evenimentului în afiș și în selecția lunii.',
+      'Materialul rămâne în căutări înainte și după data evenimentului.',
+    ],
+    formatsTitle: 'Formate de colaborare',
+    formats: [
+      {
+        name: 'Card în topul categoriei',
+        text: 'Primul loc în categoria sa și eticheta „Recomandăm” pe pagina principală. Fotografiile și prețurile le actualizăm la cerere.',
+      },
+      {
+        name: 'Partenerul lunii',
+        text: 'Card în top, articol despre local în trei limbi, mențiune într-o selecție tematică și link din articolul despre cel mai apropiat eveniment.',
+      },
+      {
+        name: 'Articol despre eveniment',
+        text: 'Pentru concerte, spectacole și festivaluri: material în trei limbi, card în afiș, loc în selecția lunii.',
+      },
+    ],
+    formatsNote:
+      'Condițiile le discutăm individual — scrieți-ne și vă arătăm cum va arăta pagina dvs. înainte de orice înțelegere. Listarea de bază în catalog rămâne gratuită pentru toți: adăugăm localurile noi înșine, dacă trec verificarea.',
+    honestTitle: 'Cum lucrăm',
+    honestText:
+      'În catalog intră doar fapte verificate: adresa, programul, prețurile și facilitățile le luăm de pe site-ul oficial al localului, fotografiile sunt doar reale. Materialele de parteneriat sunt întotdeauna marcate. Nu inventăm note și nu copiem recenzii — de aceea cititorii au încredere în noi, iar asta e o valoare și pentru dvs.',
+    ctaTitle: 'Scrieți-ne',
+    ctaText: 'Trimiteți numele localului sau al evenimentului — răspundem în aceeași zi.',
+    ctaButton: 'Scrie pe e-mail',
+  },
+
   articles: {
     indexTitle: 'Articole și selecții',
     indexSubtitle: 'Ghiduri scurte despre oraș — nu doar o listă de locuri, ci sugestii de unde să începi',

@@ -31,6 +31,7 @@ import {
   articlesIndexJsonLd,
   breadcrumbJsonLd,
   contactsJsonLd,
+  businessJsonLd,
   eventJsonLd,
   getArticleImage,
   itemListJsonLd,
@@ -345,6 +346,26 @@ function pagesForLocale(locale: Locale): PageContent[] {
     <h2>${esc(t.contacts.formTitle)}</h2>
     <p>${esc(t.contacts.formSubtitle)}</p>`,
     jsonLd: contactsJsonLd(locale),
+  });
+
+  pages.push({
+    path: '/business',
+    title: t.business.title,
+    description: t.business.seoDescription,
+    heading: t.business.title,
+    subtitle: t.business.intro,
+    body: `<h2>${esc(t.business.forVenuesTitle)}</h2>
+    <ul>${t.business.forVenuesItems.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
+    <h2>${esc(t.business.forOrganizersTitle)}</h2>
+    <ul>${t.business.forOrganizersItems.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
+    <h2>${esc(t.business.formatsTitle)}</h2>
+    ${t.business.formats.map((format) => `<h3>${esc(format.name)}</h3><p>${esc(format.text)}</p>`).join('\n    ')}
+    <p>${esc(t.business.formatsNote)}</p>
+    <h2>${esc(t.business.honestTitle)}</h2>
+    <p>${esc(t.business.honestText)}</p>
+    <h2>${esc(t.business.ctaTitle)}</h2>
+    <p>${esc(t.business.ctaText)} <a href="mailto:myyarosfilm@gmail.com">myyarosfilm@gmail.com</a></p>`,
+    jsonLd: businessJsonLd(locale),
   });
 
   pages.push({
