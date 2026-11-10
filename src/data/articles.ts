@@ -481,4 +481,497 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-11',
+    slug: 'kudy-pity-chisinau-hruden-2026',
+    title: 'Зимовий Кишинів: куди піти в грудні 2026',
+    excerpt:
+      'Колядки з оркестром «Lăutarii», K-pop на Арені, боксерський гала-вечір, різдвяний забіг і китайський цирк — перевірена афіша грудня з цінами й годинами.',
+    body: [
+      'Грудень у Кишиневі влаштований інакше, ніж листопад. Осінь тут — місяці театральних премʼєр і фестивалів у залах на бульварі Штефан чел Маре; грудень же зміщується на північ міста, на Chișinău Arena, і будується навколо двох речей — великих шоу та святкової програми з колядками. Нижче — лише ті події, дати й ціни яких ми звірили з календарями залів і сайтами організаторів.',
+      'Великі шоу на Арені. 3 грудня о 19:30 — K-POP FOREVER, програма з хітів BTS, BLACKPINK, TWICE та інших гуртів корейської сцени (900–1800 лей). 5 грудня в Малій арені — Chișinău Boxing Night IV: у головному бою 12 раундів за титул чемпіона світу WBF, а всього понад 15 поєдинків із боксу, MMA та кікбоксингу зі спортсменами з семи країн (400–600 лей; час початку організатори ще не оголосили). 22 грудня о 19:00 Арена приймає Китайський національний цирк із програмою ZENsation — «best-of» найвідоміших номерів колективу (450–1000 лей).',
+      'Святкова програма. 12 грудня о 19:00 Іон Паладі дає концерт «Colindăm cu drag tot neamul» разом із Національним оркестром народної музики «Lăutarii» під керівництвом Ніколае Ботгроса (350–1300 лей) — це найбільший вечір колядок місяця. 17 грудня о 19:00 у Палаці Націонал із різдвяною програмою «Colindăm, colindăm prin viață» виступає Паула Селінг (250–1000 лей). А 15 грудня там же — камерний сольний концерт Святослава Вакарчука: лише голос, гітара й фортепіано (750–2050 лей).',
+      'На вулиці та з дітьми. 13 грудня о 12:00 від площі Великих національних зборів стартує Maratonul de Crăciun by Moldcell — неконкурентний забіг на 3 км, куди беруть усіх і будь-яким темпом; сімейна реєстрація помітно вигідніша за одиночну (200 лей за одного, 500 за трьох). Якщо потрібен варіант «у теплі», у Національному музеї історії працює довга експозиція артефактів Кукутень–Трипілля — дорослий квиток 50 лей, дитячий 10.',
+      'Дві речі, яких у цьому списку свідомо немає. Станом на 10 листопада мерія ще не оголосила дати різдвяного ярмарку на площі Великих національних зборів на сезон 2026–2027, а Національний театр опери та балету ще не опублікував грудневу афішу — тож ні ярмарку, ні традиційного «Спăргăторул де нучі» ми тут не вказуємо, щоб не писати неперевірених дат. Щойно обидва календарі зʼявляться, події додамо в розділ «Події», і вони одразу будуть на головній.',
+      'Практична порада про логістику: Chișinău Arena стоїть не в центрі, а на Каля Орхеюлуй у Стеученях, тож на вечірнє шоу варто закласти час на дорогу й заздалегідь продумати, як вертатися. Події в Палаці Націонал, Органній залі та Опері, навпаки, лежать у межах пішої прогулянки одна від одної — повечеряти перед концертом у центрі цілком реально.',
+    ],
+    category: 'activities',
+    placeSlugs: [
+      'teatrul-opera-balet',
+      'sala-cu-orga',
+      'muzeul-national-de-istorie-chisinau',
+      'coffee-molka-chisinau',
+      'la-placinte-chisinau',
+    ],
+    eventSlug: 'ion-paladi-colindam-cu-drag-2026',
+    keywords: [
+      'куди піти в Кишиневі в грудні',
+      'афіша Кишинів грудень 2026',
+      'концерти Кишинів грудень',
+      'Кишинів Різдво 2026',
+      'Chișinău Arena грудень',
+    ],
+    image: '/images/articles/arcul-de-triumf-chisinau.jpg',
+    imageCredit: {
+      author: 'ValentinVrz',
+      license: 'CC BY-SA 4.0',
+      url: 'https://commons.wikimedia.org/wiki/File:Arcul_de_triumf_(Chi%C8%99in%C4%83u).jpg',
+    },
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Зимний Кишинёв: куда пойти в декабре 2026',
+        excerpt:
+          'Колядки с оркестром «Lăutarii», K-pop на Арене, боксёрский гала-вечер, рождественский забег и китайский цирк — проверенная афиша декабря с ценами и временем.',
+        body: [
+          'Декабрь в Кишинёве устроен иначе, чем ноябрь. Осень здесь — месяцы театральных премьер и фестивалей в залах на бульваре Штефан чел Маре; декабрь же смещается на север города, на Chișinău Arena, и строится вокруг двух вещей — больших шоу и праздничной программы с колядками. Ниже — только те события, даты и цены которых мы сверили с календарями залов и сайтами организаторов.',
+          'Большие шоу на Арене. 3 декабря в 19:30 — K-POP FOREVER, программа из хитов BTS, BLACKPINK, TWICE и других групп корейской сцены (900–1800 леев). 5 декабря в Малой арене — Chișinău Boxing Night IV: в главном бою 12 раундов за титул чемпиона мира WBF, а всего больше 15 поединков по боксу, MMA и кикбоксингу со спортсменами из семи стран (400–600 леев; время начала организаторы пока не объявили). 22 декабря в 19:00 Арена принимает Китайский национальный цирк с программой ZENsation — «best-of» самых известных номеров коллектива (450–1000 леев).',
+          'Праздничная программа. 12 декабря в 19:00 Ион Палади даёт концерт «Colindăm cu drag tot neamul» вместе с Национальным оркестром народной музыки «Lăutarii» под управлением Николае Ботгроса (350–1300 леев) — это самый большой вечер колядок месяца. 17 декабря в 19:00 в Национальном дворце с рождественской программой «Colindăm, colindăm prin viață» выступает Паула Селинг (250–1000 леев). А 15 декабря там же — камерный сольный концерт Святослава Вакарчука: только голос, гитара и фортепиано (750–2050 леев).',
+          'На улице и с детьми. 13 декабря в 12:00 от Площади Великого национального собрания стартует Maratonul de Crăciun by Moldcell — неконкурентный забег на 3 км, куда берут всех и любым темпом; семейная регистрация заметно выгоднее одиночной (200 леев за одного, 500 за троих). Если нужен вариант «в тепле», в Национальном музее истории работает долгая экспозиция артефактов Кукутень–Триполье — взрослый билет 50 леев, детский 10.',
+          'Две вещи, которых в этом списке сознательно нет. На 10 ноября мэрия ещё не объявила даты рождественской ярмарки на Площади Великого национального собрания на сезон 2026–2027, а Национальный театр оперы и балета ещё не опубликовал декабрьскую афишу — поэтому ни ярмарку, ни традиционного «Щелкунчика» мы здесь не указываем, чтобы не писать непроверенных дат. Как только оба календаря появятся, события добавим в раздел «События», и они сразу будут на главной.',
+          'Практический совет про логистику: Chișinău Arena стоит не в центре, а на Каля Орхеюлуй в Стэучень, так что на вечернее шоу стоит заложить время на дорогу и заранее продумать, как возвращаться. События в Национальном дворце, Органном зале и Опере, наоборот, лежат в пределах пешей прогулки друг от друга — поужинать перед концертом в центре вполне реально.',
+        ],
+      },
+      ro: {
+        title: 'Chișinăul de iarnă: unde mergi în decembrie 2026',
+        excerpt:
+          'Colinde cu orchestra „Lăutarii”, K-pop la Arenă, o gală de box, cursa de Crăciun și circul chinez — programul verificat al lunii decembrie, cu prețuri și ore.',
+        body: [
+          'Decembrie e altfel construit la Chișinău decât noiembrie. Toamna aici înseamnă premiere de teatru și festivaluri în sălile de pe bulevardul Ștefan cel Mare; decembrie se mută însă spre nordul orașului, la Chișinău Arena, și se organizează în jurul a două lucruri — show-uri mari și programul festiv de colinde. Mai jos — doar evenimentele ale căror date și prețuri le-am verificat în calendarele sălilor și pe site-urile organizatorilor.',
+          'Show-urile mari de la Arenă. Pe 3 decembrie, ora 19:30 — K-POP FOREVER, un program din hiturile BTS, BLACKPINK, TWICE și ale altor trupe ale scenei coreene (900–1800 lei). Pe 5 decembrie, în Arena Mică — Chișinău Boxing Night IV: în main event, 12 runde pentru titlul mondial WBF, iar în total peste 15 lupte de box, MMA și kickboxing cu sportivi din șapte țări (400–600 lei; ora de start nu a fost încă anunțată). Pe 22 decembrie, ora 19:00, Arena găzduiește Circul Național Chinez cu programul ZENsation — un „best-of” al celor mai cunoscute numere ale trupei (450–1000 lei).',
+          'Programul de sărbători. Pe 12 decembrie, ora 19:00, Ion Paladi susține concertul „Colindăm cu drag tot neamul” împreună cu Orchestra Națională de Muzică Populară „Lăutarii”, dirijată de Nicolae Botgros (350–1300 lei) — cea mai mare seară de colinde a lunii. Pe 17 decembrie, ora 19:00, la Palatul Național cântă Paula Seling, cu programul de Crăciun „Colindăm, colindăm prin viață” (250–1000 lei). Iar pe 15 decembrie, tot acolo — recitalul solo de cameră al lui Sviatoslav Vakarciuk: doar voce, chitară și pian (750–2050 lei).',
+          'Afară și cu copiii. Pe 13 decembrie, ora 12:00, din Piața Marii Adunări Naționale pornește Maratonul de Crăciun by Moldcell — o cursă necompetitivă de 3 km, deschisă tuturor și în orice ritm; înscrierea în familie e vizibil mai avantajoasă decât cea individuală (200 lei pentru unu, 500 pentru trei). Dacă vrei o variantă „la căldură”, la Muzeul Național de Istorie e deschisă expoziția de lungă durată cu artefacte Cucuteni–Trypillia — bilet adult 50 lei, copii 10.',
+          'Două lucruri care lipsesc intenționat din această listă. La 10 noiembrie, primăria nu anunțase încă datele Târgului de Crăciun din Piața Marii Adunări Naționale pentru sezonul 2026–2027, iar Teatrul Național de Operă și Balet nu publicase încă afișul de decembrie — așa că nici târgul, nici tradiționalul „Spărgătorul de nuci” nu apar aici, ca să nu scriem date neverificate. Imediat ce ambele calendare apar, adăugăm evenimentele în secțiunea „Evenimente” și vor fi vizibile pe prima pagină.',
+          'Un sfat practic de logistică: Chișinău Arena nu e în centru, ci pe Calea Orheiului, în Stăuceni, așa că pentru un show de seară merită să calculezi timpul de drum și să te gândești din timp cum te întorci. Evenimentele de la Palatul Național, Sala cu Orgă și Operă sunt, în schimb, la distanță de mers pe jos unul de altul — poți cina în centru înainte de concert fără probleme.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-12',
+    slug: 'ion-paladi-colinde-chisinau-2026',
+    title: 'Колядки з «Lăutarii»: концерт Іона Паладі 12 грудня',
+    excerpt:
+      'Найбільший вечір колядок грудня — Іон Паладі з Національним оркестром народної музики «Lăutarii» і Ніколае Ботгросом на Chișinău Arena. Ціни, час і як дістатися.',
+    body: [
+      '12 грудня 2026 року о 19:00 на Chișinău Arena Іон Паладі дає концерт «Colindăm cu drag tot neamul» — програму, повністю складену із зимового репертуару: колядки, традиційні пісні й святкові обробки. Виступає він не сам: разом із ним на сцені Національний оркестр народної музики «Lăutarii» під керівництвом Ніколае Ботгроса. Квитки — 350–1300 лей залежно від сектора, продаж на livetickets.md.',
+      'Для тих, хто в Молдові недавно, варто пояснити, чому це подія, а не просто ще один концерт у грудні. Колядки тут — не фонова музика з торгових центрів, а живий жанр із власними виконавцями й великою аудиторією; «Lăutarii» ж — найвідоміший оркестр народної музики країни, і поєднання Паладі з ботгросівським складом традиційно збирає повний зал. Якщо ви хочете один раз почути молдовську святкову традицію в її «великій» концертній формі, цей вечір — найочевидніший вибір сезону.',
+      'Практичне. Арена стоїть на Каля Орхеюлуй, 130, у Стеученях — це північ агломерації, а не центр, тож закладайте час на дорогу в обидві сторони й заздалегідь вирішуйте, як повертатися після 21:00. Зал великий, і різниця між найдешевшим і найдорожчим квитком тут — це насамперед відстань до сцени, а не якість звуку.',
+      'Якщо квитки розійдуться або формат великої арени вам не близький, у грудні в місті є ще два святкові вечори меншого масштабу: 17 грудня в Палаці Націонал із різдвяною програмою виступає Паула Селінг, а камерну класику й органні програми цілий сезон дає Органна зала на бульварі Штефан чел Маре. Обидва варіанти — у центрі, пішки від вечері.',
+    ],
+    category: 'activities',
+    placeSlugs: ['sala-cu-orga', 'teatrul-opera-balet', 'la-placinte-chisinau', 'coffee-molka-chisinau'],
+    eventSlug: 'ion-paladi-colindam-cu-drag-2026',
+    keywords: [
+      'Іон Паладі концерт Кишинів',
+      'колядки Кишинів 2026',
+      'Lăutarii Ботгрос концерт',
+      'Colindăm cu drag tot neamul квитки',
+    ],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Колядки с «Lăutarii»: концерт Иона Палади 12 декабря',
+        excerpt:
+          'Самый большой вечер колядок декабря — Ион Палади с Национальным оркестром народной музыки «Lăutarii» и Николае Ботгросом на Chișinău Arena. Цены, время и как добраться.',
+        body: [
+          '12 декабря 2026 года в 19:00 на Chișinău Arena Ион Палади даёт концерт «Colindăm cu drag tot neamul» — программу, целиком составленную из зимнего репертуара: колядки, традиционные песни и праздничные обработки. Выступает он не один: вместе с ним на сцене Национальный оркестр народной музыки «Lăutarii» под управлением Николае Ботгроса. Билеты — 350–1300 леев в зависимости от сектора, продажа на livetickets.md.',
+          'Тем, кто в Молдове недавно, стоит объяснить, почему это событие, а не просто ещё один концерт в декабре. Колядки здесь — не фоновая музыка из торговых центров, а живой жанр со своими исполнителями и большой аудиторией; «Lăutarii» же — самый известный оркестр народной музыки страны, и сочетание Палади с ботгросовским составом традиционно собирает полный зал. Если вы хотите один раз услышать молдавскую праздничную традицию в её «большой» концертной форме, этот вечер — самый очевидный выбор сезона.',
+          'Практическое. Арена стоит на Каля Орхеюлуй, 130, в Стэучень — это север агломерации, а не центр, так что закладывайте время на дорогу в обе стороны и заранее решайте, как возвращаться после 21:00. Зал большой, и разница между самым дешёвым и самым дорогим билетом здесь — это прежде всего расстояние до сцены, а не качество звука.',
+          'Если билеты разойдутся или формат большой арены вам не близок, в декабре в городе есть ещё два праздничных вечера меньшего масштаба: 17 декабря в Национальном дворце с рождественской программой выступает Паула Селинг, а камерную классику и органные программы весь сезон даёт Органный зал на бульваре Штефан чел Маре. Оба варианта — в центре, пешком от ужина.',
+        ],
+      },
+      ro: {
+        title: 'Colinde cu „Lăutarii”: concertul lui Ion Paladi pe 12 decembrie',
+        excerpt:
+          'Cea mai mare seară de colinde a lunii decembrie — Ion Paladi cu Orchestra Națională de Muzică Populară „Lăutarii” și Nicolae Botgros, la Chișinău Arena. Prețuri, ore și cum ajungi.',
+        body: [
+          'Pe 12 decembrie 2026, ora 19:00, la Chișinău Arena, Ion Paladi susține concertul „Colindăm cu drag tot neamul” — un program alcătuit integral din repertoriul de iarnă: colinde, cântece tradiționale și prelucrări festive. Nu cântă singur: pe scenă, alături de el, este Orchestra Națională de Muzică Populară „Lăutarii”, dirijată de Nicolae Botgros. Biletele costă 350–1300 lei, în funcție de sector, și se vând pe livetickets.md.',
+          'Pentru cei care sunt de puțin timp în Moldova, merită explicat de ce acesta e un eveniment, nu doar un alt concert de decembrie. Colindele nu sunt aici muzică de fundal din mall-uri, ci un gen viu, cu interpreții și publicul lui; iar „Lăutarii” e cea mai cunoscută orchestră de muzică populară din țară, așa că formula Paladi plus orchestra lui Botgros umple de obicei sala. Dacă vrei să auzi o dată tradiția festivă moldovenească în forma ei concertistică „mare”, seara aceasta e alegerea cea mai evidentă a sezonului.',
+          'Partea practică. Arena se află pe Calea Orheiului 130, în Stăuceni — nordul aglomerației, nu centrul, așa că socotește timpul de drum în ambele sensuri și decide din timp cum te întorci după ora 21:00. Sala e mare, iar diferența dintre cel mai ieftin și cel mai scump bilet ține în primul rând de distanța până la scenă, nu de calitatea sunetului.',
+          'Dacă biletele se epuizează sau formatul unei arene mari nu e pe gustul tău, în decembrie orașul mai are două seri festive de dimensiuni mai mici: pe 17 decembrie, la Palatul Național, cântă Paula Seling cu un program de Crăciun, iar Sala cu Orgă de pe bulevardul Ștefan cel Mare oferă programe camerale și de orgă pe tot parcursul sezonului. Ambele sunt în centru, la câțiva pași de o cină.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-13',
+    slug: 'circul-chinez-zensation-chisinau-2026',
+    title: 'Китайський національний цирк у Кишиневі: ZENsation 22 грудня',
+    excerpt:
+      'Акробатика, еквілібр і номери на межі можливого — програма ZENsation на Chișinău Arena. Що це за колектив, скільки коштують квитки і чи варто йти з дітьми.',
+    body: [
+      '22 грудня 2026 року о 19:00 на Chișinău Arena виступає Китайський національний цирк із програмою ZENsation. Це не класичний цирк із тваринами, а суто акробатичне шоу: еквілібр, групова акробатика, номери на реквізиті й трюки, побудовані на точності та балансі. Сама програма зібрана як «best-of» — у неї увійшли найвідоміші номери колективу за минулі роки. Квитки коштують 450–1000 лей.',
+      'Чи брати дітей — найчастіше питання про такі гастролі. Формат для цього підходить: у шоу немає тексту, який потрібно розуміти, воно тримається на візуальному ефекті, а номери короткі й змінюються швидко, тож увагу легше втримати, ніж на виставі. Єдине обмеження суто практичне — початок о 19:00 і великий зал: для малечі, яка рано засинає, вечір вийде довгим, тож варто заздалегідь подивитися схему залу й узяти місця, з яких видно без бінокля.',
+      'Логістика. Chișinău Arena — це Каля Орхеюлуй, 130, у Стеученях, тобто на північ від центру, а не в межах пішої прогулянки від бульвару Штефан чел Маре. На грудневий вечір закладайте час на дорогу в обидві сторони; якщо йдете з дітьми, подумайте про зворотний шлях ще до того, як купувати квитки.',
+      'Якщо 22 грудня не складається, у грудні в місті є й інші варіанти «з дітьми»: 13 грудня — різдвяний забіг на 3 км у центрі, куди беруть сімʼї з візочками, а в Національному музеї історії весь сезон відкрита експозиція артефактів Кукутень–Трипілля з дитячим квитком за 10 лей. У теплу погоду цілком робочий план на день — парки Валя Морілор і Дендраріум, обидва з прогулянковими маршрутами.',
+    ],
+    category: 'activities',
+    placeSlugs: [
+      'parcul-valea-morilor-chisinau',
+      'parcul-dendrariu-chisinau',
+      'muzeul-national-de-istorie-chisinau',
+      'la-placinte-chisinau',
+    ],
+    eventSlug: 'grand-chinese-national-circus-zensation-2026',
+    keywords: [
+      'китайський цирк Кишинів',
+      'ZENsation Chișinău Arena',
+      'куди піти з дітьми Кишинів грудень',
+      'цирк Кишинів 2026 квитки',
+    ],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Китайский национальный цирк в Кишинёве: ZENsation 22 декабря',
+        excerpt:
+          'Акробатика, эквилибр и номера на грани возможного — программа ZENsation на Chișinău Arena. Что это за коллектив, сколько стоят билеты и стоит ли идти с детьми.',
+        body: [
+          '22 декабря 2026 года в 19:00 на Chișinău Arena выступает Китайский национальный цирк с программой ZENsation. Это не классический цирк с животными, а чисто акробатическое шоу: эквилибр, групповая акробатика, номера на реквизите и трюки, построенные на точности и балансе. Сама программа собрана как «best-of» — в неё вошли самые известные номера коллектива за прошлые годы. Билеты стоят 450–1000 леев.',
+          'Брать ли детей — самый частый вопрос про такие гастроли. Формат для этого подходит: в шоу нет текста, который нужно понимать, оно держится на визуальном эффекте, а номера короткие и быстро сменяются, так что внимание удержать легче, чем на спектакле. Единственное ограничение чисто практическое — начало в 19:00 и большой зал: для малышей, которые рано засыпают, вечер выйдет длинным, поэтому стоит заранее посмотреть схему зала и взять места, с которых видно без бинокля.',
+          'Логистика. Chișinău Arena — это Каля Орхеюлуй, 130, в Стэучень, то есть к северу от центра, а не в пределах пешей прогулки от бульвара Штефан чел Маре. На декабрьский вечер закладывайте время на дорогу в обе стороны; если идёте с детьми, продумайте обратный путь ещё до покупки билетов.',
+          'Если 22 декабря не складывается, в декабре в городе есть и другие варианты «с детьми»: 13 декабря — рождественский забег на 3 км в центре, куда берут семьи с коляской, а в Национальном музее истории весь сезон открыта экспозиция артефактов Кукутень–Триполье с детским билетом за 10 леев. В тёплую погоду вполне рабочий план на день — парки Валя Морилор и Дендрарий, оба с прогулочными маршрутами.',
+        ],
+      },
+      ro: {
+        title: 'Circul Național Chinez la Chișinău: ZENsation pe 22 decembrie',
+        excerpt:
+          'Acrobație, echilibristică și numere la limita posibilului — programul ZENsation la Chișinău Arena. Ce este această trupă, cât costă biletele și dacă merită să mergi cu copiii.',
+        body: [
+          'Pe 22 decembrie 2026, ora 19:00, la Chișinău Arena evoluează Circul Național Chinez cu programul ZENsation. Nu e un circ clasic, cu animale, ci un show pur acrobatic: echilibristică, acrobație de grup, numere cu recuzită și trucuri construite pe precizie și echilibru. Programul în sine e gândit ca un „best-of” — adună cele mai cunoscute numere ale trupei din anii trecuți. Biletele costă 450–1000 lei.',
+          'Dacă să iei copiii e cea mai frecventă întrebare la astfel de turnee. Formatul se potrivește: show-ul nu are text de înțeles, se sprijină pe efectul visual, iar numerele sunt scurte și se schimbă repede, așa că atenția se ține mai ușor decât la un spectacol de teatru. Singura limitare e practică — începe la 19:00, într-o sală mare: pentru cei mici, care adorm devreme, seara va fi lungă, deci merită să te uiți din timp la harta sălii și să iei locuri de unde se vede fără binoclu.',
+          'Logistica. Chișinău Arena se află pe Calea Orheiului 130, în Stăuceni, adică la nord de centru, nu la distanță de mers pe jos de bulevardul Ștefan cel Mare. Pentru o seară de decembrie, calculează timpul de drum în ambele sensuri; dacă mergi cu copiii, gândește-te la drumul de întoarcere înainte să cumperi biletele.',
+          'Dacă pe 22 decembrie nu iese, orașul are și alte variante „cu copiii” în decembrie: pe 13 decembrie — cursa de Crăciun de 3 km din centru, deschisă familiilor, inclusiv cu cărucior, iar la Muzeul Național de Istorie e deschisă tot sezonul expoziția cu artefacte Cucuteni–Trypillia, cu bilet pentru copii la 10 lei. Pe vreme bună, un plan bun de zi sunt parcurile Valea Morilor și Dendrariu, ambele cu trasee de plimbare.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-20',
+    slug: 'quiet-places-chisinau',
+    title: 'Де побути в тиші в Кишиневі: бібліотеки, сквери та тихі парки',
+    excerpt:
+      'Потрібно попрацювати в тиші, почитати або просто побути наодинці — місця, де в Кишиневі справді тихо, з адресами й графіком.',
+    body: [
+      'Тиша в місті — рідкісний ресурс. Якщо треба зосередитися над текстом, почитати книжку або просто побути без шуму, у Кишиневі є два надійні типи місць: публічні бібліотеки та невеликі сквери подалі від магістралей.',
+      'Бібліотеки — найпередбачуваніший варіант. У муніципальній мережі «B. P. Hasdeu» доступ за безкоштовним читацьким квитком, у філіях є Wi-Fi і місця для індивідуальної роботи; Національна бібліотека працює за схожим принципом. Це тиша з розеткою, столом і опаленням — на відміну від кавʼярні, де за сусіднім столиком може початися нарада.',
+      'Якщо хочеться тиші на повітрі, шукайте не великі парки біля проспектів, а сквери в глибині кварталів і лісопарки: там менше людей і немає транспортного гулу. Узимку й у негоду логіка зворотна — бібліотека виграє в будь-якому разі.',
+      'Нижче — перевірені адреси з каталогу. Повний список із фільтром за типом (парк, бібліотека, кавʼярня) — у категорії «Тихі місця»; там же можна увімкнути фільтр «Відчинено зараз», щоб не їхати даремно.',
+    ],
+    category: 'quiet_places',
+    placeSlugs: ['biblioteca-hasdeu', 'biblioteca-nationala-chisinau', 'scuarul-mateevici', 'padurea-parc-schinoasa'],
+    keywords: ['тихі місця Кишинів', 'де попрацювати в тиші', 'бібліотеки Кишинева', 'тихі парки', 'читальна зала'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Где побыть в тишине в Кишинёве: библиотеки, скверы и тихие парки',
+        excerpt:
+          'Нужно поработать в тишине, почитать или просто побыть одному — места, где в Кишинёве действительно тихо, с адресами и графиком.',
+        body: [
+          'Тишина в городе — редкий ресурс. Если нужно сосредоточиться над текстом, почитать книгу или просто побыть без шума, в Кишинёве есть два надёжных типа мест: публичные библиотеки и небольшие скверы в стороне от магистралей.',
+          'Библиотеки — самый предсказуемый вариант. В муниципальной сети «B. P. Hasdeu» доступ по бесплатному читательскому билету, в филиалах есть Wi-Fi и места для индивидуальной работы; Национальная библиотека работает по схожему принципу. Это тишина с розеткой, столом и отоплением — в отличие от кофейни, где за соседним столиком может начаться совещание.',
+          'Если хочется тишины на воздухе, ищите не большие парки у проспектов, а скверы в глубине кварталов и лесопарки: там меньше людей и нет транспортного гула. Зимой и в непогоду логика обратная — библиотека выигрывает в любом случае.',
+          'Ниже — проверенные адреса из каталога. Полный список с фильтром по типу (парк, библиотека, кофейня) — в категории «Тихие места»; там же можно включить фильтр «Открыто сейчас», чтобы не ехать зря.',
+        ],
+      },
+      ro: {
+        title: 'Unde găsești liniște în Chișinău: biblioteci, scuaruri și parcuri liniștite',
+        excerpt:
+          'Ai nevoie să lucrezi în liniște, să citești sau pur și simplu să stai singur — locurile cu adevărat liniștite din Chișinău, cu adrese și program.',
+        body: [
+          'Liniștea în oraș e o resursă rară. Dacă trebuie să te concentrezi pe un text, să citești o carte sau doar să stai fără zgomot, în Chișinău există două tipuri sigure de locuri: bibliotecile publice și scuarurile mici, departe de arterele mari.',
+          'Bibliotecile sunt varianta cea mai previzibilă. În rețeaua municipală „B. P. Hasdeu” accesul se face pe baza unui card gratuit, filialele au Wi-Fi și spații pentru studiu individual; Biblioteca Națională funcționează pe un principiu similar. E liniște cu priză, masă și căldură — spre deosebire de o cafenea, unde la masa de alături poate începe o ședință.',
+          'Dacă vrei liniște în aer liber, caută nu parcurile mari de lângă bulevarde, ci scuarurile din interiorul cartierelor și pădurile-parc: sunt mai puțini oameni și lipsește zgomotul traficului. Iarna și pe vreme rea logica se inversează — biblioteca câștigă oricum.',
+          'Mai jos — adrese verificate din catalog. Lista completă, cu filtru după tip (parc, bibliotecă, cafenea) — în categoria „Locuri liniștite”; tot acolo poți activa filtrul „Deschis acum”, ca să nu mergi degeaba.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-21',
+    slug: 'free-wifi-chisinau',
+    title: 'Де в Кишиневі безкоштовний Wi-Fi: кавʼярні, бібліотеки, коворкінги',
+    excerpt:
+      'Потрібен інтернет поза домом — заклади Кишинева, де Wi-Fi підтверджено, а не припущено.',
+    body: [
+      'Безкоштовний Wi-Fi у Кишиневі є в більшості кавʼярень, але «є роутер» і «можна спокійно попрацювати годину» — різні речі. У каталозі позначку Wi-Fi мають лише ті місця, де це підтверджено джерелом, а не здогадкою: зараз таких 36.',
+      'Для короткої задачі — відповісти на листи, зідзвонитися — підійде будь-яка спешелті-кавʼярня в центрі. Для довшої роботи краще дивитися на коворкінги: там інтернет — частина послуги, а не бонус, є розетки біля кожного місця й окремі кімнати для дзвінків.',
+      'Найнедооціненіший варіант — бібліотеки. У мережі «B. P. Hasdeu» Wi-Fi безкоштовний, пароль дає черговий бібліотекар, а доступ — за безкоштовним читацьким квитком. Платити за каву, щоб мати інтернет, не доводиться взагалі.',
+      'Нижче — кілька перевірених адрес. Щоб побачити всі, відкрийте будь-яку категорію і ввімкніть фільтр «Wi-Fi» — він показує лише місця з підтвердженим інтернетом.',
+    ],
+    category: 'remote_work',
+    placeSlugs: ['tucano-coffee-brasil', 'coffee-molka-chisinau', 'rozmarin-urban-cafe', 'tekwill-studentilor'],
+    keywords: ['безкоштовний Wi-Fi Кишинів', 'кафе з Wi-Fi', 'де працювати з ноутбуком', 'інтернет Кишинів', 'коворкінг Кишинів'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Где в Кишинёве бесплатный Wi-Fi: кофейни, библиотеки, коворкинги',
+        excerpt:
+          'Нужен интернет вне дома — заведения Кишинёва, где Wi-Fi подтверждён, а не предположен.',
+        body: [
+          'Бесплатный Wi-Fi в Кишинёве есть в большинстве кофеен, но «есть роутер» и «можно спокойно поработать час» — разные вещи. В каталоге отметку Wi-Fi имеют только те места, где это подтверждено источником, а не догадкой: сейчас таких 36.',
+          'Для короткой задачи — ответить на письма, созвониться — подойдёт любая спешелти-кофейня в центре. Для долгой работы лучше смотреть на коворкинги: там интернет — часть услуги, а не бонус, есть розетки у каждого места и отдельные комнаты для звонков.',
+          'Самый недооценённый вариант — библиотеки. В сети «B. P. Hasdeu» Wi-Fi бесплатный, пароль даёт дежурный библиотекарь, а доступ — по бесплатному читательскому билету. Платить за кофе, чтобы иметь интернет, не приходится вовсе.',
+          'Ниже — несколько проверенных адресов. Чтобы увидеть все, откройте любую категорию и включите фильтр «Wi-Fi» — он показывает только места с подтверждённым интернетом.',
+        ],
+      },
+      ro: {
+        title: 'Unde găsești Wi-Fi gratuit în Chișinău: cafenele, biblioteci, coworking',
+        excerpt:
+          'Ai nevoie de internet în afara casei — localurile din Chișinău unde Wi-Fi-ul este confirmat, nu presupus.',
+        body: [
+          'Wi-Fi gratuit în Chișinău există în majoritatea cafenelelor, dar „există un router” și „poți lucra liniștit o oră” sunt lucruri diferite. În catalog, eticheta Wi-Fi o au doar locurile unde acest lucru e confirmat de o sursă, nu ghicit: acum sunt 36.',
+          'Pentru o sarcină scurtă — să răspunzi la e-mailuri, să ai un apel — merge orice cafenea specialty din centru. Pentru lucru de durată, uită-te mai degrabă la spațiile de coworking: acolo internetul face parte din serviciu, nu e un bonus, există prize la fiecare loc și camere separate pentru apeluri.',
+          'Varianta cea mai subestimată sunt bibliotecile. În rețeaua „B. P. Hasdeu” Wi-Fi-ul e gratuit, parola o dă bibliotecarul de serviciu, iar accesul se face pe baza unui card gratuit. Nu trebuie să plătești o cafea doar ca să ai internet.',
+          'Mai jos — câteva adrese verificate. Ca să le vezi pe toate, deschide orice categorie și activează filtrul „Wi-Fi” — arată doar locurile cu internet confirmat.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-22',
+    slug: 'terrace-chisinau',
+    title: 'Кавʼярні та ресторани Кишинева з терасою',
+    excerpt:
+      'Тепла погода — привід сісти надворі. Заклади, у яких тераса підтверджена, з адресами й орієнтовними цінами.',
+    body: [
+      'Тераса в Кишиневі працює довше, ніж здається: багато закладів тримають вуличні столики з квітня до середини жовтня, а частина — з обігрівачами й узимку. У каталозі позначка «тераса» стоїть лише там, де це підтверджено, тож у списку немає закладів «із двома стільцями біля входу».',
+      'Вибираючи терасу, звертайте увагу на вулицю: на бульварі Штефан чел Маре і великих проспектах шумно й пильно, а в бічних вулицях центру та у спальних районах біля парків сидіти значно приємніше.',
+      'Друге, що варто врахувати, — тінь і час доби. Південні тераси до вечора розжарюються, тож улітку туди краще приходити після 18:00; ранкова кава комфортніша на східному боці.',
+      'Нижче — перевірені варіанти. Повний перелік — через фільтр «Тераса» в категоріях «Кафе» та «Їжа».',
+    ],
+    category: 'cafes',
+    placeSlugs: ['la-placinte-chisinau', 'biorganic-raw-cafe', 'the-moss-caffe-strisca', 'andys-pizza-moscova'],
+    keywords: ['кафе з терасою Кишинів', 'ресторан з терасою', 'літня тераса Кишинів', 'де посидіти надворі'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Кофейни и рестораны Кишинёва с террасой',
+        excerpt:
+          'Тёплая погода — повод сесть на улице. Заведения, у которых терраса подтверждена, с адресами и ориентировочными ценами.',
+        body: [
+          'Терраса в Кишинёве работает дольше, чем кажется: многие заведения держат уличные столики с апреля до середины октября, а часть — с обогревателями и зимой. В каталоге отметка «терраса» стоит только там, где это подтверждено, так что в списке нет заведений «с двумя стульями у входа».',
+          'Выбирая террасу, обращайте внимание на улицу: на бульваре Штефан чел Маре и больших проспектах шумно и пыльно, а в боковых улицах центра и в спальных районах у парков сидеть значительно приятнее.',
+          'Второе, что стоит учесть, — тень и время суток. Южные террасы к вечеру раскаляются, поэтому летом туда лучше приходить после 18:00; утренний кофе комфортнее на восточной стороне.',
+          'Ниже — проверенные варианты. Полный перечень — через фильтр «Терраса» в категориях «Кафе» и «Еда».',
+        ],
+      },
+      ro: {
+        title: 'Cafenele și restaurante cu terasă în Chișinău',
+        excerpt:
+          'Vremea caldă e un motiv să stai afară. Localuri cu terasa confirmată, cu adrese și prețuri orientative.',
+        body: [
+          'Terasa la Chișinău funcționează mai mult decât pare: multe localuri țin mesele afară din aprilie până la mijlocul lui octombrie, iar unele — cu încălzitoare, chiar și iarna. În catalog, eticheta „terasă” apare doar acolo unde e confirmată, așa că lista nu conține localuri „cu două scaune la intrare”.',
+          'Când alegi o terasă, uită-te la stradă: pe bulevardul Ștefan cel Mare și pe arterele mari e zgomot și praf, în timp ce pe străzile laterale din centru și în cartierele de lângă parcuri e mult mai plăcut.',
+          'Al doilea lucru de luat în calcul este umbra și ora. Terasele cu expunere sudică se încing spre seară, așa că vara e mai bine să ajungi după ora 18:00; cafeaua de dimineață e mai comodă pe partea estică.',
+          'Mai jos — variante verificate. Lista completă — prin filtrul „Terasă” din categoriile „Cafenele” și „Mâncare”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-23',
+    slug: 'free-chisinau',
+    title: 'Що подивитися в Кишиневі безкоштовно',
+    excerpt:
+      'Парки, сквери, пішохідні вулиці та відкриті памʼятки, куди можна піти без квитка — 39 місць у каталозі.',
+    body: [
+      'Кишинів добре підходить для безкоштовних прогулянок: майже весь центр — це парки, сквери та відкриті публічні простори, куди не треба купувати квиток. У каталозі позначку «безкоштовний вхід» мають 39 місць, і це перевірена ознака, а не припущення.',
+      'Базовий маршрут вихідного дня — Центральний парк «Штефан чел Маре», далі пішохідна вулиця Євгена Доги з кавʼярнями, потім Соборний парк і Тріумфальна арка. Усе це в межах пішої доступності й не коштує нічого.',
+      'Якщо хочеться більше природи, ідіть до Валя Морілор з озером і набережною або до Долини Троянд — обидва парки великі, із затіненими алеями й місцями для пікніка. Зверніть увагу: Дендрарій, попри схожий формат, має платний вхід (5–10 лей), тож у фільтр безкоштовних місць він не потрапляє.',
+      'Нижче — кілька таких місць. Повний список — фільтр «Безкоштовно» в категоріях «Прогулянки» та «Чим зайнятися».',
+    ],
+    category: 'walks',
+    placeSlugs: ['parcul-valea-morilor-chisinau', 'strada-eugen-doga-chisinau', 'gradina-catedralei', 'valea-trandafirilor-chisinau'],
+    keywords: ['безкоштовно Кишинів', 'що подивитися в Кишиневі', 'парки Кишинева', 'прогулянка центром', 'куди піти безкоштовно'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Что посмотреть в Кишинёве бесплатно',
+        excerpt:
+          'Парки, скверы, пешеходные улицы и открытые достопримечательности, куда можно пойти без билета — 39 мест в каталоге.',
+        body: [
+          'Кишинёв хорошо подходит для бесплатных прогулок: почти весь центр — это парки, скверы и открытые публичные пространства, куда не нужно покупать билет. В каталоге отметку «бесплатный вход» имеют 39 мест, и это проверенный признак, а не предположение.',
+          'Базовый маршрут выходного дня — Центральный парк «Штефан чел Маре», дальше пешеходная улица Евгения Доги с кофейнями, потом Соборный парк и Триумфальная арка. Всё это в пешей доступности и не стоит ничего.',
+          'Если хочется больше природы, идите к Валя Морилор с озером и набережной или к Долине Роз — оба парка большие, с тенистыми аллеями и местами для пикника. Обратите внимание: Дендрарий, несмотря на похожий формат, имеет платный вход (5–10 леев), поэтому в фильтр бесплатных мест он не попадает.',
+          'Ниже — несколько таких мест. Полный список — фильтр «Бесплатно» в категориях «Прогулки» и «Чем заняться».',
+        ],
+      },
+      ro: {
+        title: 'Ce poți vedea gratuit în Chișinău',
+        excerpt:
+          'Parcuri, scuaruri, străzi pietonale și obiective deschise, unde intri fără bilet — 39 de locuri în catalog.',
+        body: [
+          'Chișinăul se pretează bine plimbărilor gratuite: aproape tot centrul înseamnă parcuri, scuaruri și spații publice deschise, pentru care nu cumperi bilet. În catalog, eticheta „intrare gratuită” o au 39 de locuri, iar aceasta este o informație verificată, nu o presupunere.',
+          'Traseul de bază pentru weekend: Parcul Central „Ștefan cel Mare”, apoi strada pietonală Eugen Doga cu cafenelele ei, apoi Grădina Catedralei și Arcul de Triumf. Totul se poate parcurge pe jos și nu costă nimic.',
+          'Dacă vrei mai multă natură, mergi la Valea Morilor, cu lacul și faleza, sau la Valea Trandafirilor — ambele parcuri sunt mari, cu alei umbrite și locuri de picnic. Atenție: Grădina Dendrariu, deși seamănă ca format, are intrare cu plată (5–10 lei), deci nu apare în filtrul locurilor gratuite.',
+          'Mai jos — câteva astfel de locuri. Lista completă — filtrul „Gratuit” din categoriile „Plimbări” și „Ce poți face”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-24',
+    slug: 'with-kids-chisinau',
+    title: 'Куди піти з дитиною в Кишиневі',
+    excerpt:
+      'Заклади з дитячою кімнатою й дитячим меню, зоопарк і торгові центри з розвагами — місця, де з дітьми справді раді.',
+    body: [
+      'Похід у кафе з дитиною залежить не від ввічливості персоналу, а від того, чи є дитині де подітися. Тому в каталозі окремо позначені два різні факти: «дитяча кімната» — виділена ігрова зона, і «дитяче меню» — окремий розділ у меню, а не просто половина дорослої порції.',
+      'Мережеві ресторани тут мають перевагу: у частини закладів La Plăcinte, Andy\'s Pizza та Oliva ігрові зони заявлені на власних сайтах, подекуди — ще й аніматори на дні народження. Важливо дивитися саме на конкретну локацію: у тій самій мережі один ресторан має ігрову кімнату, а інший — ні.',
+      'На цілий день із дитиною найпростіший план — зоопарк на бульварі Дачія: велика територія, де можна провести кілька годин, і поруч Ботанічний сад. У холодну погоду виручають торгові центри — Atrium і Port Mall у каталозі позначені як придатні для відвідин із дітьми: там є розважальні зони й фудкорти.',
+      'Нижче — перевірені варіанти з адресами. Плануючи вихідний, загляньте ще в афішу: дитячі вистави й майстер-класи в Кишиневі бувають щотижня.',
+    ],
+    category: 'food',
+    placeSlugs: ['la-placinte-chisinau', 'oliva-moscova', 'gradina-zoologica-chisinau', 'atrium-albisoara-chisinau'],
+    keywords: ['з дитиною Кишинів', 'кафе з дитячою кімнатою', 'дитяче меню Кишинів', 'куди піти з дітьми', 'зоопарк Кишинів'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Куда пойти с ребёнком в Кишинёве',
+        excerpt:
+          'Заведения с детской комнатой и детским меню, зоопарк и торговые центры с развлечениями — места, где детям действительно рады.',
+        body: [
+          'Поход в кафе с ребёнком зависит не от вежливости персонала, а от того, есть ли ребёнку куда деться. Поэтому в каталоге отдельно отмечены два разных факта: «детская комната» — выделенная игровая зона, и «детское меню» — отдельный раздел в меню, а не просто половина взрослой порции.',
+          'Сетевые рестораны здесь имеют преимущество: у части заведений La Plăcinte, Andy\'s Pizza и Oliva игровые зоны заявлены на собственных сайтах, кое-где — ещё и аниматоры на дни рождения. Важно смотреть именно на конкретную локацию: в одной и той же сети один ресторан имеет игровую комнату, а другой — нет.',
+          'На целый день с ребёнком самый простой план — зоопарк на бульваре Дачия: большая территория, где можно провести несколько часов, и рядом Ботанический сад. В холодную погоду выручают торговые центры — Atrium и Port Mall в каталоге отмечены как подходящие для посещения с детьми: там есть развлекательные зоны и фудкорты.',
+          'Ниже — проверенные варианты с адресами. Планируя выходной, загляните ещё в афишу: детские спектакли и мастер-классы в Кишинёве бывают еженедельно.',
+        ],
+      },
+      ro: {
+        title: 'Unde mergi cu copilul în Chișinău',
+        excerpt:
+          'Localuri cu loc de joacă și meniu pentru copii, grădina zoologică și centre comerciale cu distracții — locuri unde copiii chiar sunt bineveniți.',
+        body: [
+          'O ieșire la cafenea cu un copil nu depinde de amabilitatea personalului, ci de faptul că cel mic are unde să stea. De aceea, în catalog sunt marcate separat două lucruri diferite: „cameră pentru copii” — o zonă de joacă dedicată, și „meniu pentru copii” — o secțiune separată în meniu, nu doar o jumătate de porție de adult.',
+          'Restaurantele de rețea au aici un avantaj: o parte dintre localurile La Plăcinte, Andy\'s Pizza și Oliva anunță zone de joacă pe propriile site-uri, iar unele — și animatori pentru aniversări. Contează însă locația concretă: în aceeași rețea, un restaurant are loc de joacă, altul nu.',
+          'Pentru o zi întreagă cu copilul, cel mai simplu plan e grădina zoologică de pe bulevardul Dacia: un teritoriu mare, unde poți petrece câteva ore, iar alături se află Grădina Botanică. Pe vreme rece salvează centrele comerciale — Atrium și Port Mall sunt marcate în catalog ca potrivite pentru vizite cu copiii: au zone de divertisment și food court.',
+          'Mai jos — variante verificate, cu adrese. Când planifici weekendul, verifică și afișul: spectacole pentru copii și ateliere au loc la Chișinău în fiecare săptămână.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-25',
+    slug: 'breakfast-chisinau',
+    title: 'Де поснідати в Кишиневі',
+    excerpt:
+      'Заклади, у яких сніданок — окремий розділ меню, а не просто кава з круасаном. З адресами й орієнтовними цінами.',
+    body: [
+      'Снідати поза домом у Кишиневі дешевше, ніж здається: повний сніданок у кавʼярні коштує приблизно стільки ж, скільки обід у бістро. У каталозі позначку «сніданки» мають лише заклади, де це заявлено на власному сайті — зазвичай з окремим розділом меню й часовими рамками.',
+      'Тип сніданку варто обрати заздалегідь. Кавʼярні дають класичний формат: яєчня, сирники, тости, кава. Ресторани на кшталт La Plăcinte та Oliva пропонують ситніші страви й відчиняються рано. Є й проміжний варіант — пекарні, де сніданок складається з випічки, зате кава зазвичай дешевша.',
+      'Другий критерій — час. Більшість місць подає сніданки до 11:00–12:00, у вихідні трохи довше. Якщо прокидаєтеся пізно, шукайте заклади, де сніданок подають цілий день, або просто дивіться на звичайне меню.',
+      'Нижче — кілька перевірених адрес; у картках є графік роботи та орієнтовні ціни з сайтів закладів.',
+    ],
+    category: 'cafes',
+    placeSlugs: ['coffee-molka-chisinau', 'miro-cafe-petru-movila', 'oliva-moscova', 'star-kebab-grigore-vieru'],
+    keywords: ['сніданок Кишинів', 'де поснідати', 'кафе зі сніданками', 'ранкова кава Кишинів', 'бранч'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Где позавтракать в Кишинёве',
+        excerpt:
+          'Заведения, в которых завтрак — отдельный раздел меню, а не просто кофе с круассаном. С адресами и ориентировочными ценами.',
+        body: [
+          'Завтракать вне дома в Кишинёве дешевле, чем кажется: полный завтрак в кофейне стоит примерно столько же, сколько обед в бистро. В каталоге отметку «завтраки» имеют только заведения, где это заявлено на собственном сайте — обычно с отдельным разделом меню и временными рамками.',
+          'Тип завтрака стоит выбрать заранее. Кофейни дают классический формат: яичница, сырники, тосты, кофе. Рестораны вроде La Plăcinte и Oliva предлагают более сытные блюда и открываются рано. Есть и промежуточный вариант — пекарни, где завтрак состоит из выпечки, зато кофе обычно дешевле.',
+          'Второй критерий — время. Большинство мест подаёт завтраки до 11:00–12:00, в выходные чуть дольше. Если просыпаетесь поздно, ищите заведения, где завтрак подают весь день, или просто смотрите на обычное меню.',
+          'Ниже — несколько проверенных адресов; в карточках есть график работы и ориентировочные цены с сайтов заведений.',
+        ],
+      },
+      ro: {
+        title: 'Unde iei micul dejun în Chișinău',
+        excerpt:
+          'Localuri în care micul dejun e o secțiune separată de meniu, nu doar o cafea cu un croissant. Cu adrese și prețuri orientative.',
+        body: [
+          'Micul dejun în oraș costă la Chișinău mai puțin decât pare: un mic dejun complet la cafenea costă cam cât un prânz la bistro. În catalog, eticheta „mic dejun” o au doar localurile care anunță acest lucru pe propriul site — de obicei cu o secțiune separată de meniu și un interval orar.',
+          'Tipul micului dejun merită ales din timp. Cafenelele oferă formatul clasic: omletă, clătite cu brânză, toast, cafea. Restaurante precum La Plăcinte și Oliva propun preparate mai consistente și se deschid devreme. Există și o variantă intermediară — patiseriile, unde micul dejun înseamnă produse de panificație, în schimb cafeaua e de obicei mai ieftină.',
+          'Al doilea criteriu e ora. Majoritatea locurilor servesc micul dejun până la 11:00–12:00, în weekend puțin mai mult. Dacă te trezești târziu, caută localurile care servesc mic dejun toată ziua sau uită-te pur și simplu la meniul obișnuit.',
+          'Mai jos — câteva adrese verificate; în carduri găsești programul și prețurile orientative de pe site-urile localurilor.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-26',
+    slug: 'food-delivery-chisinau',
+    title: 'Доставка їжі в Кишиневі: заклади з власною доставкою',
+    excerpt:
+      'Піца, суші, бургери й домашня кухня з доставкою — умови й вартість із сайтів самих закладів.',
+    body: [
+      'Доставка в Кишиневі працює двома способами: через агрегатори та напряму з сайту закладу. Другий варіант зазвичай вигідніший — немає націнки сервісу, а багато ресторанів дають безкоштовну доставку від певної суми.',
+      'Типові умови виглядають так: доставка в межах міста коштує 40–60 лей, безкоштовна — від 400–550 лей. Деякі мережі працюють цілодобово, інші приймають замовлення до 22:45–23:00, тож пізно ввечері вибір звужується. У каталозі позначку «доставка» мають 18 закладів — лише ті, хто заявляє власну службу на своєму сайті.',
+      'Якщо замовляєте на компанію, зверніть увагу на банкетні та сімейні набори: вони майже завжди вигідніші за ту саму кількість окремих позицій.',
+      'Нижче — перевірені заклади з доставкою; у картках є посилання на сайт, де вказані актуальні умови та зона доставки.',
+    ],
+    category: 'food',
+    placeSlugs: ['andys-pizza-moscova', 'esushi-dacia', 'torro-burgers-puskin', 'citypizza-mircea-cel-batran'],
+    keywords: ['доставка їжі Кишинів', 'доставка піци Кишинів', 'доставка суші', 'замовити їжу додому', 'доставка цілодобово'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Доставка еды в Кишинёве: заведения с собственной доставкой',
+        excerpt:
+          'Пицца, суши, бургеры и домашняя кухня с доставкой — условия и стоимость с сайтов самих заведений.',
+        body: [
+          'Доставка в Кишинёве работает двумя способами: через агрегаторы и напрямую с сайта заведения. Второй вариант обычно выгоднее — нет наценки сервиса, а многие рестораны дают бесплатную доставку от определённой суммы.',
+          'Типичные условия выглядят так: доставка в пределах города стоит 40–60 леев, бесплатная — от 400–550 леев. Некоторые сети работают круглосуточно, другие принимают заказы до 22:45–23:00, так что поздно вечером выбор сужается. В каталоге отметку «доставка» имеют 18 заведений — только те, кто заявляет собственную службу на своём сайте.',
+          'Если заказываете на компанию, обратите внимание на банкетные и семейные наборы: они почти всегда выгоднее того же количества отдельных позиций.',
+          'Ниже — проверенные заведения с доставкой; в карточках есть ссылка на сайт, где указаны актуальные условия и зона доставки.',
+        ],
+      },
+      ro: {
+        title: 'Livrare de mâncare în Chișinău: localuri cu livrare proprie',
+        excerpt:
+          'Pizza, sushi, burgeri și bucătărie de casă cu livrare — condiții și costuri de pe site-urile localurilor.',
+        body: [
+          'Livrarea la Chișinău funcționează în două feluri: prin agregatori și direct de pe site-ul localului. A doua variantă e de regulă mai avantajoasă — nu are adaosul serviciului, iar multe restaurante oferă livrare gratuită peste o anumită sumă.',
+          'Condițiile tipice arată așa: livrarea în oraș costă 40–60 de lei, iar de la 400–550 de lei devine gratuită. Unele rețele lucrează non-stop, altele primesc comenzi până la 22:45–23:00, așa că seara târziu opțiunile se reduc. În catalog, eticheta „livrare” o au 18 localuri — doar cele care anunță serviciu propriu pe site-ul lor.',
+          'Dacă dai comandă pentru un grup, uită-te la platourile de banchet și la seturile de familie: aproape întotdeauna sunt mai avantajoase decât aceleași produse luate separat.',
+          'Mai jos — localuri verificate cu livrare; în carduri găsești linkul către site, unde sunt condițiile actuale și zona de livrare.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-27',
+    slug: 'cheap-eats-chisinau',
+    title: 'Де недорого поїсти в Кишиневі',
+    excerpt:
+      'Плацинди, ковриги, піца й домашня кухня в бюджетному сегменті — з орієнтовними цінами з меню закладів.',
+    body: [
+      'Кишинів — одне з небагатьох європейських міст, де повноцінно пообідати можна за 100–150 лей. Найдешевший сегмент — традиційна молдовська кухня та вулична випічка: плацинда або ковриг коштують у межах 20–50 лей, і цього часто вистачає замість перекусу.',
+      'Наступний рівень — сімейні бістро й піцерії з домашньою кухнею: суп, друга страва й компот укладаються приблизно в ту саму сотню. У каталозі ціновий рівень «$» мають 28 закладів, і для багатьох із них є орієнтовні ціни, узяті просто з меню на сайті.',
+      'Окремо варто знати про бізнес-ланчі: у низці ресторанів вони коштують 130–150 лей і включають кілька страв, тобто вигідніші за замовлення тих самих позицій окремо. Працюють зазвичай у будні з 11:00 до 16:00.',
+      'Нижче — кілька перевірених бюджетних місць. Повний список — фільтр ціни «$» у категорії «Їжа».',
+    ],
+    category: 'food',
+    placeSlugs: ['covrigo-zelinski', 'la-mamuca-stefan-cel-mare', 'citypizza-mircea-cel-batran', 'cafe-mon-ami'],
+    keywords: ['недорого поїсти Кишинів', 'дешеве кафе Кишинів', 'бізнес-ланч Кишинів', 'плацинди', 'бюджетний обід'],
+    publishedAt: '2026-11-10',
+    i18n: {
+      ru: {
+        title: 'Где недорого поесть в Кишинёве',
+        excerpt:
+          'Плацинды, ковриги, пицца и домашняя кухня в бюджетном сегменте — с ориентировочными ценами из меню заведений.',
+        body: [
+          'Кишинёв — один из немногих европейских городов, где полноценно пообедать можно за 100–150 леев. Самый дешёвый сегмент — традиционная молдавская кухня и уличная выпечка: плацинда или ковриг стоят в пределах 20–50 леев, и этого часто хватает вместо перекуса.',
+          'Следующий уровень — семейные бистро и пиццерии с домашней кухней: суп, второе и компот укладываются примерно в ту же сотню. В каталоге ценовой уровень «$» имеют 28 заведений, и для многих из них есть ориентировочные цены, взятые прямо из меню на сайте.',
+          'Отдельно стоит знать о бизнес-ланчах: в ряде ресторанов они стоят 130–150 леев и включают несколько блюд, то есть выгоднее заказа тех же позиций отдельно. Работают обычно в будни с 11:00 до 16:00.',
+          'Ниже — несколько проверенных бюджетных мест. Полный список — фильтр цены «$» в категории «Еда».',
+        ],
+      },
+      ro: {
+        title: 'Unde mănânci ieftin în Chișinău',
+        excerpt:
+          'Plăcinte, covrigi, pizza și bucătărie de casă în segmentul accesibil — cu prețuri orientative din meniurile localurilor.',
+        body: [
+          'Chișinăul e unul dintre puținele orașe europene unde poți lua un prânz complet cu 100–150 de lei. Segmentul cel mai ieftin îl reprezintă bucătăria tradițională moldovenească și patiseria stradală: o plăcintă sau un covrig costă între 20 și 50 de lei, iar de multe ori asta ține loc de gustare.',
+          'Nivelul următor sunt bistrourile de familie și pizzeriile cu bucătărie de casă: o supă, un fel principal și o compoziție se încadrează cam în aceeași sută. În catalog, nivelul de preț „$” îl au 28 de localuri, iar pentru multe dintre ele există prețuri orientative, luate direct din meniul de pe site.',
+          'Merită știut și despre business lunch: în mai multe restaurante costă 130–150 de lei și include câteva feluri, deci e mai avantajos decât aceleași preparate comandate separat. De obicei funcționează în zilele lucrătoare, între 11:00 și 16:00.',
+          'Mai jos — câteva locuri accesibile și verificate. Lista completă — filtrul de preț „$” din categoria „Mâncare”.',
+        ],
+      },
+    },
+  },
 ];

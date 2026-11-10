@@ -304,6 +304,8 @@ export function articleJsonLd(article: Article, canonical: string, locale: Local
     author: { '@type': 'Organization', name: t.common.siteName },
     publisher: { '@type': 'Organization', name: t.common.siteName },
     mainEntityOfPage: canonical,
+    ...(article.keywords?.length ? { keywords: article.keywords.join(', ') } : {}),
+    image: [socialImageUrl(getArticleImage(article))],
   };
 }
 

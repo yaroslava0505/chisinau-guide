@@ -325,6 +325,8 @@ export interface Article {
   placeSlugs: string[];
   /** Slug of a real CityEvent this piece is about, shown as a live event card. */
   eventSlug?: string;
+  /** Search terms this piece answers, published as Schema.org `keywords`. */
+  keywords?: string[];
   /** A real, licensed cover photo; without it a themed illustration is shown. */
   image?: string;
   /** Required attribution whenever `image` is set. */

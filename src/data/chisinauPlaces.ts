@@ -69,7 +69,7 @@ export const INITIAL_PLACES: Place[] = [
     price_range: { from: 5, to: 10, kind: 'entry' },
     photos: ['https://dendrariu.md/wp-content/uploads/2025/12/IMG_4004-1-scaled.webp'],
     parking: true,
-    free_entry: true,
+    free_entry: false,
     venue_type: 'park',
     tags: ['парк', 'природа', 'тиша', 'читання', 'прогулянка', 'зелена зона'],
     i18n: {

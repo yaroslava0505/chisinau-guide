@@ -89,6 +89,8 @@ interface PageContent {
   path: string;
   title: string;
   description: string;
+  /** Search terms, published as <meta name="keywords">. */
+  keywords?: string[];
   heading: string;
   subtitle?: string;
   /** Rendered inside #root, below the heading. */
@@ -427,6 +429,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     pages.push({
       path,
       title: article.title,
+      keywords: article.keywords,
       description: article.excerpt,
       heading: article.title,
       subtitle: article.excerpt,
@@ -515,6 +518,7 @@ function render(page: PageContent, locale: Locale): string {
   };
 
   replaceMeta('name', 'description', page.description);
+  if (page.keywords?.length) replaceMeta('name', 'keywords', page.keywords.join(', '));
   replaceMeta('name', 'robots', page.noindex ? 'noindex, follow' : 'index, follow');
   replaceMeta('property', 'og:title', fullTitle);
   replaceMeta('property', 'og:description', page.description);
