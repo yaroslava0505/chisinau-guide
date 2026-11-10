@@ -1,4 +1,4 @@
-import type { Place, PlaceCategoryId } from '../types';
+import type { CityEvent, Place, PlaceCategoryId } from '../types';
 
 /**
  * Thematic illustrations.
@@ -76,6 +76,56 @@ const BY_SUBTYPE: Record<string, string[]> = {
   ],
 };
 
+/**
+ * Pools for events, keyed by `event_type`. Kept separate from the place pools
+ * and deliberately several images deep: the afiș shows many events of the same
+ * type side by side, and a one-image-per-type pool made neighbouring cards look
+ * like duplicates of each other.
+ */
+const BY_EVENT_TYPE: Record<string, string[]> = {
+  concert: [
+    U('1465847899084-d164df4dedc6'), U('1493225457124-a3eb161ffa5f'),
+    U('1470225620780-dba8ba36b745'), U('1501386761578-eac5c94b800a'),
+    U('1459749411175-04bf5292ceea'), U('1524368535928-5b5e00ddc76b'),
+  ],
+  theatre: [
+    U('1503095396549-807759245b35'), U('1507924538820-ede94a04019d'),
+    U('1514306191717-452ec28c7814'), U('1580809361436-42a7ec204889'),
+  ],
+  exhibition: [
+    U('1518998053901-5348d3961a04'), U('1554907984-15263bfd63bd'),
+    U('1536924940846-227afb31e2a5'), U('1544967082-d9d25d867d66'),
+    U('1770910195254-d0f97308c30f'),
+  ],
+  festival: [
+    U('1531058020387-3be344556be6'), U('1533174072545-7a4b6ad7a6c3'),
+    U('1506157786151-b8491531f063'),
+  ],
+  kids: [
+    U('1503919545889-aef636e10ad4'), U('1472162072942-cd5147eb3902'),
+    U('1503454537195-1dcabb73ffb9'), U('1596464716127-f2a82984de30'),
+  ],
+  sport: [
+    U('1534438327276-14e5300c3a48'), U('1552674605-db6ffd4facb5'),
+    U('1461896836934-ffe607ba8211'), U('1476480862126-209bfaa8edc8'),
+    U('1571019613454-1cb2f99b2d8b'),
+  ],
+  cinema: [
+    U('1489599849927-2ee91cede3ba'), U('1517604931442-7e0c8ed2963c'),
+    U('1536440136628-849c177e76a1'), U('1485846234645-a62644f84728'),
+    U('1542204165-65bf26472b9b'),
+  ],
+  workshop: [
+    U('1522202176988-66273c2fd55f'), U('1544928147-79a2dbc1f389'),
+    U('1556910103-1c02745aae4d'), U('1452860606245-08befc0ff44b'),
+    U('1513364776144-60967b0f800f'),
+  ],
+  lecture: [
+    U('1524178232363-1fb2b075b655'), U('1540575467063-178a50c2df87'),
+    U('1587825140708-dfaf72ae4b04'), U('1521587760476-6c12a4b040da'),
+  ],
+};
+
 /** Fallback pools when nothing more specific is known. */
 const BY_CATEGORY: Record<PlaceCategoryId, string[]> = {
   remote_work: [U('1497215728101-856f4ea42174'), U('1442512595331-e89e73853f31')],
@@ -127,4 +177,17 @@ export function getPlaceImage(place: Place): string {
 export function getCategoryIllustration(category: PlaceCategoryId, seed: string): string {
   const pool = BY_CATEGORY[category];
   return pool[hash(seed) % pool.length];
+}
+
+/**
+ * The image shown for an event: its own licensed photo when it has one (which
+ * is what `image_credit` marks), otherwise an illustration picked from the pool
+ * for its type — by slug, so the choice is stable and two events of the same
+ * type don't end up with the same picture.
+ */
+export function getEventImage(event: CityEvent): string {
+  if (event.image_credit) return event.image;
+
+  const pool = BY_EVENT_TYPE[event.event_type] ?? BY_CATEGORY.activities;
+  return pool[hash(event.slug) % pool.length];
 }

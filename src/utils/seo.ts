@@ -4,7 +4,7 @@ import { nextOccurrence, toIsoDate } from './events';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from '../i18n/types';
 import { getDictionary } from '../i18n';
 import { categoryCopy } from '../i18n/labels';
-import { getCategoryIllustration, getPlaceImage } from './illustrations';
+import { getCategoryIllustration, getEventImage, getPlaceImage } from './illustrations';
 
 const SCHEMA_SCRIPT_ID = 'schema-structured-data';
 /** Must match the id `scripts/prerender.ts` gives the breadcrumb script. */
@@ -161,7 +161,7 @@ export function eventJsonLd(event: CityEvent, canonical: string, locale: Locale 
     endDate: event.end_date_iso ?? toIsoDate(occurrence),
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
-    image: event.image,
+    image: getEventImage(event),
     url: canonical,
     location: {
       '@type': 'Place',
@@ -225,6 +225,18 @@ export function contactsJsonLd(locale: Locale = DEFAULT_LOCALE) {
       name: t.common.siteName,
       email: 'myyarosfilm@gmail.com',
     },
+  };
+}
+
+export function dateJsonLd(locale: Locale = DEFAULT_LOCALE) {
+  const t = getDictionary(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: t.date.title,
+    description: t.date.seoDescription,
+    url: absoluteUrl(withLocale('/date', locale)),
+    inLanguage: LOCALE_META[locale].htmlLang,
   };
 }
 
@@ -430,6 +442,7 @@ const STATIC_PATHS = [
   '/privacy',
   '/contacts',
   '/business',
+  '/date',
   '/articles',
 ];
 

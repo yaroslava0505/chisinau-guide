@@ -18,6 +18,7 @@ export type Route =
   | { view: 'privacy' }
   | { view: 'contacts' }
   | { view: 'business' }
+  | { view: 'date' }
   | { view: 'articles' }
   | { view: 'article'; slug: string }
   | { view: 'admin' }
@@ -49,6 +50,7 @@ const STATIC_ROUTES: Record<string, Route> = {
   privacy: { view: 'privacy' },
   contacts: { view: 'contacts' },
   business: { view: 'business' },
+  date: { view: 'date' },
   articles: { view: 'articles' },
   ...(ADMIN_ENABLED ? { admin: { view: 'admin' as const } } : {}),
 };
@@ -147,6 +149,8 @@ export function buildPath(route: Route, locale: Locale = DEFAULT_LOCALE): string
         return '/contacts';
       case 'business':
         return '/business';
+      case 'date':
+        return '/date';
       case 'articles':
         return '/articles';
       case 'article':

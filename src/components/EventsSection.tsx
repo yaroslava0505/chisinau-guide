@@ -6,6 +6,7 @@ import { useT } from '../i18n';
 import type { Dictionary } from '../i18n/dictionaries/uk';
 import { eventTypeOptions } from '../i18n/labels';
 import { ToggleChip } from './ui/Chip';
+import { getEventImage } from '../utils/illustrations';
 
 interface EventsSectionProps {
   events: CityEvent[];
@@ -37,7 +38,7 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary; onSelectEven
         className="relative aspect-[16/9] overflow-hidden bg-zinc-100 block w-full text-left"
       >
         <img
-          src={event.image}
+          src={getEventImage(event)}
           // Without a credit the image is a themed stock illustration, never a
           // photo of the event itself — the alt text says so instead of
           // claiming otherwise.

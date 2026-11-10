@@ -136,6 +136,13 @@ export interface Place {
   slug: string;
   description: string;
   category: PlaceCategoryId;
+  /**
+   * Extra categories this place also belongs in — a mall whose own site states
+   * free Wi-Fi and offices belongs in "remote work" too, without leaving the
+   * shopping-centres feed. Only set it when the record carries the confirmed
+   * fields that justify the second category.
+   */
+  also_in?: PlaceCategoryId[];
   subcategory: string;
   district: District;
   address: string;

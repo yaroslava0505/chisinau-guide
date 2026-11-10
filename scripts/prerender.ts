@@ -32,6 +32,7 @@ import {
   breadcrumbJsonLd,
   contactsJsonLd,
   businessJsonLd,
+  dateJsonLd,
   eventJsonLd,
   getArticleImage,
   itemListJsonLd,
@@ -43,7 +44,8 @@ import {
 import { formatOpeningHours } from '../src/utils/openingHours';
 import { formatPriceRange } from '../src/utils/priceRange';
 import { isPastEvent, occurrenceLabel } from '../src/utils/events';
-import { getPlaceImage } from '../src/utils/illustrations';
+import { getEventImage, getPlaceImage } from '../src/utils/illustrations';
+import { dateActivities, dateEvents, dateFood, dateWalks } from '../src/utils/datePlan';
 import type { Article, CategoryId, CityEvent, Place } from '../src/types';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -287,7 +289,9 @@ function pagesForLocale(locale: Locale): PageContent[] {
   CATEGORIES.forEach((id) => {
     const copy = categoryCopy(t, id)!;
     const path = `/${id.replace('_', '-')}`;
-    const inCategory = places.filter((place) => place.category === id);
+    const inCategory = places.filter(
+      (place) => place.category === id || place.also_in?.includes(id as Place['category']),
+    );
     pages.push({
       path,
       title: copy.seoTitle,
@@ -316,7 +320,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     jsonLd: events.map((event) =>
       eventJsonLd(event, absoluteUrl(withLocale('/events', locale)), locale),
     ),
-    image: events[0]?.image,
+    image: events[0] ? getEventImage(events[0]) : undefined,
   });
 
   pages.push({
@@ -382,6 +386,31 @@ function pagesForLocale(locale: Locale): PageContent[] {
     jsonLd: businessJsonLd(locale),
   });
 
+  const dateSection = (title: string, hint: string, items: Place[]) =>
+    items.length ? `<h2>${esc(title)}</h2>\n    <p>${esc(hint)}</p>\n    ${placeList(items, locale)}` : '';
+
+  pages.push({
+    path: '/date',
+    title: t.date.title,
+    description: t.date.seoDescription,
+    heading: t.date.title,
+    subtitle: t.date.intro,
+    body: [
+      dateSection(t.date.foodTitle, t.date.foodHint, dateFood(places)),
+      dateEvents(events).length
+        ? `<h2>${esc(t.date.eventsTitle)}</h2>\n    <p>${esc(t.date.eventsHint)}</p>\n    <ul>\n      ${dateEvents(events)
+            .map((event) => eventItem(event, locale))
+            .join('\n      ')}\n    </ul>`
+        : '',
+      dateSection(t.date.walksTitle, t.date.walksHint, dateWalks(places)),
+      dateSection(t.date.activitiesTitle, t.date.activitiesHint, dateActivities(places)),
+      `<p>${esc(t.date.selectionNote)}</p>`,
+    ]
+      .filter(Boolean)
+      .join('\n    '),
+    jsonLd: dateJsonLd(locale),
+  });
+
   pages.push({
     path: '/articles',
     title: t.articles.indexTitle,
@@ -420,7 +449,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
       subtitle: event.description,
       body: eventDetail(event, locale),
       jsonLd: eventJsonLd(event, absoluteUrl(withLocale(path, locale)), locale),
-      image: event.image,
+      image: getEventImage(event),
       noindex: isPastEvent(event),
     });
   });

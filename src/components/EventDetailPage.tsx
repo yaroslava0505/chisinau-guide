@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, ImageOff, MapPin, Ticket } from 'lucide-rea
 import type { Article, CityEvent } from '../types';
 import { isPastEvent, occurrenceLabel } from '../utils/events';
 import { useT } from '../i18n';
+import { getEventImage } from '../utils/illustrations';
 import { ArticleCard } from './ArticleCard';
 
 interface EventDetailPageProps {
@@ -60,7 +61,7 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({
 
       <div className={`relative aspect-[16/9] rounded-3xl overflow-hidden bg-zinc-100 ${past ? 'opacity-60' : ''}`}>
         <img
-          src={event.image}
+          src={getEventImage(event)}
           alt={event.image_credit ? event.title : `${t.common.illustrative}: ${event.category}`}
           loading="lazy"
           className="w-full h-full object-cover"

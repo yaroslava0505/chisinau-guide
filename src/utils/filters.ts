@@ -57,7 +57,12 @@ export function placeMatchesFilters(
   filters: FilterState,
   context: FilterContext = {},
 ): boolean {
-  if (activeCategory !== 'all' && activeCategory !== 'events' && place.category !== activeCategory) {
+  if (
+    activeCategory !== 'all' &&
+    activeCategory !== 'events' &&
+    place.category !== activeCategory &&
+    !place.also_in?.includes(activeCategory)
+  ) {
     return false;
   }
 

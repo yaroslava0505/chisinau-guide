@@ -414,6 +414,25 @@ export const ro: Dictionary = {
     formSubtitle: 'Povestește-ne despre el mai jos — e cel mai rapid mod de a ne găsi.',
   },
 
+  date: {
+    title: 'Unde mergi la o întâlnire în Chișinău',
+    seoDescription:
+      'O seară în doi la Chișinău: restaurante cu rezervare și terasă, concerte și spectacole în zilele următoare, puncte de belvedere la apus și ateliere.',
+    intro:
+      'Un plan gata făcut pentru o seară în doi: unde cinezi, la ce eveniment mergeți, unde vă plimbați după apus și ce puteți face împreună, dacă vreți mai mult decât o cină.',
+    foodTitle: 'Unde cinați',
+    foodHint:
+      'Restaurante și cafenele care anunță pe propriul site rezervarea mesei, terasa sau muzica live.',
+    eventsTitle: 'Unde mergeți împreună',
+    eventsHint: 'Concerte, spectacole, film și expoziții în săptămânile următoare — din afișul ghidului.',
+    walksTitle: 'Unde vă plimbați',
+    walksHint: 'Puncte de belvedere la apus, parcuri și locuri verzi, liniștite.',
+    activitiesTitle: 'Ce faceți împreună',
+    activitiesHint: 'Ateliere, studiouri de creație, expoziții și muzee.',
+    selectionNote:
+      'Aceasta este o selecție redacțională: locurile sunt alese după câmpuri verificate din catalog (rezervare, terasă, muzică live, tipul plimbării sau al activității), nu după notele cuiva. Verificați programul și disponibilitatea pe site-ul localului.',
+  },
+
   business: {
     title: 'Colaborare',
     seoDescription:

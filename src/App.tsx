@@ -20,6 +20,7 @@ import {
   articlesIndexJsonLd,
   contactsJsonLd,
   businessJsonLd,
+  dateJsonLd,
   eventJsonLd,
   getArticleImage,
   itemListJsonLd,
@@ -28,7 +29,7 @@ import {
   updateSEO,
   websiteJsonLd,
 } from './utils/seo';
-import { getPlaceImage } from './utils/illustrations';
+import { getEventImage, getPlaceImage } from './utils/illustrations';
 import { INITIAL_FILTERS, countActiveFilters, filterPlaces } from './utils/filters';
 import { analyzeQuery } from './utils/search';
 import { localizeArticles, localizeEvents, localizePlaces } from './utils/localize';
@@ -68,6 +69,7 @@ import { AddPlaceForm } from './components/AddPlaceForm';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactsPage } from './components/ContactsPage';
 import { BusinessPage } from './components/BusinessPage';
+import { DatePage } from './components/DatePage';
 import { ArticlesSection } from './components/ArticlesSection';
 import { ArticleDetailPage } from './components/ArticleDetailPage';
 import { EventDetailPage } from './components/EventDetailPage';
@@ -274,6 +276,17 @@ function Guide() {
       return;
     }
 
+    if (route.view === 'date') {
+      updateSEO({
+        title: t.date.title,
+        description: t.date.seoDescription,
+        path,
+        locale,
+        jsonLd: dateJsonLd(locale),
+      });
+      return;
+    }
+
     if (route.view === 'articles') {
       const canonical = absoluteUrl(withLocale(path, locale));
       updateSEO({
@@ -309,7 +322,7 @@ function Guide() {
         description: selectedEvent.description,
         path,
         locale,
-        image: selectedEvent.image,
+        image: getEventImage(selectedEvent),
         jsonLd: eventJsonLd(selectedEvent, canonical, locale),
         breadcrumbLeaf: selectedEvent.title,
         // A past event's own page stops being something worth surfacing in
@@ -441,7 +454,9 @@ function Guide() {
 
       setActiveScenario(id);
       setFilters({ ...INITIAL_FILTERS, ...scenario.filters });
-      navigate(categoryPath(scenario.category, locale));
+      // "A date" is a whole evening — dinner, an event, a walk — so it gets a
+      // page of its own instead of one category's feed.
+      navigate(id === 'date' ? withLocale('/date', locale) : categoryPath(scenario.category, locale));
     },
     [locale],
   );
@@ -473,6 +488,7 @@ function Guide() {
   const isPrivacyActive = route.view === 'privacy';
   const isContactsActive = route.view === 'contacts';
   const isBusinessActive = route.view === 'business';
+  const isDateActive = route.view === 'date';
   const isArticlesActive = route.view === 'articles';
   const isArticleActive = route.view === 'article';
   const isEventActive = route.view === 'event';
@@ -498,7 +514,13 @@ function Guide() {
         isFavoritesActive={isFavoritesActive}
         isAdminActive={isAdminActive}
         isStaticPageActive={
-          isPrivacyActive || isContactsActive || isBusinessActive || isArticlesActive || isArticleActive || isEventActive
+          isPrivacyActive ||
+          isContactsActive ||
+          isBusinessActive ||
+          isDateActive ||
+          isArticlesActive ||
+          isArticleActive ||
+          isEventActive
         }
         onResetToHome={() => selectCategory('all')}
         onSelectLocale={selectLocale}
@@ -569,6 +591,18 @@ function Guide() {
       ) : isContactsActive ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
           <ContactsPage />
+        </main>
+      ) : isDateActive ? (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+          <DatePage
+            places={places}
+            events={events}
+            favorites={favorites}
+            onSelectPlace={selectPlace}
+            onToggleFavorite={toggleFavoriteFromCard}
+            onSelectEvent={selectEvent}
+            onOpenEvents={() => navigate(withLocale('/events', locale))}
+          />
         </main>
       ) : isBusinessActive ? (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
