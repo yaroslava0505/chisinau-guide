@@ -188,10 +188,24 @@ function eventDetail(event: CityEvent, locale: Locale): string {
     .map(([term, value]) => `      <dt>${esc(term)}</dt><dd>${esc(value)}</dd>`)
     .join('\n');
 
+  const related = localizeArticles(
+    INITIAL_ARTICLES.filter((article) => article.eventSlug === event.slug),
+    locale,
+  );
+  const articlesBlock = related.length
+    ? `\n    <h2>${esc(t.events.aboutEvent)}</h2>
+    <ul>${related
+      .map(
+        (article) =>
+          `<li><a href="${withLocale(`/articles/${article.slug}`, locale)}">${esc(article.title)}</a> — ${esc(article.excerpt)}</li>`,
+      )
+      .join('')}</ul>`
+    : '';
+
   return `<p>${esc(event.description)}</p>
     <dl>
 ${definitions}
-    </dl>`;
+    </dl>${articlesBlock}`;
 }
 
 /** The detail page's own facts, as a definition list. */

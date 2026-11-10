@@ -1,15 +1,24 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ImageOff, MapPin, Ticket } from 'lucide-react';
-import type { CityEvent } from '../types';
+import type { Article, CityEvent } from '../types';
 import { isPastEvent, occurrenceLabel } from '../utils/events';
 import { useT } from '../i18n';
+import { ArticleCard } from './ArticleCard';
 
 interface EventDetailPageProps {
   event: CityEvent;
+  /** Editorial pieces written about this event (matched by `eventSlug`). */
+  relatedArticles: Article[];
   onBackToEvents: () => void;
+  onSelectArticle: (article: Article) => void;
 }
 
-export const EventDetailPage: React.FC<EventDetailPageProps> = ({ event, onBackToEvents }) => {
+export const EventDetailPage: React.FC<EventDetailPageProps> = ({
+  event,
+  relatedArticles,
+  onBackToEvents,
+  onSelectArticle,
+}) => {
   const t = useT();
   const past = isPastEvent(event);
 
@@ -105,6 +114,19 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({ event, onBackT
           </div>
         )}
       </div>
+
+      {relatedArticles.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+            {t.events.aboutEvent}
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {relatedArticles.map((article) => (
+              <ArticleCard key={article.id} article={article} onSelectArticle={onSelectArticle} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 };

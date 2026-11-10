@@ -605,7 +605,9 @@ function Guide() {
           <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
             <EventDetailPage
               event={selectedEvent}
+              relatedArticles={articles.filter((article) => article.eventSlug === selectedEvent.slug)}
               onBackToEvents={() => navigate(withLocale('/events', locale))}
+              onSelectArticle={selectArticle}
             />
           </main>
         ) : (

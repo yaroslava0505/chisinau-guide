@@ -290,6 +290,7 @@ export const ru: Dictionary = {
     emptyTitle: 'На этот период событий пока нет',
     emptyText: 'Попробуйте выбрать другой период или тип события.',
     pastEventNote: 'Это событие уже прошло.',
+    aboutEvent: 'Статья о событии',
     today: 'Сегодня',
     tomorrow: 'Завтра',
     when: {

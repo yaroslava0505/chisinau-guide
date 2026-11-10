@@ -296,6 +296,7 @@ export const ro: Dictionary = {
     emptyTitle: 'Pentru această perioadă nu sunt evenimente',
     emptyText: 'Încearcă altă perioadă sau alt tip de eveniment.',
     pastEventNote: 'Acest eveniment a trecut deja.',
+    aboutEvent: 'Articol despre eveniment',
     today: 'Azi',
     tomorrow: 'Mâine',
     when: {
