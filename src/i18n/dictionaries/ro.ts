@@ -486,6 +486,8 @@ export const ro: Dictionary = {
       'Ghiduri editoriale scurte despre Chișinău: unde lucrezi cu laptopul, unde bei o cafea, ce trasee să alegi pentru plimbare.',
     homeTitle: 'Articole și selecții',
     homeSubtitle: 'Ghiduri scurte în loc de o listă seacă de locuri',
+    categoryTitle: 'Articole pe această temă',
+    categorySubtitle: 'Ghiduri scurte, alcătuite din locuri verificate din această categorie',
     allArticles: 'Toate articolele',
     readMore: 'Citește',
     publishedOn: (date: string) => `Publicat la ${date}`,

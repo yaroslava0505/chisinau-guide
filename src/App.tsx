@@ -180,6 +180,15 @@ function Guide() {
     [places, activeCategory, filters],
   );
 
+  // Guides written about the category being browsed, shown under its feed.
+  const categoryArticles = useMemo(
+    () =>
+      activeCategory === 'all' || activeCategory === 'events'
+        ? []
+        : articles.filter((article) => article.category === activeCategory),
+    [articles, activeCategory],
+  );
+
   const favoritePlaces = useMemo(
     () => places.filter((place) => favorites.includes(place.id)),
     [places, favorites],
@@ -792,6 +801,19 @@ function Guide() {
                   </div>
                 )}
               </section>
+            )}
+
+            {/* The guide that matches this category, at the end of its feed. */}
+            {!isBrowsingHome && categoryArticles.length > 0 && (
+              <ArticlesSection
+                articles={categoryArticles}
+                onSelectArticle={selectArticle}
+                variant="home"
+                limit={3}
+                heading={t.articles.categoryTitle}
+                subheading={t.articles.categorySubtitle}
+                onOpenAllArticles={() => navigate(withLocale('/articles', locale))}
+              />
             )}
 
             {isBrowsingHome && (

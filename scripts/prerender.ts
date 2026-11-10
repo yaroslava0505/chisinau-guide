@@ -294,13 +294,21 @@ function pagesForLocale(locale: Locale): PageContent[] {
     const inCategory = places.filter(
       (place) => place.category === id || place.also_in?.includes(id as Place['category']),
     );
+    const categoryArticles = articles.filter((article) => article.category === id);
     pages.push({
       path,
       title: copy.seoTitle,
       description: copy.seoDescription,
       heading: copy.h1,
       subtitle: copy.subtitle,
-      body: placeList(inCategory, locale),
+      body: [
+        placeList(inCategory, locale),
+        categoryArticles.length
+          ? `<h2>${esc(t.articles.categoryTitle)}</h2>\n    ${articleList(categoryArticles, locale)}`
+          : '',
+      ]
+        .filter(Boolean)
+        .join('\n    '),
       jsonLd: itemListJsonLd(inCategory, absoluteUrl(withLocale(path, locale)), copy.h1, locale),
       image: inCategory[0] ? getPlaceImage(inCategory[0]) : undefined,
     });

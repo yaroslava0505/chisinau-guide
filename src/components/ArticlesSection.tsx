@@ -12,6 +12,9 @@ interface ArticlesSectionProps {
   /** Number of cards shown in the home teaser. */
   limit?: number;
   onOpenAllArticles?: () => void;
+  /** Overrides the section heading — used for the per-category block. */
+  heading?: string;
+  subheading?: string;
 }
 
 export const ArticlesSection: React.FC<ArticlesSectionProps> = ({
@@ -20,6 +23,8 @@ export const ArticlesSection: React.FC<ArticlesSectionProps> = ({
   variant = 'home',
   limit = 3,
   onOpenAllArticles,
+  heading,
+  subheading,
 }) => {
   const t = useT();
   const isPage = variant === 'page';
@@ -40,10 +45,10 @@ export const ArticlesSection: React.FC<ArticlesSectionProps> = ({
               isPage ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'
             }`}
           >
-            {isPage ? t.articles.indexTitle : t.articles.homeTitle}
+            {heading ?? (isPage ? t.articles.indexTitle : t.articles.homeTitle)}
           </h2>
           <p className="text-sm text-zinc-500 mt-1">
-            {isPage ? t.articles.indexSubtitle : t.articles.homeSubtitle}
+            {subheading ?? (isPage ? t.articles.indexSubtitle : t.articles.homeSubtitle)}
           </p>
         </div>
 
