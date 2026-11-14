@@ -300,6 +300,8 @@ export interface ImageCredit {
 /** Fields of an Article that are worth translating. */
 export interface ArticleTranslation {
   title?: string;
+  /** Shorter headline for the browser tab and search results. */
+  seoTitle?: string;
   excerpt?: string;
   body?: string[];
 }
@@ -327,6 +329,11 @@ export interface Article {
   placeSlugs: string[];
   /** Slug of a real CityEvent this piece is about, shown as a live event card. */
   eventSlug?: string;
+  /**
+   * A shorter headline for <title> and search results — the on-page `title`
+   * can be longer and more descriptive without being truncated in the SERP.
+   */
+  seoTitle?: string;
   /** Search terms this piece answers, published as Schema.org `keywords`. */
   keywords?: string[];
   /** A real, licensed cover photo; without it a themed illustration is shown. */

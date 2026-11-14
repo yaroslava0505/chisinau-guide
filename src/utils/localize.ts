@@ -51,6 +51,7 @@ export function localizeArticle(article: Article, locale: Locale): Article {
   return {
     ...article,
     title: translation.title || article.title,
+    seoTitle: translation.seoTitle || translation.title || article.seoTitle,
     excerpt: translation.excerpt || article.excerpt,
     body: translation.body && translation.body.length > 0 ? translation.body : article.body,
   };

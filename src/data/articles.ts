@@ -192,6 +192,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-5',
     slug: 'rammstein-symphonic-experience-chisinau',
     title: 'Rammstein Symphonic Experience у Кишиневі: що це за концерт',
+    seoTitle: 'Rammstein Symphonic у Кишиневі',
     excerpt:
       'Не сам гурт, а оркестрова інтерпретація його хітів на сцені Національної опери — що варто знати перед тим, як купувати квиток.',
     body: [
@@ -207,6 +208,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Rammstein Symphonic Experience в Кишинёве: что это за концерт',
+        seoTitle: 'Rammstein Symphonic в Кишинёве',
         excerpt:
           'Не сама группа, а оркестровая интерпретация её хитов на сцене Национальной оперы — что стоит знать перед покупкой билета.',
         body: [
@@ -218,6 +220,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Rammstein Symphonic Experience la Chișinău: ce fel de concert este',
+        seoTitle: 'Rammstein Symphonic la Chișinău',
         excerpt:
           'Nu trupa însăși, ci o interpretare simfonică a hiturilor ei pe scena Operei Naționale — ce merită să știi înainte să cumperi un bilet.',
         body: [
@@ -233,6 +236,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-6',
     slug: 'sviatoslav-vakarchuk-chisinau-2026',
     title: 'Святослав Вакарчук у Кишиневі 15 грудня: сольний концерт у Палаці Націонал',
+    seoTitle: 'Вакарчук у Кишиневі 15 грудня',
     excerpt:
       'Лідер «Океану Ельзи» привозить камерну програму — лише голос, гітара й фортепіано. Дата, ціни, де купити квитки і де повечеряти поруч.',
     body: [
@@ -255,6 +259,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Святослав Вакарчук в Кишинёве 15 декабря: сольный концерт в Национальном дворце',
+        seoTitle: 'Вакарчук в Кишинёве 15 декабря',
         excerpt:
           'Лидер «Океана Ельзи» привозит камерную программу — только голос, гитара и фортепиано. Дата, цены, где купить билеты и где поужинать рядом.',
         body: [
@@ -267,6 +272,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Sviatoslav Vakarciuk la Chișinău pe 15 decembrie: concert solo la Palatul Național',
+        seoTitle: 'Vakarciuk la Chișinău pe 15 decembrie',
         excerpt:
           'Liderul trupei Okean Elzy aduce un program de cameră — doar voce, chitară și pian. Data, prețurile, de unde iei bilete și unde cinezi în apropiere.',
         body: [
@@ -283,6 +289,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-7',
     slug: '3-sud-est-chisinau-2026',
     title: '3 Sud Est у Кишиневі 18 і 19 листопада: два концерти в Палаці Націонал',
+    seoTitle: '3 Sud Est у Кишиневі',
     excerpt:
       'Румунський гурт, чиї хіти знають усі, хто ріс у 2000-х, дає два вечори поспіль. Ціни, час, квитки і що поруч.',
     body: [
@@ -305,6 +312,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: '3 Sud Est в Кишинёве 18 и 19 ноября: два концерта в Национальном дворце',
+        seoTitle: '3 Sud Est в Кишинёве',
         excerpt:
           'Румынская группа, чьи хиты знают все, кто рос в 2000-х, даёт два вечера подряд. Цены, время, билеты и что рядом.',
         body: [
@@ -317,6 +325,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: '3 Sud Est la Chișinău pe 18 și 19 noiembrie: două concerte la Palatul Național',
+        seoTitle: '3 Sud Est la Chișinău',
         excerpt:
           'Trupa românească ale cărei hituri le știe oricine a crescut în anii 2000 cântă două seri la rând. Prețuri, ore, bilete și ce e în apropiere.',
         body: [
@@ -333,6 +342,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-8',
     slug: 'maratonul-de-craciun-chisinau-2026',
     title: 'Різдвяний забіг у Кишиневі 13 грудня: 3 км у центрі для всієї родини',
+    seoTitle: 'Різдвяний забіг у Кишиневі',
     excerpt:
       'Maratonul de Crăciun — не змагання, а святкова пробіжка від площі Великих національних зборів. Як зареєструватися, скільки коштує і що дають учасникам.',
     body: [
@@ -355,6 +365,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Рождественский забег в Кишинёве 13 декабря: 3 км в центре для всей семьи',
+        seoTitle: 'Рождественский забег в Кишинёве',
         excerpt:
           'Maratonul de Crăciun — не соревнование, а праздничная пробежка от Площади Великого национального собрания. Как зарегистрироваться, сколько стоит и что дают участникам.',
         body: [
@@ -367,6 +378,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Cursa de Crăciun din Chișinău pe 13 decembrie: 3 km în centru pentru toată familia',
+        seoTitle: 'Cursa de Crăciun la Chișinău',
         excerpt:
           'Maratonul de Crăciun nu e o competiție, ci o alergare festivă din Piața Marii Adunări Naționale. Cum te înscrii, cât costă și ce primesc participanții.',
         body: [
@@ -383,6 +395,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-9',
     slug: 'kudy-pity-chisinau-lystopad-2026',
     title: 'Куди піти в Кишиневі в листопаді 2026: концерти, премʼєри, фестивалі',
+    seoTitle: 'Куди піти в листопаді 2026',
     excerpt:
       'Перевірена добірка подій місяця — від Uriah Heep і Alternosfera до органного фестивалю Баха, трьох театральних премʼєр і документального кіно MOLDOX.',
     body: [
@@ -406,6 +419,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Куда пойти в Кишинёве в ноябре 2026: концерты, премьеры, фестивали',
+        seoTitle: 'Куда пойти в ноябре 2026',
         excerpt:
           'Проверенная подборка событий месяца — от Uriah Heep и Alternosfera до органного фестиваля Баха, трёх театральных премьер и документального кино MOLDOX.',
         body: [
@@ -419,6 +433,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Unde mergi în Chișinău în noiembrie 2026: concerte, premiere, festivaluri',
+        seoTitle: 'Unde mergi în noiembrie 2026',
         excerpt:
           'O selecție verificată a evenimentelor lunii — de la Uriah Heep și Alternosfera la festivalul de orgă Bach, trei premiere de teatru și documentarele MOLDOX.',
         body: [
@@ -650,6 +665,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-20',
     slug: 'quiet-places-chisinau',
     title: 'Де побути в тиші в Кишиневі: бібліотеки, сквери та тихі парки',
+    seoTitle: 'Тихі місця Кишинева',
     excerpt:
       'Потрібно попрацювати в тиші, почитати або просто побути наодинці — місця, де в Кишиневі справді тихо, з адресами й графіком.',
     body: [
@@ -665,6 +681,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Где побыть в тишине в Кишинёве: библиотеки, скверы и тихие парки',
+        seoTitle: 'Тихие места Кишинёва',
         excerpt:
           'Нужно поработать в тишине, почитать или просто побыть одному — места, где в Кишинёве действительно тихо, с адресами и графиком.',
         body: [
@@ -676,6 +693,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Unde găsești liniște în Chișinău: biblioteci, scuaruri și parcuri liniștite',
+        seoTitle: 'Locuri liniștite în Chișinău',
         excerpt:
           'Ai nevoie să lucrezi în liniște, să citești sau pur și simplu să stai singur — locurile cu adevărat liniștite din Chișinău, cu adrese și program.',
         body: [
@@ -691,6 +709,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-21',
     slug: 'free-wifi-chisinau',
     title: 'Де в Кишиневі безкоштовний Wi-Fi: кавʼярні, бібліотеки, коворкінги',
+    seoTitle: 'Безкоштовний Wi-Fi у Кишиневі',
     excerpt:
       'Потрібен інтернет поза домом — заклади Кишинева, де Wi-Fi підтверджено, а не припущено.',
     body: [
@@ -706,6 +725,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Где в Кишинёве бесплатный Wi-Fi: кофейни, библиотеки, коворкинги',
+        seoTitle: 'Бесплатный Wi-Fi в Кишинёве',
         excerpt:
           'Нужен интернет вне дома — заведения Кишинёва, где Wi-Fi подтверждён, а не предположен.',
         body: [
@@ -717,6 +737,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Unde găsești Wi-Fi gratuit în Chișinău: cafenele, biblioteci, coworking',
+        seoTitle: 'Wi-Fi gratuit în Chișinău',
         excerpt:
           'Ai nevoie de internet în afara casei — localurile din Chișinău unde Wi-Fi-ul este confirmat, nu presupus.',
         body: [
@@ -732,6 +753,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-22',
     slug: 'terrace-chisinau',
     title: 'Кавʼярні та ресторани Кишинева з терасою',
+    seoTitle: 'Кафе з терасою в Кишиневі',
     excerpt:
       'Тепла погода — привід сісти надворі. Заклади, у яких тераса підтверджена, з адресами й орієнтовними цінами.',
     body: [
@@ -747,6 +769,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Кофейни и рестораны Кишинёва с террасой',
+        seoTitle: 'Кафе с террасой в Кишинёве',
         excerpt:
           'Тёплая погода — повод сесть на улице. Заведения, у которых терраса подтверждена, с адресами и ориентировочными ценами.',
         body: [
@@ -758,6 +781,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Cafenele și restaurante cu terasă în Chișinău',
+        seoTitle: 'Cafenele cu terasă în Chișinău',
         excerpt:
           'Vremea caldă e un motiv să stai afară. Localuri cu terasa confirmată, cu adrese și prețuri orientative.',
         body: [
@@ -773,6 +797,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-23',
     slug: 'free-chisinau',
     title: 'Що подивитися в Кишиневі безкоштовно',
+    seoTitle: 'Безкоштовний Кишинів',
     excerpt:
       'Парки, сквери, пішохідні вулиці та відкриті памʼятки, куди можна піти без квитка — 39 місць у каталозі.',
     body: [
@@ -788,6 +813,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Что посмотреть в Кишинёве бесплатно',
+        seoTitle: 'Бесплатный Кишинёв',
         excerpt:
           'Парки, скверы, пешеходные улицы и открытые достопримечательности, куда можно пойти без билета — 39 мест в каталоге.',
         body: [
@@ -799,6 +825,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Ce poți vedea gratuit în Chișinău',
+        seoTitle: 'Chișinău gratuit',
         excerpt:
           'Parcuri, scuaruri, străzi pietonale și obiective deschise, unde intri fără bilet — 39 de locuri în catalog.',
         body: [
@@ -814,6 +841,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-24',
     slug: 'with-kids-chisinau',
     title: 'Куди піти з дитиною в Кишиневі',
+    seoTitle: 'З дитиною в Кишиневі',
     excerpt:
       'Заклади з дитячою кімнатою й дитячим меню, зоопарк і торгові центри з розвагами — місця, де з дітьми справді раді.',
     body: [
@@ -829,6 +857,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Куда пойти с ребёнком в Кишинёве',
+        seoTitle: 'С ребёнком в Кишинёве',
         excerpt:
           'Заведения с детской комнатой и детским меню, зоопарк и торговые центры с развлечениями — места, где детям действительно рады.',
         body: [
@@ -840,6 +869,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Unde mergi cu copilul în Chișinău',
+        seoTitle: 'Cu copilul în Chișinău',
         excerpt:
           'Localuri cu loc de joacă și meniu pentru copii, grădina zoologică și centre comerciale cu distracții — locuri unde copiii chiar sunt bineveniți.',
         body: [
@@ -855,6 +885,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-25',
     slug: 'breakfast-chisinau',
     title: 'Де поснідати в Кишиневі',
+    seoTitle: 'Сніданки в Кишиневі',
     excerpt:
       'Заклади, у яких сніданок — окремий розділ меню, а не просто кава з круасаном. З адресами й орієнтовними цінами.',
     body: [
@@ -870,6 +901,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Где позавтракать в Кишинёве',
+        seoTitle: 'Завтраки в Кишинёве',
         excerpt:
           'Заведения, в которых завтрак — отдельный раздел меню, а не просто кофе с круассаном. С адресами и ориентировочными ценами.',
         body: [
@@ -881,6 +913,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Unde iei micul dejun în Chișinău',
+        seoTitle: 'Mic dejun în Chișinău',
         excerpt:
           'Localuri în care micul dejun e o secțiune separată de meniu, nu doar o cafea cu un croissant. Cu adrese și prețuri orientative.',
         body: [
@@ -896,6 +929,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-26',
     slug: 'food-delivery-chisinau',
     title: 'Доставка їжі в Кишиневі: заклади з власною доставкою',
+    seoTitle: 'Доставка їжі в Кишиневі',
     excerpt:
       'Піца, суші, бургери й домашня кухня з доставкою — умови й вартість із сайтів самих закладів.',
     body: [
@@ -911,6 +945,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Доставка еды в Кишинёве: заведения с собственной доставкой',
+        seoTitle: 'Доставка еды в Кишинёве',
         excerpt:
           'Пицца, суши, бургеры и домашняя кухня с доставкой — условия и стоимость с сайтов самих заведений.',
         body: [
@@ -922,6 +957,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Livrare de mâncare în Chișinău: localuri cu livrare proprie',
+        seoTitle: 'Livrare de mâncare în Chișinău',
         excerpt:
           'Pizza, sushi, burgeri și bucătărie de casă cu livrare — condiții și costuri de pe site-urile localurilor.',
         body: [
@@ -937,6 +973,7 @@ export const INITIAL_ARTICLES: Article[] = [
     id: 'article-27',
     slug: 'cheap-eats-chisinau',
     title: 'Де недорого поїсти в Кишиневі',
+    seoTitle: 'Недорого поїсти в Кишиневі',
     excerpt:
       'Плацинди, ковриги, піца й домашня кухня в бюджетному сегменті — з орієнтовними цінами з меню закладів.',
     body: [
@@ -952,6 +989,7 @@ export const INITIAL_ARTICLES: Article[] = [
     i18n: {
       ru: {
         title: 'Где недорого поесть в Кишинёве',
+        seoTitle: 'Недорого поесть в Кишинёве',
         excerpt:
           'Плацинды, ковриги, пицца и домашняя кухня в бюджетном сегменте — с ориентировочными ценами из меню заведений.',
         body: [
@@ -963,6 +1001,7 @@ export const INITIAL_ARTICLES: Article[] = [
       },
       ro: {
         title: 'Unde mănânci ieftin în Chișinău',
+        seoTitle: 'Mâncare ieftină în Chișinău',
         excerpt:
           'Plăcinte, covrigi, pizza și bucătărie de casă în segmentul accesibil — cu prețuri orientative din meniurile localurilor.',
         body: [

@@ -1,11 +1,13 @@
 import React from 'react';
-import { ArrowLeft, ArrowRight, Calendar, ImageOff } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, ImageOff, Ticket } from 'lucide-react';
 import type { Article, CityEvent, Place } from '../types';
 import { getArticleImage } from '../utils/seo';
 import { categoryName } from '../i18n/labels';
 import { useT } from '../i18n';
 import { PlaceCard } from './PlaceCard';
-import { EventCard } from './EventsSection';
+import { ArticleCard } from './ArticleCard';
+import { Breadcrumbs } from './ui/Breadcrumbs';
+import { occurrenceLabel } from '../utils/events';
 
 interface ArticleDetailPageProps {
   article: Article;
@@ -17,6 +19,9 @@ interface ArticleDetailPageProps {
   onSelectEvent: (event: CityEvent) => void;
   onBackToArticles: () => void;
   onOpenCategory: () => void;
+  /** Other guides to read next — keeps a search visitor on the site. */
+  moreArticles: Article[];
+  onSelectArticle: (article: Article) => void;
 }
 
 export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
@@ -29,6 +34,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
   onSelectEvent,
   onBackToArticles,
   onOpenCategory,
+  moreArticles,
+  onSelectArticle,
 }) => {
   const t = useT();
 
@@ -42,6 +49,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
 
   return (
     <div className="py-8 sm:py-10 max-w-3xl mx-auto space-y-8">
+      <Breadcrumbs
+        items={[
+          { label: t.common.home, path: '/' },
+          { label: t.articles.indexTitle, path: '/articles' },
+          { label: article.title },
+        ]}
+      />
+
       <button
         type="button"
         onClick={onBackToArticles}
@@ -90,9 +105,45 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
       </div>
 
       {relatedEvent && (
-        <div className="max-w-sm">
-          <EventCard event={relatedEvent} t={t} onSelectEvent={onSelectEvent} />
-        </div>
+        <section className="bg-zinc-900 text-white rounded-3xl p-5 sm:p-6 space-y-3">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-zinc-400">
+            {t.events.whenWhere}
+          </h2>
+          <dl className="grid sm:grid-cols-3 gap-3 text-sm">
+            <div>
+              <dt className="text-zinc-400 text-xs">{t.admin.columns.date}</dt>
+              <dd className="font-bold">{occurrenceLabel(relatedEvent, t)} · {relatedEvent.time}</dd>
+            </div>
+            <div>
+              <dt className="text-zinc-400 text-xs">{t.admin.columns.place}</dt>
+              <dd className="font-bold">{relatedEvent.location_name}</dd>
+            </div>
+            <div>
+              <dt className="text-zinc-400 text-xs">{t.admin.columns.price}</dt>
+              <dd className="font-bold">{relatedEvent.price}</dd>
+            </div>
+          </dl>
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            {relatedEvent.ticket_url && (
+              <a
+                href={relatedEvent.ticket_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-zinc-900 font-bold text-sm px-5 py-3 rounded-2xl hover:bg-zinc-100 transition-colors"
+              >
+                <Ticket className="w-4 h-4" aria-hidden="true" />
+                {t.events.tickets}
+              </a>
+            )}
+            <button
+              type="button"
+              onClick={() => onSelectEvent(relatedEvent)}
+              className="text-sm font-semibold text-zinc-300 hover:text-white transition-colors"
+            >
+              {t.common.details}
+            </button>
+          </div>
+        </section>
       )}
 
       <div className="space-y-4 text-base text-zinc-700 leading-relaxed">
@@ -115,6 +166,19 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
                 onToggleFavorite={onToggleFavorite}
                 onSelectPlace={onSelectPlace}
               />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {moreArticles.length > 0 && (
+        <section className="space-y-5 pt-2">
+          <h2 className="text-xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+            {t.articles.readAlso}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {moreArticles.map((item) => (
+              <ArticleCard key={item.id} article={item} onSelectArticle={onSelectArticle} />
             ))}
           </div>
         </section>

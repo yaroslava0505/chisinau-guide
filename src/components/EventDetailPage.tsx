@@ -1,30 +1,45 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ImageOff, MapPin, Ticket } from 'lucide-react';
 import type { Article, CityEvent } from '../types';
+import { Breadcrumbs } from './ui/Breadcrumbs';
 import { isPastEvent, occurrenceLabel } from '../utils/events';
 import { useT } from '../i18n';
 import { getEventImage } from '../utils/illustrations';
 import { ArticleCard } from './ArticleCard';
+import { EventCard } from './EventsSection';
 
 interface EventDetailPageProps {
   event: CityEvent;
   /** Editorial pieces written about this event (matched by `eventSlug`). */
   relatedArticles: Article[];
+  /** Upcoming events to go to next, so the page is not a dead end. */
+  otherEvents: CityEvent[];
   onBackToEvents: () => void;
   onSelectArticle: (article: Article) => void;
+  onSelectEvent: (event: CityEvent) => void;
 }
 
 export const EventDetailPage: React.FC<EventDetailPageProps> = ({
   event,
   relatedArticles,
+  otherEvents,
   onBackToEvents,
   onSelectArticle,
+  onSelectEvent,
 }) => {
   const t = useT();
   const past = isPastEvent(event);
 
   return (
     <div className="py-8 sm:py-10 max-w-2xl mx-auto space-y-8">
+      <Breadcrumbs
+        items={[
+          { label: t.common.home, path: '/' },
+          { label: t.events.pageTitle, path: '/events' },
+          { label: event.title },
+        ]}
+      />
+
       <button
         type="button"
         onClick={onBackToEvents}
@@ -127,6 +142,19 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({
           </div>
         )}
       </div>
+
+      {otherEvents.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-xl font-extrabold text-zinc-900 font-['Outfit',sans-serif]">
+            {t.events.otherEvents}
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {otherEvents.map((other) => (
+              <EventCard key={other.id} event={other} t={t} onSelectEvent={onSelectEvent} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {relatedArticles.length > 0 && (
         <section className="space-y-4">

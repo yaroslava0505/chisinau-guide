@@ -34,6 +34,7 @@ import { INITIAL_FILTERS, countActiveFilters, filterPlaces } from './utils/filte
 import { analyzeQuery } from './utils/search';
 import { localizeArticles, localizeEvents, localizePlaces } from './utils/localize';
 import { isPastEvent } from './utils/events';
+import { relatedArticles as pickRelatedArticles, relatedEvents as pickRelatedEvents } from './utils/related';
 import { CATEGORY_META, SCENARIOS } from './data/taxonomy';
 import { DISTRICT_IDS } from './data/chisinauPlaces';
 import { INITIAL_ARTICLES } from './data/articles';
@@ -312,7 +313,7 @@ function Guide() {
       if (!selectedArticle) return;
       const canonical = absoluteUrl(withLocale(path, locale));
       updateSEO({
-        title: selectedArticle.title,
+        title: selectedArticle.seoTitle ?? selectedArticle.title,
         description: selectedArticle.excerpt,
         path,
         locale,
@@ -626,6 +627,8 @@ function Guide() {
           <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
             <ArticleDetailPage
               article={selectedArticle}
+              moreArticles={pickRelatedArticles(articles, selectedArticle)}
+              onSelectArticle={selectArticle}
               places={places}
               events={events}
               favorites={favorites}
@@ -649,8 +652,10 @@ function Guide() {
             <EventDetailPage
               event={selectedEvent}
               relatedArticles={articles.filter((article) => article.eventSlug === selectedEvent.slug)}
+              otherEvents={pickRelatedEvents(events, selectedEvent)}
               onBackToEvents={() => navigate(withLocale('/events', locale))}
               onSelectArticle={selectArticle}
+              onSelectEvent={selectEvent}
             />
           </main>
         ) : (

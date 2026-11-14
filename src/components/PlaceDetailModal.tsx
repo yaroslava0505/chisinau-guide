@@ -28,7 +28,8 @@ import { formatPriceRange } from '../utils/priceRange';
 import { PlaceComments } from './PlaceComments';
 import { PlacePhoto } from './ui/PlacePhoto';
 import { Sheet } from './ui/Sheet';
-import { absoluteUrl, buildPath } from '../router';
+import { absoluteUrl, buildPath, categoryPath } from '../router';
+import { Breadcrumbs } from './ui/Breadcrumbs';
 import { useLocale } from '../i18n';
 import {
   atmosphereLabel,
@@ -240,6 +241,15 @@ export const PlaceDetailModal: React.FC<PlaceDetailModalProps> = ({
 
         {/* Header */}
         <header>
+          <div className="mb-3">
+            <Breadcrumbs
+              items={[
+                { label: t.common.home, path: '/' },
+                { label: category, path: categoryPath(place.category).replace(/^\/(ru|ro)/, '') },
+                { label: place.name },
+              ]}
+            />
+          </div>
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="px-3 py-1 rounded-full text-xs font-bold bg-zinc-900 text-white">
               {category}

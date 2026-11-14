@@ -46,6 +46,7 @@ import { formatPriceRange } from '../src/utils/priceRange';
 import { isPastEvent, occurrenceLabel } from '../src/utils/events';
 import { getEventImage, getPlaceImage } from '../src/utils/illustrations';
 import { dateActivities, dateEvents, dateFood, dateWalks } from '../src/utils/datePlan';
+import { relatedArticles as pickRelatedArticles, relatedEvents as pickRelatedEvents } from '../src/utils/related';
 import type { Article, CategoryId, CityEvent, Place } from '../src/types';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -162,13 +163,19 @@ function articleDetail(article: Article, locale: Locale): string {
   const related = INITIAL_PLACES.filter((place) => article.placeSlugs.includes(place.slug));
   const localizedRelated = localizePlaces(related, locale);
 
+  const source = INITIAL_ARTICLES.find((item) => item.slug === article.slug);
+  const more = source ? localizeArticles(pickRelatedArticles(INITIAL_ARTICLES, source), locale) : [];
+  const moreBlock = more.length
+    ? `\n    <h2>${esc(t.articles.readAlso)}</h2>\n    ${articleList(more, locale)}`
+    : '';
+
   return `${eventBlock}
     ${paragraphs}
     ${
       localizedRelated.length > 0
         ? `<h2>${esc(t.articles.relatedPlacesTitle)}</h2>\n    ${placeList(localizedRelated, locale)}`
         : ''
-    }`;
+    }${moreBlock}`;
 }
 
 function eventItem(event: CityEvent, locale: Locale): string {
@@ -214,10 +221,19 @@ function eventDetail(event: CityEvent, locale: Locale): string {
     ? `\n    <p><a href="${esc(event.ticket_url)}" rel="noopener">${esc(t.events.tickets)}</a></p>`
     : '';
 
+  const others = localizeEvents(
+    pickRelatedEvents(INITIAL_EVENTS, INITIAL_EVENTS.find((item) => item.slug === event.slug)),
+    locale,
+  );
+  const othersBlock = others.length
+    ? `\n    <h2>${esc(t.events.otherEvents)}</h2>
+    <ul>\n      ${others.map((other) => eventItem(other, locale)).join('\n      ')}\n    </ul>`
+    : '';
+
   return `<p>${esc(event.description)}</p>
     <dl>
 ${definitions}
-    </dl>${tickets}${articlesBlock}`;
+    </dl>${tickets}${articlesBlock}${othersBlock}`;
 }
 
 /** The detail page's own facts, as a definition list. */
@@ -444,7 +460,7 @@ function pagesForLocale(locale: Locale): PageContent[] {
     const path = `/articles/${article.slug}`;
     pages.push({
       path,
-      title: article.title,
+      title: article.seoTitle ?? article.title,
       keywords: article.keywords,
       description: article.excerpt,
       heading: article.title,
