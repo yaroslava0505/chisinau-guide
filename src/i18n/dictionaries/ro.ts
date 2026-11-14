@@ -295,6 +295,7 @@ export const ro: Dictionary = {
     allTypes: 'Toate tipurile',
     emptyTitle: 'Pentru această perioadă nu sunt evenimente',
     emptyText: 'Încearcă altă perioadă sau alt tip de eveniment.',
+    tickets: 'Cumpără bilete',
     pastEventNote: 'Acest eveniment a trecut deja.',
     aboutEvent: 'Articol despre eveniment',
     today: 'Azi',

@@ -105,6 +105,18 @@ export const EventDetailPage: React.FC<EventDetailPageProps> = ({
           <span className="text-zinc-700">{event.price}</span>
         </p>
 
+        {event.ticket_url && !past && (
+          <a
+            href={event.ticket_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-sm px-5 py-3 rounded-2xl transition-colors"
+          >
+            <Ticket className="w-4 h-4" aria-hidden="true" />
+            {t.events.tickets}
+          </a>
+        )}
+
         {event.tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 pt-1">
             {event.tags.map((tag) => (

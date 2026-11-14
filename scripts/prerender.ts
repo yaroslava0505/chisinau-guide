@@ -172,11 +172,15 @@ function articleDetail(article: Article, locale: Locale): string {
 }
 
 function eventItem(event: CityEvent, locale: Locale): string {
+  const t = getDictionary(locale);
   const facts = [event.date, event.location_name, event.address, event.price].filter(Boolean);
+  const tickets = event.ticket_url
+    ? `\n        <p><a href="${esc(event.ticket_url)}" rel="noopener">${esc(t.events.tickets)}</a></p>`
+    : '';
   return `<li>
         <h3>${esc(event.title)}</h3>
         <p>${esc(facts.join(' · '))}</p>
-        <p>${esc(event.description)}</p>
+        <p>${esc(event.description)}</p>${tickets}
       </li>`;
 }
 
@@ -206,10 +210,14 @@ function eventDetail(event: CityEvent, locale: Locale): string {
       .join('')}</ul>`
     : '';
 
+  const tickets = event.ticket_url
+    ? `\n    <p><a href="${esc(event.ticket_url)}" rel="noopener">${esc(t.events.tickets)}</a></p>`
+    : '';
+
   return `<p>${esc(event.description)}</p>
     <dl>
 ${definitions}
-    </dl>${articlesBlock}`;
+    </dl>${tickets}${articlesBlock}`;
 }
 
 /** The detail page's own facts, as a definition list. */

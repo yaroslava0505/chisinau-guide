@@ -268,6 +268,8 @@ export interface CityEvent {
   image: string;
   /** Set only when `image` is a real licensed photo rather than an illustration. */
   image_credit?: ImageCredit;
+  /** The event's own page on a ticketing platform or the venue's site. */
+  ticket_url?: string;
   tags: string[];
   /** Russian and Romanian versions of the text fields. */
   i18n?: EventI18n;

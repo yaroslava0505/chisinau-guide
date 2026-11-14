@@ -5862,6 +5862,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: 'Уточнюється',
     description: 'XI випуск міжнародного фестивалю документального кіно MOLDOX у кінотеатрі Cineplex Loteanu, тема року — «Coexist?». У програмі близько 50 міжнародних і молдовських фільмів, зокрема з відбірок Sundance і Сан-Себастьяна, ретроспектива Аньєс Варда, дискусії та MOLDOX Lab. Умови входу організатори оголосять на початку листопада.',
     image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://moldoxfestival.com/',
     tags: ['кіно', 'документальне', 'фестиваль'],
     i18n: {
       ru: {
@@ -5899,6 +5900,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Румунський поп-гурт 3 Sud Est дає два концерти в Палаці Націонал 18 і 19 листопада о 19:00 — програма з головних хітів майже тридцятирічної карʼєри. Організатори — Sens Music і 1AM, квитки на iTicket.',
     image: '/images/articles/palatul-national-chisinau.jpg',
+    ticket_url: 'https://iticket.md/event/3-sud-est-18-noiembrie',
     image_credit: { author: 'Tomasz Bladyniec', license: 'CC BY 4.0', url: 'https://commons.wikimedia.org/wiki/File:Palatul_Na%C8%9Bional,_Chi%C8%99in%C4%83u.jpg' },
     tags: ['концерт', 'поп', 'палац націонал'],
     i18n: {
@@ -5936,6 +5938,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Молодий німецький органіст Ян Ліберман відкриває XV Міжнародний фестиваль «J.S. Bach» в Органній залі: у програмі Токата і фуга ре мінор, Пасакалія до мінор та інші твори Баха. Фестиваль триває до 26 листопада — Bach Jazz Trio (15.11), «Copiii cântă Bach» (20.11), «Bach–Brahms» (26.11).',
     image: '/images/articles/sala-cu-orga-chisinau.jpg',
+    ticket_url: 'https://iticket.md/event/jan-liebermann-recital-de-orga',
     image_credit: { author: 'Pelin Oleg', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Sala_cu_Org%C4%83_din_Chi%C8%99in%C4%83u_2.jpg' },
     tags: ['орган', 'класика', 'бах'],
     i18n: {
@@ -5973,6 +5976,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Академічна хорова капела «Doina» Національної філармонії (художня керівниця Ілона Степан) представляє вечір української хорової музики — від духовних співів до світських обробок українських композиторів. Запрошені хормейстери з України — Дмитро Болдін і Наталія Гетьманець.',
     image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://iticket.md/event/armonii-sacre-si-laice',
     tags: ['хор', 'українська музика', 'філармонія'],
     i18n: {
       ru: {
@@ -6008,6 +6012,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     price: 'Уточнюється',
     description: 'Документально-біографічна вистава Лумініци Цику про журналістку Анну Політковську — «голос правди на пострадянському просторі». Тривалість 1 год 15 хв, 7+, Студійна зала; повторний показ 21 листопада о 18:30. Ціну квитків дивіться на tickets.tnme.md.',
     image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://tickets.tnme.md/',
     tags: ['театр', 'документальна вистава', 'прем’єра'],
     i18n: {
       ru: {
@@ -6045,6 +6050,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Премʼєра комедії Шекспіра в постановці Александру Греку — з оригінальним текстом без скорочень, 18 акторів на сцені, костюми Єкатерини Салімової, хореографія Думітру Танмошана. Два премʼєрні покази 13 і 14 листопада о 18:30; квитки на iTicket.',
     image: 'https://images.unsplash.com/photo-1507924538820-ede94a04019d?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://iticket.md/en/event/location/teatrul-national-satiricus',
     tags: ['театр', 'комедія', 'шекспір', 'прем’єра'],
     i18n: {
       ru: {
@@ -6081,6 +6087,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Премʼєра драми «Лошади за окном» (14+) у Російському драматичному театрі ім. Чехова, російською мовою. Повторний показ — 28 листопада о 18:00; квитки 150 лей на iTicket.',
     image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://iticket.md/en/event/location/teatrul-cehov',
     tags: ['театр', 'драма', 'прем’єра'],
     i18n: {
       ru: {
@@ -6117,6 +6124,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Балет Чайковського «Спляча красуня» у трьох діях на сцені Національного театру опери та балету — недільний показ о 17:00, зручний для походу з дітьми. Увага: дітей до 7 років на вистави TNOB не допускають.',
     image: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://www.tnob.md/ro/calendar/11-2026',
     tags: ['балет', 'з дітьми', 'чайковський'],
     i18n: {
       ru: {
@@ -6153,6 +6161,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Святковий неконкурентний забіг на 3 км у центрі Кишинева зі стартом на Площі Великих національних зборів, відкритий для всіх віків і рівнів підготовки. Учасники отримують номер, святкову шапку та «їстівну медаль»; діти до 14 років — у супроводі батьків. Реєстрація на sporter.md.',
     image: '/images/articles/arcul-de-triumf-chisinau.jpg',
+    ticket_url: 'https://sporter.md/en/events/run/17043/maratonul-de-craciun-by-moldcell-2026',
     image_credit: { author: 'ValentinVrz', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Arcul_de_triumf_(Chi%C8%99in%C4%83u).jpg' },
     tags: ['біг', 'різдво', 'з дітьми'],
     i18n: {
@@ -6191,6 +6200,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Артефакти культури Кукутень–Трипілля (V–III тис. до н.е.) з археологічних памʼяток Молдови: розписна кераміка, антропоморфні й зооморфні фігурки, знаряддя з кременю, каменю та кістки, мідні вироби, фрагменти жител. Виставку відкрили в межах Днів європейської спадщини 2026 на підтримку транснаціонального маршруту Кукутень–Трипілля та номінації до ЮНЕСКО.',
     image: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://www.nationalmuseum.md/ro/exhibitions/vestigii_ale_culturii_cucuteni_trypillia_din_republica_moldova/',
     tags: ['виставка', 'археологія', 'трипілля', 'музей'],
     i18n: {
       ru: {
@@ -6264,6 +6274,7 @@ export const INITIAL_EVENTS: CityEvent[] = [
     free_entry: false,
     description: 'Різдвяний концерт румунської співачки Паули Селінг у Палаці Націонал: традиційні колядки, зимові пісні та сучасні аранжування. Організатор — Dar.fm; квитки на iTicket.',
     image: '/images/articles/paula-seling-2019.jpg',
+    ticket_url: 'https://iticket.md/event/paula-seling-colindam-colindam-prin-viata',
     image_credit: { author: 'Cezar Popescu', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Paula_Seling,_3_august_2019.jpg' },
     tags: ['концерт', 'колядки', 'різдво'],
     i18n: {

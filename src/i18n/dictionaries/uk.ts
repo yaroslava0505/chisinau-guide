@@ -294,6 +294,7 @@ export const uk = {
     allTypes: 'Усі типи',
     emptyTitle: 'На цей період подій ще немає',
     emptyText: 'Спробуйте обрати інший період або тип події.',
+    tickets: 'Купити квитки',
     pastEventNote: 'Ця подія вже минула.',
     aboutEvent: 'Стаття про подію',
     today: 'Сьогодні',

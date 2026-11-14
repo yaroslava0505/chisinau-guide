@@ -107,6 +107,19 @@ export const EventCard: React.FC<{ event: CityEvent; t: Dictionary; onSelectEven
             </span>
           </p>
 
+          {event.ticket_url && !past && (
+            <a
+              href={event.ticket_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(clickEvent) => clickEvent.stopPropagation()}
+              className="inline-flex items-center gap-1.5 pt-1 text-xs font-bold text-zinc-900 hover:underline"
+            >
+              <Ticket className="w-3.5 h-3.5 text-zinc-400" aria-hidden="true" />
+              {t.events.tickets}
+            </a>
+          )}
+
           {event.tags.length > 0 && (
             <div className="flex flex-wrap gap-1.5 pt-1">
               {event.tags.map((tag) => (

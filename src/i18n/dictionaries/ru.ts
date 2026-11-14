@@ -289,6 +289,7 @@ export const ru: Dictionary = {
     allTypes: 'Все типы',
     emptyTitle: 'На этот период событий пока нет',
     emptyText: 'Попробуйте выбрать другой период или тип события.',
+    tickets: 'Купить билеты',
     pastEventNote: 'Это событие уже прошло.',
     aboutEvent: 'Статья о событии',
     today: 'Сегодня',
