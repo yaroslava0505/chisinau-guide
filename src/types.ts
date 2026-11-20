@@ -15,6 +15,9 @@ export interface EventTranslation {
   category?: string;
   price?: string;
   date?: string;
+  /** Venue name and address — they carry Ukrainian wording in the source record. */
+  location_name?: string;
+  address?: string;
   tags?: string[];
 }
 

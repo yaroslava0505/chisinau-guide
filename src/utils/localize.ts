@@ -38,6 +38,8 @@ export function localizeEvent(event: CityEvent, locale: Locale): CityEvent {
     category: translation.category || event.category,
     price: translation.price || event.price,
     date: translation.date || event.date,
+    location_name: translation.location_name || event.location_name,
+    address: translation.address || event.address,
     tags: translation.tags ?? event.tags,
   };
 }

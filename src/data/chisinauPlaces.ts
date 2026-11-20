@@ -5405,6 +5405,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Опера «Риголетто» Джузеппе Верди',
+        location_name: 'Национальный театр оперы и балета им. Марии Биешу',
+        address: 'бул. Штефан чел Маре, 152, Кишинёв',
         description: '«Риголетто» Джузеппе Верди — опера в трёх действиях из постоянного репертуара Национального театра оперы и балета. Билеты на спектакли TNOB стоят от 200 до 500 леев; детей до 7 лет на спектакли не допускают. Афиша и билеты — на tnob.md.',
         category: 'Спектакль',
         price: '200–500 леев',
@@ -5413,6 +5415,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Opera „Rigoletto” de Giuseppe Verdi',
+        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
+        address: 'bd. Ștefan cel Mare 152, Chișinău',
         description: '„Rigoletto” de Giuseppe Verdi — operă în trei acte din repertoriul permanent al Teatrului Național de Operă și Balet. Biletele la spectacolele TNOB costă între 200 și 500 de lei; accesul copiilor sub 7 ani nu este permis. Afișul și biletele — pe tnob.md.',
         category: 'Spectacol',
         price: '200–500 lei',
@@ -5442,6 +5446,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Международный благотворительный базар 2026',
+        location_name: 'Выставочный центр Moldexpo',
+        address: 'ул. Гиочеилор, 1, Кишинёв',
         description: 'Ежегодный международный благотворительный базар, который организует International Women’s Club of Moldova. В павильоне Moldexpo более 20 посольств, дипломатических представительств и международных организаций представляют кухню и ремёсла своих стран; выручка идёт на благотворительные проекты в Молдове. Входной билет — от 50 леев.',
         category: 'Фестиваль',
         price: 'от 50 леев',
@@ -5450,6 +5456,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Târgul Internațional de Caritate 2026',
+        location_name: 'Centrul Expozițional Moldexpo',
+        address: 'str. Ghioceilor 1, Chișinău',
         description: 'Târgul internațional de caritate organizat anual de International Women’s Club of Moldova. În pavilionul Moldexpo, peste 20 de ambasade, misiuni diplomatice și organizații internaționale își prezintă bucătăria și meșteșugurile; încasările merg către proiecte caritabile din Moldova. Biletul de intrare — de la 50 de lei.',
         category: 'Festival',
         price: 'de la 50 lei',
@@ -5479,6 +5487,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: '«Ultimul avertisment» — трагикомедия в театре Чехова',
+        location_name: 'Русский драматический театр им. А.П. Чехова',
+        address: 'ул. Влайку Пыркэлаб, 75, Кишинёв',
         description: 'Трагикомедия «Ultimul avertisment» на сцене Русского драматического театра им. А. П. Чехова — показ проекта #Cooltura. Один вечер, 10 декабря в 19:00; билеты от 400 леев на livetickets.md. Афиша театра — на cehov.md.',
         category: 'Спектакль',
         price: 'от 400 леев',
@@ -5487,6 +5497,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: '„Ultimul avertisment” — tragicomedie la Teatrul Cehov',
+        location_name: 'Teatrul Dramatic Rus „A.P. Cehov”',
+        address: 'str. Vlaicu Pârcălab 75, Chișinău',
         description: 'Tragicomedia „Ultimul avertisment”, pe scena Teatrului Dramatic Rus de Stat „A. P. Cehov” — o reprezentație a proiectului #Cooltura. O singură seară, 10 decembrie, ora 19:00; bilete de la 400 de lei pe livetickets.md. Afișul teatrului — pe cehov.md.',
         category: 'Spectacol',
         price: 'de la 400 lei',
@@ -5516,6 +5528,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Балет «Лебединое озеро»',
+        location_name: 'Национальный театр оперы и балета им. Марии Биешу',
+        address: 'бул. Штефан чел Маре, 152, Кишинёв',
         description: '«Лебединое озеро» Чайковского — балет в четырёх действиях из репертуара Национального театра оперы и балета, субботний вечерний показ. Билеты на спектакли TNOB стоят от 200 до 500 леев; детей до 7 лет на спектакли не допускают.',
         category: 'Спектакль',
         price: '200–500 леев',
@@ -5524,6 +5538,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Baletul „Lacul lebedelor”',
+        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
+        address: 'bd. Ștefan cel Mare 152, Chișinău',
         description: '„Lacul lebedelor” de Ceaikovski — balet în patru acte din repertoriul Teatrului Național de Operă și Balet, reprezentație de sâmbătă seara. Biletele la spectacolele TNOB costă între 200 și 500 de lei; accesul copiilor sub 7 ani nu este permis.',
         category: 'Spectacol',
         price: '200–500 lei',
@@ -5553,6 +5569,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Китайский национальный цирк — ZENsation',
+        location_name: 'Chișinău Arena',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
         description: 'Гастроли Китайского национального цирка с программой ZENsation — «best-of» из самых известных номеров коллектива за прошлые годы: акробатика, эквилибр и трюки на грани возможного. Вечерний показ на Chișinău Arena; формат подходит для похода с детьми.',
         category: 'Детское мероприятие',
         price: '450–1000 леев',
@@ -5561,6 +5579,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Circul Național Chinez — ZENsation',
+        location_name: 'Chișinău Arena',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
         description: 'Turneul Circului Național Chinez cu programul ZENsation — un „best-of” al celor mai cunoscute numere ale trupei din anii trecuți: acrobație, echilibristică și trucuri la limita posibilului. Reprezentație de seară la Chișinău Arena; formatul e potrivit pentru o ieșire cu copiii.',
         category: 'Eveniment pentru copii',
         price: '450–1000 lei',
@@ -5590,6 +5610,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Ион Палади — «Colindăm cu drag tot neamul»',
+        location_name: 'Chișinău Arena',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
         description: 'Рождественский концерт Иона Палади «Colindăm cu drag tot neamul» — колядки, зимние традиции и праздничная программа вместе с Национальным оркестром народной музыки «Lăutarii» под управлением Николае Ботгроса. Билеты на livetickets.md.',
         category: 'Концерт',
         price: '350–1300 леев',
@@ -5598,6 +5620,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Ion Paladi — „Colindăm cu drag tot neamul”',
+        location_name: 'Chișinău Arena',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
         description: 'Concertul de Crăciun al lui Ion Paladi, „Colindăm cu drag tot neamul” — colinde, tradiții de iarnă și un program festiv împreună cu Orchestra Națională de Muzică Populară „Lăutarii”, dirijată de Nicolae Botgros. Bilete pe livetickets.md.',
         category: 'Concert',
         price: '350–1300 lei',
@@ -5626,6 +5650,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Chișinău Boxing Night IV',
+        location_name: 'Chișinău Arena, Малая арена',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
         description: 'Четвёртый международный боксёрский гала-вечер в Малой арене. В главном бою — 12 раундов за титул чемпиона мира WBF между Яном Заком (Израиль) и Саханом Айбаем (Турция); организаторы называют это первым main event такого уровня в истории молдавского бокса. Всего больше 15 поединков по боксу, MMA и кикбоксингу с представителями семи стран, плюс бой за титул профессионального чемпиона Молдовы.',
         category: 'Спорт',
         price: '400–600 леев',
@@ -5634,6 +5660,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Chișinău Boxing Night IV',
+        location_name: 'Chișinău Arena, Arena Mică',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
         description: 'A patra ediție a galei internaționale de box, în Arena Mică. În main event — 12 runde pentru titlul mondial WBF, între Yan Zak (Israel) și Sahan Aybay (Turcia); organizatorii îl prezintă drept primul main event de acest calibru din istoria boxului moldovenesc. În total, peste 15 lupte de box, MMA și kickboxing cu sportivi din șapte țări, plus o partidă pentru titlul de campion profesionist al Moldovei.',
         category: 'Sport',
         price: '400–600 lei',
@@ -5662,6 +5690,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'K-POP FOREVER',
+        location_name: 'Chișinău Arena',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
         description: 'Шоу-программа, собранная из главных хитов корейской поп-сцены — BTS, BLACKPINK, TWICE, MELOMANCE, HUNTR/X, SAJA BOYS. Проект уже отыграл Дублин, Корк и Белфаст; в Кишинёве его принимает Chișinău Arena.',
         category: 'Концерт',
         price: '900–1800 леев',
@@ -5670,6 +5700,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'K-POP FOREVER',
+        location_name: 'Chișinău Arena',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
         description: 'Un show construit din cele mai cunoscute hituri ale scenei pop coreene — BTS, BLACKPINK, TWICE, MELOMANCE, HUNTR/X, SAJA BOYS. Proiectul a trecut deja prin Dublin, Cork și Belfast; la Chișinău este găzduit de Chișinău Arena.',
         category: 'Concert',
         price: '900–1800 lei',
@@ -5698,6 +5730,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Chef’s Forum Moldova 2026',
+        location_name: 'Chișinău Arena',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
         description: 'Второй профессиональный гастрономический форум Chef’s Forum Moldova — целый день докладов и дискуссий для шеф-поваров, предпринимателей из HoReCa и всех, кому интересна высокая кухня как бизнес. Программа идёт с 09:00 до 18:00; в продаже стандартные пакеты и VIP, в том числе групповые на троих.',
         category: 'Лекция',
         price: '1000–3600 леев',
@@ -5706,6 +5740,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Chef’s Forum Moldova 2026',
+        location_name: 'Chișinău Arena',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
         description: 'A doua ediție a forumului gastronomic profesionist Chef’s Forum Moldova — o zi întreagă de prezentări și discuții pentru bucătari-șefi, antreprenori din HoReCa și toți cei interesați de bucătăria fină ca business. Programul se desfășoară de la 09:00 la 18:00; sunt în vânzare pachete standard și VIP, inclusiv de grup, pentru trei persoane.',
         category: 'Prelegere',
         price: '1000–3600 lei',
@@ -5735,6 +5771,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Выставка «Городская археология и скрытая память Кишинёва»',
+        location_name: 'Национальный музей истории Молдовы',
+        address: 'ул. 31 августа 1989, 121А, Кишинёв',
         description: 'Экспозиция об археологических слоях Кишинёва — находки, показывающие город древнее, чем первое письменное упоминание 1436 года. Открыта до 30 ноября.',
         category: 'Выставка',
         price: '10–50 лей',
@@ -5743,6 +5781,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Expoziția „Arheologia urbană și memoria ascunsă a Chișinăului”',
+        location_name: 'Muzeul Național de Istorie a Moldovei',
+        address: 'str. 31 August 1989, 121A, Chișinău',
         description: 'Expoziție despre straturile arheologice ale Chișinăului — descoperiri care arată un oraș mai vechi decât prima atestare documentară din 1436. Deschisă până la 30 noiembrie.',
         category: 'Expoziție',
         price: '10–50 lei',
@@ -5773,6 +5813,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'JDC Dance Weekend 2026',
+        location_name: 'Chișinău Arena',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
         description: 'Двухдневный танцевальный фестиваль и соревнования Just Dance Competitions — от contemporary и modern до hip-hop и street dance, на Chișinău Arena.',
         category: 'Фестиваль',
         price: 'от 370 лей',
@@ -5781,6 +5823,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'JDC Dance Weekend 2026',
+        location_name: 'Chișinău Arena',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
         description: 'Festival și competiție de dans pe durata a două zile, Just Dance Competitions — de la contemporary și modern până la hip-hop și street dance, la Arena Chișinău.',
         category: 'Festival',
         price: 'de la 370 lei',
@@ -5810,6 +5854,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Rammstein Symphonic Experience',
+        location_name: 'Национальный театр оперы и балета «Maria Bieșu»',
+        address: 'бул. Штефан чел Маре, 152, Кишинёв',
         description: 'Симфоническая программа по музыке Rammstein в исполнении оркестра на сцене Национального театра оперы и балета.',
         category: 'Концерт',
         price: '900–1300 лей',
@@ -5818,6 +5864,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Rammstein Symphonic Experience',
+        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
+        address: 'bd. Ștefan cel Mare 152, Chișinău',
         description: 'Program simfonic pe muzica Rammstein, interpretat de orchestră pe scena Teatrului Național de Operă și Balet.',
         category: 'Concert',
         price: '900–1300 lei',
@@ -5847,6 +5895,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'MOLDOX 2026 — фестиваль документального кино',
+        location_name: 'Cineplex Loteanu',
+        address: 'бул. Штефан чел Маре, 103, Кишинёв',
         description: 'XI выпуск международного фестиваля документального кино MOLDOX в кинотеатре Cineplex Loteanu, тема года — «Coexist?». В программе около 50 международных и молдавских фильмов, включая отборы Sundance и Сан-Себастьяна, ретроспектива Аньес Варда, дискуссии и MOLDOX Lab. Условия входа организаторы объявят в начале ноября.',
         category: 'Кино',
         price: 'Уточняется',
@@ -5855,6 +5905,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'MOLDOX 2026 — festival de film documentar',
+        location_name: 'Cineplex Loteanu',
+        address: 'bd. Ștefan cel Mare 103, Chișinău',
         description: 'Ediția a XI-a a Festivalului Internațional de Film Documentar MOLDOX la Cineplex Loteanu, sub tema „Coexist?”. Programul include circa 50 de filme internaționale și moldovenești, inclusiv din selecțiile Sundance și San Sebastián, o retrospectivă Agnès Varda, dezbateri și MOLDOX Lab. Condițiile de acces vor fi anunțate la începutul lunii noiembrie.',
         category: 'Cinema',
         price: 'Se anunță',
@@ -5884,6 +5936,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Балет «Спящая красавица» — воскресный показ для семей',
+        location_name: 'Национальный театр оперы и балета им. Марии Биешу',
+        address: 'бул. Штефан чел Маре, 152, Кишинёв',
         description: 'Балет Чайковского «Спящая красавица» в трёх действиях на сцене Национального театра оперы и балета — воскресный показ в 17:00, удобный для похода с детьми. Внимание: детей до 7 лет на спектакли TNOB не допускают.',
         category: 'Детское мероприятие',
         price: '150–400 леев',
@@ -5892,6 +5946,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Baletul „Frumoasa din Pădurea Adormită” — reprezentație de duminică',
+        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
+        address: 'bd. Ștefan cel Mare 152, Chișinău',
         description: 'Baletul „Frumoasa din Pădurea Adormită” de Ceaikovski, în trei acte, pe scena Teatrului Național de Operă și Balet — reprezentație de duminică, ora 17:00, potrivită pentru o ieșire cu copiii. Atenție: accesul copiilor sub 7 ani nu este permis la spectacolele TNOB.',
         category: 'Eveniment pentru copii',
         price: '150–400 lei',
@@ -5922,6 +5978,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Рождественский марафон by Moldcell 2026',
+        location_name: 'Площадь Великого национального собрания (старт)',
+        address: 'Piața Marii Adunări Naționale, Кишинёв',
         description: 'Праздничный неконкурентный забег на 3 км в центре Кишинёва со стартом на Площади Великого национального собрания, открытый для всех возрастов и уровней подготовки. Участники получают номер, праздничную шапку и «съедобную медаль»; дети до 14 лет — в сопровождении родителей. Регистрация на sporter.md.',
         category: 'Спорт',
         price: '200 леев (1 участник), 350 (2), 500 (3)',
@@ -5930,6 +5988,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Maratonul de Crăciun by Moldcell 2026',
+        location_name: 'Piața Marii Adunări Naționale (start)',
+        address: 'Piața Marii Adunări Naționale, Chișinău',
         description: 'Cursă festivă necompetitivă de 3 km în centrul Chișinăului, cu start în Piața Marii Adunări Naționale, deschisă tuturor vârstelor și nivelurilor. Participanții primesc număr, căciuliță festivă și „medalie comestibilă”; copiii sub 14 ani doar însoțiți de părinți. Înscrieri pe sporter.md.',
         category: 'Sport',
         price: '200 lei (1 participant), 350 (2), 500 (3)',
@@ -5960,6 +6020,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Выставка «Памятники культуры Кукутень–Триполье в Молдове»',
+        location_name: 'Национальный музей истории Молдовы, зал 2',
+        address: 'ул. 31 августа 1989, 121А, Кишинёв',
         description: 'Артефакты культуры Кукутень–Триполье (V–III тыс. до н.э.) с археологических памятников Молдовы: расписная керамика, антропоморфные и зооморфные фигурки, орудия из кремня, камня и кости, медные изделия, фрагменты жилищ. Выставку открыли в рамках Дней европейского наследия 2026 в поддержку транснационального маршрута Кукутень–Триполье и номинации в ЮНЕСКО.',
         category: 'Выставка',
         price: '50 леев, пенсионеры/студенты 20, дети 10',
@@ -5968,6 +6030,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Expoziția „Vestigii ale culturii Cucuteni–Trypillia din Republica Moldova”',
+        location_name: 'Muzeul Național de Istorie a Moldovei, sala 2',
+        address: 'str. 31 August 1989, 121A, Chișinău',
         description: 'Artefacte ale culturii Cucuteni–Trypillia (mileniile V–III î.Hr.) din siturile arheologice ale Republicii Moldova: ceramică pictată, figurine antropomorfe și zoomorfe, unelte din silex, piatră și os, piese de cupru, fragmente de locuințe. Expoziția a fost deschisă în cadrul Zilelor Europene ale Patrimoniului 2026, în sprijinul rutei transnaționale Cucuteni–Trypillia și al înscrierii UNESCO.',
         category: 'Expoziție',
         price: '50 lei, pensionari/studenți 20, copii 10',
@@ -5998,6 +6062,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Святослав Вакарчук — сольный концерт',
+        location_name: 'Национальный дворец «Николае Сулак»',
+        address: 'ул. Пушкина, 21, Кишинёв',
         description: 'Лидер «Океана Ельзи» Святослав Вакарчук представит в Кишинёве камерную сольную программу — только голос, гитара и фортепиано: известные песни группы, сочинения из сольных проектов и новые композиции. Концерт при поддержке Посольства Украины в Молдове; билеты на livetickets.md.',
         category: 'Концерт',
         price: '750–2050 леев',
@@ -6006,6 +6072,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Sviatoslav Vakarciuk — concert solo',
+        location_name: 'Palatul Național „Nicolae Sulac”',
+        address: 'str. Pușkin 21, Chișinău',
         description: 'Liderul trupei Okean Elzy, Sviatoslav Vakarciuk, prezintă la Chișinău un program solo de cameră — doar voce, chitară și pian: piese cunoscute ale trupei, lucrări din proiectele solo și compoziții noi. Concert cu sprijinul Ambasadei Ucrainei în Republica Moldova; bilete pe livetickets.md.',
         category: 'Concert',
         price: '750–2050 lei',
@@ -6036,6 +6104,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Паула Селинг — «Colindăm, colindăm prin viață»',
+        location_name: 'Национальный дворец «Николае Сулак»',
+        address: 'ул. Пушкина, 21, Кишинёв',
         description: 'Рождественский концерт румынской певицы Паулы Селинг в Национальном дворце: традиционные колядки, зимние песни и современные аранжировки. Организатор — Dar.fm; билеты на iTicket.',
         category: 'Концерт',
         price: '250–1000 леев',
@@ -6044,6 +6114,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Paula Seling — „Colindăm, colindăm prin viață”',
+        location_name: 'Palatul Național „Nicolae Sulac”',
+        address: 'str. Pușkin 21, Chișinău',
         description: 'Concert de Crăciun al Paulei Seling la Palatul Național: colinde tradiționale, cântece de iarnă și aranjamente moderne. Organizator Dar.fm; bilete pe iTicket.',
         category: 'Concert',
         price: '250–1000 lei',
@@ -6074,6 +6146,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Ансамбль «JOC» — хореографический концерт',
+        location_name: 'Национальный театр оперы и балета им. Марии Биешу',
+        address: 'бул. Штефан чел Маре, 152, Кишинёв',
         description: 'Два вечера Национального академического ансамбля народного танца «JOC» на сцене Оперы — молдавская хореографическая традиция в исполнении коллектива, который представляет страну на мировых сценах более полувека.',
         category: 'Концерт',
         price: '250–700 леев',
@@ -6082,6 +6156,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Ansamblul „JOC” — concert coregrafic',
+        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
+        address: 'bd. Ștefan cel Mare 152, Chișinău',
         description: 'Două seri ale Ansamblului Național Academic de Dansuri Populare „JOC” pe scena Operei — tradiția coregrafică moldovenească în interpretarea colectivului care reprezintă țara pe scenele lumii de peste o jumătate de secol.',
         category: 'Concert',
         price: '250–700 lei',
@@ -6111,6 +6187,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
     i18n: {
       ru: {
         title: 'Балет «Щелкунчик» — дневной показ для детей',
+        location_name: 'Национальный театр оперы и балета им. Марии Биешу',
+        address: 'бул. Штефан чел Маре, 152, Кишинёв',
         description: 'Рождественский «Щелкунчик» в постановке балетной академии Attitude — дневной показ в 12:00, удобный для похода с детьми. Внимание: детей до 7 лет на спектакли TNOB не допускают.',
         category: 'Детское мероприятие',
         price: '250–450 леев',
@@ -6119,6 +6197,8 @@ export const INITIAL_EVENTS: CityEvent[] = [
       },
       ro: {
         title: 'Baletul „Spărgătorul de nuci” — matineu pentru copii',
+        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
+        address: 'bd. Ștefan cel Mare 152, Chișinău',
         description: '„Spărgătorul de nuci” de Crăciun, în montarea academiei de balet Attitude — reprezentație de zi, la ora 12:00, potrivită pentru o ieșire cu copiii. Atenție: accesul copiilor sub 7 ani nu este permis la spectacolele TNOB.',
         category: 'Eveniment pentru copii',
         price: '250–450 lei',
