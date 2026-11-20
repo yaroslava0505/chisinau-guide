@@ -1013,4 +1013,63 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-28',
+    slug: 'indoor-chisinau-winter',
+    title: 'Куди піти в Кишиневі, коли холодно: музеї, театри й концертні зали',
+    seoTitle: 'Куди піти в Кишиневі взимку',
+    excerpt:
+      'Листопад і грудень у Кишиневі — сезон, коли план «просто погуляти» не працює. Як вибрати музей, театр чи концертний зал під свій вечір.',
+    body: [
+      'З середини листопада до кінця зими головне питання в Кишиневі — не «куди піти», а «куди піти так, щоб не змокнути й не змерзнути». Добра новина в тому, що майже вся культурна інфраструктура міста сконцентрована в центрі, у межах пішої відстані від бульвару Штефан чел Маре: музей, театр і концертний зал можуть виявитися в трьох кварталах один від одного.',
+      'Музеї — найгнучкіший варіант: вони не вимагають планувати вечір заздалегідь і підходять і для години між справами, і для повноцінного походу з дітьми. Державні музеї в Кишиневі недорогі, але в них зазвичай один вихідний на тижні й каса закривається раніше за самі зали — тож графік варто звірити перед виходом, а не на місці. Якщо йдете з дітьми, дивіться не на розмір колекції, а на те, чи є в музеї щось «велике й помітне»: один вражаючий експонат утримує увагу краще, ніж десять залів живопису.',
+      'Театр і концертний зал працюють інакше: тут потрібно подивитися афішу й купити квиток заздалегідь, зате вечір уже спланований за вас. Варто знати дві практичні речі. Перша: вистави в Кишиневі починаються рано — найчастіше о 18:00 або 18:30, а не о 19:00, як можна звикнути в інших містах. Друга: у Національному театрі опери та балету діє вікове обмеження — дітей до 7 років на вечірні вистави не пускають, тому для сімейного походу шукайте окремі денні покази. Репертуар у театрах тримається місяцями, тож ту саму постановку майже завжди можна зловити ще раз.',
+      'Окремий зимовий сюжет — грудень. Це єдиний місяць, коли афіша в Кишиневі справді щільна: колядкові концерти, різдвяні програми, балетна класика й ярмарки йдуть майже щодня, і квитки на найпопулярніші події розходяться за кілька тижнів. Якщо хочете на щось конкретне в грудні — дивіться афішу вже в листопаді.',
+      'Нижче — кілька місць із каталогу, з яких можна почати. Повний список музеїв, театрів, кінотеатрів і творчих просторів із адресами та графіком — у категорії «Чим зайнятися»; актуальні дати конкретних вистав і концертів — у розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: [
+      'muzeul-national-arta',
+      'muzeul-national-de-istorie-chisinau',
+      'muzeul-etnografie-istorie-naturala',
+      'teatrul-national-mihai-eminescu',
+      'sala-cu-orga',
+    ],
+    keywords: [
+      'куди піти в Кишиневі взимку',
+      'музеї Кишинева',
+      'театри Кишинева',
+      'куди піти в погану погоду',
+      'Кишинів у грудні',
+    ],
+    publishedAt: '2026-11-20',
+    i18n: {
+      ru: {
+        title: 'Куда пойти в Кишинёве, когда холодно: музеи, театры и концертные залы',
+        seoTitle: 'Куда пойти в Кишинёве зимой',
+        excerpt:
+          'Ноябрь и декабрь в Кишинёве — сезон, когда план «просто погулять» не работает. Как выбрать музей, театр или концертный зал под свой вечер.',
+        body: [
+          'С середины ноября и до конца зимы главный вопрос в Кишинёве — не «куда пойти», а «куда пойти так, чтобы не промокнуть и не замёрзнуть». Хорошая новость в том, что почти вся культурная инфраструктура города сосредоточена в центре, в пешей доступности от бульвара Штефан чел Маре: музей, театр и концертный зал могут оказаться в трёх кварталах друг от друга.',
+          'Музеи — самый гибкий вариант: они не требуют планировать вечер заранее и подходят и для часа между делами, и для полноценного похода с детьми. Государственные музеи в Кишинёве недорогие, но у них обычно один выходной в неделю, а касса закрывается раньше самих залов — так что график стоит сверить перед выходом, а не на месте. Если идёте с детьми, смотрите не на размер коллекции, а на то, есть ли в музее что-то «большое и заметное»: один впечатляющий экспонат держит внимание лучше, чем десять залов живописи.',
+          'Театр и концертный зал работают иначе: здесь нужно посмотреть афишу и купить билет заранее, зато вечер уже спланирован за вас. Стоит знать две практические вещи. Первая: спектакли в Кишинёве начинаются рано — чаще всего в 18:00 или 18:30, а не в 19:00, как можно привыкнуть в других городах. Вторая: в Национальном театре оперы и балета действует возрастное ограничение — детей до 7 лет на вечерние спектакли не пускают, поэтому для семейного похода ищите отдельные дневные показы. Репертуар в театрах держится месяцами, так что ту же постановку почти всегда можно поймать ещё раз.',
+          'Отдельный зимний сюжет — декабрь. Это единственный месяц, когда афиша в Кишинёве действительно плотная: колядочные концерты, рождественские программы, балетная классика и ярмарки идут почти каждый день, а билеты на самые популярные события расходятся за несколько недель. Если хотите на что-то конкретное в декабре — смотрите афишу уже в ноябре.',
+          'Ниже — несколько мест из каталога, с которых можно начать. Полный список музеев, театров, кинотеатров и творческих пространств с адресами и графиком — в категории «Чем заняться»; актуальные даты конкретных спектаклей и концертов — в разделе «События».',
+        ],
+      },
+      ro: {
+        title: 'Unde mergi în Chișinău când e frig: muzee, teatre și săli de concert',
+        seoTitle: 'Unde mergi în Chișinău iarna',
+        excerpt:
+          'Noiembrie și decembrie în Chișinău sunt sezonul în care planul „ieșim pur și simplu la plimbare” nu mai funcționează. Cum alegi un muzeu, un teatru sau o sală de concert.',
+        body: [
+          'De la mijlocul lui noiembrie și până la sfârșitul iernii, întrebarea principală în Chișinău nu e „unde mergem”, ci „unde mergem ca să nu ne udăm și să nu înghețăm”. Vestea bună e că aproape toată infrastructura culturală a orașului e concentrată în centru, la câțiva pași de bulevardul Ștefan cel Mare: muzeul, teatrul și sala de concert pot fi la trei străzi una de alta.',
+          'Muzeele sunt varianta cea mai flexibilă: nu cer să-ți planifici seara din timp și se potrivesc deopotrivă pentru o oră între două treburi și pentru o ieșire în toată regula cu copiii. Muzeele de stat din Chișinău sunt ieftine, dar au de obicei o zi liberă pe săptămână, iar casa se închide mai devreme decât sălile — așa că merită să verifici programul înainte de a pleca, nu la fața locului. Dacă mergi cu copiii, uită-te nu la mărimea colecției, ci dacă muzeul are ceva „mare și vizibil”: un singur exponat impresionant ține atenția mai bine decât zece săli de pictură.',
+          'Teatrul și sala de concert funcționează altfel: aici trebuie să te uiți la afiș și să cumperi biletul din timp, în schimb seara e deja planificată pentru tine. Două lucruri practice merită știute. Primul: spectacolele în Chișinău încep devreme — cel mai des la 18:00 sau 18:30, nu la 19:00, cum te-ai putea obișnui în alte orașe. Al doilea: la Teatrul Național de Operă și Balet există o limită de vârstă — copiii sub 7 ani nu sunt lăsați la spectacolele de seară, așa că pentru o ieșire de familie caută reprezentațiile de zi. Repertoriul teatrelor se menține luni întregi, deci același spectacol poate fi prins aproape sigur și altă dată.',
+          'Un capitol de iarnă aparte este decembrie. E singura lună în care afișul Chișinăului e într-adevăr dens: concerte de colinde, programe de Crăciun, balet clasic și târguri se țin aproape zilnic, iar biletele la cele mai căutate evenimente se epuizează cu săptămâni înainte. Dacă vrei la ceva anume în decembrie — uită-te la afiș încă din noiembrie.',
+          'Mai jos — câteva locuri din catalog de la care poți începe. Lista completă de muzee, teatre, cinematografe și spații creative, cu adrese și program — în categoria „Ce poți face”; datele actuale ale spectacolelor și concertelor — în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
 ];
