@@ -5365,24 +5365,30 @@ export const INITIAL_PLACES: Place[] = [
  * Real, verifiable events only — sourced from the official visit.chisinau.md
  * calendar, the arenachisinau.md and tnob.md venue calendars, the fest.md and
  * livetickets.md listings, and the organisers' own sites and press coverage
- * (cehov.md, iwcm.md, iticket.md, diez.md), re-checked as of 2026-11-20. No
- * invented entries: every date, venue and price here traces back to one of
- * those sources. Re-check and refresh periodically — at this refresh thirteen
- * entries were dropped (nine that lapsed on 2026-11-09…11-19, plus three
- * near-duplicate December carol/Christmas concerts and the 3 Sud Est run that
- * ended on the refresh date) and four verified December events were added,
- * which revives `theatre` (every theatre entry had just expired) and spreads
- * the afiș across early, mid and late December.
+ * (cehov.md, iwcm.md, iticket.md, diez.md, nationalmuseum.md), re-checked as
+ * of 2026-11-24. No invented entries: every date, venue and price here traces
+ * back to one of those sources. Re-check and refresh periodically — at this
+ * refresh three entries were dropped (JDC Dance Weekend and the "Frumoasa din
+ * Pădurea Adormită" matinee, both lapsed on 2026-11-22, plus the urban-
+ * archaeology exhibition, which closes 2026-11-30 and is superseded by the
+ * MONEDA exhibition in the same museum) and three verified entries were added.
  *
- * Deliberately NOT added at this refresh: a `workshop` entry — it is now the
- * only empty `event_type`, but every Chișinău workshop listing found on
- * iticket.md, fest.md and afisha.md still carried 2025 dates, and the one
- * genuinely dated 2026 workshop (the FITC collective-creation atelier,
- * 18–21 November) was already over. Also still out: the TNOB "Spărgătorul de
- * nuci" December run and the 2026–2027 Christmas fair in PMAN, since neither
- * tnob.md nor craciun.chisinau.md has published those dates yet, and the
- * "Covorul Dorului" carpet fair, where fest.md and turism.gov.md disagree on
- * both the date (19 vs 20 December) and the venue.
+ * Those three finally fill the last gaps: the FabClub robotics ateliers give
+ * `workshop` its first entry, so all nine `event_type` values are now live;
+ * MONEDA keeps a second, long-running exhibition on the afiș into February
+ * 2027; and LEGENDARY ROCK VOICES extends the horizon past the December
+ * cluster, which previously ended on 22 December. The count sits at twenty
+ * rather than the usual ten-to-fifteen: every entry is verified and still
+ * upcoming, and trimming further would mean deleting real events.
+ *
+ * Checked and rejected at this refresh: the iticket.md ateliers "Calul de Foc"
+ * and "Pictăm Moș Crăciun", whose listings look current but are dated
+ * December 2025; and the Artkimia jewellery courses, which turned out to be in
+ * Bucharest, not Chișinău. Still out: the TNOB "Spărgătorul de nuci" December
+ * run and the 2026–2027 Christmas fair in PMAN, since neither tnob.md nor
+ * craciun.chisinau.md has published those dates yet, and the "Covorul Dorului"
+ * carpet fair, where fest.md and turism.gov.md disagree on both the date
+ * (19 vs 20 December) and the venue.
  */
 export const INITIAL_EVENTS: CityEvent[] = [
   {
@@ -5752,89 +5758,6 @@ export const INITIAL_EVENTS: CityEvent[] = [
     is_demo: false,
   },
   {
-    id: 'event-16',
-    title: 'Виставка «Міська археологія та прихована памʼять Кишинева»',
-    slug: 'arheologia-urbana-chisinau-2026',
-    date: 'до 30 листопада 2026',
-    date_iso: '2026-10-26',
-    end_date_iso: '2026-11-30',
-    time: 'Вт–Нд, 10:00–17:00',
-    location_name: 'Національний музей історії Молдови',
-    address: 'вул. 31 серпня 1989, 121А, Кишинів',
-    category: 'Виставка',
-    event_type: 'exhibition',
-    price: '10–50 лей',
-    free_entry: false,
-    description: 'Експозиція про археологічні шари Кишинева — знахідки, що показують місто давнішим, ніж перша письмова згадка 1436 року. Відкрита до 30 листопада.',
-    image: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1000&auto=format&fit=crop',
-    tags: ['виставка', 'археологія', 'історія'],
-    i18n: {
-      ru: {
-        title: 'Выставка «Городская археология и скрытая память Кишинёва»',
-        location_name: 'Национальный музей истории Молдовы',
-        address: 'ул. 31 августа 1989, 121А, Кишинёв',
-        description: 'Экспозиция об археологических слоях Кишинёва — находки, показывающие город древнее, чем первое письменное упоминание 1436 года. Открыта до 30 ноября.',
-        category: 'Выставка',
-        price: '10–50 лей',
-        date: 'до 30 ноября 2026',
-        tags: ['выставка', 'археология', 'история'],
-      },
-      ro: {
-        title: 'Expoziția „Arheologia urbană și memoria ascunsă a Chișinăului”',
-        location_name: 'Muzeul Național de Istorie a Moldovei',
-        address: 'str. 31 August 1989, 121A, Chișinău',
-        description: 'Expoziție despre straturile arheologice ale Chișinăului — descoperiri care arată un oraș mai vechi decât prima atestare documentară din 1436. Deschisă până la 30 noiembrie.',
-        category: 'Expoziție',
-        price: '10–50 lei',
-        date: 'până la 30 noiembrie 2026',
-        tags: ['expoziție', 'arheologie', 'istorie'],
-      },
-    },
-    is_demo: false,
-  },
-  {
-    id: 'event-23',
-    title: 'JDC Dance Weekend 2026',
-    slug: 'jdc-dance-weekend-2026',
-    date: '21–22 листопада 2026',
-    date_iso: '2026-11-21',
-    end_date_iso: '2026-11-22',
-    time: 'За розкладом виступів',
-    location_name: 'Chișinău Arena',
-    address: 'Каля Орхеюлуй, 130, Стеучень, Кишинів',
-    category: 'Фестиваль',
-    event_type: 'festival',
-    price: 'від 370 лей',
-    free_entry: false,
-    description: 'Дводенний танцювальний фестиваль і змагання Just Dance Competitions — від contemporary та modern до hip-hop і street dance, на Chișinău Arena.',
-    image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=1000&auto=format&fit=crop',
-    ticket_url: 'https://iticket.md/event/jdc-dance-weekend-2026',
-    tags: ['фестиваль', 'танці'],
-    i18n: {
-      ru: {
-        title: 'JDC Dance Weekend 2026',
-        location_name: 'Chișinău Arena',
-        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
-        description: 'Двухдневный танцевальный фестиваль и соревнования Just Dance Competitions — от contemporary и modern до hip-hop и street dance, на Chișinău Arena.',
-        category: 'Фестиваль',
-        price: 'от 370 лей',
-        date: '21–22 ноября 2026',
-        tags: ['фестиваль', 'танцы'],
-      },
-      ro: {
-        title: 'JDC Dance Weekend 2026',
-        location_name: 'Chișinău Arena',
-        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
-        description: 'Festival și competiție de dans pe durata a două zile, Just Dance Competitions — de la contemporary și modern până la hip-hop și street dance, la Arena Chișinău.',
-        category: 'Festival',
-        price: 'de la 370 lei',
-        date: '21–22 noiembrie 2026',
-        tags: ['festival', 'dans'],
-      },
-    },
-    is_demo: false,
-  },
-  {
     id: 'event-24',
     title: 'Rammstein Symphonic Experience',
     slug: 'rammstein-symphonic-experience-2026',
@@ -5912,47 +5835,6 @@ export const INITIAL_EVENTS: CityEvent[] = [
         price: 'Se anunță',
         date: '25–29 noiembrie 2026',
         tags: ['cinema', 'documentar', 'festival'],
-      },
-    },
-    is_demo: false,
-  },
-  {
-    id: 'event-32',
-    title: 'Балет «Спляча красуня» — недільний показ для сімей',
-    slug: 'frumoasa-din-padurea-adormita-tnob-2026',
-    date: '22 листопада 2026',
-    date_iso: '2026-11-22',
-    time: '17:00',
-    location_name: 'Національний театр опери та балету ім. Марії Бієшу',
-    address: 'бул. Штефан чел Маре, 152, Кишинів',
-    category: 'Дитячий захід',
-    event_type: 'kids',
-    price: '150–400 лей',
-    free_entry: false,
-    description: 'Балет Чайковського «Спляча красуня» у трьох діях на сцені Національного театру опери та балету — недільний показ о 17:00, зручний для походу з дітьми. Увага: дітей до 7 років на вистави TNOB не допускають.',
-    image: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=1000&auto=format&fit=crop',
-    ticket_url: 'https://www.tnob.md/ro/calendar/11-2026',
-    tags: ['балет', 'з дітьми', 'чайковський'],
-    i18n: {
-      ru: {
-        title: 'Балет «Спящая красавица» — воскресный показ для семей',
-        location_name: 'Национальный театр оперы и балета им. Марии Биешу',
-        address: 'бул. Штефан чел Маре, 152, Кишинёв',
-        description: 'Балет Чайковского «Спящая красавица» в трёх действиях на сцене Национального театра оперы и балета — воскресный показ в 17:00, удобный для похода с детьми. Внимание: детей до 7 лет на спектакли TNOB не допускают.',
-        category: 'Детское мероприятие',
-        price: '150–400 леев',
-        date: '22 ноября 2026',
-        tags: ['балет', 'с детьми', 'чайковский'],
-      },
-      ro: {
-        title: 'Baletul „Frumoasa din Pădurea Adormită” — reprezentație de duminică',
-        location_name: 'Teatrul Național de Operă și Balet „Maria Bieșu”',
-        address: 'bd. Ștefan cel Mare 152, Chișinău',
-        description: 'Baletul „Frumoasa din Pădurea Adormită” de Ceaikovski, în trei acte, pe scena Teatrului Național de Operă și Balet — reprezentație de duminică, ora 17:00, potrivită pentru o ieșire cu copiii. Atenție: accesul copiilor sub 7 ani nu este permis la spectacolele TNOB.',
-        category: 'Eveniment pentru copii',
-        price: '150–400 lei',
-        date: '22 noiembrie 2026',
-        tags: ['balet', 'cu copii', 'ceaikovski'],
       },
     },
     is_demo: false,
@@ -6204,6 +6086,131 @@ export const INITIAL_EVENTS: CityEvent[] = [
         price: '250–450 lei',
         date: '20 decembrie 2026',
         tags: ['balet', 'cu copii', 'crăciun'],
+      },
+    },
+    is_demo: false,
+  },
+  {
+    id: 'event-54',
+    title: 'Безкоштовні майстер-класи робототехніки для дітей 10–14 років',
+    slug: 'ateliere-robotica-fablab-2026',
+    date: 'до 20 грудня 2026, за записом',
+    date_iso: '2026-11-07',
+    end_date_iso: '2026-12-20',
+    time: 'Дві сесії по 3 години, у вихідні на вибір',
+    location_name: 'FabLab в Orange Digital Center',
+    address: 'вул. Іон Крянге, 1, Кишинів',
+    category: 'Майстер-клас',
+    event_type: 'workshop',
+    price: 'Безкоштовно',
+    free_entry: true,
+    description: 'Програма FabClub для дітей 10–14 років: учасники збирають, програмують і тестують роботів Makeblock mBot, розбираються з датчиками й вчаться вирішувати задачі в команді. Формат — дві сесії по три години у вихідні, які можна обрати самому, у межах 7 листопада — 20 грудня 2026. Попередній досвід не потрібен, участь безкоштовна, кількість місць обмежена — потрібна реєстрація через онлайн-форму. Програму підтримує Фундація Orange Moldova, реалізує TEKEDU.',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://digitalcenter.orange.md/',
+    tags: ['майстер-клас', 'робототехніка', 'з дітьми', 'безкоштовно'],
+    i18n: {
+      ru: {
+        title: 'Бесплатные мастер-классы по робототехнике для детей 10–14 лет',
+        location_name: 'FabLab в Orange Digital Center',
+        address: 'ул. Ион Крянгэ, 1, Кишинёв',
+        description: 'Программа FabClub для детей 10–14 лет: участники собирают, программируют и тестируют роботов Makeblock mBot, разбираются с датчиками и учатся решать задачи в команде. Формат — две сессии по три часа в выходные, которые можно выбрать самому, в период с 7 ноября по 20 декабря 2026. Предварительный опыт не нужен, участие бесплатное, количество мест ограничено — нужна регистрация через онлайн-форму. Программу поддерживает Фонд Orange Moldova, реализует TEKEDU.',
+        category: 'Мастер-класс',
+        price: 'Бесплатно',
+        date: 'до 20 декабря 2026, по записи',
+        tags: ['мастер-класс', 'робототехника', 'с детьми', 'бесплатно'],
+      },
+      ro: {
+        title: 'Ateliere gratuite de robotică pentru copii de 10–14 ani',
+        location_name: 'FabLab din Orange Digital Center',
+        address: 'str. Ion Creangă 1, Chișinău',
+        description: 'Programul FabClub pentru copii de 10–14 ani: participanții construiesc, programează și testează roboți Makeblock mBot, descoperă senzorii și învață să rezolve probleme în echipă. Formatul — două sesiuni de câte trei ore, într-un weekend ales de participant, în intervalul 7 noiembrie — 20 decembrie 2026. Experiența anterioară nu este necesară, participarea e gratuită, iar numărul de locuri este limitat — este nevoie de înscriere printr-un formular online. Programul este susținut de Fundația Orange Moldova și implementat de TEKEDU.',
+        category: 'Atelier',
+        price: 'Gratuit',
+        date: 'până la 20 decembrie 2026, cu înscriere',
+        tags: ['atelier', 'robotică', 'cu copii', 'gratuit'],
+      },
+    },
+    is_demo: false,
+  },
+  {
+    id: 'event-55',
+    title: 'Виставка «MONEDA. Метаморфози грошей у просторі й часі»',
+    slug: 'moneda-muzeul-istorie-2026',
+    date: '26 листопада 2026 — 28 лютого 2027',
+    date_iso: '2026-11-26',
+    end_date_iso: '2027-02-28',
+    time: '10:00–17:00, понеділок — вихідний',
+    location_name: 'Національний музей історії Молдови',
+    address: 'вул. 31 Серпня 1989, 121A, Кишинів',
+    category: 'Виставка',
+    event_type: 'exhibition',
+    price: '50 лей, пенсіонери/студенти 20, діти 10',
+    free_entry: false,
+    description: 'Понад 300 монет, які охоплюють більше двох тисяч років — від античності й часів Золотої Орди до Землі Молдовської та сучасної епохи. Серед найцінніших експонатів — золоті монети часів Александра Македонського та срібні монети античного Тіраса, які вперше за десятиліття показують публіці. У залі також є реконструкція монетного двору й інтерактивна вікторина. Виставку підготували разом із колекціонером Ігорем Нісенбоймом і Національним музеєм етнографії та природної історії; вернісаж — 26 листопада о 15:00.',
+    image: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://www.nationalmuseum.md/ro/exhibitions/',
+    tags: ['виставка', 'монети', 'історія', 'музей'],
+    i18n: {
+      ru: {
+        title: 'Выставка «MONEDA. Метаморфозы денег в пространстве и времени»',
+        location_name: 'Национальный музей истории Молдовы',
+        address: 'ул. 31 августа 1989, 121А, Кишинёв',
+        description: 'Более 300 монет, охватывающих больше двух тысяч лет — от античности и времён Золотой Орды до Земли Молдавской и современной эпохи. Среди самых ценных экспонатов — золотые монеты времён Александра Македонского и серебряные монеты античного Тираса, которые впервые за десятилетия показывают публике. В зале также есть реконструкция монетного двора и интерактивная викторина. Выставку подготовили вместе с коллекционером Игорем Нисенбоймом и Национальным музеем этнографии и природной истории; вернисаж — 26 ноября в 15:00.',
+        category: 'Выставка',
+        price: '50 леев, пенсионеры/студенты 20, дети 10',
+        date: '26 ноября 2026 — 28 февраля 2027',
+        tags: ['выставка', 'монеты', 'история', 'музей'],
+      },
+      ro: {
+        title: 'Expoziția „MONEDA. Metamorfoza banilor în spațiu și timp”',
+        location_name: 'Muzeul Național de Istorie a Moldovei',
+        address: 'str. 31 August 1989, 121A, Chișinău',
+        description: 'Peste 300 de monede care acoperă mai bine de două milenii — din Antichitate și perioada Hoardei de Aur până la Țara Moldovei și epoca modernă. Printre cele mai valoroase exponate sunt monede de aur din vremea lui Alexandru cel Mare și monede de argint ale cetății antice Tyras, expuse public pentru prima dată după decenii. În sală se găsesc și o reconstituire a unei monetării și un test interactiv. Expoziția a fost realizată împreună cu colecționarul Igor Nisenboim și Muzeul Național de Etnografie și Istorie Naturală; vernisajul — 26 noiembrie, ora 15:00.',
+        category: 'Expoziție',
+        price: '50 lei, pensionari/studenți 20, copii 10',
+        date: '26 noiembrie 2026 — 28 februarie 2027',
+        tags: ['expoziție', 'monede', 'istorie', 'muzeu'],
+      },
+    },
+    is_demo: false,
+  },
+  {
+    id: 'event-56',
+    title: 'LEGENDARY ROCK VOICES',
+    slug: 'legendary-rock-voices-chisinau-2027',
+    date: '15 січня 2027',
+    date_iso: '2027-01-15',
+    time: '19:00',
+    location_name: 'Chișinău Arena',
+    address: 'Каля Орхеюлуй, 130, Стеучень, Кишинів',
+    category: 'Концерт',
+    event_type: 'concert',
+    price: 'від 350 лей',
+    free_entry: false,
+    description: 'Симфонічне рок-шоу: головні рок-гімни у виконанні вокалістів разом із симфонічним оркестром — Queen, AC/DC, Guns N’ Roses, Metallica, Scorpions, Nirvana та інші. Перша велика подія в афіші Chișinău Arena після новорічних свят.',
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1000&auto=format&fit=crop',
+    ticket_url: 'https://arenachisinau.md/ro/evenimente/legendary-rock-voices',
+    tags: ['концерт', 'рок', 'симфонічна музика'],
+    i18n: {
+      ru: {
+        title: 'LEGENDARY ROCK VOICES',
+        location_name: 'Chișinău Arena',
+        address: 'Каля Орхеюлуй, 130, Стэучень, Кишинёв',
+        description: 'Симфоническое рок-шоу: главные рок-гимны в исполнении вокалистов вместе с симфоническим оркестром — Queen, AC/DC, Guns N’ Roses, Metallica, Scorpions, Nirvana и другие. Первое крупное событие в афише Chișinău Arena после новогодних праздников.',
+        category: 'Концерт',
+        price: 'от 350 леев',
+        date: '15 января 2027',
+        tags: ['концерт', 'рок', 'симфоническая музыка'],
+      },
+      ro: {
+        title: 'LEGENDARY ROCK VOICES',
+        location_name: 'Chișinău Arena',
+        address: 'Calea Orheiului 130, Stăuceni, Chișinău',
+        description: 'Un show simfonic de rock: cele mai cunoscute imnuri rock, interpretate de soliști împreună cu o orchestră simfonică — Queen, AC/DC, Guns N’ Roses, Metallica, Scorpions, Nirvana și altele. Primul eveniment mare din afișul Chișinău Arena după sărbătorile de iarnă.',
+        category: 'Concert',
+        price: 'de la 350 lei',
+        date: '15 ianuarie 2027',
+        tags: ['concert', 'rock', 'muzică simfonică'],
       },
     },
     is_demo: false,

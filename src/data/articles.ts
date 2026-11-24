@@ -1072,4 +1072,63 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-29',
+    slug: 'winter-walks-chisinau',
+    title: 'Прогулянки Кишиневом узимку: куди піти, коли холодно і рано темніє',
+    seoTitle: 'Зимові прогулянки Кишиневом',
+    excerpt:
+      'У грудні темніє близько пів на пʼяту, а гуляти все одно хочеться. Як вибрати маршрут: освітлений центр, парк у долині чи лісопарк на околиці.',
+    body: [
+      'Зима в Кишиневі не скасовує прогулянки — вона їх скорочує. Головне обмеження тут не холод, а світло: у середині грудня темніє вже близько пів на пʼяту, і це значить, що прогулянка буває або денною, або центральною й освітленою. Майже всі інші рішення випливають із цього одного.',
+      'Якщо вільна лише година після роботи, найкращий вибір — центр. Пішохідні вулиці, центральні парки й сквери освітлені, там завжди є люди, а головне — за кілька кроків завжди знайдеться кавʼярня, музей чи театр. Це важливіше, ніж здається: узимку прогулянку рятує можливість зайти погрітися, не завершуючи її. Центр Кишинева до того ж компактний — кілька парків і скверів легко складаються в один маршрут, не виходячи за межі пішої відстані.',
+      'Для довгої прогулянки світлим днем краще підходять великі парки, але тут діє окреме зимове правило. Після снігу чи відлиги асфальтовані алеї та набережні в парках, що лежать у долинах, значно комфортніші за ґрунтові стежки на схилах. Парки й оглядові точки на пагорбах дають найкращі види на місто, але сходи та спуски там слизькі — це той випадок, коли взуття визначає маршрут більше, ніж бажання.',
+      'Лісопарки — найтихіший варіант, і особливо гарні вони в ясний морозний день, коли в центрі людно, а тут майже нікого. Але вони на околицях і без освітлення, тож такий маршрут планують на першу половину дня й розраховують повернутися до сутінків. А в по-справжньому погану погоду — дощ, вітер, сльота — прогулянка просто програє: тоді логічніше дивитися зимовий гід по музеях і театрах.',
+      'Нижче — кілька місць із каталогу, з яких можна почати, від центральних парків до лісопарку. Повний список маршрутів, парків і скверів із адресами — у категорії «Прогулянки».',
+    ],
+    category: 'walks',
+    placeSlugs: [
+      'gradina-publica-stefan-cel-mare',
+      'strada-eugen-doga-chisinau',
+      'gradina-catedralei',
+      'parcul-valea-morilor-chisinau',
+      'padurea-parc-riscani',
+    ],
+    keywords: [
+      'зимові прогулянки Кишинів',
+      'куди погуляти в Кишиневі взимку',
+      'парки Кишинева взимку',
+      'прогулянка центром Кишинева',
+      'Кишинів у грудні',
+    ],
+    publishedAt: '2026-11-24',
+    i18n: {
+      ru: {
+        title: 'Прогулки по Кишинёву зимой: куда пойти, когда холодно и рано темнеет',
+        seoTitle: 'Зимние прогулки по Кишинёву',
+        excerpt:
+          'В декабре темнеет около половины пятого, а гулять всё равно хочется. Как выбрать маршрут: освещённый центр, парк в долине или лесопарк на окраине.',
+        body: [
+          'Зима в Кишинёве не отменяет прогулки — она их сокращает. Главное ограничение здесь не холод, а свет: в середине декабря темнеет уже около половины пятого, и это значит, что прогулка бывает либо дневной, либо центральной и освещённой. Почти все остальные решения вытекают из этого одного.',
+          'Если свободен только час после работы, лучший выбор — центр. Пешеходные улицы, центральные парки и скверы освещены, там всегда есть люди, а главное — в нескольких шагах всегда найдётся кофейня, музей или театр. Это важнее, чем кажется: зимой прогулку спасает возможность зайти погреться, не заканчивая её. Центр Кишинёва к тому же компактный — несколько парков и скверов легко складываются в один маршрут, не выходя за пределы пешей доступности.',
+          'Для долгой прогулки светлым днём лучше подходят большие парки, но здесь действует отдельное зимнее правило. После снега или оттепели асфальтированные аллеи и набережные в парках, лежащих в долинах, значительно комфортнее грунтовых тропинок на склонах. Парки и смотровые точки на холмах дают лучшие виды на город, но лестницы и спуски там скользкие — это тот случай, когда обувь определяет маршрут больше, чем желание.',
+          'Лесопарки — самый тихий вариант, и особенно хороши они в ясный морозный день, когда в центре людно, а здесь почти никого. Но они на окраинах и без освещения, так что такой маршрут планируют на первую половину дня и рассчитывают вернуться до сумерек. А в по-настоящему плохую погоду — дождь, ветер, слякоть — прогулка просто проигрывает: тогда логичнее смотреть зимний гид по музеям и театрам.',
+          'Ниже — несколько мест из каталога, с которых можно начать, от центральных парков до лесопарка. Полный список маршрутов, парков и скверов с адресами — в категории «Прогулки».',
+        ],
+      },
+      ro: {
+        title: 'Plimbări prin Chișinău iarna: unde mergi când e frig și se întunecă devreme',
+        seoTitle: 'Plimbări de iarnă prin Chișinău',
+        excerpt:
+          'În decembrie se întunecă pe la patru și jumătate, dar tot ai chef de o plimbare. Cum alegi traseul: centrul iluminat, un parc din vale sau o pădure-parc de la margine.',
+        body: [
+          'Iarna nu anulează plimbările în Chișinău — le scurtează. Constrângerea principală nu e frigul, ci lumina: la mijlocul lui decembrie se întunecă deja pe la patru și jumătate, iar asta înseamnă că o plimbare e fie de zi, fie prin centru și pe iluminat. Aproape toate celelalte decizii decurg din aceasta.',
+          'Dacă ai liber doar o oră după muncă, cea mai bună alegere e centrul. Străzile pietonale, parcurile și scuarurile centrale sunt iluminate, acolo e mereu lume și, cel mai important, la câțiva pași găsești oricând o cafenea, un muzeu sau un teatru. Asta contează mai mult decât pare: iarna, plimbarea e salvată de posibilitatea de a intra la căldură fără să o închei. Centrul Chișinăului e, în plus, compact — câteva parcuri și scuaruri se leagă ușor într-un singur traseu, fără să ieși din raza de mers pe jos.',
+          'Pentru o plimbare lungă, pe lumină, sunt mai potrivite parcurile mari, dar aici intervine o regulă de iarnă separată. După ninsoare sau dezgheț, aleile asfaltate și falezele din parcurile aflate în vale sunt mult mai comode decât potecile de pământ de pe pante. Parcurile și punctele de belvedere de pe dealuri oferă cele mai bune priveliști asupra orașului, însă scările și coborârile devin alunecoase — e cazul în care încălțămintea decide traseul mai mult decât dorința.',
+          'Pădurile-parc sunt varianta cea mai liniștită și arată deosebit de bine într-o zi senină și geroasă, când în centru e aglomerat, iar aici nu e aproape nimeni. Dar se află la marginea orașului și nu au iluminat, așa că un asemenea traseu se planifică pentru prima parte a zilei, cu gândul să te întorci înainte de crepuscul. Iar pe vreme chiar urâtă — ploaie, vânt, lapoviță — plimbarea pierde pur și simplu: atunci are mai mult sens ghidul de iarnă prin muzee și teatre.',
+          'Mai jos — câteva locuri din catalog de la care poți începe, de la parcurile centrale până la o pădure-parc. Lista completă de trasee, parcuri și scuaruri, cu adrese — în categoria „Plimbări”.',
+        ],
+      },
+    },
+  },
 ];
