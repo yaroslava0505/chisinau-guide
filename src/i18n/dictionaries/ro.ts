@@ -437,6 +437,14 @@ export const ro: Dictionary = {
       'Aceasta este o selecție redacțională: locurile sunt alese după câmpuri verificate din catalog (rezervare, terasă, muzică live, tipul plimbării sau al activității), nu după notele cuiva. Verificați programul și disponibilitatea pe site-ul localului.',
   },
 
+  ads: {
+    label: 'Publicitate',
+    ownTitle: 'Aici poate fi localul tău',
+    ownText:
+      'Cafenea, restaurant, coworking sau eveniment — te prezentăm celor care deja caută unde să meargă în Chișinău.',
+    ownCta: 'Condiții de colaborare',
+  },
+
   business: {
     title: 'Colaborare',
     seoDescription:

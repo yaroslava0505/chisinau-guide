@@ -7,6 +7,7 @@ import { useT } from '../i18n';
 import { PlaceCard } from './PlaceCard';
 import { ArticleCard } from './ArticleCard';
 import { Breadcrumbs } from './ui/Breadcrumbs';
+import { AdSlot } from './ui/AdSlot';
 import { occurrenceLabel } from '../utils/events';
 
 interface ArticleDetailPageProps {
@@ -151,6 +152,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
           <p key={index}>{paragraph}</p>
         ))}
       </div>
+
+      <AdSlot slot={import.meta.env?.VITE_ADSENSE_SLOT_ARTICLE} />
 
       {relatedPlaces.length > 0 && (
         <section className="space-y-5 pt-2">
