@@ -381,6 +381,10 @@ function pagesForLocale(locale: Locale): PageContent[] {
     <p>${esc(t.privacy.localStorageText)}</p>
     <h2>${esc(t.privacy.formTitle)}</h2>
     <p>${esc(t.privacy.formText)}</p>
+    <h2>${esc(t.privacy.analyticsTitle)}</h2>
+    <p>${esc(t.privacy.analyticsText)}</p>
+    <h2>${esc(t.privacy.adsTitle)}</h2>
+    <p>${esc(t.privacy.adsText)}</p>
     <h2>${esc(t.privacy.hostingTitle)}</h2>
     <p>${esc(t.privacy.hostingText)}</p>
     <h2>${esc(t.privacy.contactTitle)}</h2>

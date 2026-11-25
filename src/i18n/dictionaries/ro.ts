@@ -393,13 +393,19 @@ export const ro: Dictionary = {
       'Ghidul Chișinăului este un proiect independent, de voluntariat, fără companie, înregistrare sau conturi. Această pagină descrie onest ce se întâmplă cu datele tale — fără jargon juridic.',
     noDataTitle: 'Ce nu face site-ul',
     noDataText:
-      'Nu există înregistrare, parole sau conturi. Nu există analitice, contoare de vizite sau cookie-uri publicitare. Pe site nu este conectat niciun script de urmărire terț.',
+      'Nu există înregistrare, parole sau conturi. Site-ul nu plasează cookie-uri publicitare și nu încarcă scripturi care să te urmărească între site-uri. Singura analiză este statistica anonimă a vizitelor, descrisă mai jos.',
     localStorageTitle: 'Datele din browserul tău',
     localStorageText:
       'Favoritele, comentariile de la locuri și limba aleasă sunt stocate în localStorage — spațiul de stocare al browserului tău. Aceste date nu sunt niciodată trimise către vreun server și dispar dacă ștergi datele site-ului. Un comentariu este vizibil doar pentru cel care l-a lăsat, în același browser.',
     formTitle: 'Formularul „Adaugă locul tău preferat”',
     formText:
       'Dacă completezi acest formular, datele introduse (numele locului, adresa, categoria, descrierea și emailul — dacă îl indici) sunt trimise prin Formspree, un serviciu terț de recepție a formularelor, către e-mailul redacției ghidului. E-mailul este folosit doar pentru a clarifica eventual detaliile cererii. Procesarea datelor de către Formspree este descrisă în propria lor politică de confidențialitate.',
+    analyticsTitle: 'Statistica vizitelor',
+    analyticsText:
+      'Pentru a înțelege ce pagini sunt citite, site-ul folosește Cloudflare Web Analytics. Serviciul nu plasează cookie-uri, nu creează un identificator al vizitatorului și nu te urmărește pe alte site-uri. Se colectează doar statistici anonime: adresa paginii, țara, tipul dispozitivului și al browserului, viteza de încărcare.',
+    adsTitle: 'Publicitate',
+    adsText:
+      'Momentan site-ul are un singur spațiu publicitar — la finalul articolelor — iar în el apare propria ofertă a ghidului; niciun script publicitar extern nu este încărcat. Dacă vom activa Google AdSense, Google și partenerii săi vor putea folosi cookie-uri pentru a afișa reclame în funcție de vizitele tale anterioare pe acest site și pe altele. Poți renunța la publicitatea personalizată din setările Google: g.co/adsettings. Vom actualiza această pagină în ziua în care reclamele vor apărea.',
     hostingTitle: 'Găzduire',
     hostingText:
       'Site-ul este găzduit pe Cloudflare Pages. Ca orice serviciu de găzduire, Cloudflare procesează date tehnice ale cererilor (de exemplu, adresa IP și tipul de browser) pentru ca site-ul să funcționeze și să fie protejat — conform propriei politici Cloudflare.',

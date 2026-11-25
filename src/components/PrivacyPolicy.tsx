@@ -16,6 +16,8 @@ export const PrivacyPolicy: React.FC = () => {
     { title: t.privacy.noDataTitle, text: t.privacy.noDataText },
     { title: t.privacy.localStorageTitle, text: t.privacy.localStorageText },
     { title: t.privacy.formTitle, text: t.privacy.formText },
+    { title: t.privacy.analyticsTitle, text: t.privacy.analyticsText },
+    { title: t.privacy.adsTitle, text: t.privacy.adsText },
     { title: t.privacy.hostingTitle, text: t.privacy.hostingText },
   ];
 
