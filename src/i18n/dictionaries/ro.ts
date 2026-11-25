@@ -405,7 +405,7 @@ export const ro: Dictionary = {
       'Pentru a înțelege ce pagini sunt citite, site-ul folosește Cloudflare Web Analytics. Serviciul nu plasează cookie-uri, nu creează un identificator al vizitatorului și nu te urmărește pe alte site-uri. Se colectează doar statistici anonime: adresa paginii, țara, tipul dispozitivului și al browserului, viteza de încărcare.',
     adsTitle: 'Publicitate',
     adsText:
-      'Momentan site-ul are un singur spațiu publicitar — la finalul articolelor — iar în el apare propria ofertă a ghidului; niciun script publicitar extern nu este încărcat. Dacă vom activa Google AdSense, Google și partenerii săi vor putea folosi cookie-uri pentru a afișa reclame în funcție de vizitele tale anterioare pe acest site și pe altele. Poți renunța la publicitatea personalizată din setările Google: g.co/adsettings. Vom actualiza această pagină în ziua în care reclamele vor apărea.',
+      'Site-ul folosește Google AdSense. Pentru afișarea și măsurarea reclamelor, Google și partenerii săi pot folosi cookie-uri și tehnologii similare, inclusiv pentru a selecta anunțuri în funcție de vizitele tale anterioare pe acest site și pe altele. Poți renunța la publicitatea personalizată din setările Google: g.co/adsettings. Spațiile publicitare sunt întotdeauna marcate cu cuvântul „Publicitate”; o parte dintre ele sunt ocupate de propria ofertă a ghidului, nu de anunțuri Google.',
     hostingTitle: 'Găzduire',
     hostingText:
       'Site-ul este găzduit pe Cloudflare Pages. Ca orice serviciu de găzduire, Cloudflare procesează date tehnice ale cererilor (de exemplu, adresa IP și tipul de browser) pentru ca site-ul să funcționeze și să fie protejat — conform propriei politici Cloudflare.',
