@@ -1131,4 +1131,679 @@ export const INITIAL_ARTICLES: Article[] = [
       },
     },
   },
+  {
+    id: 'article-30',
+    slug: 'moldox-2026-chisinau',
+    title: 'MOLDOX 2026 у Кишиневі: фестиваль документального кіно 25–29 листопада',
+    seoTitle: 'MOLDOX 2026 у Кишиневі',
+    excerpt:
+      'П’ять днів документального кіно в Cineplex Loteanu: близько 50 фільмів, ретроспектива Аньєс Варда і дискусії. Розклад, фестивальний пас, ціни.',
+    body: [
+      'З 25 до 29 листопада 2026 року в кінотеатрі Cineplex Loteanu (бул. Штефан чел Маре, 103) проходить XI Міжнародний фестиваль документального кіно MOLDOX. Тема цьогорічного випуску — «Coexist?»: про те, як різні люди й спільноти вживаються в спільному просторі.',
+      'У програмі близько 50 фільмів — міжнародних і молдовських, зокрема стрічки з відбірок Sundance і Сан-Себастьяна. Окремий блок — ретроспектива Аньєс Варда, класикині документального кіно. Крім показів, фестиваль проводить дискусії після сеансів і освітню платформу MOLDOX Lab для молодих авторів.',
+      'Квитки: фестивальний пас на весь фестиваль коштує 700 лей і продається на unde.io, окремі покази — приблизно 80–150 лей, кожен фільм має свою сторінку. Церемонії відкриття й закриття — за запрошеннями, а публічні дискусії та шкільні покази безкоштовні.',
+      'Кінотеатр розташований у центрі, за кілька хвилин пішки від бульвару Штефан чел Маре, тож між сеансами легко вийти на каву. Повна афіша інших подій міста — у розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['odeon-eminescu', 'poetry-coffeeshop-julius-meinl', 'la-mamuca-stefan-cel-mare'],
+    eventSlug: 'moldox-2026',
+    keywords: ['MOLDOX 2026', 'документальне кіно Кишинів', 'фестиваль кіно', 'Cineplex Loteanu'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'MOLDOX 2026 в Кишинёве: фестиваль документального кино 25–29 ноября',
+        seoTitle: 'MOLDOX 2026 в Кишинёве',
+        excerpt:
+          'Пять дней документального кино в Cineplex Loteanu: около 50 фильмов, ретроспектива Аньес Варда и дискуссии. Расписание, фестивальный пас, цены.',
+        body: [
+          'С 25 по 29 ноября 2026 года в кинотеатре Cineplex Loteanu (бул. Штефан чел Маре, 103) проходит XI Международный фестиваль документального кино MOLDOX. Тема нынешнего выпуска — «Coexist?»: о том, как разные люди и сообщества уживаются в общем пространстве.',
+          'В программе около 50 фильмов — международных и молдавских, в том числе ленты из отборов Sundance и Сан-Себастьяна. Отдельный блок — ретроспектива Аньес Варда, классика документального кино. Кроме показов, фестиваль проводит дискуссии после сеансов и образовательную платформу MOLDOX Lab для молодых авторов.',
+          'Билеты: фестивальный пас на весь фестиваль стоит 700 леев и продаётся на unde.io, отдельные показы — примерно 80–150 леев, у каждого фильма своя страница. Церемонии открытия и закрытия — по приглашениям, а публичные дискуссии и школьные показы бесплатны.',
+          'Кинотеатр находится в центре, в нескольких минутах пешком от бульвара Штефан чел Маре, так что между сеансами легко выйти на кофе. Полная афиша других событий города — в разделе «События».',
+        ],
+      },
+      ro: {
+        title: 'MOLDOX 2026 la Chișinău: festivalul de film documentar, 25–29 noiembrie',
+        seoTitle: 'MOLDOX 2026 la Chișinău',
+        excerpt:
+          'Cinci zile de film documentar la Cineplex Loteanu: circa 50 de filme, o retrospectivă Agnès Varda și dezbateri. Program, abonament, prețuri.',
+        body: [
+          'Între 25 și 29 noiembrie 2026, la Cineplex Loteanu (bd. Ștefan cel Mare 103) are loc ediția a XI-a a Festivalului Internațional de Film Documentar MOLDOX. Tema acestei ediții este „Coexist?” — despre felul în care oameni și comunități diferite conviețuiesc în același spațiu.',
+          'Programul cuprinde circa 50 de filme, internaționale și moldovenești, inclusiv titluri din selecțiile Sundance și San Sebastián. Un segment separat este retrospectiva Agnès Varda, o clasică a filmului documentar. Pe lângă proiecții, festivalul organizează dezbateri după filme și platforma educațională MOLDOX Lab pentru autori tineri.',
+          'Bilete: abonamentul pentru tot festivalul costă 700 de lei și se vinde pe unde.io, iar proiecțiile individuale — aproximativ 80–150 de lei, fiecare film având pagina sa. Ceremoniile de deschidere și închidere sunt cu invitație, iar dezbaterile publice și proiecțiile școlare sunt gratuite.',
+          'Cinematograful e în centru, la câteva minute de mers pe jos de bulevardul Ștefan cel Mare, așa că între proiecții poți ieși la o cafea. Afișul complet al orașului — în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-31',
+    slug: 'moneda-expozitie-chisinau-2026',
+    title: 'Виставка «MONEDA» в Національному музеї історії: понад 300 монет',
+    seoTitle: 'Виставка «MONEDA» в Кишиневі',
+    excerpt:
+      'Золото часів Александра Македонського, срібло античного Тіраса й реконструкція монетного двору — з 26 листопада до кінця лютого.',
+    body: [
+      'З 26 листопада 2026 року до 28 лютого 2027-го в Національному музеї історії Молдови (вул. 31 Серпня 1989, 121A) працює виставка «MONEDA. Метаморфози грошей у просторі й часі». Вернісаж — 26 листопада о 15:00.',
+      'В експозиції понад 300 монет, які охоплюють більше двох тисяч років: античність, часи Золотої Орди, Земля Молдовська й сучасна епоха. Найцінніші експонати — золоті монети часів Александра Македонського та срібні монети античного Тіраса: їх уперше за десятиліття показують публіці. У залі також є реконструкція монетного двору й інтерактивна вікторина, тож дітям там не нудно.',
+      'Виставку підготували разом із колекціонером Ігорем Нісенбоймом і Національним музеєм етнографії та природної історії. Квиток — 50 лей, пенсіонерам і студентам 20, дітям 10. Музей працює з 10:00 до 17:00, понеділок — вихідний.',
+      'Поруч, у тому ж музеї, триває довга експозиція артефактів культури Кукутень–Трипілля, тож за один візит можна подивитися обидві. Музей стоїть у центрі, за квартал від пішохідної вулиці Євгена Доги.',
+    ],
+    category: 'activities',
+    placeSlugs: ['muzeul-national-de-istorie-chisinau', 'coffee-molka-chisinau', 'strada-eugen-doga-chisinau'],
+    eventSlug: 'moneda-muzeul-istorie-2026',
+    keywords: ['виставка MONEDA', 'музей історії Кишинів', 'монети', 'виставки Кишинева', 'куди піти з дітьми'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Выставка «MONEDA» в Национальном музее истории: больше 300 монет',
+        seoTitle: 'Выставка «MONEDA» в Кишинёве',
+        excerpt:
+          'Золото времён Александра Македонского, серебро античного Тираса и реконструкция монетного двора — с 26 ноября до конца февраля.',
+        body: [
+          'С 26 ноября 2026 года до 28 февраля 2027-го в Национальном музее истории Молдовы (ул. 31 августа 1989, 121А) работает выставка «MONEDA. Метаморфозы денег в пространстве и времени». Вернисаж — 26 ноября в 15:00.',
+          'В экспозиции больше 300 монет, охватывающих свыше двух тысяч лет: античность, времена Золотой Орды, Земля Молдавская и современная эпоха. Самые ценные экспонаты — золотые монеты времён Александра Македонского и серебряные монеты античного Тираса: их впервые за десятилетия показывают публике. В зале есть и реконструкция монетного двора с интерактивной викториной, так что детям там не скучно.',
+          'Выставку подготовили вместе с коллекционером Игорем Нисенбоймом и Национальным музеем этнографии и природной истории. Билет — 50 леев, пенсионерам и студентам 20, детям 10. Музей работает с 10:00 до 17:00, понедельник — выходной.',
+          'Рядом, в том же музее, идёт длительная экспозиция артефактов культуры Кукутень–Триполье, так что за один визит можно посмотреть обе. Музей стоит в центре, в квартале от пешеходной улицы Евгения Доги.',
+        ],
+      },
+      ro: {
+        title: 'Expoziția „MONEDA” la Muzeul Național de Istorie: peste 300 de monede',
+        seoTitle: 'Expoziția „MONEDA” la Chișinău',
+        excerpt:
+          'Aur din vremea lui Alexandru cel Mare, argint din cetatea Tyras și o reconstituire de monetărie — din 26 noiembrie până la sfârșitul lui februarie.',
+        body: [
+          'Din 26 noiembrie 2026 până pe 28 februarie 2027, la Muzeul Național de Istorie a Moldovei (str. 31 August 1989, 121A) este deschisă expoziția „MONEDA. Metamorfoza banilor în spațiu și timp”. Vernisajul — 26 noiembrie, ora 15:00.',
+          'Expoziția cuprinde peste 300 de monede care acoperă mai bine de două milenii: Antichitatea, perioada Hoardei de Aur, Țara Moldovei și epoca modernă. Cele mai valoroase exponate sunt monedele de aur din vremea lui Alexandru cel Mare și monedele de argint ale cetății antice Tyras, expuse public pentru prima dată după decenii. În sală se află și o reconstituire a unei monetării, cu un test interactiv — deci copiii nu se plictisesc.',
+          'Expoziția a fost realizată împreună cu colecționarul Igor Nisenboim și Muzeul Național de Etnografie și Istorie Naturală. Biletul costă 50 de lei, 20 pentru pensionari și studenți, 10 pentru copii. Muzeul e deschis între 10:00 și 17:00, luni fiind zi liberă.',
+          'În același muzeu continuă și expoziția de lungă durată cu artefacte Cucuteni–Trypillia, așa că le poți vedea pe amândouă într-o singură vizită. Muzeul se află în centru, la un cvartal de strada pietonală Eugen Doga.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-32',
+    slug: 'chefs-forum-moldova-2026',
+    title: 'Chef’s Forum Moldova 2026: гастрономічний форум 28 листопада',
+    seoTitle: 'Chef’s Forum Moldova 2026',
+    excerpt:
+      'Цілий день доповідей і дискусій для шеф-кухарів і власників закладів у Chișinău Arena. Програма, формати участі, ціни.',
+    body: [
+      '28 листопада 2026 року в Chișinău Arena (Каля Орхеюлуй, 130, Стеучень) відбудеться друга едиція Chef’s Forum Moldova — професійного гастрономічного форуму. Програма триває цілий день, з 09:00 до 18:00.',
+      'Формат — доповіді й дискусії про високу кухню як бізнес: для шеф-кухарів, власників ресторанів і всіх, хто працює в HoReCa. Це не фестиваль їжі для широкої публіки, а галузева подія, де обговорюють собівартість, меню, роботу команди й те, куди рухається ресторанний ринок Молдови.',
+      'Квитки коштують від 1000 до 3600 лей залежно від пакета: є стандартні, VIP і групові на трьох — останні вигідніші, якщо йдете командою закладу.',
+      'Якщо ви з ресторанного боку, після форуму логічно подивитися, як виглядає кишинівський ринок зсередини: у нашому каталозі 137 перевірених закладів із цінами й особливостями, узятими з їхніх власних сайтів.',
+    ],
+    category: 'activities',
+    placeSlugs: ['fuior-gourmet-chisinau', 'oliva-moscova', 'tiflis-studentilor'],
+    eventSlug: 'chefs-forum-moldova-2026',
+    keywords: ['Chefs Forum Moldova', 'гастрономічний форум Кишинів', 'HoReCa Молдова', 'подія для рестораторів'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Chef’s Forum Moldova 2026: гастрономический форум 28 ноября',
+        seoTitle: 'Chef’s Forum Moldova 2026',
+        excerpt:
+          'Целый день докладов и дискуссий для шеф-поваров и владельцев заведений в Chișinău Arena. Программа, форматы участия, цены.',
+        body: [
+          '28 ноября 2026 года в Chișinău Arena (Каля Орхеюлуй, 130, Стэучень) пройдёт вторая эдиция Chef’s Forum Moldova — профессионального гастрономического форума. Программа идёт целый день, с 09:00 до 18:00.',
+          'Формат — доклады и дискуссии о высокой кухне как бизнесе: для шеф-поваров, владельцев ресторанов и всех, кто работает в HoReCa. Это не фестиваль еды для широкой публики, а отраслевое событие, где обсуждают себестоимость, меню, работу команды и то, куда движется ресторанный рынок Молдовы.',
+          'Билеты стоят от 1000 до 3600 леев в зависимости от пакета: есть стандартные, VIP и групповые на троих — последние выгоднее, если идёте командой заведения.',
+          'Если вы с ресторанной стороны, после форума логично посмотреть, как выглядит кишинёвский рынок изнутри: в нашем каталоге 137 проверенных заведений с ценами и особенностями, взятыми с их собственных сайтов.',
+        ],
+      },
+      ro: {
+        title: 'Chef’s Forum Moldova 2026: forum gastronomic pe 28 noiembrie',
+        seoTitle: 'Chef’s Forum Moldova 2026',
+        excerpt:
+          'O zi întreagă de prezentări și discuții pentru bucătari-șefi și patroni de localuri, la Chișinău Arena. Program, pachete, prețuri.',
+        body: [
+          'Pe 28 noiembrie 2026, la Chișinău Arena (Calea Orheiului 130, Stăuceni) are loc a doua ediție a Chef’s Forum Moldova — forum gastronomic profesionist. Programul se desfășoară pe parcursul întregii zile, de la 09:00 la 18:00.',
+          'Formatul înseamnă prezentări și discuții despre bucătăria fină ca afacere: pentru bucătari-șefi, patroni de restaurante și toți cei care lucrează în HoReCa. Nu este un festival de mâncare pentru publicul larg, ci un eveniment de industrie, unde se discută costuri, meniuri, munca în echipă și direcția pieței restaurantelor din Moldova.',
+          'Biletele costă între 1000 și 3600 de lei, în funcție de pachet: există variante standard, VIP și de grup, pentru trei persoane — ultimele sunt mai avantajoase dacă mergeți cu echipa localului.',
+          'Dacă lucrezi în domeniu, după forum merită să vezi cum arată piața chișinăuiană din interior: catalogul nostru are 137 de localuri verificate, cu prețuri și facilități luate de pe site-urile lor.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-33',
+    slug: 'k-pop-forever-chisinau-2026',
+    title: 'K-POP FOREVER у Кишиневі 3 грудня: шоу корейських хітів',
+    seoTitle: 'K-POP FOREVER у Кишиневі',
+    excerpt:
+      'BTS, BLACKPINK, TWICE та інші хіти к-попу в Chișinău Arena. Дата, час, ціни на квитки.',
+    body: [
+      '3 грудня 2026 року о 19:30 у Chișinău Arena (Каля Орхеюлуй, 130, Стеучень) відбудеться шоу K-POP FOREVER — програма, зібрана з головних хітів корейської поп-сцени.',
+      'У сет-листі — BTS, BLACKPINK, TWICE, MELOMANCE, а також HUNTR/X і SAJA BOYS. Проєкт уже відіграв Дублін, Корк і Белфаст, тож до Кишинева приїжджає з обкатаною програмою. Формат — концерт-шоу з хореографією, а не виступ самих корейських гуртів: це варто розуміти, купуючи квиток.',
+      'Квитки коштують від 900 до 1800 лей залежно від сектора. Chișinău Arena розташована за містом, у Стеучень, тож варто закласти час на дорогу — громадським транспортом це близько 30–40 хвилин від центру.',
+      'У грудні в Chișinău Arena ще кілька великих подій: Ion Paladi з колядками 12 грудня і китайський цирк «Zensation» 22 грудня. Усі дати — в розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['malldova-shopping-center', 'oliva-moscova', 'andys-pizza-moscova'],
+    eventSlug: 'k-pop-forever-chisinau-2026',
+    keywords: ['K-POP Кишинів', 'K-POP FOREVER', 'концерт Chișinău Arena', 'корейська музика'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'K-POP FOREVER в Кишинёве 3 декабря: шоу корейских хитов',
+        seoTitle: 'K-POP FOREVER в Кишинёве',
+        excerpt:
+          'BTS, BLACKPINK, TWICE и другие хиты к-попа в Chișinău Arena. Дата, время, цены на билеты.',
+        body: [
+          '3 декабря 2026 года в 19:30 в Chișinău Arena (Каля Орхеюлуй, 130, Стэучень) пройдёт шоу K-POP FOREVER — программа, собранная из главных хитов корейской поп-сцены.',
+          'В сет-листе — BTS, BLACKPINK, TWICE, MELOMANCE, а также HUNTR/X и SAJA BOYS. Проект уже отыграл Дублин, Корк и Белфаст, так что в Кишинёв приезжает с обкатанной программой. Формат — концерт-шоу с хореографией, а не выступление самих корейских групп: это стоит понимать, покупая билет.',
+          'Билеты стоят от 900 до 1800 леев в зависимости от сектора. Chișinău Arena находится за городом, в Стэучень, так что стоит заложить время на дорогу — общественным транспортом это около 30–40 минут от центра.',
+          'В декабре в Chișinău Arena ещё несколько крупных событий: Ion Paladi с колядками 12 декабря и китайский цирк «Zensation» 22 декабря. Все даты — в разделе «События».',
+        ],
+      },
+      ro: {
+        title: 'K-POP FOREVER la Chișinău pe 3 decembrie: show cu hituri coreene',
+        seoTitle: 'K-POP FOREVER la Chișinău',
+        excerpt:
+          'BTS, BLACKPINK, TWICE și alte hituri K-pop la Chișinău Arena. Data, ora, prețurile biletelor.',
+        body: [
+          'Pe 3 decembrie 2026, de la ora 19:30, la Chișinău Arena (Calea Orheiului 130, Stăuceni) are loc show-ul K-POP FOREVER — un program construit din cele mai cunoscute hituri ale scenei pop coreene.',
+          'În set-list intră BTS, BLACKPINK, TWICE, MELOMANCE, dar și HUNTR/X și SAJA BOYS. Proiectul a trecut deja prin Dublin, Cork și Belfast, deci ajunge la Chișinău cu un program rodat. Formatul este un show cu coregrafie, nu un concert al trupelor coreene în sine — merită știut înainte de a cumpăra biletul.',
+          'Biletele costă între 900 și 1800 de lei, în funcție de sector. Chișinău Arena se află în afara orașului, la Stăuceni, așa că lasă-ți timp pentru drum — cu transportul public înseamnă circa 30–40 de minute din centru.',
+          'În decembrie, la Chișinău Arena mai sunt câteva evenimente mari: Ion Paladi cu colinde pe 12 decembrie și circul chinezesc „Zensation” pe 22 decembrie. Toate datele — în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-34',
+    slug: 'rigoletto-opera-chisinau-2026',
+    title: 'Опера «Ріголетто» в Кишиневі 4 грудня',
+    seoTitle: 'Опера «Ріголетто» в Кишиневі',
+    excerpt:
+      'Верді на сцені Національної опери: дата, час, ціни на квитки й що варто знати перед візитом.',
+    body: [
+      '4 грудня 2026 року о 18:30 Національний театр опери та балету ім. Марії Бієшу (бул. Штефан чел Маре, 152) дає «Ріголетто» Джузеппе Верді — оперу на три дії з постійного репертуару театру.',
+      '«Ріголетто» — одна з найвідоміших опер Верді: історія придворного блазня, його доньки й герцога, у якій звучить і знаменита «La donna è mobile». Для першого походу в оперу це вдалий вибір: сюжет зрозумілий без підготовки, а дія триває три акти з антрактами.',
+      'Квитки на вистави TNOB коштують від 200 до 500 лей залежно від місця в залі — це помітно дешевше за більшість концертів у місті. Афіша й квитки — на tnob.md. Важливо: дітей до 7 років на вистави театру не допускають.',
+      'Театр стоїть просто на бульварі Штефан чел Маре, тож повечеряти до вистави можна за кілька хвилин пішки. У грудні тут же — «Лебедине озеро» 19 грудня і денний «Лускунчик» для дітей 20 грудня.',
+    ],
+    category: 'activities',
+    placeSlugs: ['teatrul-opera-balet', 'la-mamuca-stefan-cel-mare', 'poetry-coffeeshop-julius-meinl'],
+    eventSlug: 'rigoletto-tnob-2026',
+    keywords: ['Ріголетто Кишинів', 'опера Кишинів', 'TNOB афіша', 'Верді', 'квитки в оперу'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Опера «Риголетто» в Кишинёве 4 декабря',
+        seoTitle: 'Опера «Риголетто» в Кишинёве',
+        excerpt:
+          'Верди на сцене Национальной оперы: дата, время, цены на билеты и что стоит знать перед визитом.',
+        body: [
+          '4 декабря 2026 года в 18:30 Национальный театр оперы и балета им. Марии Биешу (бул. Штефан чел Маре, 152) даёт «Риголетто» Джузеппе Верди — оперу в трёх действиях из постоянного репертуара театра.',
+          '«Риголетто» — одна из самых известных опер Верди: история придворного шута, его дочери и герцога, в которой звучит и знаменитая «La donna è mobile». Для первого похода в оперу это удачный выбор: сюжет понятен без подготовки, а действие идёт в трёх актах с антрактами.',
+          'Билеты на спектакли TNOB стоят от 200 до 500 леев в зависимости от места в зале — это заметно дешевле большинства концертов в городе. Афиша и билеты — на tnob.md. Важно: детей до 7 лет на спектакли театра не допускают.',
+          'Театр стоит прямо на бульваре Штефан чел Маре, так что поужинать до спектакля можно в нескольких минутах пешком. В декабре здесь же — «Лебединое озеро» 19 декабря и дневной «Щелкунчик» для детей 20 декабря.',
+        ],
+      },
+      ro: {
+        title: 'Opera „Rigoletto” la Chișinău pe 4 decembrie',
+        seoTitle: 'Opera „Rigoletto” la Chișinău',
+        excerpt:
+          'Verdi pe scena Operei Naționale: data, ora, prețurile biletelor și ce merită știut înainte de spectacol.',
+        body: [
+          'Pe 4 decembrie 2026, de la ora 18:30, Teatrul Național de Operă și Balet „Maria Bieșu” (bd. Ștefan cel Mare 152) prezintă „Rigoletto” de Giuseppe Verdi — operă în trei acte din repertoriul permanent al teatrului.',
+          '„Rigoletto” este una dintre cele mai cunoscute opere ale lui Verdi: povestea bufonului de curte, a fiicei sale și a ducelui, în care răsună și celebra „La donna è mobile”. Pentru prima ieșire la operă e o alegere bună: subiectul se înțelege fără pregătire, iar spectacolul are trei acte, cu pauze.',
+          'Biletele la spectacolele TNOB costă între 200 și 500 de lei, în funcție de loc — vizibil mai ieftin decât majoritatea concertelor din oraș. Afișul și biletele — pe tnob.md. Important: accesul copiilor sub 7 ani la spectacolele teatrului nu este permis.',
+          'Teatrul se află chiar pe bulevardul Ștefan cel Mare, așa că poți cina înainte de spectacol la câteva minute de mers pe jos. Tot în decembrie, aici au loc „Lacul lebedelor” pe 19 decembrie și matineul „Spărgătorul de nuci” pentru copii pe 20 decembrie.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-35',
+    slug: 'targul-de-caritate-chisinau-2026',
+    title: 'Міжнародний благодійний ярмарок у Кишиневі 5 грудня',
+    seoTitle: 'Благодійний ярмарок у Кишиневі',
+    excerpt:
+      'Понад 20 посольств із кухнею й ремеслами своїх країн у Moldexpo. Вхід від 50 лей, виручка йде на благодійність.',
+    body: [
+      '5 грудня 2026 року з 10:00 до 17:00 у виставковому центрі Moldexpo (вул. Гіочеілор, 1) проходить щорічний Міжнародний благодійний ярмарок, який організовує International Women’s Club of Moldova.',
+      'У павільйоні понад 20 посольств, дипломатичних представництв і міжнародних організацій ставлять свої столи: національна кухня, солодощі, ремесла й сувеніри з десятків країн. Формат простий — ходите між стендами, куштуєте й купуєте, а вся виручка йде на благодійні проєкти в Молдові.',
+      'Вхідний квиток коштує від 50 лей. Це одна з небагатьох подій року, де за одну годину можна спробувати їжу з різних континентів, тож приходьте голодними й беріть готівку — не на кожному стенді є термінал.',
+      'Ярмарок зручний для походу з дітьми: багато солодощів, музики й простору. Детальніше про організатора — на iwcm.md, а решта грудневої афіші — у розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['malldova-shopping-center', 'la-placinte-chisinau', 'gradina-publica-stefan-cel-mare'],
+    eventSlug: 'targul-internatinal-de-caritate-2026',
+    keywords: ['благодійний ярмарок Кишинів', 'Moldexpo', 'різдвяний ярмарок', 'куди піти з дітьми', 'IWCM'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Международный благотворительный базар в Кишинёве 5 декабря',
+        seoTitle: 'Благотворительный базар в Кишинёве',
+        excerpt:
+          'Более 20 посольств с кухней и ремёслами своих стран в Moldexpo. Вход от 50 леев, выручка идёт на благотворительность.',
+        body: [
+          '5 декабря 2026 года с 10:00 до 17:00 в выставочном центре Moldexpo (ул. Гиочеилор, 1) проходит ежегодный Международный благотворительный базар, который организует International Women’s Club of Moldova.',
+          'В павильоне более 20 посольств, дипломатических представительств и международных организаций ставят свои столы: национальная кухня, сладости, ремёсла и сувениры из десятков стран. Формат простой — ходите между стендами, пробуете и покупаете, а вся выручка идёт на благотворительные проекты в Молдове.',
+          'Входной билет стоит от 50 леев. Это одно из немногих событий года, где за час можно попробовать еду с разных континентов, так что приходите голодными и берите наличные — не на каждом стенде есть терминал.',
+          'Базар удобен для похода с детьми: много сладостей, музыки и пространства. Подробнее об организаторе — на iwcm.md, а остальная декабрьская афиша — в разделе «События».',
+        ],
+      },
+      ro: {
+        title: 'Târgul Internațional de Caritate la Chișinău, 5 decembrie',
+        seoTitle: 'Târgul de Caritate la Chișinău',
+        excerpt:
+          'Peste 20 de ambasade cu bucătăria și meșteșugurile țărilor lor, la Moldexpo. Intrarea de la 50 de lei, încasările merg în caritate.',
+        body: [
+          'Pe 5 decembrie 2026, între 10:00 și 17:00, la Centrul Expozițional Moldexpo (str. Ghioceilor 1) are loc Târgul Internațional de Caritate, organizat anual de International Women’s Club of Moldova.',
+          'În pavilion, peste 20 de ambasade, misiuni diplomatice și organizații internaționale își amenajează standurile: bucătărie națională, dulciuri, meșteșuguri și suveniruri din zeci de țări. Formatul e simplu — te plimbi printre standuri, guști și cumperi, iar toate încasările merg către proiecte caritabile din Moldova.',
+          'Biletul de intrare costă de la 50 de lei. E unul dintre puținele evenimente ale anului unde, într-o oră, poți gusta mâncare de pe continente diferite — așa că vino flămând și ia numerar, pentru că nu fiecare stand are terminal.',
+          'Târgul e potrivit pentru o ieșire cu copiii: multe dulciuri, muzică și spațiu. Detalii despre organizator — pe iwcm.md, iar restul afișului de decembrie — în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-36',
+    slug: 'chisinau-boxing-night-2026',
+    title: 'Chișinău Boxing Night IV: бій за титул WBF 5 грудня',
+    seoTitle: 'Chișinău Boxing Night IV',
+    excerpt:
+      'Понад 15 поєдинків, головний бій — 12 раундів за титул чемпіона світу WBF. Мала арена, ціни на квитки.',
+    body: [
+      '5 грудня 2026 року в Малій арені Chișinău Arena (Каля Орхеюлуй, 130, Стеучень) відбудеться четверта едиція міжнародного боксерського гала-вечора Chișinău Boxing Night.',
+      'Головний бій — 12 раундів за титул чемпіона світу WBF між Яном Заком (Ізраїль) і Саханом Айбаєм (Туреччина). Організатори називають це першим main event такого рівня в історії молдовського боксу. Усього в карді понад 15 поєдинків із боксу, MMA та кікбоксингу зі спортсменами із семи країн, а також бій за титул професіонального чемпіона Молдови.',
+      'Квитки коштують 400–600 лей. Точний час початку організатори ще уточнюють — слідкуйте за оновленням на сторінці події.',
+      'Арена розташована за містом, у Стеучень; на вечірні події туди зручніше їхати заздалегідь. Інші грудневі події в тому ж залі — K-POP FOREVER 3 грудня і Ion Paladi 12 грудня.',
+    ],
+    category: 'activities',
+    placeSlugs: ['chisinau-bouldering-project', 'global-fitness-mircea', 'energy-fitness-dacia'],
+    eventSlug: 'chisinau-boxing-night-iv-2026',
+    keywords: ['бокс Кишинів', 'Chisinau Boxing Night', 'WBF титул', 'спортивні події Кишинева'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Chișinău Boxing Night IV: бой за титул WBF 5 декабря',
+        seoTitle: 'Chișinău Boxing Night IV',
+        excerpt:
+          'Больше 15 поединков, главный бой — 12 раундов за титул чемпиона мира WBF. Малая арена, цены на билеты.',
+        body: [
+          '5 декабря 2026 года в Малой арене Chișinău Arena (Каля Орхеюлуй, 130, Стэучень) пройдёт четвёртая эдиция международного боксёрского гала-вечера Chișinău Boxing Night.',
+          'Главный бой — 12 раундов за титул чемпиона мира WBF между Яном Заком (Израиль) и Саханом Айбаем (Турция). Организаторы называют это первым main event такого уровня в истории молдавского бокса. Всего в карде больше 15 поединков по боксу, MMA и кикбоксингу со спортсменами из семи стран, а также бой за титул профессионального чемпиона Молдовы.',
+          'Билеты стоят 400–600 леев. Точное время начала организаторы ещё уточняют — следите за обновлением на странице события.',
+          'Арена находится за городом, в Стэучень; на вечерние события туда удобнее выезжать заранее. Другие декабрьские события в том же зале — K-POP FOREVER 3 декабря и Ion Paladi 12 декабря.',
+        ],
+      },
+      ro: {
+        title: 'Chișinău Boxing Night IV: luptă pentru centura WBF, 5 decembrie',
+        seoTitle: 'Chișinău Boxing Night IV',
+        excerpt:
+          'Peste 15 lupte, iar în main event — 12 runde pentru titlul mondial WBF. Arena Mică, prețurile biletelor.',
+        body: [
+          'Pe 5 decembrie 2026, în Arena Mică de la Chișinău Arena (Calea Orheiului 130, Stăuceni) are loc a patra ediție a galei internaționale de box Chișinău Boxing Night.',
+          'În main event — 12 runde pentru titlul mondial WBF, între Yan Zak (Israel) și Sahan Aybay (Turcia). Organizatorii îl prezintă drept primul main event de acest calibru din istoria boxului moldovenesc. În total, cardul cuprinde peste 15 lupte de box, MMA și kickboxing, cu sportivi din șapte țări, plus o partidă pentru titlul de campion profesionist al Moldovei.',
+          'Biletele costă 400–600 de lei. Ora exactă de start este încă în curs de confirmare — urmărește actualizările pe pagina evenimentului.',
+          'Arena se află în afara orașului, la Stăuceni; pentru evenimentele de seară e mai comod să pleci din timp. Alte evenimente de decembrie în aceeași locație — K-POP FOREVER pe 3 decembrie și Ion Paladi pe 12 decembrie.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-37',
+    slug: 'ansamblul-joc-concert-chisinau-2026',
+    title: 'Ансамбль «JOC» у Кишиневі 5 і 6 грудня',
+    seoTitle: 'Концерт ансамблю «JOC»',
+    excerpt:
+      'Два вечори народного танцю на сцені Опери. Дати, час, ціни на квитки.',
+    body: [
+      '5 і 6 грудня 2026 року о 18:00 Національний академічний ансамбль народного танцю «JOC» дає два хореографічні концерти на сцені Національного театру опери та балету (бул. Штефан чел Маре, 152).',
+      '«JOC» — найвідоміший танцювальний колектив Молдови: він представляє країну на світових сценах понад пів століття, а його програми будуються на традиційній молдовській хореографії — від повільних обрядових танців до швидких фінальних сюїт із десятками танцюристів на сцені.',
+      'Квитки коштують 250–700 лей залежно від місця й продаються на iTicket. Програма обох вечорів однакова, тож обирайте зручнішу дату.',
+      'Це гарний варіант для вечора з гостями міста або з батьками: вистава без слів, зрозуміла будь-якою мовою. Театр стоїть у центрі, тож повечеряти поруч можна за кілька хвилин пішки.',
+    ],
+    category: 'activities',
+    placeSlugs: ['teatrul-opera-balet', 'la-mamuca-stefan-cel-mare', 'fuior-gourmet-chisinau'],
+    eventSlug: 'concert-coregrafic-joc-2026',
+    keywords: ['ансамбль JOC', 'народний танець Молдови', 'концерт Кишинів', 'опера афіша'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Ансамбль «JOC» в Кишинёве 5 и 6 декабря',
+        seoTitle: 'Концерт ансамбля «JOC»',
+        excerpt:
+          'Два вечера народного танца на сцене Оперы. Даты, время, цены на билеты.',
+        body: [
+          '5 и 6 декабря 2026 года в 18:00 Национальный академический ансамбль народного танца «JOC» даёт два хореографических концерта на сцене Национального театра оперы и балета (бул. Штефан чел Маре, 152).',
+          '«JOC» — самый известный танцевальный коллектив Молдовы: он представляет страну на мировых сценах более полувека, а его программы строятся на традиционной молдавской хореографии — от медленных обрядовых танцев до быстрых финальных сюит с десятками танцоров на сцене.',
+          'Билеты стоят 250–700 леев в зависимости от места и продаются на iTicket. Программа обоих вечеров одинаковая, так что выбирайте удобную дату.',
+          'Это хороший вариант для вечера с гостями города или с родителями: спектакль без слов, понятный на любом языке. Театр стоит в центре, так что поужинать рядом можно в нескольких минутах пешком.',
+        ],
+      },
+      ro: {
+        title: 'Ansamblul „JOC” la Chișinău, 5 și 6 decembrie',
+        seoTitle: 'Concertul ansamblului „JOC”',
+        excerpt:
+          'Două seri de dans popular pe scena Operei. Date, ore, prețurile biletelor.',
+        body: [
+          'Pe 5 și 6 decembrie 2026, de la ora 18:00, Ansamblul Național Academic de Dansuri Populare „JOC” susține două concerte coregrafice pe scena Teatrului Național de Operă și Balet (bd. Ștefan cel Mare 152).',
+          '„JOC” este cel mai cunoscut colectiv de dans din Moldova: reprezintă țara pe scenele lumii de peste o jumătate de secol, iar programele sale se construiesc pe coregrafia tradițională moldovenească — de la dansuri rituale lente până la suite finale rapide, cu zeci de dansatori pe scenă.',
+          'Biletele costă între 250 și 700 de lei, în funcție de loc, și se vând pe iTicket. Programul este același în ambele seri, așa că poți alege data care îți convine.',
+          'E o variantă bună pentru o seară cu oaspeți veniți în oraș sau cu părinții: un spectacol fără cuvinte, pe înțelesul oricui. Teatrul e în centru, iar restaurantele din apropiere sunt la câteva minute de mers pe jos.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-38',
+    slug: 'ultimul-avertisment-teatrul-cehov-2026',
+    title: '«Ultimul avertisment» у театрі Чехова 10 грудня',
+    seoTitle: '«Ultimul avertisment» у Кишиневі',
+    excerpt:
+      'Трагікомедія проєкту #Cooltura — один вечір на сцені Російського драматичного театру. Дата, час, ціни.',
+    body: [
+      '10 грудня 2026 року о 19:00 на сцені Російського драматичного театру ім. А. П. Чехова (вул. Влайку Пиркелаб, 75) покажуть трагікомедію «Ultimul avertisment» — виставу проєкту #Cooltura.',
+      'Це разовий показ, а не репертуарна вистава: один вечір, одна дата. Такі гастрольні й проєктні покази зазвичай збирають повний зал швидше за звичайну афішу, тож із квитками краще не зволікати.',
+      'Квитки коштують від 400 лей і продаються на livetickets.md. Повна афіша театру — на cehov.md.',
+      'Театр розташований у центрі, за два квартали від бульвару Штефан чел Маре. Інші театральні події грудня — опера «Ріголетто» 4 грудня, «Лебедине озеро» 19 грудня та «Лускунчик» 20 грудня.',
+    ],
+    category: 'activities',
+    placeSlugs: ['teatrul-cehov', 'bellucci-cafe-kogalniceanu', 'coffee-molka-chisinau'],
+    eventSlug: 'ultimul-avertisment-cehov-2026',
+    keywords: ['театр Чехова Кишинів', 'Ultimul avertisment', 'вистава Кишинів', 'Cooltura'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: '«Ultimul avertisment» в театре Чехова 10 декабря',
+        seoTitle: '«Ultimul avertisment» в Кишинёве',
+        excerpt:
+          'Трагикомедия проекта #Cooltura — один вечер на сцене Русского драматического театра. Дата, время, цены.',
+        body: [
+          '10 декабря 2026 года в 19:00 на сцене Русского драматического театра им. А. П. Чехова (ул. Влайку Пыркэлаб, 75) покажут трагикомедию «Ultimul avertisment» — спектакль проекта #Cooltura.',
+          'Это разовый показ, а не репертуарный спектакль: один вечер, одна дата. Такие гастрольные и проектные показы обычно собирают полный зал быстрее обычной афиши, так что с билетами лучше не тянуть.',
+          'Билеты стоят от 400 леев и продаются на livetickets.md. Полная афиша театра — на cehov.md.',
+          'Театр расположен в центре, в двух кварталах от бульвара Штефан чел Маре. Другие театральные события декабря — опера «Риголетто» 4 декабря, «Лебединое озеро» 19 декабря и «Щелкунчик» 20 декабря.',
+        ],
+      },
+      ro: {
+        title: '„Ultimul avertisment” la Teatrul Cehov, 10 decembrie',
+        seoTitle: '„Ultimul avertisment” la Chișinău',
+        excerpt:
+          'Tragicomedie din proiectul #Cooltura — o singură seară pe scena Teatrului Dramatic Rus. Data, ora, prețuri.',
+        body: [
+          'Pe 10 decembrie 2026, de la ora 19:00, pe scena Teatrului Dramatic Rus de Stat „A. P. Cehov” (str. Vlaicu Pârcălab 75) este prezentată tragicomedia „Ultimul avertisment”, o reprezentație a proiectului #Cooltura.',
+          'Este o reprezentație unică, nu un spectacol din repertoriu: o seară, o singură dată. Astfel de spectacole-eveniment umplu sala mai repede decât afișul obișnuit, așa că biletele merită luate din timp.',
+          'Biletele costă de la 400 de lei și se vând pe livetickets.md. Afișul complet al teatrului — pe cehov.md.',
+          'Teatrul se află în centru, la două cvartale de bulevardul Ștefan cel Mare. Alte evenimente teatrale din decembrie — opera „Rigoletto” pe 4 decembrie, „Lacul lebedelor” pe 19 decembrie și „Spărgătorul de nuci” pe 20 decembrie.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-39',
+    slug: 'paula-seling-chisinau-2026',
+    title: 'Паула Селінг у Кишиневі 17 грудня: різдвяний концерт',
+    seoTitle: 'Паула Селінг у Кишиневі',
+    excerpt:
+      'Колядки й зимові пісні в Палаці Націонал. Дата, час, ціни на квитки і що поруч.',
+    body: [
+      '17 грудня 2026 року о 19:00 румунська співачка Паула Селінг виступить у Палаці Націонал «Ніколае Сулак» (вул. Пушкіна, 21) із різдвяною програмою «Colindăm, colindăm prin viață».',
+      'У програмі — традиційні колядки, зимові пісні та сучасні аранжування. Паула Селінг відома широкій аудиторії і як учасниця «Євробачення», і як виконавиця різдвяних альбомів, які в Румунії стали частиною святкової традиції. Організатор концерту — Dar.fm.',
+      'Квитки коштують 250–1000 лей залежно від сектора й продаються на iTicket. Це один із найдоступніших великих концертів грудня в Кишиневі.',
+      'Палац Націонал стоїть у центрі, за два квартали від бульвару Штефан чел Маре; повечеряти до концерту зручно на тій самій вулиці Пушкіна. Того ж тижня тут же — Святослав Вакарчук 15 грудня.',
+    ],
+    category: 'activities',
+    placeSlugs: ['fuior-gourmet-chisinau', 'torro-burgers-puskin', 'bellucci-cafe-kogalniceanu'],
+    eventSlug: 'paula-seling-colinde-2026',
+    keywords: ['Паула Селінг Кишинів', 'колядки концерт', 'різдвяний концерт Кишинів', 'Палац Націонал квитки'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Паула Селинг в Кишинёве 17 декабря: рождественский концерт',
+        seoTitle: 'Паула Селинг в Кишинёве',
+        excerpt:
+          'Колядки и зимние песни в Национальном дворце. Дата, время, цены на билеты и что рядом.',
+        body: [
+          '17 декабря 2026 года в 19:00 румынская певица Паула Селинг выступит в Национальном дворце «Николае Сулак» (ул. Пушкина, 21) с рождественской программой «Colindăm, colindăm prin viață».',
+          'В программе — традиционные колядки, зимние песни и современные аранжировки. Паула Селинг известна широкой аудитории и как участница «Евровидения», и как исполнительница рождественских альбомов, которые в Румынии стали частью праздничной традиции. Организатор концерта — Dar.fm.',
+          'Билеты стоят 250–1000 леев в зависимости от сектора и продаются на iTicket. Это один из самых доступных крупных концертов декабря в Кишинёве.',
+          'Национальный дворец стоит в центре, в двух кварталах от бульвара Штефан чел Маре; поужинать до концерта удобно на той же улице Пушкина. На той же неделе здесь — Святослав Вакарчук 15 декабря.',
+        ],
+      },
+      ro: {
+        title: 'Paula Seling la Chișinău pe 17 decembrie: concert de Crăciun',
+        seoTitle: 'Paula Seling la Chișinău',
+        excerpt:
+          'Colinde și cântece de iarnă la Palatul Național. Data, ora, prețurile biletelor și ce e în apropiere.',
+        body: [
+          'Pe 17 decembrie 2026, de la ora 19:00, cântăreața Paula Seling urcă pe scena Palatului Național „Nicolae Sulac” (str. Pușkin 21) cu programul de Crăciun „Colindăm, colindăm prin viață”.',
+          'În program — colinde tradiționale, cântece de iarnă și aranjamente moderne. Paula Seling e cunoscută publicului larg atât din Eurovision, cât și din albumele de Crăciun care au devenit, în România, parte din tradiția sărbătorilor. Organizator: Dar.fm.',
+          'Biletele costă între 250 și 1000 de lei, în funcție de sector, și se vând pe iTicket. Este unul dintre cele mai accesibile concerte mari ale lunii decembrie la Chișinău.',
+          'Palatul Național se află în centru, la două cvartale de bulevardul Ștefan cel Mare; poți cina înainte de concert chiar pe strada Pușkin. În aceeași săptămână, tot aici cântă Sviatoslav Vakarciuk, pe 15 decembrie.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-40',
+    slug: 'lacul-lebedelor-chisinau-2026',
+    title: 'Балет «Лебедине озеро» в Кишиневі 19 грудня',
+    seoTitle: '«Лебедине озеро» в Кишиневі',
+    excerpt:
+      'Чайковський на сцені Національної опери, суботній вечір. Дата, час, ціни на квитки.',
+    body: [
+      '19 грудня 2026 року о 18:30 Національний театр опери та балету ім. Марії Бієшу (бул. Штефан чел Маре, 152) дає «Лебедине озеро» Чайковського — балет на чотири дії з постійного репертуару театру.',
+      '«Лебедине озеро» — найвідоміший балет у світі й найбезпечніший вибір для першого походу на балет: музику впізнають усі, а історія зрозуміла без лібрето. Показ суботній, вечірній, тож день можна спланувати навколо нього.',
+      'Квитки коштують від 200 до 500 лей залежно від місця — за мірками європейських столиць це дуже доступно. Афіша й квитки — на tnob.md. Дітей до 7 років на вистави театру не допускають; якщо йдете з дитиною молодшою, подивіться денний «Лускунчик» 20 грудня.',
+      'Театр стоїть на головному бульварі міста, тож повечеряти до вистави або випити кави після можна за кілька хвилин пішки.',
+    ],
+    category: 'activities',
+    placeSlugs: ['teatrul-opera-balet', 'la-mamuca-stefan-cel-mare', 'poetry-coffeeshop-julius-meinl'],
+    eventSlug: 'lacul-lebedelor-tnob-2026',
+    keywords: ['Лебедине озеро Кишинів', 'балет Кишинів', 'Чайковський', 'TNOB квитки', 'опера афіша грудень'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Балет «Лебединое озеро» в Кишинёве 19 декабря',
+        seoTitle: '«Лебединое озеро» в Кишинёве',
+        excerpt:
+          'Чайковский на сцене Национальной оперы, субботний вечер. Дата, время, цены на билеты.',
+        body: [
+          '19 декабря 2026 года в 18:30 Национальный театр оперы и балета им. Марии Биешу (бул. Штефан чел Маре, 152) даёт «Лебединое озеро» Чайковского — балет в четырёх действиях из постоянного репертуара театра.',
+          '«Лебединое озеро» — самый известный балет в мире и самый безопасный выбор для первого похода на балет: музыку узнают все, а история понятна без либретто. Показ субботний, вечерний, так что день можно спланировать вокруг него.',
+          'Билеты стоят от 200 до 500 леев в зависимости от места — по меркам европейских столиц это очень доступно. Афиша и билеты — на tnob.md. Детей до 7 лет на спектакли театра не допускают; если идёте с ребёнком младше, посмотрите дневной «Щелкунчик» 20 декабря.',
+          'Театр стоит на главном бульваре города, так что поужинать до спектакля или выпить кофе после можно в нескольких минутах пешком.',
+        ],
+      },
+      ro: {
+        title: 'Baletul „Lacul lebedelor” la Chișinău, 19 decembrie',
+        seoTitle: '„Lacul lebedelor” la Chișinău',
+        excerpt:
+          'Ceaikovski pe scena Operei Naționale, sâmbătă seara. Data, ora, prețurile biletelor.',
+        body: [
+          'Pe 19 decembrie 2026, de la ora 18:30, Teatrul Național de Operă și Balet „Maria Bieșu” (bd. Ștefan cel Mare 152) prezintă „Lacul lebedelor” de Ceaikovski — balet în patru acte din repertoriul permanent al teatrului.',
+          '„Lacul lebedelor” este cel mai cunoscut balet din lume și cea mai sigură alegere pentru prima ieșire la balet: muzica e recunoscută de toți, iar povestea se înțelege fără libret. Reprezentația e sâmbătă seara, așa că îți poți construi ziua în jurul ei.',
+          'Biletele costă între 200 și 500 de lei, în funcție de loc — pentru o capitală europeană, foarte accesibil. Afișul și biletele — pe tnob.md. Accesul copiilor sub 7 ani nu este permis; dacă mergi cu un copil mai mic, vezi matineul „Spărgătorul de nuci” din 20 decembrie.',
+          'Teatrul se află pe bulevardul principal al orașului, așa că poți cina înainte sau bea o cafea după spectacol la câteva minute de mers pe jos.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-41',
+    slug: 'spargatorul-de-nuci-chisinau-2026',
+    title: '«Лускунчик» у Кишиневі 20 грудня: денний показ для дітей',
+    seoTitle: '«Лускунчик» у Кишиневі',
+    excerpt:
+      'Різдвяний балет о 12:00 — зручний час для походу з дітьми. Ціни, вікові обмеження, квитки.',
+    body: [
+      '20 грудня 2026 року о 12:00 на сцені Національного театру опери та балету ім. Марії Бієшу (бул. Штефан чел Маре, 152) покажуть «Лускунчика» у постановці балетної академії Attitude.',
+      '«Лускунчик» — головний різдвяний балет: саме з нього у багатьох родинах починається відчуття свята. Денний час показу тут важливіший за все інше: о 12:00 дитина ще не втомлена, а після вистави лишається цілий день.',
+      'Квитки коштують 250–450 лей і продаються на iTicket. Важливе обмеження: дітей до 7 років на вистави TNOB не допускають — це правило театру, а не конкретної постановки, тож із молодшими варто обрати інший формат.',
+      'Що робити після вистави з дітьми в центрі: поруч бульвар Штефан чел Маре з Центральним парком, а заклади з дитячою кімнатою й дитячим меню зібрані в нашій добірці «Куди піти з дитиною».',
+    ],
+    category: 'activities',
+    placeSlugs: ['teatrul-opera-balet', 'gradina-publica-stefan-cel-mare', 'la-placinte-chisinau'],
+    eventSlug: 'spargatorul-de-nuci-attitude-2026',
+    keywords: ['Лускунчик Кишинів', 'балет для дітей', 'різдвяна вистава', 'куди піти з дитиною', 'TNOB'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: '«Щелкунчик» в Кишинёве 20 декабря: дневной показ для детей',
+        seoTitle: '«Щелкунчик» в Кишинёве',
+        excerpt:
+          'Рождественский балет в 12:00 — удобное время для похода с детьми. Цены, возрастные ограничения, билеты.',
+        body: [
+          '20 декабря 2026 года в 12:00 на сцене Национального театра оперы и балета им. Марии Биешу (бул. Штефан чел Маре, 152) покажут «Щелкунчика» в постановке балетной академии Attitude.',
+          '«Щелкунчик» — главный рождественский балет: именно с него во многих семьях начинается ощущение праздника. Дневное время показа здесь важнее всего остального: в 12:00 ребёнок ещё не устал, а после спектакля остаётся целый день.',
+          'Билеты стоят 250–450 леев и продаются на iTicket. Важное ограничение: детей до 7 лет на спектакли TNOB не допускают — это правило театра, а не конкретной постановки, так что с младшими стоит выбрать другой формат.',
+          'Что делать после спектакля с детьми в центре: рядом бульвар Штефан чел Маре с Центральным парком, а заведения с детской комнатой и детским меню собраны в нашей подборке «Куда пойти с ребёнком».',
+        ],
+      },
+      ro: {
+        title: '„Spărgătorul de nuci” la Chișinău, 20 decembrie: matineu pentru copii',
+        seoTitle: '„Spărgătorul de nuci” la Chișinău',
+        excerpt:
+          'Baletul de Crăciun la ora 12:00 — oră potrivită pentru o ieșire cu copiii. Prețuri, restricții de vârstă, bilete.',
+        body: [
+          'Pe 20 decembrie 2026, de la ora 12:00, pe scena Teatrului Național de Operă și Balet „Maria Bieșu” (bd. Ștefan cel Mare 152) este prezentat „Spărgătorul de nuci”, în montarea academiei de balet Attitude.',
+          '„Spărgătorul de nuci” este baletul de Crăciun prin excelență: pentru multe familii, de aici începe senzația de sărbătoare. Ora de zi contează cel mai mult: la 12:00 copilul nu e încă obosit, iar după spectacol rămâne toată ziua liberă.',
+          'Biletele costă 250–450 de lei și se vând pe iTicket. O restricție importantă: accesul copiilor sub 7 ani la spectacolele TNOB nu este permis — e o regulă a teatrului, nu a montării, așa că pentru cei mai mici merită ales alt format.',
+          'Ce faci după spectacol cu copiii în centru: alături e bulevardul Ștefan cel Mare cu Parcul Central, iar localurile cu loc de joacă și meniu pentru copii sunt adunate în selecția noastră „Unde mergi cu copilul”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-42',
+    slug: 'legendary-rock-voices-chisinau-2027',
+    title: 'LEGENDARY ROCK VOICES у Кишиневі 15 січня',
+    seoTitle: 'Legendary Rock Voices у Кишиневі',
+    excerpt:
+      'Queen, AC/DC, Metallica й Nirvana в симфонічному виконанні. Перша велика подія після свят.',
+    body: [
+      '15 січня 2027 року о 19:00 у Chișinău Arena (Каля Орхеюлуй, 130, Стеучень) відбудеться симфонічне рок-шоу LEGENDARY ROCK VOICES.',
+      'Формат — головні рок-гімни у виконанні вокалістів разом із симфонічним оркестром: Queen, AC/DC, Guns N’ Roses, Metallica, Scorpions, Nirvana та інші. Такі програми працюють інакше за звичайний трибʼют: звичні рифи звучать у виконанні струнних і духових, а вокальну партію беруть на себе кілька солістів.',
+      'Квитки коштують від 350 лей, продаються на сайті Chișinău Arena. Це перша велика подія в афіші арени після новорічних свят — коли в місті традиційно затишшя.',
+      'Арена розташована за межами міста, у Стеучень; дорога з центру займає близько 30–40 хвилин. Решта афіші — у розділі «Події».',
+    ],
+    category: 'activities',
+    placeSlugs: ['oliva-moscova', 'andys-pizza-moscova', 'malldova-shopping-center'],
+    eventSlug: 'legendary-rock-voices-chisinau-2027',
+    keywords: ['рок концерт Кишинів', 'Legendary Rock Voices', 'симфонічний рок', 'Chisinau Arena січень'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'LEGENDARY ROCK VOICES в Кишинёве 15 января',
+        seoTitle: 'Legendary Rock Voices в Кишинёве',
+        excerpt:
+          'Queen, AC/DC, Metallica и Nirvana в симфоническом исполнении. Первое крупное событие после праздников.',
+        body: [
+          '15 января 2027 года в 19:00 в Chișinău Arena (Каля Орхеюлуй, 130, Стэучень) пройдёт симфоническое рок-шоу LEGENDARY ROCK VOICES.',
+          'Формат — главные рок-гимны в исполнении вокалистов вместе с симфоническим оркестром: Queen, AC/DC, Guns N’ Roses, Metallica, Scorpions, Nirvana и другие. Такие программы работают иначе, чем обычный трибьют: привычные риффы звучат в исполнении струнных и духовых, а вокальную партию берут на себя несколько солистов.',
+          'Билеты стоят от 350 леев, продаются на сайте Chișinău Arena. Это первое крупное событие в афише арены после новогодних праздников — когда в городе традиционно затишье.',
+          'Арена расположена за чертой города, в Стэучень; дорога из центра занимает около 30–40 минут. Остальная афиша — в разделе «События».',
+        ],
+      },
+      ro: {
+        title: 'LEGENDARY ROCK VOICES la Chișinău, 15 ianuarie',
+        seoTitle: 'Legendary Rock Voices la Chișinău',
+        excerpt:
+          'Queen, AC/DC, Metallica și Nirvana în versiune simfonică. Primul eveniment mare după sărbători.',
+        body: [
+          'Pe 15 ianuarie 2027, de la ora 19:00, la Chișinău Arena (Calea Orheiului 130, Stăuceni) are loc show-ul simfonic LEGENDARY ROCK VOICES.',
+          'Formatul înseamnă cele mai cunoscute imnuri rock, interpretate de soliști împreună cu o orchestră simfonică: Queen, AC/DC, Guns N’ Roses, Metallica, Scorpions, Nirvana și altele. Astfel de programe funcționează altfel decât un tribut obișnuit: riff-urile familiare sunt preluate de coarde și suflători, iar partitura vocală e împărțită între mai mulți soliști.',
+          'Biletele costă de la 350 de lei și se vând pe site-ul Chișinău Arena. Este primul eveniment mare din afișul arenei după sărbătorile de iarnă — perioadă în care orașul e, de obicei, mai liniștit.',
+          'Arena se află în afara orașului, la Stăuceni; drumul din centru durează circa 30–40 de minute. Restul afișului — în secțiunea „Evenimente”.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-43',
+    slug: 'cucuteni-trypillia-chisinau',
+    title: 'Виставка Кукутень–Трипілля в Кишиневі: кераміка віком 7000 років',
+    seoTitle: 'Виставка Кукутень–Трипілля',
+    excerpt:
+      'Розписна кераміка, фігурки й знаряддя V–III тисячоліть до н.е. в Національному музеї історії. Працює до вересня 2027-го.',
+    body: [
+      'У Національному музеї історії Молдови (вул. 31 Серпня 1989, 121A, зала 2) працює виставка «Пам’ятки культури Кукутень–Трипілля в Молдові». Вона відкрита надовго — до 1 вересня 2027 року, тож поспішати не треба, але й відкладати на останній тиждень не варто.',
+      'Кукутень–Трипілля — одна з найбільших землеробських культур доісторичної Європи, яка існувала на території сучасних Молдови, України та Румунії в V–III тисячоліттях до нашої ери. В експозиції — розписна кераміка з характерним спіральним орнаментом, антропоморфні й зооморфні фігурки, знаряддя з кременю, каменю та кістки, мідні вироби й фрагменти жител із молдовських археологічних памʼяток.',
+      'Виставку відкрили в межах Днів європейської спадщини 2026 на підтримку транснаціонального маршруту Кукутень–Трипілля та його номінації до списку ЮНЕСКО. Квиток — 50 лей, пенсіонерам і студентам 20, дітям 10. Музей працює з 10:00 до 17:00, понеділок — вихідний.',
+      'У тому ж музеї з 26 листопада працює виставка монет «MONEDA», тож за один квиток-візит можна подивитися обидві експозиції.',
+    ],
+    category: 'activities',
+    placeSlugs: ['muzeul-national-de-istorie-chisinau', 'coffee-molka-chisinau', 'strada-eugen-doga-chisinau'],
+    eventSlug: 'cucuteni-trypillia-muzeul-istorie-2026',
+    keywords: ['Кукутень Трипілля', 'виставка Кишинів', 'музей історії Молдови', 'археологія', 'куди піти в музей'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Выставка Кукутень–Триполье в Кишинёве: керамика возрастом 7000 лет',
+        seoTitle: 'Выставка Кукутень–Триполье',
+        excerpt:
+          'Расписная керамика, фигурки и орудия V–III тысячелетий до н.э. в Национальном музее истории. Работает до сентября 2027-го.',
+        body: [
+          'В Национальном музее истории Молдовы (ул. 31 августа 1989, 121А, зал 2) работает выставка «Памятники культуры Кукутень–Триполье в Молдове». Она открыта надолго — до 1 сентября 2027 года, так что спешить не нужно, но и откладывать на последнюю неделю не стоит.',
+          'Кукутень–Триполье — одна из крупнейших земледельческих культур доисторической Европы, существовавшая на территории современных Молдовы, Украины и Румынии в V–III тысячелетиях до нашей эры. В экспозиции — расписная керамика с характерным спиральным орнаментом, антропоморфные и зооморфные фигурки, орудия из кремня, камня и кости, медные изделия и фрагменты жилищ с молдавских археологических памятников.',
+          'Выставку открыли в рамках Дней европейского наследия 2026 в поддержку транснационального маршрута Кукутень–Триполье и его номинации в список ЮНЕСКО. Билет — 50 леев, пенсионерам и студентам 20, детям 10. Музей работает с 10:00 до 17:00, понедельник — выходной.',
+          'В том же музее с 26 ноября работает выставка монет «MONEDA», так что за один визит можно посмотреть обе экспозиции.',
+        ],
+      },
+      ro: {
+        title: 'Expoziția Cucuteni–Trypillia la Chișinău: ceramică veche de 7000 de ani',
+        seoTitle: 'Expoziția Cucuteni–Trypillia',
+        excerpt:
+          'Ceramică pictată, figurine și unelte din mileniile V–III î.Hr., la Muzeul Național de Istorie. Deschisă până în septembrie 2027.',
+        body: [
+          'La Muzeul Național de Istorie a Moldovei (str. 31 August 1989, 121A, sala 2) este deschisă expoziția „Vestigii ale culturii Cucuteni–Trypillia din Republica Moldova”. Rămâne deschisă mult timp — până pe 1 septembrie 2027 — deci nu e nevoie să te grăbești, dar nici să amâni până în ultima săptămână.',
+          'Cucuteni–Trypillia este una dintre cele mai mari culturi agrare ale Europei preistorice, răspândită pe teritoriul actualei Moldove, Ucraine și Românii în mileniile V–III î.Hr. Expoziția cuprinde ceramică pictată cu caracteristicul decor spiralat, figurine antropomorfe și zoomorfe, unelte din silex, piatră și os, piese de cupru și fragmente de locuințe din siturile arheologice moldovenești.',
+          'Expoziția a fost deschisă în cadrul Zilelor Europene ale Patrimoniului 2026, în sprijinul rutei transnaționale Cucuteni–Trypillia și al înscrierii ei în lista UNESCO. Biletul costă 50 de lei, 20 pentru pensionari și studenți, 10 pentru copii. Muzeul e deschis între 10:00 și 17:00, luni fiind zi liberă.',
+          'În același muzeu, din 26 noiembrie, funcționează și expoziția de monede „MONEDA”, așa că le poți vedea pe amândouă într-o singură vizită.',
+        ],
+      },
+    },
+  },
+  {
+    id: 'article-44',
+    slug: 'ateliere-robotica-copii-chisinau',
+    title: 'Безкоштовні майстер-класи з робототехніки для дітей у Кишиневі',
+    seoTitle: 'Робототехніка для дітей у Кишиневі',
+    excerpt:
+      'FabClub для дітей 10–14 років: збирають і програмують роботів mBot. Участь безкоштовна, за записом, до 20 грудня.',
+    body: [
+      'У FabLab в Orange Digital Center (вул. Іон Крянге, 1) до 20 грудня 2026 року працює програма FabClub — безкоштовні майстер-класи з робототехніки для дітей 10–14 років.',
+      'На заняттях діти збирають, програмують і тестують роботів Makeblock mBot: розбираються, як працюють датчики, і вчаться вирішувати задачі в команді. Формат зручний для школярів: дві сесії по три години у вихідні, причому вихідні можна обрати самому в межах періоду програми.',
+      'Попередній досвід не потрібен — починають із нуля. Участь безкоштовна, але кількість місць обмежена, тож потрібна реєстрація через онлайн-форму на digitalcenter.orange.md. Програму підтримує Фундація Orange Moldova, реалізує TEKEDU.',
+      'Це рідкісний формат для Кишинева: технічний гурток без оплати й без довгих зобовʼязань — лише два вихідні. Інші варіанти дозвілля з дітьми — у добірці «Куди піти з дитиною».',
+    ],
+    category: 'activities',
+    placeSlugs: ['tekwill-studentilor', 'biblioteca-ion-creanga', 'gradina-zoologica-chisinau'],
+    eventSlug: 'ateliere-robotica-fablab-2026',
+    keywords: ['робототехніка для дітей Кишинів', 'безкоштовні гуртки', 'FabLab Orange', 'майстер-класи для дітей'],
+    publishedAt: '2026-11-25',
+    i18n: {
+      ru: {
+        title: 'Бесплатные мастер-классы по робототехнике для детей в Кишинёве',
+        seoTitle: 'Робототехника для детей в Кишинёве',
+        excerpt:
+          'FabClub для детей 10–14 лет: собирают и программируют роботов mBot. Участие бесплатное, по записи, до 20 декабря.',
+        body: [
+          'В FabLab в Orange Digital Center (ул. Ион Крянгэ, 1) до 20 декабря 2026 года работает программа FabClub — бесплатные мастер-классы по робототехнике для детей 10–14 лет.',
+          'На занятиях дети собирают, программируют и тестируют роботов Makeblock mBot: разбираются, как работают датчики, и учатся решать задачи в команде. Формат удобен для школьников: две сессии по три часа в выходные, причём выходные можно выбрать самому в рамках периода программы.',
+          'Предварительный опыт не нужен — начинают с нуля. Участие бесплатное, но количество мест ограничено, поэтому нужна регистрация через онлайн-форму на digitalcenter.orange.md. Программу поддерживает Фонд Orange Moldova, реализует TEKEDU.',
+          'Это редкий формат для Кишинёва: технический кружок без оплаты и без долгих обязательств — всего два выходных. Другие варианты досуга с детьми — в подборке «Куда пойти с ребёнком».',
+        ],
+      },
+      ro: {
+        title: 'Ateliere gratuite de robotică pentru copii la Chișinău',
+        seoTitle: 'Robotică pentru copii la Chișinău',
+        excerpt:
+          'FabClub pentru copii de 10–14 ani: construiesc și programează roboți mBot. Participare gratuită, cu înscriere, până pe 20 decembrie.',
+        body: [
+          'La FabLab din Orange Digital Center (str. Ion Creangă 1), până pe 20 decembrie 2026, se desfășoară programul FabClub — ateliere gratuite de robotică pentru copii de 10–14 ani.',
+          'La ateliere, copiii construiesc, programează și testează roboți Makeblock mBot: înțeleg cum funcționează senzorii și învață să rezolve probleme în echipă. Formatul e comod pentru școlari: două sesiuni de câte trei ore în weekend, iar weekendul poate fi ales de participant în intervalul programului.',
+          'Experiența anterioară nu este necesară — se începe de la zero. Participarea e gratuită, dar numărul de locuri e limitat, așa că e nevoie de înscriere printr-un formular online pe digitalcenter.orange.md. Programul este susținut de Fundația Orange Moldova și implementat de TEKEDU.',
+          'E un format rar pentru Chișinău: un cerc tehnic fără plată și fără angajamente lungi — doar două weekenduri. Alte idei de petrecere a timpului cu copiii — în selecția „Unde mergi cu copilul”.',
+        ],
+      },
+    },
+  },
 ];
