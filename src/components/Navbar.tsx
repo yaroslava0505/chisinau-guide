@@ -148,7 +148,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-18 gap-4">
+          <div className="flex items-center justify-between h-[76px] sm:h-[84px] gap-2 sm:gap-4">
             <a
               href="/"
               onClick={(event) => {
@@ -157,20 +157,20 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onResetToHome();
               }}
               id="navbar-brand-logo"
-              className="group flex items-center gap-3 shrink-0 py-1 min-h-[44px]"
+              className="group flex min-w-0 items-center gap-2 py-1 font-['Manrope',sans-serif] sm:gap-3"
             >
-              <span className="w-10 h-10 rounded-xl bg-zinc-900 text-white flex items-center justify-center font-black text-lg tracking-tight group-hover:scale-105 transition-transform">
+              <span aria-hidden="true" className="flex size-14 shrink-0 items-center justify-center rounded-[15px] bg-zinc-900 text-[33px] font-extrabold leading-none tracking-tight text-white transition-transform group-hover:scale-105">
                 CH
               </span>
-              <span className="hidden sm:block">
-                <span className="block font-extrabold text-lg tracking-tight text-zinc-900 font-['Outfit',sans-serif] leading-tight">
+              <span className="min-w-0">
+                <span className="block text-lg font-extrabold leading-tight tracking-tight text-zinc-900 sm:text-[30px]">
                   {t.common.siteName}
                 </span>
-                <span className="block text-xs text-zinc-500">{t.common.tagline}</span>
+                <span className="hidden font-sans text-xs text-zinc-500 sm:block">{t.common.tagline}</span>
               </span>
             </a>
 
-            <div className="flex items-center gap-2">
+            <div className="flex shrink-0 items-center gap-2">
               <button
                 type="button"
                 onClick={() => {
